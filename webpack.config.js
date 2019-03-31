@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const metadata = require('./src/metadata.json');
 
 var APP_DIR = path.resolve(__dirname, 'src');
 var BUILD_DIR = path.resolve(__dirname, 'dist');
@@ -44,6 +45,7 @@ var config = {
     new HtmlWebPackPlugin({
       template: APP_DIR + '/index.html',
       filename: 'index.html',
+      favicon: metadata.faviconIcon,
     }),
     new webpack.HotModuleReplacementPlugin()
   ],
