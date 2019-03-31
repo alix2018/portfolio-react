@@ -2,10 +2,11 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const metadata = require('./src/metadata.json');
+const metadata = require('./public/metadata.json');
 
 var APP_DIR = path.resolve(__dirname, 'src');
 var BUILD_DIR = path.resolve(__dirname, 'dist');
+var PUBLIC_DIR = path.resolve(__dirname, 'public');
 
 var config = {
   entry: APP_DIR + '/index.jsx',
@@ -35,15 +36,31 @@ var config = {
         test: /\.css$/,
         use: [
           'style-loader',
-          'css-loader'
+          'css-loader',
+          'postcss-loader'
         ]
-      }
+      },
+      {
+        test: /\.scss$/,
+          use: [
+            "style-loader",
+            "css-loader",
+            "sass-loader",
+            'postcss-loader'
+          ]
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          'file-loader'
+      ]
+}
     ]
   },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebPackPlugin({
-      template: APP_DIR + '/index.html',
+      template: PUBLIC_DIR + '/index.html',
       filename: 'index.html',
       favicon: metadata.faviconIcon,
     }),
