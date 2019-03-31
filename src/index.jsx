@@ -1,10 +1,7 @@
 import React from 'react';
 import {render} from 'react-dom';
 
-class App extends React.Component {
-  render () {
-    return <p>Hello React!</p>;
-  }
-}
+// Main app
+import App from './containers/App.jsx';
 
 render(<App/>, document.getElementById('app'));
