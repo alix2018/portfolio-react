@@ -12,7 +12,7 @@ var config = {
   entry: APP_DIR + '/index.jsx',
   output: {
     filename: '[name].bundle.js',
-    path: BUILD_DIR
+    path: BUILD_DIR,
   },
   devtool: 'inline-source-map',
   module : {
