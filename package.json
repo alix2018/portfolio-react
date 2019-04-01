@@ -1,5 +1,5 @@
 {
-  "name": "website-project",
+  "name": "react-website",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alix2018/website-project.git"
+    "url": "git+https://github.com/alix2018/react-website.git"
   },
   "author": "Stephanie Alix",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/alix2018/website-project/issues"
+    "url": "https://github.com/alix2018/react-website/issues"
   },
-  "homepage": "https://github.com/alix2018/website-project#readme",
+  "homepage": "https://github.com/alix2018/react-website#readme",
   "devDependencies": {
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.2.1"
