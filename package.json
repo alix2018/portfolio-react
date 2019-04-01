@@ -1,0 +1,32 @@
+{
+  "name": "website-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --mode development --display-error-details",
+    "build": "webpack --mode development",
+    "build:prod": "webpack --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alix2018/website-project.git"
+  },
+  "author": "Stephanie Alix",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alix2018/website-project/issues"
+  },
+  "homepage": "https://github.com/alix2018/website-project#readme",
+  "devDependencies": {
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.4.2",
+    "babel-loader": "^8.0.5",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^4.29.6"
+  }
+}
