@@ -1,8 +1,9 @@
 const webpack = require('webpack');
 const path = require('path');
+const metadata = require('./public/metadata.json');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const metadata = require('./public/metadata.json');
+const CopyPlugin = require('copy-webpack-plugin');
 
 var APP_DIR = path.resolve(__dirname, 'src');
 var BUILD_DIR = path.resolve(__dirname, 'dist');
@@ -49,20 +50,17 @@ var config = {
         ]
       },
       {
-        test: /\.scss$/,
-          use: [
-            "style-loader",
-            "css-loader",
-            "sass-loader",
-            'postcss-loader'
-          ]
-      },
-      {
         test: /\.(png|svg|jpg|gif)$/,
         use: [
           'file-loader'
-      ]
-}
+        ]
+      },
+      {
+        test: /\.(png|svg|otf)$/,
+        use: [
+          'file-loader'
+        ]
+      }
     ]
   },
   plugins: [
@@ -72,7 +70,13 @@ var config = {
       filename: 'index.html',
       favicon: metadata.faviconIcon,
     }),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new CopyPlugin([
+      {
+        from:'public/images',
+        to:'public/images'
+      }
+    ])
   ],
   devServer: {
     contentBase: BUILD_DIR,
