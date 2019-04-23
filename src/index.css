@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url('../public/assets/Poppins-Medium.otf') format('opentype');
+}
+
+body {
+  font-family: 'Poppins';
+}
