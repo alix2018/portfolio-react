@@ -3,6 +3,6 @@ import {render} from 'react-dom';
 import './index.css';
 
 // Main app
-import App from './containers/App.jsx';
+import App from './App.jsx';
 
 render(<App/>, document.getElementById('app'));
