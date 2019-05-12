@@ -50,13 +50,7 @@ var config = {
         ]
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: [
-          'file-loader'
-        ]
-      },
-      {
-        test: /\.(png|svg|otf)$/,
+        test: /\.(png|svg|jpg|gif|pdf|otf)$/,
         use: [
           'file-loader'
         ]
@@ -73,8 +67,8 @@ var config = {
     new webpack.HotModuleReplacementPlugin(),
     new CopyPlugin([
       {
-        from:'public/images',
-        to:'public/images'
+        from:'public',
+        to:'public'
       }
     ])
   ],
