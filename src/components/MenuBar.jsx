@@ -4,7 +4,7 @@ import './MenuBar.css';
 class MenuBar extends React.Component {
   render() {
     return (
-      <ul className="menu-effect">
+      <ul className="menu-effect animated fadeInUp">
         <li className="current"><a href="#">Home</a></li>
         <li><a href="#">Portfolio</a></li>
         <li><a href="#">About me</a></li>
