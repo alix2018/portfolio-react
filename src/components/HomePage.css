@@ -59,8 +59,8 @@ body {
   background-size: cover;
 }
 
-.button:hover {
-  transform: scale(1.5)!important;
+.btn-animation {
+  animation-delay: 1s;
 }
 
 .button {
@@ -75,28 +75,10 @@ body {
   border-radius: 100px;
   color: #ffffff;
   background-color: #3498db;
-  animation-delay: 1s;
+  cursor: pointer;
+  transition: all .5s cubic-bezier(1, 1.27, 0, 1.8);
 }
 
-/* Animation */
-
-@keyframes FadeInUp {
-  from {
-      transform: translate3d(0, 50px, 0);
-  }
-
-  to {
-      transform: translate3d(0, 0, 0);
-      opacity: 1;
-  }
-}
-
-.animated {
-  animation-duration: 1s;
-  animation-fill-mode: both;
-}
-
-.fadeInUp {
-  opacity: 0;
-  animation-name: FadeInUp;
+.button:hover {
+  transform: scale(1.050);
 }

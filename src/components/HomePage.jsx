@@ -2,6 +2,7 @@ import React from 'react';
 import './HomePage.css';
 
 class HomePage extends React.Component {
+
   render() {
     return (
       <React.Fragment>
@@ -23,10 +24,15 @@ class HomePage extends React.Component {
               <div className="github"></div>
             </a>
           </div>
-          <div>
-            <button className="button animated fadeInUp">Download CV</button>
-          </div>
+          <form method="get" action="./public/assets/cv.pdf" className="btn-animation animated fadeInUp" target="_blank">
+            <button className="button">Download CV</button>
+          </form>
         </div>
+        <h1>
+          <a href="" class="typewrite" data-period="2000" data-type='[ "Hi, Im Si.", "I am Creative.", "I Love Design.", "I Love to Develop." ]'>
+            <span class="wrap"></span>
+          </a>
+        </h1>
         </React.Fragment>
     )
   }
