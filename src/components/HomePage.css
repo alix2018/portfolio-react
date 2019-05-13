@@ -24,6 +24,8 @@ body {
 .title {
   font-size: 50px;
   text-align: center;
+  font-weight: bold;
+  letter-spacing: -1px;
   color: #ffffff;
   animation-delay: 500ms;
 }
@@ -76,6 +78,7 @@ body {
   color: #ffffff;
   background-color: #3498db;
   cursor: pointer;
+  outline: none;
   transition: all .5s cubic-bezier(1, 1.27, 0, 1.8);
 }
 

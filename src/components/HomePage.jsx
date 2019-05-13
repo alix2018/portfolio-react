@@ -1,18 +1,18 @@
 import React from 'react';
 import './HomePage.css';
+import Typewriter from './Typewriter.jsx';
 
 class HomePage extends React.Component {
-
   render() {
     return (
       <React.Fragment>
         <div className="shape1"></div>
         <div className="container">
-          <div className="title animated fadeInUp">I am Stéphanie Alix
-            <a href="" className="typewrite" data-period="2000" data-type='["Stéphanie Alix", "Web Developer"]'>
-              <span className="wrap"></span>
-            </a>
-          </div>
+          <div className="title animated fadeInUp">I am Stéphanie</div>
+          <Typewriter
+              period={200}
+              fullTexts={["French", "Web developer", "Work at Ice"]}
+            />
           <div className="social animated fadeInUp">
             <a href="https://www.linkedin.com/in/stephanie-alix/" target="_blank">
               <div className="linkedin"></div>
@@ -28,11 +28,6 @@ class HomePage extends React.Component {
             <button className="button">Download CV</button>
           </form>
         </div>
-        <h1>
-          <a href="" class="typewrite" data-period="2000" data-type='[ "Hi, Im Si.", "I am Creative.", "I Love Design.", "I Love to Develop." ]'>
-            <span class="wrap"></span>
-          </a>
-        </h1>
         </React.Fragment>
     )
   }
