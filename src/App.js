@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import HomePage from'./components/HomePage.jsx';
-import MenuBar from'./components/MenuBar.jsx';
+import HomePage from'./components/HomePage';
+import MenuBar from'./components/MenuBar';
 
 
 class App extends React.Component {

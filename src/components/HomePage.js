@@ -1,6 +1,6 @@
 import React from 'react';
 import './HomePage.css';
-import Typewriter from './Typewriter.jsx';
+import Typewriter from './Typewriter';
 
 class HomePage extends React.Component {
   render() {
