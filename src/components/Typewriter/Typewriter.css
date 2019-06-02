@@ -1,0 +1,14 @@
+.typewriter {
+  height: 71px !important;
+  font-size: 50px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  letter-spacing: -1px;
+  animation-delay: 500ms;
+}
+
+.cursor {
+  margin-left: -3px;
+  font-weight: 400;
+};

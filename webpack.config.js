@@ -1,31 +1,32 @@
-const webpack = require('webpack');
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const metadata = require('./public/metadata.json');
 
-var APP_DIR = path.resolve(__dirname, 'src');
-var BUILD_DIR = path.resolve(__dirname, 'dist');
-var PUBLIC_DIR = path.resolve(__dirname, 'public');
+const APP_DIR = path.resolve(__dirname, 'src');
+const BUILD_DIR = path.resolve(__dirname, 'dist');
+const PUBLIC_DIR = path.resolve(__dirname, 'public');
 
-var config = {
-  entry: APP_DIR + '/index.jsx',
+const config = {
+  entry: APP_DIR + '/index.js',
   output: {
     filename: '[name].bundle.js',
-    path: BUILD_DIR,
+    path: BUILD_DIR
   },
   devtool: 'inline-source-map',
-  module : {
+  module: {
     rules: [
       {
-        test : /\.jsx?/,
+        test: /\.js?/,
         exclude: /node_modules/,
         use: {
-          loader : 'babel-loader',
+          loader: 'babel-loader',
           options: {
             presets: [['@babel/preset-env',
               {
-                targets: {browsers: ["last 2 versions", "ie >= 9"]},
+                targets: {browsers: ['last 2 versions', 'ie >= 9']},
                 debug: true
               }]],
             plugins: ['@babel/plugin-syntax-dynamic-import']
@@ -49,20 +50,11 @@ var config = {
         ]
       },
       {
-        test: /\.scss$/,
-          use: [
-            "style-loader",
-            "css-loader",
-            "sass-loader",
-            'postcss-loader'
-          ]
-      },
-      {
-        test: /\.(png|svg|jpg|gif)$/,
+        test: /\.(png|svg|jpg|gif|pdf|otf)$/,
         use: [
           'file-loader'
-      ]
-}
+        ]
+      }
     ]
   },
   plugins: [
@@ -70,15 +62,21 @@ var config = {
     new HtmlWebPackPlugin({
       template: PUBLIC_DIR + '/index.html',
       filename: 'index.html',
-      favicon: metadata.faviconIcon,
+      favicon: metadata.faviconIcon
     }),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new CopyPlugin([
+      {
+        from: 'public',
+        to: 'public'
+      }
+    ])
   ],
   devServer: {
     contentBase: BUILD_DIR,
     port: 9000,
     hot: true
-  },
+  }
 };
 
 module.exports = config;
