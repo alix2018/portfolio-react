@@ -9,7 +9,7 @@ function MenuBar() {
       <li><a href="#">About me</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
-  )
-};
+  );
+}
 
 export default MenuBar;

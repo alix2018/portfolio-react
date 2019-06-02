@@ -5,4 +5,4 @@ import './index.css';
 // Main app
 import App from './App';
 
-render(<App/>, document.getElementById('app'));
+render(<App/>, document.querySelector('app'));

@@ -4,10 +4,35 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "xo",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development --display-error-details",
     "build": "webpack --mode development",
-    "build:prod": "webpack --mode development"
+    "build:prod": "webpack --mode development",
+    "prepush": "npm run lint"
+  },
+  "xo": {
+    "extends": "xo-react",
+    "parser": "babel-eslint",
+    "space": true,
+    "envs": [
+      "browser"
+    ],
+    "rules": {
+      "unicorn/filename-case": "off",
+      "padding-line-between-statements": [
+        "error",
+        {
+          "blankLine": "any",
+          "prev": "*",
+          "next": "*"
+        }
+      ],
+      "eol-last": 0,
+      "import/no-unassigned-import": 0,
+      "react/prop-types": 1
+    },
+    "ignores": []
   },
   "repository": {
     "type": "git",
@@ -23,14 +48,20 @@
     "@babel/core": "^7.4.0",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
     "clean-webpack-plugin": "^2.0.1",
+    "eslint-config-xo-react": "^0.19.0",
+    "eslint-plugin-react": "^7.13.0",
+    "eslint-plugin-react-hooks": "^1.6.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "webpack-cli": "^3.3.0",
-    "webpack-dev-server": "^3.2.1"
+    "webpack-dev-server": "^3.2.1",
+    "xo": "^0.24.0"
   },
   "dependencies": {
     "@babel/preset-env": "^7.4.2",
+    "autoprefixer": "^9.5.1",
     "babel-loader": "^8.0.5",
     "babel-preset-react": "^6.24.1",
     "copy-webpack-plugin": "^5.0.2",
@@ -40,6 +71,7 @@
     "postcss-easy-import": "^3.0.0",
     "postcss-loader": "^3.0.0",
     "postcss-mixins": "^6.2.1",
+    "postcss-nesting": "^7.0.0",
     "postcss-preset-env": "^6.6.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
