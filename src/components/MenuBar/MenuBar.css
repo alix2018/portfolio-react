@@ -48,7 +48,7 @@
 
 .menu-effect a:hover,
 .menu-effect .current a {
-  color: #ffffff;
+  color: #fff;
   transition: color 0.3s;
 }
 

@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const metadata = require('./public/metadata.json');
 
@@ -65,6 +66,10 @@ const config = {
       favicon: metadata.faviconIcon
     }),
     new webpack.HotModuleReplacementPlugin(),
+    new StyleLintPlugin({
+      configFile: '.stylelintrc',
+      files: ['src/*.css', 'src/components/**/*.css']
+    }),
     new CopyPlugin([
       {
         from: 'public',
