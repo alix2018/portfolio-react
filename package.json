@@ -20,7 +20,6 @@
     ],
     "rules": {
       "unicorn/filename-case": "off",
-      "unicorn/prefer-query-selector": "off",
       "padding-line-between-statements": [
         "error",
         {
