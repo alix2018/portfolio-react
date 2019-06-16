@@ -1,10 +1,10 @@
 import React from 'react';
-import './HomePage.css';
+import './PageHome.css';
 import Typewriter from '../Typewriter/Typewriter';
 
-function HomePage() {
+function PageHome() {
   return (
-    <>
+    <div className="home-page">
       <div className="shape1"/>
       <div className="container">
         <div className="title animated fadeInUp">I am Stéphanie</div>
@@ -27,8 +27,8 @@ function HomePage() {
           <button type="button" className="button">Download CV</button>
         </form>
       </div>
-    </>
+    </div>
   );
 }
 
-export default HomePage;
+export default PageHome;
