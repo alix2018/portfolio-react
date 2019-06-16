@@ -1,8 +1,9 @@
 .menu-effect {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   z-index: 1;
+  overflow: hidden;
   margin: 30px 30px 0 0;
   text-transform: uppercase;
   letter-spacing: 2.5px;
