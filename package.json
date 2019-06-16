@@ -43,6 +43,16 @@
   "bugs": {
     "url": "https://github.com/alix2018/react-website/issues"
   },
+  "browserslist": [
+    "Chrome >= 71",
+    "Safari >= 11",
+    "Firefox >= 64",
+    "Edge >= 17",
+    "ios_saf >= 11.3",
+    "and_chr >= 68",
+    "and_ff >= 65",
+    "not ie <= 11"
+  ],
   "homepage": "https://github.com/alix2018/react-website#readme",
   "devDependencies": {
     "@babel/core": "^7.4.0",

@@ -5,10 +5,6 @@ module.exports = () => ({
     require('postcss-mixins'),
     require('cssnano'),
     require('postcss-nesting'),
-    require('autoprefixer')({
-      browsers: [
-        '> 5%'
-      ]
-    })
+    require('autoprefixer')
   ]
 });
