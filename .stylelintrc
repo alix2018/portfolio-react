@@ -2,6 +2,8 @@
   "extends": "stylelint-config-standard",
   "rules": {
     "selector-pseudo-element-colon-notation": "single",
-    "no-missing-end-of-source-newline": null
+    "no-missing-end-of-source-newline": null,
+    "color-hex-case": "upper",
+    "string-quotes": "single"
   }
 }
