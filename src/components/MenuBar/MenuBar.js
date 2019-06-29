@@ -2,38 +2,34 @@ import React, {useState, useEffect} from 'react';
 import './MenuBar.css';
 
 function MenuBar() {
-  const [menuItems, setMenuItems] = useState([]);
+  const [activePage, setActivePage] = useState('');
 
+  const menuItems = [
+    {name: 'Home', page: 'home'},
+    {name: 'Portfolio', page: 'portfolio'},
+    {name: 'About Me', page: 'about-me'},
+    {name: 'Contact', page: 'contact'}
+  ];
+  
   function handleClick(e, page) {
     e.preventDefault();
-    const currentAnchor = document.querySelector('.' + page);
-    currentAnchor.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
-
-    const previousActiveLink = document.querySelectorAll('.active');
-    if (previousActiveLink && previousActiveLink[0] && previousActiveLink[0].classList) {
-      previousActiveLink[0].classList.remove('active');
-    }
-
-    const activeLink = document.querySelector(`#${page}`);
-    activeLink.classList.add('active');
+    setActivePage(page);
   }
 
   useEffect(() => {
-    setMenuItems([
-      {key: 1, name: 'Home', page: 'home'},
-      {key: 2, name: 'Portfolio', page: 'portfolio'},
-      {key: 3, name: 'About Me', page: 'about-me'},
-      {key: 4, name: 'Contact', page: 'contact'}
-    ]);
-  });
+    if (activePage.length !== 0) {
+      const currentAnchor = document.querySelector('.' + activePage);
+      currentAnchor.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  }, [activePage]);
 
   return (
     <ul className="menu-effect animated fadeInUp">
-      {menuItems.map(({key, name, page}) => (
-        <li key={key} id={page}>
+      {menuItems.map(({name, page}) => (
+        <li key={page} className={`${page === activePage ? "active" : ""}`} id={page}>
           <a href={`${name}`} onClick={e => {handleClick(e, page)}}>
             {name}
           </a>
