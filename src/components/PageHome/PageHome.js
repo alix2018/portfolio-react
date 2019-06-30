@@ -4,7 +4,7 @@ import Typewriter from '../Typewriter/Typewriter';
 
 function PageHome() {
   return (
-    <div className="home">
+    <div id="home" className="home">
       <div className="shape1"/>
       <div className="container">
         <div className="title animated fadeInUp">I am Stéphanie</div>

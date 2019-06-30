@@ -3,7 +3,7 @@ import './PagePortfolio.css';
 
 function PagePortfolio() {
   return (
-    <div className="portfolio">PORTFOLIO</div>
+    <div id="portfolio" className="portfolio">PORTFOLIO</div>
   );
 }
 

@@ -3,7 +3,7 @@ import './PageAboutMe.css';
 
 function PageAboutMe() {
   return (
-    <div className="about-me">ABOUT ME</div>
+    <div id="about-me" className="about-me">ABOUT ME</div>
   );
 }
 
