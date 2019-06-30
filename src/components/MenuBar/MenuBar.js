@@ -1,8 +1,11 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import './MenuBar.css';
+import useScroll from "./useScroll";
+
 
 function MenuBar() {
-  const [activePage, setActivePage] = useState('');
+  const activePage = useScroll(['home', 'portfolio', 'about-me','contact']);
+
 
   const menuItems = [
     {name: 'Home', page: 'home'},
@@ -13,23 +16,17 @@ function MenuBar() {
   
   function handleClick(e, page) {
     e.preventDefault();
-    setActivePage(page);
+    const currentAnchor = document.querySelector('.' + page);
+    currentAnchor.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
   }
-
-  useEffect(() => {
-    if (activePage.length !== 0) {
-      const currentAnchor = document.querySelector('.' + activePage);
-      currentAnchor.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  }, [activePage]);
 
   return (
     <ul className="menu-effect animated fadeInUp">
-      {menuItems.map(({name, page}) => (
-        <li key={page} className={`${page === activePage ? "active" : ""}`} id={page}>
+      {menuItems.map(({name, page, index}) => (
+        <li key={page} className={`${page === activePage ? "active" : ""}`} id={index}>
           <a href={`${name}`} onClick={e => {handleClick(e, page)}}>
             {name}
           </a>
