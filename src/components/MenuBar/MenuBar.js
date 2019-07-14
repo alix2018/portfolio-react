@@ -6,7 +6,6 @@ import useScroll from "./useScroll";
 function MenuBar() {
   const activePage = useScroll(['home', 'portfolio', 'about-me','contact']);
 
-
   const menuItems = [
     {name: 'Home', page: 'home'},
     {name: 'Portfolio', page: 'portfolio'},
