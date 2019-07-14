@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
 
 function useScroll(pagesIds) {
   const [activePageId, setActivePageId] = useState('home');
@@ -10,8 +10,8 @@ function useScroll(pagesIds) {
     );
     const activePage = pagesElements.find(page => {
       const elementRect = page.getBoundingClientRect();
-      return (elementRect.top <= 0) && (elementRect.top > -window.innerHeight) && (elementRect.bottom > 0) 
-      && (elementRect.bottom <= window.innerHeight);
+      return (elementRect.top <= 0) && (elementRect.top > -window.innerHeight) && (elementRect.bottom > 0) &&
+      (elementRect.bottom <= window.innerHeight);
     });
 
     if (activePage) {
