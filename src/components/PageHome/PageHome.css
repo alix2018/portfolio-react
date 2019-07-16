@@ -1,19 +1,78 @@
+:root {
+  --width-left-column: 30%;
+  --center-text-from-top: 45%;
+}
+
 .home {
-  background-color: #FAFAFA;
+  background-color: var(--main-color-dark);
   height: 100vh;
   width: 100vw;
 }
 
-.shape1 {
-  z-index: 0;
-  position: absolute;
-  top: -80px;
-  right: 0;
-  width: 75vw;
+.left {
   height: 100vh;
-  border-radius: 76% 71% 24% 100% / 54% 15% 10% 100%;
-  background-attachment: fixed;
-  background-image: linear-gradient(-20deg, #485563 40%, #29323C 80%);
+  float: left;
+  width: var(--width-left-column);
+  background-color: #FAFAFA;
+}
+
+.full-name {
+  position: relative;
+  left: 15%;
+  margin-top: 30px;
+  color: var(--main-color-dark);
+  font-size: 14px;
+  animation-delay: 0ms;
+}
+
+.iam {
+  left: calc(var(--width-left-column) - 150px);
+  color: var(--main-color-dark);
+}
+
+.iam,
+.typewriter {
+  position: absolute;
+  top: var(--center-text-from-top);
+  font-size: 60px;
+  animation-delay: 700ms;
+  font-weight: bold;
+}
+
+.arrow-1,
+.arrow-2,
+.arrow-3 {
+  position: absolute;
+  display: inline-block;
+  left: 5%;
+  padding: 7px;
+  border: solid var(--main-color-dark);
+  border-width: 0 5px 5px 0;
+  transform: rotate(45deg);
+}
+
+.arrow-1 {
+  bottom: 70px;
+}
+
+.arrow-2 {
+  bottom: 55px;
+}
+
+.arrow-3 {
+  bottom: 40px;
+}
+
+.right {
+  height: 100vh;
+  float: right;
+  width: 70%;
+  background-color: var(--main-color-dark);
+}
+
+.typewriter {
+  left: calc(var(--width-left-column) + 15px);
+  color: var(--main-light-color);
 }
 
 .container {
@@ -27,62 +86,89 @@
   text-align: center;
   font-weight: bold;
   letter-spacing: -1px;
-  color: #FFF;
+  color: var(--main-light-color);
   animation-delay: 500ms;
 }
 
 .social {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
   display: inline-flex;
-  margin: 25px auto 45px auto;
-  margin-left: auto;
-  margin-right: auto;
-  animation-delay: 750ms;
-  filter: invert(100%);
+  margin: 0;
 }
 
 .linkedin {
   background: url('/public/images/linkedin.svg');
-  height: 35px;
-  width: 35px;
-  background-size: cover;
 }
 
 .skype {
-  margin: 0 20px;
+  margin: 0 15px;
   background: url('/public/images/skype.svg');
-  height: 35px;
-  width: 35px;
-  background-size: cover;
 }
 
 .github {
   background: url('/public/images/github.svg');
-  height: 35px;
-  width: 35px;
+}
+
+.linkedin,
+.skype,
+.github {
+  height: 30px;
+  width: 30px;
   background-size: cover;
+  filter: invert(100%);
+  transition: all 0.5s cubic-bezier(1, 1.27, 0, 1.8);
+}
+
+.linkedin-animation,
+.skype-animation,
+.github-animation,
+.btn-animation {
+  animation-duration: 650ms;
+}
+
+.linkedin-animation {
+  animation-delay: 1475ms;
+}
+
+.skype-animation {
+  animation-delay: 1550ms;
+}
+
+.github-animation {
+  animation-delay: 1625ms;
 }
 
 .btn-animation {
-  animation-delay: 1s;
+  margin: 0;
+  animation-delay: 1400ms;
 }
 
 .button {
   display: inline-block;
-  padding: 15px 40px;
+  padding: 6px 10px;
+  margin-right: 25px;
   text-align: center;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   letter-spacing: 0.1em;
   border: none;
-  border-radius: 100px;
-  color: #FFF;
-  background-color: #3498DB;
+  border-radius: 5px;
+  color: var(--main-color-dark);
+  background-color: var(--main-light-color);
   cursor: pointer;
   outline: none;
   transition: all 0.5s cubic-bezier(1, 1.27, 0, 1.8);
 }
 
 .button:hover {
-  transform: scale(1.05);
+  transform: scale(1.075);
+}
+
+.linkedin:hover,
+.skype:hover,
+.github:hover {
+  transform: scale(1.13);
 }

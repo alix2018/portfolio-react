@@ -1,3 +1,8 @@
+:root {
+  --main-color-dark: #485563;
+  --main-light-color: #F7FaFF;
+}
+
 @font-face {
   font-family: 'Poppins';
   src: url('../public/assets/Poppins-Medium.otf') format('opentype');
