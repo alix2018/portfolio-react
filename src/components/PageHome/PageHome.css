@@ -1,10 +1,8 @@
 :root {
-  --width-left-column: 30%;
   --center-text-from-top: 45%;
 }
 
 .home {
-  background-color: var(--main-color-dark);
   height: 100vh;
   width: 100vw;
 }
@@ -20,14 +18,14 @@
   position: relative;
   left: 15%;
   margin-top: 30px;
-  color: var(--main-color-dark);
+  color: var(--second-color-dark);
   font-size: 14px;
   animation-delay: 0ms;
 }
 
 .iam {
   left: calc(var(--width-left-column) - 150px);
-  color: var(--main-color-dark);
+  color: var(--second-color-dark);
 }
 
 .iam,
@@ -46,7 +44,7 @@
   display: inline-block;
   left: 5%;
   padding: 7px;
-  border: solid var(--main-color-dark);
+  border: solid var(--third-color);
   border-width: 0 5px 5px 0;
   transform: rotate(45deg);
 }
@@ -66,13 +64,13 @@
 .right {
   height: 100vh;
   float: right;
-  width: 70%;
-  background-color: var(--main-color-dark);
+  width: var(--width-right-colum);
+  background-color: var(--second-color-dark);
 }
 
 .typewriter {
   left: calc(var(--width-left-column) + 15px);
-  color: var(--main-light-color);
+  color: var(--first-color-light);
 }
 
 .container {
@@ -86,7 +84,7 @@
   text-align: center;
   font-weight: bold;
   letter-spacing: -1px;
-  color: var(--main-light-color);
+  color: var(--first-color-light);
   animation-delay: 500ms;
 }
 
@@ -156,8 +154,8 @@
   letter-spacing: 0.1em;
   border: none;
   border-radius: 5px;
-  color: var(--main-color-dark);
-  background-color: var(--main-light-color);
+  color: var(--second-color-dark);
+  background-color: var(--first-color-light);
   cursor: pointer;
   outline: none;
   transition: all 0.5s cubic-bezier(1, 1.27, 0, 1.8);
@@ -172,3 +170,83 @@
 .github:hover {
   transform: scale(1.13);
 }
+
+/* a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+}
+
+.groupe-test {
+  position: absolute;
+  font-weight: bold;
+  font-size: 20px;
+  display: inline-block;
+}
+
+.groupe-test a:before,
+.groupe-test a:after {
+  transition: all 0.5s ease;
+}
+
+.groupe-test a:after {
+  left: 0;
+  top: 0;
+  position: absolute;
+  content: attr(data-hover);
+  color: blue;
+  white-space: nowrap;
+  max-width: 0%;
+  overflow: hidden;
+}
+
+.groupe-test a:hover:before,
+.groupe-test .active a:before {
+  opacity: 1;
+  width: 100%;
+}
+
+.groupe-test a:hover:after,
+.groupe-test .current a:after {
+  max-width: 100%;
+}
+
+
+.snip1168 {
+  font-family: 'Raleway', Arial, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.snip1168 a {
+  padding: 0.5em 0;
+  color:pink;
+  position: relative;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+.snip1168 a:before,
+.snip1168 a:after {
+  position: absolute;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.snip1168 a:after {
+  left: 0;
+  top: 0;
+  padding: 0.5em 0;
+  content: attr(data-hover);
+  color: blue;
+  white-space: nowrap;
+  max-width: 0%;
+  overflow: hidden;
+}
+.snip1168 a:hover:before,
+.snip1168 .current a:before {
+  opacity: 1;
+  width: 100%;
+}
+.snip1168 a:hover:after,
+.snip1168 .current a:after {
+  max-width: 100%;
+} */

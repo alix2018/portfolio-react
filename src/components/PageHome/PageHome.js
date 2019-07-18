@@ -15,6 +15,21 @@ function PageHome() {
         <div className="arrow-1"/>
         <div className="arrow-2"/>
         <div className="arrow-3"/>
+
+        {/* <div className="groupe-test">
+          <a href="#" data-hover="TEST1" className="active">TEST1</a>
+          <a href="#" data-hover="TEST2" className="">TEST2</a>
+        </div>
+
+        <ul class="snip1168">
+          <li class="current"><a href="#" data-hover="Home">Home</a></li>
+          <li><a href="#" data-hover="About Us">About Us</a></li>
+          <li><a href="#" data-hover="Blog">Blog</a></li>
+          <li><a href="#" data-hover="Services">Services</a></li>
+          <li><a href="#" data-hover="Products">Products</a></li>
+          <li><a href="#" data-hover="Contact">Contact</a></li>
+        </ul> */}
+
       </div>
       <div className="right">
         <Typewriter
