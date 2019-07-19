@@ -37,7 +37,7 @@ function PageHome() {
           period={200}
           fullTexts={['Web developer', 'From France', 'Working in Amsterdam']}
         />
-        <div className="social">
+        <div className="icons">
           <form method="get" action="./public/assets/cv.pdf" className="btn-animation animated fadeInUp" target="_blank" rel="noopener noreferrer">
             <button type="button" className="button">Download CV</button>
           </form>

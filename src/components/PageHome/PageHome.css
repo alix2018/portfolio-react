@@ -11,7 +11,7 @@
   height: 100vh;
   float: left;
   width: var(--width-left-column);
-  background-color: #FAFAFA;
+  background-color: var(--first-color-light);
 }
 
 .full-name {
@@ -88,7 +88,7 @@
   animation-delay: 500ms;
 }
 
-.social {
+.icons {
   position: absolute;
   bottom: 5%;
   right: 5%;
