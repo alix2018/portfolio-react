@@ -30,10 +30,10 @@ function PageContact() {
           </div>
         </div>
         <div className="end-sentence">
-          Available for new web developing projects      
+          Available for new web developing projects
+        </div>
       </div>
     </div>
-  </div>
   );
 }
 
