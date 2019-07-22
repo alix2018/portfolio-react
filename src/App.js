@@ -1,12 +1,18 @@
 import React from 'react';
-import HomePage from './components/HomePage/HomePage';
 import MenuBar from './components/MenuBar/MenuBar';
+import PageHome from './components/PageHome/PageHome';
+import PagePortfolio from './components/PagePortfolio/PagePortfolio';
+import PageAboutMe from './components/PageAboutMe/PageAboutMe';
+import PageContact from './components/PageContact/PageContact';
 
 function App() {
   return (
     <>
-      <HomePage/>
       <MenuBar/>
+      <PageHome/>
+      <PagePortfolio/>
+      <PageAboutMe/>
+      <PageContact/>
     </>
   );
 }

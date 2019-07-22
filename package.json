@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "xo && stylelint **/*.css !files/save.css",
+    "lint": "xo && stylelint src/*.css src/components/**/*.css",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development --display-error-details",
     "build": "webpack --mode development",
