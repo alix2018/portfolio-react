@@ -1,10 +1,24 @@
+:root {
+  --first-color-light: #F7FaFF;
+  --second-color-dark: #485563;
+  --third-color: #25CCF7;
+  --width-left-column: 30%;
+  --width-right-colum: 70%;
+  --font-poppins-light: 'Poppins Light', sans-serif;
+}
+
 @font-face {
-  font-family: 'Poppins';
-  src: url('../public/assets/Poppins-Medium.otf') format('opentype');
+  font-family: 'Poppins Medium';
+  src: url('../public/assets/Poppins-Medium.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Poppins Light';
+  src: url('../public/assets/Poppins-Light.ttf') format('opentype');
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins Medium', sans-serif;
   margin: 0;
   padding: 0;
 }
