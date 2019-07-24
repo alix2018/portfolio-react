@@ -2,7 +2,7 @@
   --center-text-from-top: 45%;
 }
 
-.home {
+section.home {
   height: 100vh;
   width: 100vw;
 }
@@ -14,7 +14,7 @@
   background-color: var(--first-color-light);
 }
 
-.full-name {
+section.home .left p {
   position: relative;
   left: 15%;
   margin-top: 30px;
@@ -23,12 +23,13 @@
   animation-delay: 0ms;
 }
 
-.iam {
+section.home .left h1 {
   left: calc(var(--width-left-column) - 150px);
+  margin: 0;
   color: var(--second-color-dark);
 }
 
-.iam,
+section.home .left h1,
 .typewriter {
   position: absolute;
   top: var(--center-text-from-top);
@@ -49,15 +50,15 @@
   transform: rotate(45deg);
 }
 
-.arrow-1 {
+section.home .left .arrow-1 {
   bottom: 70px;
 }
 
-.arrow-2 {
+section.home .left .arrow-2 {
   bottom: 55px;
 }
 
-.arrow-3 {
+section.home .left .arrow-3 {
   bottom: 40px;
 }
 
@@ -73,22 +74,13 @@
   color: var(--first-color-light);
 }
 
-.container {
+section.home .right .container {
   position: relative;
   padding-top: 35vh;
   text-align: center;
 }
 
-.title {
-  font-size: 50px;
-  text-align: center;
-  font-weight: bold;
-  letter-spacing: -1px;
-  color: var(--first-color-light);
-  animation-delay: 500ms;
-}
-
-.icons {
+section.home .right .icons {
   position: absolute;
   display: inline-flex;
   bottom: 5%;
@@ -143,7 +135,7 @@
   animation-delay: 1400ms;
 }
 
-.button {
+section.home .right .button {
   display: inline-block;
   padding: 6px 10px;
   margin-right: 25px;
@@ -161,7 +153,7 @@
   transition: all 0.5s cubic-bezier(1, 1.27, 0, 1.8);
 }
 
-.button:hover {
+section.home .right .button:hover {
   transform: scale(1.075);
 }
 

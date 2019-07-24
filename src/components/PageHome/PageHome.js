@@ -4,14 +4,14 @@ import Typewriter from '../Typewriter/Typewriter';
 
 function PageHome() {
   return (
-    <div id="home" className="home">
+    <section id="home" className="home">
       <div className="left">
-        <div className="full-name animated fadeInUp">
+        <p className="animated fadeInUp">
           Stéphanie Alix
-        </div>
-        <div className="iam animated fadeInUp">
+        </p>
+        <h1 className="animated fadeInUp">
           I am
-        </div>
+        </h1>
         <div className="arrow-1"/>
         <div className="arrow-2"/>
         <div className="arrow-3"/>
@@ -52,7 +52,7 @@ function PageHome() {
           </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
