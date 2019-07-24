@@ -51,25 +51,25 @@ section {
 }
 
 h1 {
-  color: var(--first-color-light);
-  font-size: 40px;
   margin: 0;
+  font-size: 40px;
+  color: var(--first-color-light);
 }
 
 .title-end {
   position: absolute;
   right: 10%;
   bottom: 30px;
-  color: var(--first-color-light);
   font-size: 40px;
+  color: var(--first-color-light);
 }
 
 p {
-  color: var(--first-color-light);
-  font-size: 12px;
   width: 450px;
   margin-top: 40px;
   margin-bottom: 0;
+  font-size: 12px;
+  color: var(--first-color-light);
 }
 
 .ready {

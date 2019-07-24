@@ -18,22 +18,22 @@
 }
 
 .menu-effect a {
+  position: relative;
+  display: inline-block;
   padding: 0.1em 0;
   color: rgba(255, 255, 255, 0.5);
-  position: relative;
   text-decoration: none;
-  display: inline-block;
 }
 
 .menu-effect a:before,
 .menu-effect a:after {
-  height: 2px;
-  border-radius: 100px;
   position: absolute;
+  height: 2px;
+  width: 0;
+  border-radius: 100px;
   content: '';
   transition: all 0.55s ease;
   background-color: #00B5CC;
-  width: 0;
 }
 
 .menu-effect a:before {

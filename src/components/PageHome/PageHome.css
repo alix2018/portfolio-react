@@ -18,8 +18,8 @@
   position: relative;
   left: 15%;
   margin-top: 30px;
-  color: var(--second-color-dark);
   font-size: 14px;
+  color: var(--second-color-dark);
   animation-delay: 0ms;
 }
 
@@ -90,9 +90,9 @@
 
 .icons {
   position: absolute;
+  display: inline-flex;
   bottom: 5%;
   right: 5%;
-  display: inline-flex;
   margin: 0;
 }
 
