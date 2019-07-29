@@ -15,8 +15,9 @@ section.home {
 }
 
 section.home .left p {
-  position: relative;
-  left: 15%;
+  position: fixed;
+  z-index: 2;
+  left: 5%;
   margin-top: 30px;
   font-size: 14px;
   color: var(--second-color-dark);
@@ -202,7 +203,6 @@ section.home .right .button:hover {
 .groupe-test .current a:after {
   max-width: 100%;
 }
-
 
 .snip1168 {
   font-family: 'Raleway', Arial, sans-serif;
