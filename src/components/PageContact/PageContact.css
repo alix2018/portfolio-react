@@ -100,7 +100,7 @@ section.contact .right section .icons .github {
   width: 30px;
   filter: invert(0%);
   background-size: cover;
-  transition: all 0.5s cubic-bezier(0.27, 1.4, 0.57, 1.70);
+  transition: all 0.5s cubic-bezier(0.27, 1.4, 0.57, 1.7);
 }
 
 section.contact .right footer {
