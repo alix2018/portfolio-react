@@ -5,6 +5,7 @@
   --width-left-column: 30%;
   --width-right-colum: 70%;
   --font-poppins-light: 'Poppins Light', sans-serif;
+  --font-poppins-medium: 'Poppins Medium', sans-serif;
 }
 
 @font-face {
