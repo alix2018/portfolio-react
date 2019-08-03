@@ -3,4 +3,27 @@ section.portfolio {
   width: 100vw;
   color: var(--first-color-light);
   background-color: var(--second-color-dark);
+  position: relative;
+}
+
+.titles {
+  position: absolute;
+  width: 150px;
+  left: calc(30% - 75px);
+  top: 50%;
+  margin-top: 20px;
+  text-align: right;
+  transform: translate(-50%, -50%);
+}
+
+section.portfolio h1 {
+  margin: 50px 0;
+}
+
+section.portfolio h1:first-child {
+  margin-top: 0;
+}
+
+section.portfolio h1:last-child {
+  margin-bottom: 0;
 }
