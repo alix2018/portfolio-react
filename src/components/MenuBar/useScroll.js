@@ -12,10 +12,10 @@ function useScroll(pagesIds) {
 
   function setMenuBarColors(nameColor, menuLinkColor) {
     document.querySelector('section.home .left .name').style.color = nameColor;
-      document.querySelectorAll('.menu-effect a').forEach( elt => {
-        elt.style.color = menuLinkColor;
-      });
-      document.querySelector('.menu-effect .active a').style.color = thirdColor;
+    document.querySelectorAll('.menu-effect a').forEach(menuItem => {
+      menuItem.style.color = menuLinkColor;
+    });
+    document.querySelector('.menu-effect .active a').style.color = thirdColor;
   }
 
   function scrolling() {
