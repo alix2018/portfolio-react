@@ -1,9 +1,9 @@
-.contact {
+section.contact {
   height: 100vh;
   width: 100vw;
 }
 
-.left-contact {
+section.contact .left {
   position: relative;
   height: 100vh;
   float: left;
@@ -11,34 +11,33 @@
   background-color: var(--second-color-dark);
 }
 
-.arrow-4,
-.arrow-5,
-.arrow-6 {
+section.contact .left .group-arrows {
   position: absolute;
-  display: inline-block;
-  left: 12%;
-  padding: 7px;
-  border: solid var(--third-color);
+  height: 50px;
+  left: 14%;
+  bottom: 5%;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+section.contact .left .arrow-1,
+section.contact .left .arrow-2,
+section.contact .left .arrow-3 {
   border-width: 5px 0 0 5px;
-  transform: rotate(45deg);
 }
 
-.arrow-4 {
-  bottom: 70px;
+section.contact .left .arrow-1 {
+  margin-bottom: -5px;
 }
 
-.arrow-5 {
-  bottom: 55px;
-}
-
-.arrow-6 {
-  bottom: 40px;
+section.contact .left .arrow-2 {
+  margin-bottom: -5px;
 }
 
 .rights-reserved,
 .name {
   position: absolute;
-  left: 25%;
+  left: 28%;
   font-size: 13px;
   text-align: left;
   font-family: var(--font-poppins-light);
@@ -53,7 +52,7 @@
   bottom: 50px;
 }
 
-.right-contact {
+section.contact .right {
   position: relative;
   height: 100vh;
   float: right;
@@ -61,15 +60,15 @@
   background-color: var(--first-color-light);
 }
 
-.group-contact {
+section.contact .right section {
   position: absolute;
   left: 30%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
 
-.title-contact {
-  margin-bottom: 30px;
+section.contact .right section h1 {
+  margin-bottom: 0 0 30px 0;
   font-size: 40px;
   font-weight: bold;
   color: var(--second-color-dark);
@@ -88,35 +87,23 @@
   color: var(--second-color-dark);
 }
 
-.group-icons {
+section.contact .right section .icons {
   display: inline-flex;
   margin: 0;
   margin-top: 20px;
 }
 
-.linkedin-icon {
-  background: url('/public/images/linkedin.svg');
-}
-
-.skype-icon {
-  margin: 0 15px;
-  background: url('/public/images/skype.svg');
-}
-
-.github-icon {
-  background: url('/public/images/github.svg');
-}
-
-.linkedin-icon,
-.skype-icon,
-.github-icon {
+section.contact .right section .icons .linkedin,
+section.contact .right section .icons .skype,
+section.contact .right section .icons .github {
   height: 30px;
   width: 30px;
+  filter: invert(0%);
   background-size: cover;
-  transition: all 0.5s cubic-bezier(1, 1.27, 0, 1.8);
+  transition: all 0.5s cubic-bezier(0.27, 1.4, 0.57, 1.7);
 }
 
-.end-sentence {
+section.contact .right footer {
   position: absolute;
   width: 230px;
   bottom: 60px;

@@ -1,10 +1,11 @@
 :root {
-  --first-color-light: #F7FaFF;
+  --first-color-light: #F7FAFF;
   --second-color-dark: #485563;
   --third-color: #25CCF7;
   --width-left-column: 30%;
   --width-right-colum: 70%;
   --font-poppins-light: 'Poppins Light', sans-serif;
+  --font-poppins-medium: 'Poppins Medium', sans-serif;
 }
 
 @font-face {
@@ -18,30 +19,7 @@
 }
 
 body {
-  font-family: 'Poppins Medium', sans-serif;
   margin: 0;
   padding: 0;
-}
-
-/* Animation */
-
-@keyframes fadeInUp {
-  from {
-    transform: translate3d(0, 50px, 0);
-  }
-
-  to {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-}
-
-.animated {
-  animation-duration: 1s;
-  animation-fill-mode: both;
-}
-
-.fadeInUp {
-  opacity: 0;
-  animation-name: fadeInUp;
+  font-family: 'Poppins Medium', sans-serif;
 }

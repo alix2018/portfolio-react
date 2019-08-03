@@ -2,7 +2,7 @@
   --center-text-from-top: 45%;
 }
 
-.home {
+section.home {
   height: 100vh;
   width: 100vw;
 }
@@ -14,21 +14,25 @@
   background-color: var(--first-color-light);
 }
 
-.full-name {
-  position: relative;
-  left: 15%;
-  margin-top: 30px;
-  color: var(--second-color-dark);
+section.home .left .name {
+  position: fixed;
+  z-index: 2;
+  top: 0%;
+  left: 5%;
+  margin-top: 36.5px;
   font-size: 14px;
+  font-family: var(--font-poppins-medium);
+  color: var(--second-color-dark);
   animation-delay: 0ms;
 }
 
-.iam {
+section.home .left h1 {
   left: calc(var(--width-left-column) - 150px);
+  margin: 0;
   color: var(--second-color-dark);
 }
 
-.iam,
+section.home .left h1,
 .typewriter {
   position: absolute;
   top: var(--center-text-from-top);
@@ -37,28 +41,37 @@
   font-weight: bold;
 }
 
+section.home .left .group-arrows {
+  position: absolute;
+  height: 50px;
+  left: 4%;
+  bottom: 6%;
+  padding: 5px 10px;
+  cursor: pointer;
+  animation-delay: 900ms;
+}
+
 .arrow-1,
 .arrow-2,
 .arrow-3 {
-  position: absolute;
-  display: inline-block;
-  left: 5%;
   padding: 7px;
   border: solid var(--third-color);
   border-width: 0 5px 5px 0;
   transform: rotate(45deg);
 }
 
-.arrow-1 {
-  bottom: 70px;
+section.home .left .arrow-1 {
+  margin-bottom: -5px;
+  animation-delay: 2s;
 }
 
-.arrow-2 {
-  bottom: 55px;
+section.home .left .arrow-2 {
+  margin-bottom: -5px;
+  animation-delay: 2.5s;
 }
 
-.arrow-3 {
-  bottom: 40px;
+section.home .left .arrow-3 {
+  animation-delay: 3s;
 }
 
 .right {
@@ -73,26 +86,17 @@
   color: var(--first-color-light);
 }
 
-.container {
+section.home .right .container {
   position: relative;
   padding-top: 35vh;
   text-align: center;
 }
 
-.title {
-  font-size: 50px;
-  text-align: center;
-  font-weight: bold;
-  letter-spacing: -1px;
-  color: var(--first-color-light);
-  animation-delay: 500ms;
-}
-
-.icons {
+section.home .right .icons {
   position: absolute;
+  display: inline-flex;
   bottom: 5%;
   right: 5%;
-  display: inline-flex;
   margin: 0;
 }
 
@@ -100,13 +104,13 @@
   background: url('/public/images/linkedin.svg');
 }
 
-.skype {
+.github {
   margin: 0 15px;
-  background: url('/public/images/skype.svg');
+  background: url('/public/images/github.svg');
 }
 
-.github {
-  background: url('/public/images/github.svg');
+.skype {
+  background: url('/public/images/skype.svg');
 }
 
 .linkedin,
@@ -116,7 +120,7 @@
   width: 30px;
   background-size: cover;
   filter: invert(100%);
-  transition: all 0.5s cubic-bezier(1, 1.27, 0, 1.8);
+  transition: all 0.5s cubic-bezier(0.27, 1.4, 0.57, 1.7);
 }
 
 .linkedin-animation,
@@ -143,7 +147,7 @@
   animation-delay: 1400ms;
 }
 
-.button {
+section.home .right .button {
   display: inline-block;
   padding: 6px 10px;
   margin-right: 25px;
@@ -158,10 +162,10 @@
   background-color: var(--first-color-light);
   cursor: pointer;
   outline: none;
-  transition: all 0.5s cubic-bezier(1, 1.27, 0, 1.8);
+  transition: all 0.5s cubic-bezier(0.27, 1.4, 0.57, 1.7);
 }
 
-.button:hover {
+section.home .right .button:hover {
   transform: scale(1.075);
 }
 
@@ -170,83 +174,3 @@
 .github:hover {
   transform: scale(1.13);
 }
-
-/* a {
-  text-decoration: none;
-  color: black;
-  position: relative;
-}
-
-.groupe-test {
-  position: absolute;
-  font-weight: bold;
-  font-size: 20px;
-  display: inline-block;
-}
-
-.groupe-test a:before,
-.groupe-test a:after {
-  transition: all 0.5s ease;
-}
-
-.groupe-test a:after {
-  left: 0;
-  top: 0;
-  position: absolute;
-  content: attr(data-hover);
-  color: blue;
-  white-space: nowrap;
-  max-width: 0%;
-  overflow: hidden;
-}
-
-.groupe-test a:hover:before,
-.groupe-test .active a:before {
-  opacity: 1;
-  width: 100%;
-}
-
-.groupe-test a:hover:after,
-.groupe-test .current a:after {
-  max-width: 100%;
-}
-
-
-.snip1168 {
-  font-family: 'Raleway', Arial, sans-serif;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-.snip1168 a {
-  padding: 0.5em 0;
-  color:pink;
-  position: relative;
-  letter-spacing: 1px;
-  text-decoration: none;
-}
-.snip1168 a:before,
-.snip1168 a:after {
-  position: absolute;
-  -webkit-transition: all 0.35s ease;
-  transition: all 0.35s ease;
-}
-.snip1168 a:after {
-  left: 0;
-  top: 0;
-  padding: 0.5em 0;
-  content: attr(data-hover);
-  color: blue;
-  white-space: nowrap;
-  max-width: 0%;
-  overflow: hidden;
-}
-.snip1168 a:hover:before,
-.snip1168 .current a:before {
-  opacity: 1;
-  width: 100%;
-}
-.snip1168 a:hover:after,
-.snip1168 .current a:after {
-  max-width: 100%;
-} */

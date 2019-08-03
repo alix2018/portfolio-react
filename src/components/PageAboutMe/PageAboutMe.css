@@ -1,16 +1,16 @@
-.about-me {
+section.about-me {
   height: 100vh;
   width: 100vw;
 }
 
-.left-aboutme {
+section.about-me .left {
   height: 100vh;
   float: left;
   width: var(--width-left-column);
   background-color: var(--first-color-light);
 }
 
-.img,
+section.about-me .left .img,
 .img-container {
   position: absolute;
   left: 50%;
@@ -22,13 +22,13 @@
   position: relative;
 }
 
-img {
+section.about-me .left img {
   max-width: 50%;
   height: auto;
   margin-left: 25%;
 }
 
-.text-img {
+section.about-me .left p {
   max-width: 50%;
   margin-left: 25%;
   margin-top: 20px;
@@ -37,7 +37,7 @@ img {
   color: #485563C9;
 }
 
-.right-aboutme {
+section.about-me .right {
   position: relative;
   height: 100vh;
   float: right;
@@ -45,33 +45,34 @@ img {
   background-color: var(--second-color-dark);
 }
 
-section {
+article {
   margin-left: 140px;
   margin-top: 17vh;
 }
 
-h1 {
-  color: var(--first-color-light);
-  font-size: 40px;
+header {
   margin: 0;
+  font-size: 40px;
+  color: var(--first-color-light);
 }
 
-.title-end {
+section.about-me .right article section {
+  width: 450px;
+  margin: 40px 0;
+  font-size: 14px;
+  line-height: 25px;
+  font-family: var(--font-poppins-light);
+  color: var(--first-color-light);
+}
+
+footer {
   position: absolute;
   right: 10%;
   bottom: 30px;
-  color: var(--first-color-light);
   font-size: 40px;
-}
-
-p {
   color: var(--first-color-light);
-  font-size: 12px;
-  width: 450px;
-  margin-top: 40px;
-  margin-bottom: 0;
 }
 
-.ready {
+section.about-me .right article footer span {
   color: var(--third-color);
 }
