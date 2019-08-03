@@ -11,29 +11,33 @@ section.contact .left {
   background-color: var(--second-color-dark);
 }
 
+section.contact .left .group-arrows {
+  position: absolute;
+  height: 50px;
+  left: 14%;
+  bottom: 5%;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
 section.contact .left .arrow-1,
 section.contact .left .arrow-2,
 section.contact .left .arrow-3 {
-  left: 12%;
   border-width: 5px 0 0 5px;
 }
 
 section.contact .left .arrow-1 {
-  bottom: 70px;
+  margin-bottom: -5px;
 }
 
 section.contact .left .arrow-2 {
-  bottom: 55px;
-}
-
-section.contact .left .arrow-3 {
-  bottom: 40px;
+  margin-bottom: -5px;
 }
 
 .rights-reserved,
 .name {
   position: absolute;
-  left: 25%;
+  left: 28%;
   font-size: 13px;
   text-align: left;
   font-family: var(--font-poppins-light);
@@ -96,7 +100,7 @@ section.contact .right section .icons .github {
   width: 30px;
   filter: invert(0%);
   background-size: cover;
-  transition: all 0.5s cubic-bezier(1, 1.27, 0, 1.8);
+  transition: all 0.5s cubic-bezier(0.27, 1.4, 0.57, 1.70);
 }
 
 section.contact .right footer {
