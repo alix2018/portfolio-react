@@ -22,15 +22,17 @@ function MenuBar() {
   }
 
   return (
-    <ul className="menu-effect animated fadeInUp">
-      {menuItems.map(({name, page, index}) => (
-        <li key={page} className={`${page === activePage ? 'active' : ''}`} id={index}>
-          <a href={`${name}`} onClick={e => {handleClick(e, page);}}>
-            {name}
-          </a>
-        </li>
-      ))}
-    </ul>
+    <nav>
+      <ul className="menu-effect animated fadeInUp">
+        {menuItems.map(({name, page, index}) => (
+          <li key={page} className={`${page === activePage ? 'active' : ''}`} id={index}>
+            <a href={`${name}`} onClick={e => {handleClick(e, page);}}>
+              {name}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 }
 

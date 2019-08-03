@@ -21,42 +21,18 @@
   position: relative;
   display: inline-block;
   padding: 0.1em 0;
+  font-weight: normal;
   color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
 }
 
-.menu-effect a:before,
-.menu-effect a:after {
-  position: absolute;
-  height: 2px;
-  width: 0;
-  border-radius: 100px;
-  content: '';
-  transition: all 0.55s ease;
-  background-color: #00B5CC;
-}
-
-.menu-effect a:before {
-  top: 0;
-  left: 0;
-  background: linear-gradient(to left, #2C3E50, #2980B9);
-}
-
-.menu-effect a:after {
-  bottom: 0;
-  right: 0;
-  background: linear-gradient(to right, #2C3E50, #2980B9);
-}
-
 .menu-effect a:hover,
 .menu-effect .active a {
-  color: #FFF;
+  font-weight: 900;
+  color: var(--third-color);
   transition: color 0.3s;
 }
 
-.menu-effect a:hover:before,
-.menu-effect .active a:before,
-.menu-effect a:hover:after,
-.menu-effect .active a:after {
-  width: 100%;
+.menu-effect a:hover {
+  color: var(--third-color) !important;
 }
