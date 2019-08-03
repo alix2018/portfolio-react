@@ -3,33 +3,29 @@ import './PageHome.css';
 import Typewriter from '../Typewriter/Typewriter';
 
 function PageHome() {
+  function clickArrowsDown(e) {
+    e.preventDefault();
+    const currentAnchor = document.querySelector('.contact');
+    currentAnchor.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
+
   return (
     <section id="home" className="home">
       <div className="left">
-        <p className="animated fadeInUp">
+        <div className="name animated fadeInUp">
           Stéphanie Alix
-        </p>
+        </div>
         <h1 className="animated fadeInUp">
           I am
         </h1>
-        <div className="arrow-1"/>
-        <div className="arrow-2"/>
-        <div className="arrow-3"/>
-
-        {/* <div className="groupe-test">
-          <a href="#" data-hover="TEST1" className="active">TEST1</a>
-          <a href="#" data-hover="TEST2" className="">TEST2</a>
+        <div className="group-arrows animated fadeInUp" onClick={e => {clickArrowsDown(e);}}>
+          <div className="arrow-1"/>
+          <div className="arrow-2"/>
+          <div className="arrow-3"/>
         </div>
-
-        <ul class="snip1168">
-          <li class="current"><a href="#" data-hover="Home">Home</a></li>
-          <li><a href="#" data-hover="About Us">About Us</a></li>
-          <li><a href="#" data-hover="Blog">Blog</a></li>
-          <li><a href="#" data-hover="Services">Services</a></li>
-          <li><a href="#" data-hover="Products">Products</a></li>
-          <li><a href="#" data-hover="Contact">Contact</a></li>
-        </ul> */}
-
       </div>
       <div className="right">
         <Typewriter
@@ -44,11 +40,11 @@ function PageHome() {
           <a href="https://www.linkedin.com/in/stephanie-alix/" className="linkedin-animation animated fadeInUp" target="_blank" rel="noopener noreferrer">
             <div className="linkedin"/>
           </a>
-          <a href="https://join.skype.com/invite/ljzSCwTgKRyX" className="skype-animation animated fadeInUp" target="_blank" rel="noopener noreferrer">
-            <div className="skype"/>
-          </a>
           <a href="https://github.com/alix2018" className="github-animation animated fadeInUp" target="_blank" rel="noopener noreferrer">
             <div className="github"/>
+          </a>
+          <a href="https://join.skype.com/invite/ljzSCwTgKRyX" className="skype-animation animated fadeInUp" target="_blank" rel="noopener noreferrer">
+            <div className="skype"/>
           </a>
         </div>
       </div>
