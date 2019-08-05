@@ -1,3 +1,7 @@
+:root {
+  --project-left: 60%;
+}
+
 section.portfolio {
   height: 100vh;
   width: 100vw;
@@ -6,24 +10,97 @@ section.portfolio {
   position: relative;
 }
 
-.titles {
+section.portfolio .left {
+  background-color: var(--second-color-dark);
+}
+
+.titles,
+.project-index,
+section.portfolio img {
   position: absolute;
-  width: 150px;
-  left: calc(30% - 75px);
-  top: 50%;
-  margin-top: 20px;
-  text-align: right;
   transform: translate(-50%, -50%);
 }
 
-section.portfolio h1 {
+.titles {
+  left: calc(30% - 58px);
+  top: 50%;
+  margin-top: 40px;
+  text-align: right;
+}
+
+.titles section {
+  position: relative;
+  height: auto;
+  width: 205px;
+  overflow: auto;
   margin: 50px 0;
+
+  /* display: inline-flex; */
 }
 
-section.portfolio h1:first-child {
-  margin-top: 0;
+section.portfolio h1 {
+  width: 160px;
+  float: left;
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.1;
+
+  /* display: inline-table; */
 }
 
-section.portfolio h1:last-child {
-  margin-bottom: 0;
+.project-index {
+  width: 20px;
+  top: 50%;
+  right: 0;
+  font-family: var(--font-poppins-light);
+  font-size: 14px;
+  text-align: left;
+
+  /* display: inline-table; */
+}
+
+section.portfolio .right {
+  z-index: -1;
+}
+
+section.portfolio img {
+  left: var(--project-left);
+  top: 50%;
+  width: auto;
+  height: 250px;
+  padding: 100px 0;
+  margin-top: 40px;
+  background-color: #FFF;
+}
+
+section.portfolio img:nth-child(1) {
+  z-index: 10;
+}
+
+section.portfolio img:nth-child(2) {
+  z-index: 9;
+  left: calc(var(--project-left) + 70px);
+  height: 210px;
+  background-color: #D1D5D8;
+}
+
+section.portfolio img:nth-child(3) {
+  z-index: 8;
+  left: calc(var(--project-left) + 140px);
+  height: 170px;
+  background-color: #A4AAB1;
+}
+
+section.portfolio img:nth-child(4) {
+  z-index: 7;
+  left: calc(var(--project-left) + 210px);
+  height: 130px;
+  background-color: #76808A;
+}
+
+.project-1 {
+  background: url('/public/images/loyatly-application.png');
+  height: 300px;
+  width: auto;
+  background-size: cover;
 }
