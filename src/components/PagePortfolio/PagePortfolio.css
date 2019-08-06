@@ -10,10 +10,6 @@ section.portfolio {
   position: relative;
 }
 
-section.portfolio .left {
-  background-color: var(--second-color-dark);
-}
-
 .titles,
 .project-index,
 section.portfolio img {
@@ -22,7 +18,7 @@ section.portfolio img {
 }
 
 .titles {
-  left: calc(30% - 68px);
+  right: calc(60% - 55px);
   top: 50%;
   margin-top: 40px;
   text-align: right;
@@ -35,8 +31,6 @@ section.portfolio img {
   margin: 50px 0 0;
   overflow: auto;
   overflow-y: hidden;
-
-  /* display: inline-flex; */
 }
 
 .titles section:first-child {
@@ -44,20 +38,17 @@ section.portfolio img {
 }
 
 section.portfolio h1 {
+  overflow-y: hidden;
   width: 180px;
   float: left;
   margin: 0;
   font-size: 30px;
   line-height: 1.1;
   cursor: pointer;
-
-  /* display: inline-table; */
 }
 
 section.portfolio h1.active {
   color: var(--third-color);
-
-  /* display: inline-table; */
 }
 
 .project-index {
@@ -67,16 +58,14 @@ section.portfolio h1.active {
   font-family: var(--font-poppins-light);
   font-size: 14px;
   text-align: left;
-
-  /* display: inline-table; */
 }
 
 .line {
   position: relative;
-  display: inline-block;
-  left: calc(8vw + 10px);
+  display: block;
+  left: 110%;
   top: -35px;
-  width: 85px;
+  width: 5vw;
   height: 1px;
   background: #FFF;
 }
@@ -85,7 +74,7 @@ section.portfolio h1.active {
   top: -18px;
 }
 
-section.portfolio .right {
+section.portfolio .carousel {
   z-index: -1;
 }
 
