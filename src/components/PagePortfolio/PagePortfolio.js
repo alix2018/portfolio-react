@@ -1,4 +1,5 @@
 import React from 'react';
+import {useEffect, useState} from 'react';
 import './PagePortfolio.css';
 
 function PagePortfolio() {
@@ -24,7 +25,12 @@ function PagePortfolio() {
       name: 'Facebook Chatbot'
     }
   ];
-  const activeProject = projectsList[0].name;
+  const [activeProject, setActiveProject] = useState(projectsList[0].name);
+
+  function clickOnProject(e, currentProject) {
+    e.preventDefault();
+    setActiveProject(currentProject);
+  }
 
   return (
     <section id="portfolio" className="portfolio">
@@ -35,10 +41,10 @@ function PagePortfolio() {
             return (
               <React.Fragment key={project.id}>
                 <section id={project.class}>
-                  <h1 className={isActive ? 'active' : ''}>{project.name}</h1>
+                  <h1 className={isActive ? 'active' : ''} onClick={e => {clickOnProject(e, project.name);}}>{project.name}</h1>
                   <div className="project-index">0{index + 1}</div>
                 </section>
-                {isActive && <div className={'line ' + project.class}/>}
+                {isActive && <div className={`line  ${project.class}`}/>}
               </React.Fragment>
             );
           })}
