@@ -1,5 +1,5 @@
 :root {
-  --project-left: 60%;
+  --project-left: 55%;
 }
 
 section.portfolio {
@@ -22,7 +22,7 @@ section.portfolio img {
 }
 
 .titles {
-  left: calc(30% - 58px);
+  left: calc(30% - 68px);
   top: 50%;
   margin-top: 40px;
   text-align: right;
@@ -31,19 +31,31 @@ section.portfolio img {
 .titles section {
   position: relative;
   height: auto;
-  width: 205px;
+  width: 225px;
+  margin: 50px 0 0;
   overflow: auto;
-  margin: 50px 0;
+  overflow-y: hidden;
 
   /* display: inline-flex; */
 }
 
+.titles section:first-child {
+  margin: 0;
+}
+
 section.portfolio h1 {
-  width: 160px;
+  width: 180px;
   float: left;
   margin: 0;
   font-size: 30px;
   line-height: 1.1;
+  cursor: pointer;
+
+  /* display: inline-table; */
+}
+
+section.portfolio h1.active {
+  color: var(--third-color);
 
   /* display: inline-table; */
 }
@@ -57,6 +69,20 @@ section.portfolio h1 {
   text-align: left;
 
   /* display: inline-table; */
+}
+
+.line {
+  position: relative;
+  display: inline-block;
+  left: 7vw;
+  top: -35px;
+  width: 75px;
+  height: 1px;
+  background: #FFF;
+}
+
+.line.games {
+  top: -18px;
 }
 
 section.portfolio .right {
@@ -75,6 +101,7 @@ section.portfolio img {
 
 section.portfolio img:nth-child(1) {
   z-index: 10;
+  cursor: pointer;
 }
 
 section.portfolio img:nth-child(2) {
@@ -96,11 +123,4 @@ section.portfolio img:nth-child(4) {
   left: calc(var(--project-left) + 210px);
   height: 130px;
   background-color: #76808A;
-}
-
-.project-1 {
-  background: url('/public/images/loyatly-application.png');
-  height: 300px;
-  width: auto;
-  background-size: cover;
 }

@@ -2,26 +2,53 @@ import React from 'react';
 import './PagePortfolio.css';
 
 function PagePortfolio() {
-  const projectsList = ['Loyalty Application', 'Retailer Portal', '2D Games', 'Facebook Chatbot'];
-  const projectPictures = ['loyalty-application', 'retailer-portal', '2d-game', 'facebook-chatbot'];
+  const projectsList = [
+    {
+      id: 1,
+      class: 'loyalty-application',
+      name: 'Loyalty Application'
+    },
+    {
+      id: 2,
+      class: 'retailer-portal',
+      name: 'Retailer Portal'
+    },
+    {
+      id: 3,
+      class: 'games',
+      name: '2D Games'
+    },
+    {
+      id: 4,
+      class: 'facebook-chatbot',
+      name: 'Facebook Chatbot'
+    }
+  ];
+  const activeProject = projectsList[0].name;
 
   return (
     <section id="portfolio" className="portfolio">
       <div className="left">
         <div className="titles">
-          {projectsList.map((projectName, index) => {
+          {projectsList.map((project, index) => {
+            const isActive = project.name === activeProject;
             return (
-              <section key={projectName}>
-                <h1>{projectName}</h1>
-                <div className="project-index">0{index + 1}</div>
-              </section>
+              <React.Fragment key={project.id}>
+                <section id={project.class}>
+                  <h1 className={isActive ? 'active' : ''}>{project.name}</h1>
+                  <div className="project-index">0{index + 1}</div>
+                </section>
+                {isActive && <div className={'line ' + project.class}/>}
+              </React.Fragment>
             );
           })}
         </div>
       </div>
       <div className="right">
-        {projectPictures.map(project => {
-          return <img key={project} src={`../../../public/images/${project}.png`}/>;
+        {projectsList.map(project => {
+          return (
+            <img key={project.id} src={`../../../public/images/${project.class}.png`}/>
+          );
         })}
       </div>
     </section>
