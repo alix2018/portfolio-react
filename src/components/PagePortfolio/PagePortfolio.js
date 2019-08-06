@@ -27,7 +27,7 @@ function PagePortfolio() {
   // Initialize list of project
   const projects = [];
   projectsList.forEach(element => {
-    projects.push(element.class)
+    projects.push(element.class);
   });
 
   const [activeProject, setActiveProject] = useState(projectsList[0]);
