@@ -31,7 +31,7 @@ function PageHome() {
         <Typewriter
           className="typewriter animated fadeInUp"
           period={200}
-          fullTexts={['Stéphanie', 'web developer', 'in Amsterdam']}
+          fullTexts={['Stéphanie', 'a web developer', 'in Amsterdam']}
         />
         <div className="icons">
           <form method="get" action="./public/assets/cv.pdf" className="btn-animation animated fadeInUp" target="_blank" rel="noopener noreferrer">
