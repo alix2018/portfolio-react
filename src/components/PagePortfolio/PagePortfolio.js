@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import Modal from './Modal';
+import LoyaltyApplication from '../Modals/LoyaltyApplication';
 import './PagePortfolio.css';
 
 function PagePortfolio() {
@@ -33,7 +33,7 @@ function PagePortfolio() {
 
   const [activeProject, setActiveProject] = useState(projectsList[0]);
   const [projectsArray] = useState(projects);
-  const [showModal, setShowModal] = useState(false);
+  const [showModalLoyaltyApp, setShowModalLoyaltyApp] = useState(false);
 
   function clickOnProject(e, currentProject) {
     e.preventDefault();
@@ -50,14 +50,11 @@ function PagePortfolio() {
     }
   }
 
-  function openModal(e) {
+  function openModal(e, project, show) {
     e.preventDefault();
-    setShowModal(true);
-  }
-
-  function closeModal(e) {
-    e.preventDefault();
-    setShowModal(false);
+    if (project === 'loyalty-application') {
+      setShowModalLoyaltyApp(show);
+    }
   }
 
   return (
@@ -82,15 +79,12 @@ function PagePortfolio() {
         <div className="right">
           {projectsArray.map(project => {
             return (
-              <img key={project} src={`../../../public/images/${project}.png`} onClick={e => {openModal(e);}}/>
+              <img key={project} src={`../../../public/images/${project}.png`} onClick={e => {openModal(e, project, true);}}/>
             );
           })}
         </div>
+        <LoyaltyApplication showModal={showModalLoyaltyApp} closeModal={e => {openModal(e, 'loyalty-application', false);}}/>
       </section>
-      <Modal show={showModal} handleClose={e => {closeModal(e);}}>
-        <p>Modal</p>
-        <p>Data</p>
-      </Modal>
     </>
   );
 }
