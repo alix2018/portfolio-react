@@ -53,7 +53,7 @@ section.portfolio h1.active {
 
 .project-index {
   width: 20px;
-  top: 50%;
+  top: calc(50% + 3px);
   right: 0;
   font-family: var(--font-poppins-light);
   font-size: 14px;
@@ -64,14 +64,14 @@ section.portfolio h1.active {
   position: relative;
   display: block;
   left: 110%;
-  top: -35px;
+  top: -31px;
   width: 5vw;
   height: 1px;
   background: #FFF;
 }
 
 .line.games {
-  top: -18px;
+  top: -15px;
 }
 
 section.portfolio .carousel {
