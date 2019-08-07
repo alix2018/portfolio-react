@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import Modal from './Modal';
 import './PagePortfolio.css';
 
 function PagePortfolio() {
@@ -32,6 +33,7 @@ function PagePortfolio() {
 
   const [activeProject, setActiveProject] = useState(projectsList[0]);
   const [projectsArray] = useState(projects);
+  const [showModal, setShowModal] = useState(false);
 
   function clickOnProject(e, currentProject) {
     e.preventDefault();
@@ -48,32 +50,48 @@ function PagePortfolio() {
     }
   }
 
+  function openModal(e) {
+    e.preventDefault();
+    setShowModal(true);
+  }
+
+  function closeModal(e) {
+    e.preventDefault();
+    setShowModal(false);
+  }
+
   return (
-    <section id="portfolio" className="portfolio">
-      <div className="left">
-        <div className="titles">
-          {projectsList.map((project, index) => {
-            const isActive = project.name === activeProject.name;
+    <>
+      <section id="portfolio" className="portfolio">
+        <div className="left">
+          <div className="titles">
+            {projectsList.map((project, index) => {
+              const isActive = project.name === activeProject.name;
+              return (
+                <React.Fragment key={project.id}>
+                  <section id={project.class}>
+                    <h1 className={isActive ? 'active' : ''} onClick={e => {clickOnProject(e, project);}}>{project.name}</h1>
+                    <div className="project-index">0{index + 1}</div>
+                  </section>
+                  {isActive && <div className={`line  ${project.class}`}/>}
+                </React.Fragment>
+              );
+            })}
+          </div>
+        </div>
+        <div className="right">
+          {projectsArray.map(project => {
             return (
-              <React.Fragment key={project.id}>
-                <section id={project.class}>
-                  <h1 className={isActive ? 'active' : ''} onClick={e => {clickOnProject(e, project);}}>{project.name}</h1>
-                  <div className="project-index">0{index + 1}</div>
-                </section>
-                {isActive && <div className={`line  ${project.class}`}/>}
-              </React.Fragment>
+              <img key={project} src={`../../../public/images/${project}.png`} onClick={e => {openModal(e);}}/>
             );
           })}
         </div>
-      </div>
-      <div className="right">
-        {projectsArray.map(project => {
-          return (
-            <img key={project} src={`../../../public/images/${project}.png`}/>
-          );
-        })}
-      </div>
-    </section>
+      </section>
+      <Modal show={showModal} handleClose={e => {closeModal(e);}}>
+        <p>Modal</p>
+        <p>Data</p>
+      </Modal>
+    </>
   );
 }
 
