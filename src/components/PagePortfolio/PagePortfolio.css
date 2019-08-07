@@ -10,6 +10,10 @@ section.portfolio {
   position: relative;
 }
 
+section.portfolio .left {
+  background-color: var(--second-color-dark);
+}
+
 .titles,
 .project-index,
 section.portfolio img {
@@ -18,7 +22,7 @@ section.portfolio img {
 }
 
 .titles {
-  right: calc(60% - 55px);
+  left: calc(30% - 73px);
   top: 50%;
   margin-top: 40px;
   text-align: right;
@@ -27,7 +31,7 @@ section.portfolio img {
 .titles section {
   position: relative;
   height: auto;
-  width: 225px;
+  width: 255px;
   margin: 50px 0 0;
   overflow: auto;
   overflow-y: hidden;
@@ -39,10 +43,10 @@ section.portfolio img {
 
 section.portfolio h1 {
   overflow-y: hidden;
-  width: 180px;
+  width: 200px;
   float: left;
   margin: 0;
-  font-size: 30px;
+  font-size: 33px;
   line-height: 1.1;
   cursor: pointer;
 }
@@ -53,7 +57,7 @@ section.portfolio h1.active {
 
 .project-index {
   width: 20px;
-  top: calc(50% + 3px);
+  top: calc(50% + 2px);
   right: 0;
   font-family: var(--font-poppins-light);
   font-size: 14px;
@@ -63,18 +67,18 @@ section.portfolio h1.active {
 .line {
   position: relative;
   display: block;
-  left: 110%;
-  top: -31px;
-  width: 5vw;
+  left: 115%;
+  top: -35px;
+  width: 5.5vw;
   height: 1px;
   background: #FFF;
 }
 
 .line.games {
-  top: -15px;
+  top: -18px;
 }
 
-section.portfolio .carousel {
+section.portfolio .right {
   z-index: -1;
 }
 

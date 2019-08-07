@@ -50,21 +50,23 @@ function PagePortfolio() {
 
   return (
     <section id="portfolio" className="portfolio">
-      <div className="titles">
-        {projectsList.map((project, index) => {
-          const isActive = project.name === activeProject.name;
-          return (
-            <React.Fragment key={project.id}>
-              <section id={project.class}>
-                <h1 className={isActive ? 'active' : ''} onClick={e => {clickOnProject(e, project);}}>{project.name}</h1>
-                <div className="project-index">0{index + 1}</div>
-              </section>
-              {isActive && <div className={`line  ${project.class}`}/>}
-            </React.Fragment>
-          );
-        })}
+      <div className="left">
+        <div className="titles">
+          {projectsList.map((project, index) => {
+            const isActive = project.name === activeProject.name;
+            return (
+              <React.Fragment key={project.id}>
+                <section id={project.class}>
+                  <h1 className={isActive ? 'active' : ''} onClick={e => {clickOnProject(e, project);}}>{project.name}</h1>
+                  <div className="project-index">0{index + 1}</div>
+                </section>
+                {isActive && <div className={`line  ${project.class}`}/>}
+              </React.Fragment>
+            );
+          })}
+        </div>
       </div>
-      <div className="carousel">
+      <div className="right">
         {projectsArray.map(project => {
           return (
             <img key={project} src={`../../../public/images/${project}.png`}/>
