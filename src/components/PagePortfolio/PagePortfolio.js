@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
-import LoyaltyApplication from '../Modals/LoyaltyApplication';
+import ModalLoyaltyApplication from '../Modals/ModalLoyaltyApplication';
 import './PagePortfolio.css';
+import DisplayProjectTitles from './DisplayProjectTitles';
 
 function PagePortfolio() {
   const projectsList = [
@@ -25,35 +26,18 @@ function PagePortfolio() {
       name: 'Facebook Chatbot'
     }
   ];
-  // Initialize list of project
-  const projects = [];
-  projectsList.forEach(element => {
-    projects.push(element.class);
-  });
 
-  const [activeProject, setActiveProject] = useState(projectsList[0]);
-  const [projectsArray] = useState(projects);
+  const projects = projectsList.map(element => element.class); // Initialize list of project
+  const [projectsArray, setProjectsArray] = useState(projects);
   const [showModalLoyaltyApp, setShowModalLoyaltyApp] = useState(false);
-
-  function clickOnProject(e, currentProject) {
-    e.preventDefault();
-    setActiveProject(currentProject);
-    const differenceBetween = currentProject.id - activeProject.id;
-    if (differenceBetween > 0) {
-      for (let i = 0; i < differenceBetween; i++) {
-        projectsArray.push(projectsArray.shift());
-      }
-    } else if (differenceBetween < 0) {
-      for (let i = 0; i < Math.abs(differenceBetween); i++) {
-        projectsArray.unshift(projectsArray.pop());
-      }
-    }
-  }
 
   function openModal(e, project, show) {
     e.preventDefault();
-    if (project === 'loyalty-application') {
-      setShowModalLoyaltyApp(show);
+    switch (project) {
+      case 'loyalty-application':
+        setShowModalLoyaltyApp(show);
+        break;
+      default:
     }
   }
 
@@ -62,18 +46,7 @@ function PagePortfolio() {
       <section id="portfolio" className="portfolio">
         <div className="left">
           <div className="titles">
-            {projectsList.map((project, index) => {
-              const isActive = project.name === activeProject.name;
-              return (
-                <React.Fragment key={project.id}>
-                  <section id={project.class}>
-                    <h1 className={isActive ? 'active' : ''} onClick={e => {clickOnProject(e, project);}}>{project.name}</h1>
-                    <div className="project-index">0{index + 1}</div>
-                  </section>
-                  {isActive && <div className={`line  ${project.class}`}/>}
-                </React.Fragment>
-              );
-            })}
+            <DisplayProjectTitles list={projectsList} projectsArray={projectsArray} setProjectsArray={setProjectsArray}/>
           </div>
         </div>
         <div className="right">
@@ -83,7 +56,10 @@ function PagePortfolio() {
             );
           })}
         </div>
-        <LoyaltyApplication showModal={showModalLoyaltyApp} closeModal={e => {openModal(e, 'loyalty-application', false);}}/>
+        <ModalLoyaltyApplication
+          showModal={showModalLoyaltyApp}
+          closeModal={e => {openModal(e, 'loyalty-application', false);}}
+        />
       </section>
     </>
   );

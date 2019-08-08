@@ -1,5 +1,23 @@
+#container1 {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  transform: rotate(270deg) translateX(-100%);
+  transform-origin: top left;
+  background-color: #999;
+  position: absolute;
+  width: 100vh;
+  height: 100vw;
+}
+
+#container2 {
+  transform: rotate(90deg) translateY(-100vh);
+  transform-origin: top left;
+  white-space: nowrap;
+  font-size: 0;
+}
+
 .modal {
-  z-index: 101;
+  z-index: 100;
   position: fixed;
   top: 0;
   left: 0;
@@ -21,4 +39,34 @@
 
 .display-none {
   display: none;
+}
+
+.close {
+  z-index: 101;
+  position: absolute;
+  left: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 1;
+  color: #FFF;
+  cursor: pointer;
+}
+
+.close:before,
+.close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #FFF;
+}
+
+.close:before {
+  transform: rotate(45deg);
+}
+
+.close:after {
+  transform: rotate(-45deg);
 }

@@ -1,0 +1,39 @@
+:root {
+  color: #FFF;
+}
+
+.box {
+  width: 100vw;
+  height: 100vh;
+  display: inline-block;
+  position: relative;
+}
+
+.box > section {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+.box:last-child {
+  width: 50vw;
+}
+
+section.page-one {
+  background-color: var(--second-color-dark);
+}
+
+section.page-two {
+  background-color: var(--third-color);
+}
+
+section.half-page {
+  width: 50vw;
+}
+
+.modal1 .page-one > h1,
+.modal1 .page-one > h2 {
+  position: absolute;
+  font-size: 20px;
+  bottom: 0;
+}

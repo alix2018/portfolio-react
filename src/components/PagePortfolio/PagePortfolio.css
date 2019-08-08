@@ -15,7 +15,6 @@ section.portfolio .left {
 }
 
 .titles,
-.project-index,
 section.portfolio img {
   position: absolute;
   transform: translate(-50%, -50%);
@@ -39,29 +38,6 @@ section.portfolio img {
 
 .titles section:first-child {
   margin: 0;
-}
-
-section.portfolio h1 {
-  overflow-y: hidden;
-  width: 200px;
-  float: left;
-  margin: 0;
-  font-size: 33px;
-  line-height: 1.1;
-  cursor: pointer;
-}
-
-section.portfolio h1.active {
-  color: var(--third-color);
-}
-
-.project-index {
-  width: 20px;
-  top: calc(50% + 2px);
-  right: 0;
-  font-family: var(--font-poppins-light);
-  font-size: 14px;
-  text-align: left;
 }
 
 .line {
