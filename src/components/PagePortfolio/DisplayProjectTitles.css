@@ -22,3 +22,17 @@
   font-size: 14px;
   text-align: left;
 }
+
+.line-titles {
+  position: relative;
+  display: block;
+  left: 115%;
+  top: -35px;
+  width: 5.5vw;
+  height: 1px;
+  background: var(--white-color);
+}
+
+.line-titles.games {
+  top: -18px;
+}
