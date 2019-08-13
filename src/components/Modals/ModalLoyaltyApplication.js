@@ -3,15 +3,57 @@ import './ModalLoyaltyApplication.css';
 import Modal from './Modal';
 
 function LoyaltyApplication({closeModal, showModal}) {
+  const listSubtitles = [
+    {
+      category: 'technologies',
+      details: 'Web components, Polymer, Webpack'
+    },
+    {
+      category: 'date',
+      details: 'From September 2018'
+    }
+  ];
+  const modalTexts = {
+    firstTitle: 'Loyalty',
+    secondTitle: 'Application',
+    firstSubtitle: 'From WEB app to PWA',
+    secondSubtitle: 'using Web Components',
+    introduction: 'Stamps is a digital solution that informs the customers about the current loyalty program. They can find the number of stamps they have, see the rewards they can redeem or check the promotions that will make them earn more points.'
+  }
+  const imageName = 'loyalty-application';
+  const modalName = 'modal-loyalty';
   return (
     <Modal show={showModal} handleClose={closeModal}>
-      <div className="modal1 box">
+      <div className={`${modalName} box`}>
         <section className="page-one">
-          <h1>Loyalty Application</h1>
-          <h2>From WEB app to PWA using Web Components</h2>
+          <div className="main-info">
+            <h1>{modalTexts.firstTitle}<br/>{modalTexts.secondTitle}</h1>
+            <h2>{modalTexts.firstSubtitle}<br/>{modalTexts.secondSubtitle}</h2>
+            {listSubtitles.map(item => {
+              return (
+                <section key={item.category}>
+                  <div className="container-categories">
+                    <div className="line-categories"/>
+                    <div className="categories">{item.category}</div>
+                  </div>
+                  <div className="details">{item.details}</div>
+                </section>
+              );
+            })}
+          </div>
+          <img className="flat" src={`../../../public/images/${imageName}.png`}/>   
+          <div className="row">
+            <div className="column title">
+              <div className="introduction">Introduction</div>
+              <div className="line-introduction"/>
+            </div>
+            <div className="column text">
+              <p>{modalTexts.introduction}</p>
+            </div>
+          </div>
         </section>
       </div>
-      <div className="modal1 box">
+      <div className={`${modalName} box`}>
         <section className="page-two half-page">
           2
         </section>

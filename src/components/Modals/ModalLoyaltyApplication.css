@@ -1,5 +1,10 @@
 :root {
-  color: #FFF;
+  color: var(--white-color);
+
+  --line-width: 70px;
+  --flat-image-width: 400px;
+  --percentage-border-left: 5%;
+  --percentage-border-right: 6%;
 }
 
 .box {
@@ -23,17 +28,131 @@ section.page-one {
   background-color: var(--second-color-dark);
 }
 
-section.page-two {
-  background-color: var(--third-color);
-}
-
 section.half-page {
   width: 50vw;
 }
 
-.modal1 .page-one > h1,
-.modal1 .page-one > h2 {
+.main-info {
   position: absolute;
-  font-size: 20px;
-  bottom: 0;
+  left: var(--percentage-border-left);
+  bottom: 7%;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-loyalty .page-one .main-info h1 {
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: 33px;
+  line-height: 1.1;
+  letter-spacing: 1.1;
+}
+
+.modal-loyalty .page-one .main-info h2 {
+  margin: 0;
+  margin-bottom: 45px;
+  font-family: var(--font-poppins-light);
+  font-size: 25px;
+  font-weight: normal;
+  line-height: 1.1;
+  letter-spacing: 0.9;
+}
+
+.main-info section {
+  margin-bottom: 25px;
+}
+
+.main-info section:last-child {
+  margin-bottom: 0;
+}
+
+.container-categories {
+  display: flex;
+}
+
+.line-categories {
+  position: relative;
+  width: var(--line-width);
+  height: 1px;
+  top: 8px;
+  margin-right: 17px;
+  background: var(--white-color);
+}
+
+.categories,
+.introduction {
+  font-size: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2;
+}
+
+.details {
+  margin-left: calc(var(--line-width) + 17px);
+  font-size: 11px;
+  font-family: var(--font-poppins-light);
+  letter-spacing: 0;
+}
+
+img.flat {
+  position: absolute;
+  width: var(--flat-image-width);
+  height: 380px;
+  top: calc(7% + 200px);
+  right: calc(var(--percentage-border-right) - 200px);
+  background-color: var(--image-background);
+}
+
+.row {
+  display: inline-block;
+  position: absolute;
+  width: 610px;
+  bottom: 7%;
+  right: calc(var(--percentage-border-right));
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.column.title {
+  width: auto;
+  padding: 0;
+  float: left;
+}
+
+.introduction {
+  display: inline-block;
+}
+
+.line-introduction {
+  position: relative;
+  width: var(--line-width);
+  height: 1px;
+  bottom: 9px;
+  left: 117px;
+  background: var(--white-color);
+}
+
+.column.text {
+  width: var(--flat-image-width);
+  float: right;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: var(--font-poppins-light);
+  white-space: pre-wrap;
+  text-align: justify;
+}
+
+.column.text p {
+  margin: 0;
+}
+
+section.page-two {
+  background-color: var(--third-color);
 }
