@@ -19,7 +19,7 @@ function LoyaltyApplication({closeModal, showModal}) {
     firstSubtitle: 'From WEB app to PWA',
     secondSubtitle: 'using Web Components',
     introduction: 'Stamps is a digital solution that informs the customers about the current loyalty program. They can find the number of stamps they have, see the rewards they can redeem or check the promotions that will make them earn more points.'
-  }
+  };
   const imageName = 'loyalty-application';
   const modalName = 'modal-loyalty';
   return (
@@ -41,7 +41,7 @@ function LoyaltyApplication({closeModal, showModal}) {
               );
             })}
           </div>
-          <img className="flat" src={`../../../public/images/${imageName}.png`}/>   
+          <img className="flat" src={`../../../public/images/${imageName}.png`}/>
           <div className="row">
             <div className="column title">
               <div className="introduction">Introduction</div>
