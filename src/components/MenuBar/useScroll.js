@@ -43,14 +43,19 @@ function useScroll(pagesIds) {
       setScrollToHome(false);
     }
 
-    if (activePageId === 'home') {
-      setMenuBarColors(secondDarkColor, greyColor);
-    } else if (activePageId === 'portfolio') {
-      setMenuBarColors(firstLightColor, greyColor);
-    } else if (activePageId === 'about-me') {
-      setMenuBarColors(secondDarkColor, greyColor);
-    } else {
-      setMenuBarColors(firstLightColor, secondDarkColor);
+    switch(activePageId) {
+      case 'home':
+        setMenuBarColors(secondDarkColor, greyColor);
+        break;
+      case 'portfolio':
+        setMenuBarColors(firstLightColor, greyColor);
+        break;
+      case 'about-me':
+        setMenuBarColors(secondDarkColor, greyColor);
+        break;
+      default:
+        setMenuBarColors(firstLightColor, secondDarkColor);
+        break;
     }
 
     window.addEventListener('scroll', scrolling);
