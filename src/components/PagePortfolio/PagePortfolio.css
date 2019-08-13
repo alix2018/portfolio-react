@@ -40,25 +40,11 @@ section.portfolio img {
   margin: 0;
 }
 
-.line {
-  position: relative;
-  display: block;
-  left: 115%;
-  top: -35px;
-  width: 5.5vw;
-  height: 1px;
-  background: #FFF;
-}
-
-.line.games {
-  top: -18px;
-}
-
 section.portfolio .right {
   z-index: -1;
 }
 
-section.portfolio img {
+section.portfolio img.isometric {
   object-fit: cover;
   left: var(--project-left);
   top: 50%;
@@ -66,29 +52,29 @@ section.portfolio img {
   height: 380px;
   padding: 60px 0;
   margin-top: 40px;
-  background-color: #FFF;
+  background-color: var(--white-color);
 }
 
-section.portfolio img:nth-child(1) {
+section.portfolio img.isometric:nth-child(1) {
   z-index: 10;
   cursor: pointer;
 }
 
-section.portfolio img:nth-child(2) {
+section.portfolio img.isometric:nth-child(2) {
   z-index: 9;
   left: calc(var(--project-left) + 50px);
   height: 335px;
   background-color: #D1D5D8;
 }
 
-section.portfolio img:nth-child(3) {
+section.portfolio img.isometric:nth-child(3) {
   z-index: 8;
   left: calc(var(--project-left) + 100px);
   height: 285px;
   background-color: #A4AAB1;
 }
 
-section.portfolio img:nth-child(4) {
+section.portfolio img.isometric:nth-child(4) {
   z-index: 7;
   left: calc(var(--project-left) + 145px);
   height: 240px;
