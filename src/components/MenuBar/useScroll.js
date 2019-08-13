@@ -43,7 +43,7 @@ function useScroll(pagesIds) {
       setScrollToHome(false);
     }
 
-    switch(activePageId) {
+    switch (activePageId) {
       case 'home':
         setMenuBarColors(secondDarkColor, greyColor);
         break;
