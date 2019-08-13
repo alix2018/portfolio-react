@@ -1,3 +1,7 @@
+:root {
+  --image-background: #CDD2E0;
+}
+
 #container1 {
   overflow-y: scroll;
   overflow-x: hidden;
@@ -44,12 +48,12 @@
 .close {
   z-index: 101;
   position: absolute;
-  left: 32px;
-  top: 32px;
+  left: 5%;
+  top: 7%;
   width: 32px;
   height: 32px;
   opacity: 1;
-  color: #FFF;
+  color: var(--white-color);
   cursor: pointer;
 }
 
@@ -60,7 +64,7 @@
   content: ' ';
   height: 33px;
   width: 2px;
-  background-color: #FFF;
+  background-color: var(--white-color);
 }
 
 .close:before {
