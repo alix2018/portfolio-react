@@ -20,7 +20,7 @@ function LoyaltyApplication({closeModal, showModal}) {
     firstSubtitle: 'From WEB app to PWA using',
     secondSubtitle: 'Web Components'
   };
-  const paragraph = {
+  const paragraphInfo = {
     context: 'Introduction',
     text: 'Stamps is a digital solution that informs the customers about the current loyalty program. They can find the number of stamps they have, see the rewards they can redeem or check the promotions that will make them earn more points.',
     keywords: 'digital solution'
@@ -48,7 +48,7 @@ function LoyaltyApplication({closeModal, showModal}) {
             })}
           </div>
           <img className="flat" src={`../../../public/images/${imageName}.png`}/>
-          <Paragraph paragraphInfo={paragraph}/>
+          <Paragraph information={paragraphInfo}/>
         </section>
       </div>
       <div className={`${modalName} box`}>
