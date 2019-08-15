@@ -1,17 +1,12 @@
 import React, {useState} from 'react';
 
-function DisplayProjetcsTitle({list, projectsArray, setProjectsArray}) {
+function DisplayProjetcsTitle({list, updateProjectsArray}) {
   const [activeProject, setActiveProject] = useState(list[0]);
 
   function clickOnProject(e, currentProject) {
     e.preventDefault();
     setActiveProject(currentProject);
-    const differenceBetween = currentProject.id - activeProject.id;
-    const projectsLength = projectsArray.length;
-    const newArray = projectsArray.map((_p, index, arr) => {
-      return arr[(projectsLength + index + differenceBetween) % projectsLength];
-    });
-    setProjectsArray(newArray);
+    updateProjectsArray(currentProject, activeProject);
   }
 
   return (

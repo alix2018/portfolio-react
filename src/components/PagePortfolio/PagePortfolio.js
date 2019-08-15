@@ -29,11 +29,20 @@ function PagePortfolio() {
   const projects = projectsList.map(element => element.class); // Initialize list of project
   const [projectsArray, setProjectsArray] = useState(projects);
 
+  function updateProjectsArray(currentProject, activeProject) {
+    const differenceBetween = currentProject.id - activeProject.id;
+    const projectsLength = projectsArray.length;
+    const newArray = projectsArray.map((_p, index, arr) => {
+      return arr[(projectsLength + index + differenceBetween) % projectsLength];
+    });
+    setProjectsArray(newArray);
+  }
+
   return (
     <section id="portfolio" className="portfolio">
       <div className="left">
         <div className="titles">
-          <DisplayProjectsTitle list={projectsList} projectsArray={projectsArray} setProjectsArray={setProjectsArray}/>
+          <DisplayProjectsTitle list={projectsList} updateProjectsArray={updateProjectsArray}/>
         </div>
       </div>
       <div className="right">
