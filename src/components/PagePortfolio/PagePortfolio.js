@@ -26,7 +26,7 @@ function PagePortfolio() {
     }
   ];
 
-  const projects = projectsList.map(element => element.class); // Initialize list of project
+  const projects = projectsList.map(element => element.class);
   const [projectsArray, setProjectsArray] = useState(projects);
 
   function updateProjectsArray(currentProject, activeProject) {
