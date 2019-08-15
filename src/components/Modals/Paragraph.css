@@ -1,5 +1,4 @@
 .row {
-  display: inline-block;
   position: absolute;
   width: 610px;
   bottom: 7%;
@@ -8,27 +7,27 @@
 
 .column {
   float: left;
-  width: 33.33%;
-  padding: 10px;
   font-size: 14px;
 }
 
 .column.title {
-  width: auto;
+  position: absolute;
+  min-width: 200px;
   padding: 0;
-  float: left;
 }
 
 .context {
+  position: absolute;
   display: inline-block;
+  right: calc(var(--line-width) + 25px);
 }
 
 .line-context {
-  position: relative;
+  position: absolute;
+  right: 10px;
   width: var(--line-width);
   height: 1px;
-  bottom: 9px;
-  left: 117px;
+  margin-top: 8px;
   background: var(--white-color);
 }
 
