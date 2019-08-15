@@ -8,16 +8,16 @@
 }
 
 .box {
-  width: 100vw;
-  height: 100vh;
   display: inline-block;
   position: relative;
+  width: 100vw;
+  height: 100vh;
 }
 
 .box > section {
+  position: absolute;
   width: 100vw;
   height: 100vh;
-  position: absolute;
 }
 
 .box:last-child {

@@ -3,14 +3,14 @@
 }
 
 #container1 {
+  position: absolute;
+  width: 100vh;
+  height: 100vw;
   overflow-y: scroll;
   overflow-x: hidden;
   transform: rotate(270deg) translateX(-100%);
   transform-origin: top left;
   background-color: #999;
-  position: absolute;
-  width: 100vh;
-  height: 100vw;
 }
 
 #container2 {
@@ -23,10 +23,10 @@
 .modal {
   z-index: 100;
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
   background: var(--second-color-dark);
 }
 
@@ -48,10 +48,10 @@
 .close {
   z-index: 101;
   position: absolute;
-  left: 5%;
-  top: 7%;
   width: 32px;
   height: 32px;
+  left: 5%;
+  top: 7%;
   opacity: 1;
   color: var(--white-color);
   cursor: pointer;
@@ -60,10 +60,10 @@
 .close:before,
 .close:after {
   position: absolute;
-  left: 15px;
-  content: ' ';
   height: 33px;
   width: 2px;
+  left: 15px;
+  content: ' ';
   background-color: var(--white-color);
 }
 

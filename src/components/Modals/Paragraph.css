@@ -24,9 +24,9 @@
 
 .line-context {
   position: absolute;
-  right: 10px;
   width: var(--line-width);
   height: 1px;
+  right: 10px;
   margin-top: 8px;
   background: var(--white-color);
 }
