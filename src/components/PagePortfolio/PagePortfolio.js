@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import ModalLoyaltyApplication from '../Modals/ModalLoyaltyApplication';
+import ModalLoyaltyApplication from '../Modals/Projects/ModalLoyaltyApplication';
 import './PagePortfolio.css';
 import DisplayProjectTitles from './DisplayProjectTitles';
 

@@ -20,12 +20,16 @@
   height: 100vh;
 }
 
-.box:last-child {
+/* .box:last-child {
   width: 50vw;
-}
+} */
 
 section.page-one {
   background-color: var(--second-color-dark);
+}
+
+section.full-page {
+  width: 100vw;
 }
 
 section.half-page {
