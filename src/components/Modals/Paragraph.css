@@ -1,0 +1,48 @@
+.row {
+  display: inline-block;
+  position: absolute;
+  width: 610px;
+  bottom: 7%;
+  right: calc(var(--percentage-border-right));
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.column.title {
+  width: auto;
+  padding: 0;
+  float: left;
+}
+
+.context {
+  display: inline-block;
+}
+
+.line-context {
+  position: relative;
+  width: var(--line-width);
+  height: 1px;
+  bottom: 9px;
+  left: 117px;
+  background: var(--white-color);
+}
+
+.column.text {
+  width: var(--flat-image-width);
+  float: right;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: var(--font-poppins-light);
+  white-space: pre-wrap;
+  text-align: justify;
+}
+
+.column.text p {
+  margin: 0;
+}

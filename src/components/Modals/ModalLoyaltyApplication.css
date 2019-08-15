@@ -81,8 +81,8 @@ section.half-page {
 }
 
 .categories,
-.introduction {
-  font-size: 10px;
+.context {
+  font-size: 11px;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 2;
@@ -90,7 +90,7 @@ section.half-page {
 
 .details {
   margin-left: calc(var(--line-width) + 17px);
-  font-size: 11px;
+  font-size: 12px;
   font-family: var(--font-poppins-light);
   letter-spacing: 0;
 }
@@ -102,55 +102,6 @@ img.flat {
   top: calc(7% + 200px);
   right: calc(var(--percentage-border-right) - 200px);
   background-color: var(--image-background);
-}
-
-.row {
-  display: inline-block;
-  position: absolute;
-  width: 610px;
-  bottom: 7%;
-  right: calc(var(--percentage-border-right));
-}
-
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 10px;
-  font-size: 14px;
-}
-
-.column.title {
-  width: auto;
-  padding: 0;
-  float: left;
-}
-
-.introduction {
-  display: inline-block;
-}
-
-.line-introduction {
-  position: relative;
-  width: var(--line-width);
-  height: 1px;
-  bottom: 9px;
-  left: 117px;
-  background: var(--white-color);
-}
-
-.column.text {
-  width: var(--flat-image-width);
-  float: right;
-  margin: 0;
-  padding: 0;
-  font-size: 14px;
-  font-family: var(--font-poppins-light);
-  white-space: pre-wrap;
-  text-align: justify;
-}
-
-.column.text p {
-  margin: 0;
 }
 
 section.page-two {

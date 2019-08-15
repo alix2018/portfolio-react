@@ -1,6 +1,7 @@
 import React from 'react';
 import './ModalLoyaltyApplication.css';
 import Modal from './Modal';
+import Paragraph from './Paragraph';
 
 function LoyaltyApplication({closeModal, showModal}) {
   const listSubtitles = [
@@ -21,8 +22,10 @@ function LoyaltyApplication({closeModal, showModal}) {
   };
   const paragraph = {
     context: 'Introduction',
-    text: 'Stamps is a digital solution that informs the customers about the current loyalty program. They can find the number of stamps they have, see the rewards they can redeem or check the promotions that will make them earn more points.'
+    text: 'Stamps is a digital solution that informs the customers about the current loyalty program. They can find the number of stamps they have, see the rewards they can redeem or check the promotions that will make them earn more points.',
+    keywords: 'digital solution'
   };
+
   const imageName = 'loyalty-application';
   const modalName = 'modal-loyalty';
   return (
@@ -45,15 +48,7 @@ function LoyaltyApplication({closeModal, showModal}) {
             })}
           </div>
           <img className="flat" src={`../../../public/images/${imageName}.png`}/>
-          <div className="row">
-            <div className="column title">
-              <div className="introduction">{paragraph.context}</div>
-              <div className="line-introduction"/>
-            </div>
-            <div className="column text">
-              <p>{paragraph.text}</p>
-            </div>
-          </div>
+          <Paragraph paragraphInfo={paragraph}/>
         </section>
       </div>
       <div className={`${modalName} box`}>
