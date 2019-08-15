@@ -3,11 +3,11 @@
 }
 
 section.portfolio {
+  position: relative;
   height: 100vh;
   width: 100vw;
   color: var(--first-color-light);
   background-color: var(--second-color-dark);
-  position: relative;
 }
 
 section.portfolio .left {
@@ -42,10 +42,10 @@ section.portfolio img {
 }
 
 section.portfolio h1 {
-  overflow-y: hidden;
   width: 200px;
   float: left;
   margin: 0;
+  overflow-y: hidden;
   font-size: 33px;
   line-height: 1.1;
   cursor: pointer;
@@ -83,11 +83,11 @@ section.portfolio .right {
 }
 
 section.portfolio img {
-  object-fit: cover;
   left: var(--project-left);
   top: 50%;
   width: 400px;
   height: 380px;
+  object-fit: cover;
   padding: 60px 0;
   margin-top: 40px;
   background-color: #FFF;
