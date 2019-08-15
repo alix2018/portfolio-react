@@ -16,9 +16,12 @@ function LoyaltyApplication({closeModal, showModal}) {
   const modalTexts = {
     firstTitle: 'Loyalty',
     secondTitle: 'Application',
-    firstSubtitle: 'From WEB app to PWA',
-    secondSubtitle: 'using Web Components',
-    introduction: 'Stamps is a digital solution that informs the customers about the current loyalty program. They can find the number of stamps they have, see the rewards they can redeem or check the promotions that will make them earn more points.'
+    firstSubtitle: 'From WEB app to PWA using',
+    secondSubtitle: 'Web Components'
+  };
+  const paragraph = {
+    context: 'Introduction',
+    text: 'Stamps is a digital solution that informs the customers about the current loyalty program. They can find the number of stamps they have, see the rewards they can redeem or check the promotions that will make them earn more points.'
   };
   const imageName = 'loyalty-application';
   const modalName = 'modal-loyalty';
@@ -44,11 +47,11 @@ function LoyaltyApplication({closeModal, showModal}) {
           <img className="flat" src={`../../../public/images/${imageName}.png`}/>
           <div className="row">
             <div className="column title">
-              <div className="introduction">Introduction</div>
+              <div className="introduction">{paragraph.context}</div>
               <div className="line-introduction"/>
             </div>
             <div className="column text">
-              <p>{modalTexts.introduction}</p>
+              <p>{paragraph.text}</p>
             </div>
           </div>
         </section>
