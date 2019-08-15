@@ -36,9 +36,6 @@ section.half-page {
   position: absolute;
   left: var(--percentage-border-left);
   bottom: 7%;
-  flex-direction: column;
-  display: flex;
-  justify-content: space-between;
 }
 
 .modal-loyalty .page-one .main-info h1 {
@@ -67,6 +64,15 @@ section.half-page {
   margin-bottom: 0;
 }
 
+img.flat {
+  position: absolute;
+  width: var(--flat-image-width);
+  height: 380px;
+  top: calc(7% + 200px);
+  right: calc(var(--percentage-border-right) - 200px);
+  background-color: var(--image-background);
+}
+
 .container-categories {
   display: flex;
 }
@@ -93,15 +99,6 @@ section.half-page {
   font-size: 12px;
   font-family: var(--font-poppins-light);
   letter-spacing: 0;
-}
-
-img.flat {
-  position: absolute;
-  width: var(--flat-image-width);
-  height: 380px;
-  top: calc(7% + 200px);
-  right: calc(var(--percentage-border-right) - 200px);
-  background-color: var(--image-background);
 }
 
 section.page-two {
