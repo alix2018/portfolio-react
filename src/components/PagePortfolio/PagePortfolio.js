@@ -1,6 +1,9 @@
 import React, {useState} from 'react';
-import ModalLoyaltyApplication from '../Modals/Projects/ModalLoyaltyApplication';
 import './PagePortfolio.css';
+import LoyaltyApplication from '../Modals/ModalLoyaltyApplication/ModalLoyaltyApplication';
+import RetailerPortal from '../Modals/ModalRePo/ModalRePo';
+import Games from '../Modals/ModalGames/ModalGames';
+import Chatbot from '../Modals/ModalChatbot/ModalChatbot';
 import DisplayProjectTitles from './DisplayProjectTitles';
 
 function PagePortfolio() {
@@ -30,12 +33,24 @@ function PagePortfolio() {
   const projects = projectsList.map(element => element.class);
   const [projectsArray, setProjectsArray] = useState(projects);
   const [showModalLoyaltyApp, setShowModalLoyaltyApp] = useState(false);
+  const [showModalRetailerPortal, setShowModalRetailerPortal] = useState(false);
+  const [showModalGames, setShowModalGames] = useState(false);
+  const [showModalChatbot, setShowModalChatbot] = useState(false);
 
   function openModal(e, project, show) {
     e.preventDefault();
     switch (project) {
       case 'loyalty-application':
         setShowModalLoyaltyApp(show);
+        break;
+      case 'retailer-portal':
+        setShowModalRetailerPortal(show);
+        break;
+      case 'games':
+        setShowModalGames(show);
+        break;
+      case 'facebook-chatbot':
+        setShowModalChatbot(show);
         break;
       default:
     }
@@ -66,9 +81,21 @@ function PagePortfolio() {
             );
           })}
         </div>
-        <ModalLoyaltyApplication
+        <LoyaltyApplication
           showModal={showModalLoyaltyApp}
           closeModal={e => {openModal(e, 'loyalty-application', false);}}
+        />
+        <RetailerPortal
+          showModal={showModalRetailerPortal}
+          closeModal={e => {openModal(e, 'retailer-portal', false);}}
+        />
+        <Games
+          showModal={showModalGames}
+          closeModal={e => {openModal(e, 'games', false);}}
+        />
+        <Chatbot
+          showModal={showModalChatbot}
+          closeModal={e => {openModal(e, 'facebook-chatbot', false);}}
         />
       </section>
     </>

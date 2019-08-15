@@ -42,7 +42,7 @@ section.half-page {
   bottom: 7%;
 }
 
-.modal-loyalty .page-one .main-info h1 {
+.page-one .main-info h1 {
   margin: 0;
   margin-bottom: 30px;
   font-size: 40px;
@@ -50,7 +50,7 @@ section.half-page {
   letter-spacing: 1.2;
 }
 
-.modal-loyalty .page-one .main-info h2 {
+.page-one .main-info h2 {
   margin: 0;
   margin-bottom: 45px;
   font-family: var(--font-poppins-light);
@@ -71,8 +71,7 @@ section.half-page {
 img.flat {
   position: absolute;
   width: var(--flat-image-width);
-  height: 380px;
-  top: calc(7% + 200px);
+  bottom: 100px;
   right: calc(var(--percentage-border-right) - 200px);
   background-color: var(--image-background);
 }
