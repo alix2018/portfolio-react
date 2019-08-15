@@ -3,11 +3,11 @@
 }
 
 section.portfolio {
+  position: relative;
   height: 100vh;
   width: 100vw;
   color: var(--first-color-light);
   background-color: var(--second-color-dark);
-  position: relative;
 }
 
 section.portfolio .left {
@@ -45,11 +45,11 @@ section.portfolio .right {
 }
 
 section.portfolio img.isometric {
-  object-fit: cover;
   left: var(--project-left);
   top: 50%;
   width: 400px;
   height: 380px;
+  object-fit: cover;
   padding: 60px 0;
   margin-top: 40px;
   background-color: var(--white-color);
