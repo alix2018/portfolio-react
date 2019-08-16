@@ -36,7 +36,9 @@ function RetailerPortal({showModal, closeModal}) {
     >
       <div className={`${modalInfo.modalName} box`}>
         <section className="page-two half-page">
-          <Paragraph information={paragraphDetails}/>
+          <div className="bottom-right">
+            <Paragraph information={paragraphDetails}/>
+          </div>
         </section>
       </div>
     </ModalContent>

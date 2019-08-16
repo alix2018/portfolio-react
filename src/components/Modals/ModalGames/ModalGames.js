@@ -49,11 +49,18 @@ function Games({showModal, closeModal}) {
     >
       <div className={`${modalInfo.modalName} box`}>
         <section className="page-two full-page">
-          <Paragraph information={paragraphPixijs} newClass="bottom-left-games"/>
-          <Paragraph information={paragraphUnity} newClass="top-left-games"/>
-          <Paragraph information={paragraphResult}/>
-          <Paragraph information={paragraphWebAssembly} newClass="top-right-games"/>
-
+          <div className="games-bottom-left">
+            <Paragraph information={paragraphPixijs}/>
+          </div>
+          <div className="games-top-left">
+            <Paragraph information={paragraphUnity}/>
+          </div>
+          <div className="games-bottom-right">
+            <Paragraph information={paragraphResult}/>
+          </div>
+          <div className="games-top-right">
+            <Paragraph information={paragraphWebAssembly}/>
+          </div>
         </section>
       </div>
     </ModalContent>

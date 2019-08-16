@@ -1,3 +1,27 @@
 .modal-games.box:nth-child(2) {
   width: 100vw;
 }
+
+.games-top-left {
+  position: absolute;
+  bottom: 45%;
+  left: calc(5% - 64px);
+}
+
+.games-bottom-left {
+  position: absolute;
+  bottom: 8%;
+  left: calc(5% - 62px);
+}
+
+.games-top-right {
+  position: absolute;
+  bottom: 35%;
+  right: calc(var(--percentage-border-right));
+}
+
+.games-bottom-right {
+  position: absolute;
+  bottom: 8%;
+  right: calc(var(--percentage-border-right));
+}

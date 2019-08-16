@@ -1,3 +1,9 @@
 .modal-chatbot.box:nth-child(2) {
   width: 50vw;
 }
+
+.chatbot-top-right {
+  position: absolute;
+  bottom: 45%;
+  right: calc(var(--percentage-border-right));
+}

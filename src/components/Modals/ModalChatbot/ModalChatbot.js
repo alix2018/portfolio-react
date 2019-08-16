@@ -45,8 +45,12 @@ function Chatbot({showModal, closeModal}) {
     >
       <div className={`${modalInfo.modalName} box`}>
         <section className="page-two half-page">
-          <Paragraph information={paragraphFeature} newClass="top-right-chatbot"/>
-          <Paragraph information={paragraphCode}/>
+          <div className="chatbot-top-right">
+            <Paragraph information={paragraphFeature}/>
+          </div>
+          <div className="bottom-right">
+            <Paragraph information={paragraphCode}/>
+          </div>
         </section>
       </div>
     </ModalContent>

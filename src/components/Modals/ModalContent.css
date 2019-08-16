@@ -104,6 +104,12 @@ img.flat {
   letter-spacing: 0;
 }
 
+.bottom-right {
+  position: absolute;
+  bottom: 8%;
+  right: calc(var(--percentage-border-right));
+}
+
 section.page-two {
   background-color: var(--second-color-dark);
 }
