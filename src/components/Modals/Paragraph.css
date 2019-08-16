@@ -40,8 +40,30 @@
   font-family: var(--font-poppins-light);
   white-space: pre-wrap;
   text-align: justify;
+  letter-spacing: 0.8;
 }
 
 .column.text p {
   margin: 0;
+}
+
+.top-right-loyalty {
+  bottom: 35%;
+}
+
+.top-left-games {
+  bottom: 45%;
+  left: calc(5% - 64px);
+}
+
+.bottom-left-games {
+  left: calc(5% - 62px);
+}
+
+.top-right-games {
+  bottom: 35%;
+}
+
+.top-right-chatbot {
+  bottom: 45%;
 }

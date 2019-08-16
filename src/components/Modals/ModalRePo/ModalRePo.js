@@ -1,6 +1,7 @@
 import React from 'react';
 import './ModalRePo.css';
 import ModalContent from '../ModalContent';
+import Paragraph from '../Paragraph';
 
 function RetailerPortal({showModal, closeModal}) {
   const listSubtitles = [
@@ -21,18 +22,21 @@ function RetailerPortal({showModal, closeModal}) {
     secondSubtitle: 'management interface',
     imageName: 'retailer-portal'
   };
-  const paragraphInfo = {
+  const paragraphIntro = {
     context: 'Introduction',
     text: 'The Retailer Portal is an interface for cashiers and managers to handle customers cards and loyalty campaigns.'
   };
-
+  const paragraphDetails = {
+    context: 'Details',
+    text: 'Every actions possible for the users is represented by a module. These modules are displayed using the template engine Handlebars. The javascript code is based on JQuery and we complete it by implementing our own helpers and plugins. The project exists for few years already and the Front- End Framework chosen at this time to design the entire the website was Bootstrap 3. The whole application is built using Gulpfile and its tasks system.'
+  };
   return (
     <ModalContent showModal={showModal} closeModal={closeModal} listSubtitles={listSubtitles}
-      modalInfo={modalInfo} paragraphInfo={paragraphInfo}
+      modalInfo={modalInfo} paragraphInfo={paragraphIntro}
     >
       <div className={`${modalInfo.modalName} box`}>
         <section className="page-two half-page">
-          2
+          <Paragraph information={paragraphDetails}/>
         </section>
       </div>
     </ModalContent>

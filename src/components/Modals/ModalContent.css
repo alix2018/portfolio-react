@@ -71,7 +71,7 @@ section.half-page {
 img.flat {
   position: absolute;
   width: var(--flat-image-width);
-  bottom: 100px;
+  top: 300px;
   right: calc(var(--percentage-border-right) - 200px);
   background-color: var(--image-background);
 }
@@ -105,5 +105,5 @@ img.flat {
 }
 
 section.page-two {
-  background-color: var(--third-color);
+  background-color: var(--second-color-dark);
 }

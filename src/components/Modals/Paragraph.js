@@ -1,9 +1,9 @@
 import React from 'react';
 import './Paragraph.css';
 
-function Paragraph({information}) {
+function Paragraph({information, newClass}) {
   return (
-    <div className="row">
+    <div className={`row ${newClass}`}>
       <div className="column title">
         <div className="context">{information.context}</div>
         <div className="line-context"/>
