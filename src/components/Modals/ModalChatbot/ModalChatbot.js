@@ -1,6 +1,6 @@
 import React from 'react';
 import './ModalChatbot.css';
-import ModalContent from '../ModalContent';
+import Modal from '../Modal';
 import Paragraph from '../Paragraph';
 
 function Chatbot({showModal, closeModal}) {
@@ -40,7 +40,7 @@ function Chatbot({showModal, closeModal}) {
   };
 
   return (
-    <ModalContent showModal={showModal} closeModal={closeModal} listSubtitles={listSubtitles}
+    <Modal showModal={showModal} closeModal={closeModal} listSubtitles={listSubtitles}
       modalInfo={modalInfo} paragraphInfo={paragraphIntro}
     >
       <div className={`${modalInfo.modalName} box`}>
@@ -57,7 +57,7 @@ function Chatbot({showModal, closeModal}) {
           </div>
         </section>
       </div>
-    </ModalContent>
+    </Modal>
   );
 }
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import './ModalRePo.css';
-import ModalContent from '../ModalContent';
+import Modal from '../Modal';
 import Paragraph from '../Paragraph';
 
 function RetailerPortal({showModal, closeModal}) {
@@ -31,7 +31,7 @@ function RetailerPortal({showModal, closeModal}) {
     text: 'Every actions possible for the users is represented by a module. These modules are displayed using the template engine Handlebars. The javascript code is based on JQuery and we complete it by implementing our own helpers and plugins. The project exists for few years already and the Front- End Framework chosen at this time to design the entire the website was Bootstrap 3. The whole application is built using Gulpfile and its tasks system.'
   };
   return (
-    <ModalContent showModal={showModal} closeModal={closeModal} listSubtitles={listSubtitles}
+    <Modal showModal={showModal} closeModal={closeModal} listSubtitles={listSubtitles}
       modalInfo={modalInfo} paragraphInfo={paragraphIntro}
     >
       <div className={`${modalInfo.modalName} box`}>
@@ -43,7 +43,7 @@ function RetailerPortal({showModal, closeModal}) {
           </div>
         </section>
       </div>
-    </ModalContent>
+    </Modal>
   );
 }
 

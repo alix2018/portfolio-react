@@ -1,6 +1,6 @@
 import React from 'react';
 import './ModalLoyaltyApplication.css';
-import ModalContent from '../ModalContent';
+import Modal from '../Modal';
 import Paragraph from '../Paragraph';
 
 function LoyaltyApplication({showModal, closeModal}) {
@@ -37,7 +37,7 @@ function LoyaltyApplication({showModal, closeModal}) {
   };
 
   return (
-    <ModalContent showModal={showModal} closeModal={closeModal} listSubtitles={listSubtitles}
+    <Modal showModal={showModal} closeModal={closeModal} listSubtitles={listSubtitles}
       modalInfo={modalInfo} paragraphInfo={paragraphIntro}
     >
       <div className={`${modalInfo.modalName} box`}>
@@ -54,7 +54,7 @@ function LoyaltyApplication({showModal, closeModal}) {
           </div>
         </section>
       </div>
-    </ModalContent>
+    </Modal>
   );
 }
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import './ModalGames.css';
-import ModalContent from '../ModalContent';
+import Modal from '../Modal';
 import Paragraph from '../Paragraph';
 
 function Games({showModal, closeModal}) {
@@ -44,7 +44,7 @@ function Games({showModal, closeModal}) {
   };
 
   return (
-    <ModalContent showModal={showModal} closeModal={closeModal} listSubtitles={listSubtitles}
+    <Modal showModal={showModal} closeModal={closeModal} listSubtitles={listSubtitles}
       modalInfo={modalInfo} paragraphInfo={paragraphIntro}
     >
       <div className={`${modalInfo.modalName} box`}>
@@ -71,7 +71,7 @@ function Games({showModal, closeModal}) {
           </div>
         </section>
       </div>
-    </ModalContent>
+    </Modal>
   );
 }
 
