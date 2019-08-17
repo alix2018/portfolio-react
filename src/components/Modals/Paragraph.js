@@ -1,15 +1,15 @@
 import React from 'react';
 import './Paragraph.css';
 
-function Paragraph({information, newClass}) {
+function Paragraph({children}) {
   return (
-    <div className={`row ${newClass}`}>
+    <div className="row">
       <div className="column title">
-        <div className="context">{information.context}</div>
+        <div className="context">{children.context}</div>
         <div className="line-context"/>
       </div>
       <div className="column text">
-        <p>{information.text}</p>
+        <p>{children.text}</p>
       </div>
     </div>
   );

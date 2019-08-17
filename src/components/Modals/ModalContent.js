@@ -25,7 +25,9 @@ function ModalContent({showModal, closeModal, listSubtitles, modalInfo, paragrap
           </div>
           <img className="flat" src={`../../../public/images/${modalInfo.imageName}.png`}/>
           <div className="bottom-right">
-            <Paragraph information={paragraphInfo}/>
+            <Paragraph>
+              {paragraphInfo}
+            </Paragraph>
           </div>
         </section>
       </div>

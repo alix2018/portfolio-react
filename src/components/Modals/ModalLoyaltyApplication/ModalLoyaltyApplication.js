@@ -43,10 +43,14 @@ function LoyaltyApplication({showModal, closeModal}) {
       <div className={`${modalInfo.modalName} box`}>
         <section className="page-two half-page">
           <div className="loyalty-top-right">
-            <Paragraph information={paragraphStamps}/>
+            <Paragraph>
+              {paragraphStamps}
+            </Paragraph>
           </div>
           <div className="bottom-right">
-            <Paragraph information={paragraphPwa}/>
+            <Paragraph>
+              {paragraphPwa}
+            </Paragraph>
           </div>
         </section>
       </div>
