@@ -32,6 +32,7 @@ function PagePortfolio() {
 
   const projects = projectsList.map(element => element.class);
   const [projectsArray, setProjectsArray] = useState(projects);
+  const [activeProject, setActiveProject] = useState(projectsList[0]);
   const [showModalLoyaltyApp, setShowModalLoyaltyApp] = useState(false);
   const [showModalRetailerPortal, setShowModalRetailerPortal] = useState(false);
   const [showModalGames, setShowModalGames] = useState(false);
@@ -56,7 +57,8 @@ function PagePortfolio() {
     }
   }
 
-  function updateProjectsArray(currentProject, activeProject) {
+  function updateProjectsArray(currentProject) {
+    setActiveProject(currentProject);
     const differenceBetween = currentProject.id - activeProject.id;
     const projectsLength = projectsArray.length;
     const newArray = projectsArray.map((_p, index, arr) => {
@@ -70,7 +72,7 @@ function PagePortfolio() {
       <section id="portfolio" className="portfolio">
         <div className="left">
           <div className="titles">
-            <DisplayProjectTitles list={projectsList} updateProjectsArray={updateProjectsArray}/>
+            <DisplayProjectTitles projectsList={projectsList} activeProject={activeProject} updateProjectsArray={updateProjectsArray}/>
           </div>
         </div>
         <div className="right">

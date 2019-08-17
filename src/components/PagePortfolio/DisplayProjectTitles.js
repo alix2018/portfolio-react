@@ -1,18 +1,15 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './DisplayProjectTitles.css';
 
-function DisplayProjetcTitles({list, updateProjectsArray}) {
-  const [activeProject, setActiveProject] = useState(list[0]);
-
+function DisplayProjectTitles({projectsList, activeProject, updateProjectsArray}) {
   function clickOnProject(e, currentProject) {
     e.preventDefault();
-    setActiveProject(currentProject);
-    updateProjectsArray(currentProject, activeProject);
+    updateProjectsArray(currentProject);
   }
 
   return (
     <>
-      {list.map((project, index) => {
+      {projectsList.map((project, index) => {
         const isActive = project.name === activeProject.name;
         return (
           <React.Fragment key={project.id}>
@@ -28,4 +25,4 @@ function DisplayProjetcTitles({list, updateProjectsArray}) {
   );
 }
 
-export default DisplayProjetcTitles;
+export default DisplayProjectTitles;
