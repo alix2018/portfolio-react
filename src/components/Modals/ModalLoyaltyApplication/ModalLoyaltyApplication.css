@@ -4,6 +4,43 @@
 
 .loyalty-top-right {
   position: absolute;
-  bottom: 35%;
+  bottom: 66%;
   right: calc(var(--percentage-border-right));
+}
+
+.quote {
+  position: absolute;
+  width: var(--flat-image-width);
+  bottom: 30%;
+  right: calc(var(--percentage-border-right));
+  font-size: 18px;
+  white-space: pre-wrap;
+  letter-spacing: 0.8;
+}
+
+.quote img {
+  position: absolute;
+  left: -35px;
+  top: 10px;
+  height: 25px;
+}
+
+.source-quote {
+  float: right;
+  display: flex;
+  margin-top: 10px;
+}
+
+.line-source {
+  position: relative;
+  top: 8px;
+}
+
+.source-quote a {
+  margin-left: 15px;
+  font-size: 11px;
+  font-family: var(--font-poppins-medium);
+  color: var(--white-color);
+  letter-spacing: 0.4;
+  text-decoration: none;
 }

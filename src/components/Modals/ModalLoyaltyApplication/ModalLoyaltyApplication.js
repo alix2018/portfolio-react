@@ -35,6 +35,13 @@ function LoyaltyApplication({showModal, closeModal}) {
     context: 'Stamps Application',
     text: 'The first implementation was with Polymer 1 and web components to be able to reuse them from one application to another and do efficient customization.'
   };
+  const pwaQuote = {
+    mainText: 'Progressive Web Apps are user experiences that have the reach of the web, and are:',
+    line1: '- Reliable,',
+    line2: '- Fast,',
+    line3: '- Engaging',
+    source: 'Google Developers'
+  };
 
   return (
     <Modal showModal={showModal} closeModal={closeModal} listSubtitles={listSubtitles}
@@ -46,6 +53,17 @@ function LoyaltyApplication({showModal, closeModal}) {
             <Paragraph>
               {paragraphStamps}
             </Paragraph>
+          </div>
+          <div className="quote">
+            <img src="../../../../public/images/quotation-mark.svg"/>
+            {pwaQuote.mainText}<br/>
+            {pwaQuote.line1}<br/>
+            {pwaQuote.line2}<br/>
+            {pwaQuote.line3}<br/>
+            <div className="source-quote">
+              <div className="line-source"/>
+              <a href="https://developers.google.com" target="_blank" rel="noopener noreferrer">Source: {pwaQuote.source}</a>
+            </div>
           </div>
           <div className="bottom-right">
             <Paragraph>
