@@ -24,3 +24,9 @@ body {
   padding: 0;
   font-family: 'Poppins Medium', sans-serif;
 }
+
+div[class^='line'] {
+  width: var(--line-width);
+  height: 1px;
+  background: var(--white-color);
+}

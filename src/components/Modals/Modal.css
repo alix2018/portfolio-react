@@ -20,10 +20,6 @@
   height: 100vh;
 }
 
-/* .box:last-child {
-  width: 50vw;
-} */
-
 section.page-one {
   background-color: var(--second-color-dark);
 }
@@ -82,11 +78,8 @@ img.flat {
 
 .line-categories {
   position: relative;
-  width: var(--line-width);
-  height: 1px;
   top: 8px;
   margin-right: 17px;
-  background: var(--white-color);
 }
 
 .categories,
