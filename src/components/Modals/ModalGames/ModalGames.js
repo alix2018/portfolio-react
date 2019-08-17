@@ -42,21 +42,29 @@ function Games({showModal, closeModal}) {
     context: 'Result',
     text: 'After checking all the criteria (cross browsers, loading time, performances, integration, development time), PixiJS was the most suitable solution.'
   };
-
+  const textPlayGame = 'Play the game';
   return (
     <Modal showModal={showModal} closeModal={closeModal} listSubtitles={listSubtitles}
       modalInfo={modalInfo} paragraphInfo={paragraphIntro}
     >
       <div className={`${modalInfo.modalName} box`}>
         <section className="page-two full-page">
-          <div className="games-bottom-left">
-            <Paragraph>
-              {paragraphPixijs}
-            </Paragraph>
-          </div>
           <div className="games-top-left">
+            <a href="https://pwa-test-1bec3.web.app" className="play-game unity" target="_blank" rel="noopener noreferrer">
+              <p>{textPlayGame}</p>
+              <img src="../../../../public/images/play-game.svg"/>
+            </a>
             <Paragraph>
               {paragraphUnity}
+            </Paragraph>
+          </div>
+          <div className="games-bottom-left">
+            <a href="https://jumpy-component.web.app/demo" className="play-game pixi" target="_blank" rel="noopener noreferrer">
+              <p>{textPlayGame}</p>
+              <img src="../../../../public/images/play-game.svg"/>
+            </a>
+            <Paragraph>
+              {paragraphPixijs}
             </Paragraph>
           </div>
           <div className="games-bottom-right">
