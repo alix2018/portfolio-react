@@ -28,15 +28,15 @@ function Chatbot({showModal, closeModal}) {
   };
   const paragraphIntro = {
     context: 'Introduction',
-    text: 'The goal of the chatbot is to retrieve information about the customers during a loyalty program campaign. They answer the bot questions an the flow is be updated depending on their answer. I also made some chatbot tests with Telegram and Wechat before implementing the Facebook one.'
-  };
-  const paragraphCode = {
-    context: 'Code details',
-    text: 'The webviews design are realized with Bootstrap and Materialize. The backend side was handled with NodeJS with the template engine Pug that is used to send data from the server to the client side. I finally chose Dialogflow for the text recognition because of his easy integration to lots of platforms, his natural language processing and its user friendly interface.'
+    text: 'The goal was to retrieve information about the customers during a loyalty program campaign. They could answer the bot questions and the flow was be updated depending on their answers. I also made some tests with Telegram and Wechat chatbots before implementing the Facebook one.'
   };
   const paragraphFeature = {
     context: 'Chatbot feature',
-    text: 'The user has to log in with his loyalty card number and then answer the onboarding questions about his shopping habits. For example his diet preferences, his basket size or the frequency he visits the store. After the survey he can also check the rewards he is able to redeem at the store.'
+    text: 'The user can log in with his loyalty card number and then answer the onboarding questions. The questions are mostly about his shopping habits, his diet preferences, his basket size or the frequency he visits the store. After the survey, he was also able to check the rewards he could redeem at the store.'
+  };
+  const paragraphCode = {
+    context: 'Code details',
+    text: 'The webviews design was realized with Bootstrap and Materialize. The backend side was handled with NodeJS. I chose Dialogflow for the text recognition because of his easy integration with lots of platforms and his natural language processing.'
   };
 
   return (

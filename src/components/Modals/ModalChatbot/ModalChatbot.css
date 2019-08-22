@@ -4,6 +4,6 @@
 
 .chatbot-top-right {
   position: absolute;
-  bottom: 45%;
+  bottom: 40%;
   right: calc(var(--percentage-border-right));
 }
