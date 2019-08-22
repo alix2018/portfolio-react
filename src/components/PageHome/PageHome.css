@@ -23,6 +23,7 @@ section.home .left .name {
   font-size: 14px;
   font-family: var(--font-poppins-medium);
   color: var(--second-color-dark);
+  pointer-events: none;
   animation-delay: 0ms;
 }
 
