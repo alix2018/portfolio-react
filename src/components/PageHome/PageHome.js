@@ -35,7 +35,7 @@ function PageHome() {
         />
         <div className="icons">
           <form method="get" action="./public/assets/cv.pdf" className="btn-animation animated fadeInUp" target="_blank" rel="noopener noreferrer">
-            <button type="button" className="button">Download CV</button>
+            <input type="submit" className="button" value="Download CV"></input>
           </form>
           <a href="https://www.linkedin.com/in/stephanie-alix/" className="linkedin-animation animated fadeInUp" target="_blank" rel="noopener noreferrer">
             <svg className="linkedin" viewBox="0 0 512 512">
