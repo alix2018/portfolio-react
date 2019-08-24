@@ -33,28 +33,11 @@ function PagePortfolio() {
   const projects = projectsList.map(element => element.class);
   const [projectsArray, setProjectsArray] = useState(projects);
   const [activeProject, setActiveProject] = useState(projectsList[0]);
-  const [showModalLoyaltyApp, setShowModalLoyaltyApp] = useState(false);
-  const [showModalRetailerPortal, setShowModalRetailerPortal] = useState(false);
-  const [showModalGames, setShowModalGames] = useState(false);
-  const [showModalChatbot, setShowModalChatbot] = useState(false);
+  const [showModal, setShowModal] = useState('');
 
-  function openModal(e, project, show) {
+  function openModal(e, project) {
     e.preventDefault();
-    switch (project) {
-      case 'loyalty-application':
-        setShowModalLoyaltyApp(show);
-        break;
-      case 'retailer-portal':
-        setShowModalRetailerPortal(show);
-        break;
-      case 'games':
-        setShowModalGames(show);
-        break;
-      case 'facebook-chatbot':
-        setShowModalChatbot(show);
-        break;
-      default:
-    }
+    setShowModal(project);
   }
 
   function updateProjectsArray(currentProject) {
@@ -79,25 +62,25 @@ function PagePortfolio() {
           {projectsArray.map(project => {
             return (
               <img key={project} className="isometric" src={`../../../public/images/${project}.png`}
-                onClick={e => {openModal(e, project, true);}}/>
+                onClick={e => {openModal(e, project);}}/>
             );
           })}
         </div>
         <LoyaltyApplication
-          showModal={showModalLoyaltyApp}
-          closeModal={e => {openModal(e, 'loyalty-application', false);}}
+          showModal={showModal === 'loyalty-application'}
+          closeModal={e => {openModal(e, '');}}
         />
         <RetailerPortal
-          showModal={showModalRetailerPortal}
-          closeModal={e => {openModal(e, 'retailer-portal', false);}}
+          showModal={showModal === 'retailer-portal'}
+          closeModal={e => {openModal(e, '');}}
         />
         <Games
-          showModal={showModalGames}
-          closeModal={e => {openModal(e, 'games', false);}}
+          showModal={showModal === 'games'}
+          closeModal={e => {openModal(e, '');}}
         />
         <Chatbot
-          showModal={showModalChatbot}
-          closeModal={e => {openModal(e, 'facebook-chatbot', false);}}
+          showModal={showModal === 'facebook-chatbot'}
+          closeModal={e => {openModal(e, '');}}
         />
       </section>
     </>
