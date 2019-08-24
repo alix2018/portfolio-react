@@ -1,6 +1,8 @@
 import React from 'react';
 import './Paragraph.css';
 
+const parse = require('html-react-parser');
+
 function Paragraph({children}) {
   return (
     <div className="row">
@@ -9,7 +11,7 @@ function Paragraph({children}) {
         <div className="line-context"/>
       </div>
       <div className="column text">
-        <p>{children.text}</p>
+        <p>{parse(children.text)}</p>
       </div>
     </div>
   );

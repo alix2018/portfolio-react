@@ -28,7 +28,7 @@ function Chatbot({showModal, closeModal}) {
   };
   const paragraphIntro = {
     context: 'Introduction',
-    text: 'The goal was to retrieve information about the customers during a loyalty program campaign. They could answer the bot questions and the flow was be updated depending on their answers. I also made some tests with Telegram and Wechat chatbots before implementing the Facebook one.'
+    text: 'The goal was to <span>retrieve information about the customers</span> during a loyalty program campaign. They could answer the bot questions and the flow was be updated depending on their answers. I also made some tests with <span>Telegram</span> and <span>Wechat</span> chatbots before implementing the <span>Facebook</span> one.'
   };
   const paragraphFeature = {
     context: 'Chatbot feature',
@@ -36,7 +36,7 @@ function Chatbot({showModal, closeModal}) {
   };
   const paragraphCode = {
     context: 'Code details',
-    text: 'The webviews design was realized with Bootstrap and Materialize. The backend side was handled with NodeJS. I chose Dialogflow for the text recognition because of his easy integration with lots of platforms and his natural language processing.'
+    text: 'The webviews design was realized with <span>Bootstrap</span> and <span>Materialize</span>. The backend side was handled with <span>NodeJS</span>. I chose <span>Dialogflow</span> for the text recognition because of his easy integration with lots of platforms and his natural language processing.'
   };
 
   return (

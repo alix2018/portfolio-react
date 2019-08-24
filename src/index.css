@@ -7,6 +7,8 @@
   --width-right-colum: 70%;
   --font-poppins-light: 'Poppins Light', sans-serif;
   --font-poppins-medium: 'Poppins Medium', sans-serif;
+  --font-poppins-bold: 'Poppins Bold', sans-serif;
+  --font-poppins-extra-bold: 'Poppins Extra Bold', sans-serif;
 }
 
 @font-face {
@@ -17,6 +19,16 @@
 @font-face {
   font-family: 'Poppins Light';
   src: url('../public/assets/Poppins-Light.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Poppins Bold';
+  src: url('../public/assets/Poppins-ExtraBold.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Poppins Extra Bold';
+  src: url('../public/assets/Poppins-ExtraBold.ttf') format('opentype');
 }
 
 body {

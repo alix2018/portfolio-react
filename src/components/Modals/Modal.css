@@ -88,13 +88,14 @@ img.flat {
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 2;
+  font-family: var(--font-poppins-extra-bold);
 }
 
 .details {
   margin-left: calc(var(--line-width) + 17px);
   font-size: 12px;
   font-family: var(--font-poppins-light);
-  letter-spacing: 0;
+  letter-spacing: 0.5;
 }
 
 .bottom-right {

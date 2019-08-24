@@ -28,19 +28,19 @@ function Games({showModal, closeModal}) {
   };
   const paragraphUnity = {
     context: 'Unity',
-    text: 'I started to implement a 2D game platform with the game engine Unity. With this first game, I could learn the process of developing video games but also all the mechanics. The Unity interface makes it way easier.'
+    text: 'I started to implement a 2D game platform with the <span>game engine <a href="https:// unity.com" target="_blank" rel="noopener noreferrer">Unity</a></span>. With this first game, I could learn the process of developing video games but also all the mechanics. The Unity interface makes it way easier.'
   };
   const paragraphPixijs = {
     context: 'PixiJS',
-    text: 'I implemented the same 2D platform game with the 2D WebGL renderer PixiJS. There was no interface but only Javascript code. I wrapped the game into a web component to be easily reusable. All the options of the game could be decided while importing the component: number of coins, speed, space between platforms...'
+    text: 'I implemented the same 2D platform game with the <span>2D WebGL renderer <a href="https:// unity.com" target="_blank" rel="noopener noreferrer">PixiJS</a></span>. There was no interface but only Javascript code. I wrapped the game into a web component to be easily reusable. All the options of the game could be decided while importing the component: number of coins, speed, space between platforms...'
   };
   const paragraphWebAssembly = {
     context: 'webassembly',
-    text: 'WebAssembly is near-native performances and really low level compare to the two previous ones. I wanted to give it a try even if it was quite new at this time. I made a snake with Javascript and WebAssembly. It was really performant but the time of development was too long for the result.'
+    text: '<span>WebAssembly</span> is near-native performances and really low level compare to the two previous ones. I wanted to give it a try even if it was quite new at this time. I made a <span>snake</span> with Javascript and WebAssembly. It was really <span>performant</span> but the time of development was too long for the result.'
   };
   const paragraphResult = {
     context: 'Result',
-    text: 'After checking all the criteria (cross browsers, loading time, performances, integration, development time), PixiJS was the most suitable solution.'
+    text: 'After checking all the criteria (cross browsers, loading time, performances, integration, development time), <span>PixiJS</span> was the most suitable solution.'
   };
   const textPlayGame = 'Play the game';
   return (

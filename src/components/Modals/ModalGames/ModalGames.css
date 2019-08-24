@@ -41,8 +41,9 @@
   font-weight: 900;
   color: var(--third-color);
   text-transform: uppercase;
-  letter-spacing: 1.2;
+  letter-spacing: 1.7;
   text-decoration: none;
+  font-family: var(--font-poppins-extra-bold);
 }
 
 .play-game img {

@@ -24,16 +24,15 @@ function LoyaltyApplication({showModal, closeModal}) {
   };
   const paragraphIntro = {
     context: 'Introduction',
-    text: 'The Stamps application is a digital solution which informs the customers about the current loyalty program. They can find their number of stamps, see the rewards they can redeem or check the promotions that will make them earn more points.',
-    keywords: 'digital solution'
+    text: 'The Stamps application is a <span>digital solution</span> which informs the customers about the current <span>loyalty program</span>. They can find their number of stamps, see the rewards they can redeem or check the promotions that will make them earn more points.'
   };
   const paragraphStamps = {
     context: 'Stamps Application',
-    text: 'The first implementation was with Polymer 1.0 and web components. Web components allow us to reuse them from one application to another and do efficient customizations for the different costumers.'
+    text: 'The first implementation was with Polymer 1.0 and <span>web components</span>. Web components allow us to reuse them from one application to another and do efficient customizations for the different costumers.'
   };
   const paragraphPwa = {
     context: 'Stamps PWA',
-    text: 'In 2018, we started to develop the same application as a Progressive Web App (PWA) with Polymer 3.0 and still using web components. PWA includes a shell application, a mobile app experience, an offline mode and way more features.'
+    text: 'In 2018, we started to develop the same application as a <span>Progressive Web App</span> (PWA) with Polymer 3.0 and still using <span>web components</span>. PWA includes a shell application, a mobile app experience, an offline mode and way more features.'
   };
   const pwaQuote = {
     mainText: 'Progressive Web Apps are user experiences that have the reach of the web, and are:',
