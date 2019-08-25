@@ -38,6 +38,12 @@ function PagePortfolio() {
   function openModal(e, project) {
     e.preventDefault();
     setShowModal(project);
+    if (project === '') {
+      const menuBar = document.querySelector('ul.menu-effect');
+      if (menuBar) {
+        menuBar.style.pointerEvents = 'visible';
+      }
+    }
   }
 
   function updateProjectsArray(currentProject) {

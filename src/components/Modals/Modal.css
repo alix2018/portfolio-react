@@ -36,6 +36,17 @@
   background: var(--second-color-dark);
 }
 
+.modal-div {
+  z-index: 110;
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+}
+
 .modal-main {
   position: fixed;
   width: 100%;
