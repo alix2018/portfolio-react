@@ -23,6 +23,7 @@ section.home .left .name {
   font-size: 14px;
   font-family: var(--font-poppins-medium);
   color: var(--second-color-dark);
+  pointer-events: none;
   animation-delay: 0ms;
 }
 
@@ -100,17 +101,14 @@ section.home .right .icons {
   margin: 0;
 }
 
-.linkedin {
-  background: url('/public/images/linkedin.svg');
-}
-
 .github {
   margin: 0 15px;
-  background: url('/public/images/github.svg');
 }
 
-.skype {
-  background: url('/public/images/skype.svg');
+.linkedin path,
+.github path,
+.skype path {
+  fill: var(--first-color-light);
 }
 
 .linkedin,
@@ -119,13 +117,12 @@ section.home .right .icons {
   height: 30px;
   width: 30px;
   background-size: cover;
-  filter: invert(100%);
   transition: all 0.5s cubic-bezier(0.27, 1.4, 0.57, 1.7);
 }
 
 .linkedin-animation,
-.skype-animation,
 .github-animation,
+.skype-animation,
 .btn-animation {
   animation-duration: 650ms;
 }
@@ -134,11 +131,11 @@ section.home .right .icons {
   animation-delay: 1475ms;
 }
 
-.skype-animation {
+.github-animation {
   animation-delay: 1550ms;
 }
 
-.github-animation {
+.skype-animation {
   animation-delay: 1625ms;
 }
 

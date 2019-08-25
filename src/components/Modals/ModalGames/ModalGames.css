@@ -1,0 +1,53 @@
+.modal-games.box:nth-child(2) {
+  width: 100vw;
+}
+
+.games-top-left {
+  position: absolute;
+  bottom: 45%;
+  left: calc(5% - 64px);
+}
+
+.games-bottom-left {
+  position: absolute;
+  bottom: 8%;
+  left: calc(5% - 62px);
+}
+
+.games-top-right {
+  position: absolute;
+  bottom: 35%;
+  right: calc(var(--percentage-border-right));
+}
+
+.games-bottom-right {
+  position: absolute;
+  bottom: 8%;
+  right: calc(var(--percentage-border-right));
+}
+
+.play-game {
+  position: absolute;
+  display: flex;
+  top: 70%;
+  left: 5%;
+  text-decoration: none;
+}
+
+.play-game p {
+  position: relative;
+  margin: 0;
+  font-size: 10px;
+  font-weight: 900;
+  color: var(--third-color);
+  text-transform: uppercase;
+  letter-spacing: 1.7;
+  text-decoration: none;
+  font-family: var(--font-poppins-extra-bold);
+}
+
+.play-game img {
+  position: relative !important;
+  height: 23px;
+  margin: 7px 0 0 25px;
+}

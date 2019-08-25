@@ -1,0 +1,54 @@
+.row {
+  width: 610px;
+}
+
+.column {
+  float: left;
+  font-size: 14px;
+}
+
+.column.title {
+  position: absolute;
+  min-width: 200px;
+  padding: 0;
+}
+
+.context {
+  position: absolute;
+  display: inline-block;
+  right: calc(var(--line-width) + 25px);
+}
+
+.line-context {
+  position: absolute;
+  width: var(--line-width);
+  height: 1px;
+  right: 10px;
+  margin-top: 8px;
+  background: var(--white-color);
+}
+
+.column.text {
+  width: var(--flat-image-width);
+  float: right;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: var(--font-poppins-light);
+  white-space: pre-wrap;
+  text-align: justify;
+  letter-spacing: 1;
+}
+
+.column.text p {
+  margin: 0;
+}
+
+.text p span {
+  font-family: var(--font-poppins-bold);
+}
+
+.text p span a {
+  text-decoration: none;
+  color: unset;
+}

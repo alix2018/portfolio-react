@@ -7,9 +7,9 @@ function PageAboutMe() {
       <div className="left">
         <div className="img-container">
           <img src="../../../public/images/self-picture.jpg"/>
-          <p>
-            Short sentence about myself or photo description.
-          </p>
+          <form method="get" action="./public/assets/cv.pdf" className="btn-animation animated fadeInUp" target="_blank" rel="noopener noreferrer">
+            <input type="submit" className="button" value="Click here to download my CV"/>
+          </form>
         </div>
       </div>
       <div className="right">

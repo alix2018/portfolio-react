@@ -1,6 +1,10 @@
 import React, {useState} from 'react';
 import './PagePortfolio.css';
-import DisplayProjectsTitle from './DisplayProjectsTitle';
+import LoyaltyApplication from '../Modals/ModalLoyaltyApplication/ModalLoyaltyApplication';
+import RetailerPortal from '../Modals/ModalRePo/ModalRePo';
+import Games from '../Modals/ModalGames/ModalGames';
+import Chatbot from '../Modals/ModalChatbot/ModalChatbot';
+import DisplayProjectTitles from './DisplayProjectTitles';
 
 function PagePortfolio() {
   const projectsList = [
@@ -28,8 +32,16 @@ function PagePortfolio() {
 
   const projects = projectsList.map(element => element.class);
   const [projectsArray, setProjectsArray] = useState(projects);
+  const [activeProject, setActiveProject] = useState(projectsList[0]);
+  const [showModal, setShowModal] = useState('');
 
-  function updateProjectsArray(currentProject, activeProject) {
+  function openModal(e, project) {
+    e.preventDefault();
+    setShowModal(project);
+  }
+
+  function updateProjectsArray(currentProject) {
+    setActiveProject(currentProject);
     const differenceBetween = currentProject.id - activeProject.id;
     const projectsLength = projectsArray.length;
     const newArray = projectsArray.map((_p, index, arr) => {
@@ -39,20 +51,39 @@ function PagePortfolio() {
   }
 
   return (
-    <section id="portfolio" className="portfolio">
-      <div className="left">
-        <div className="titles">
-          <DisplayProjectsTitle list={projectsList} updateProjectsArray={updateProjectsArray}/>
+    <>
+      <section id="portfolio" className="portfolio">
+        <div className="left">
+          <div className="titles">
+            <DisplayProjectTitles projectsList={projectsList} activeProject={activeProject} updateProjectsArray={updateProjectsArray}/>
+          </div>
         </div>
-      </div>
-      <div className="right">
-        {projectsArray.map(project => {
-          return (
-            <img key={project} src={`../../../public/images/${project}.png`}/>
-          );
-        })}
-      </div>
-    </section>
+        <div className="right">
+          {projectsArray.map(project => {
+            return (
+              <img key={project} className="isometric" src={`../../../public/images/${project}.png`}
+                onClick={e => {openModal(e, project);}}/>
+            );
+          })}
+        </div>
+        <LoyaltyApplication
+          showModal={showModal === 'loyalty-application'}
+          closeModal={e => {openModal(e, '');}}
+        />
+        <RetailerPortal
+          showModal={showModal === 'retailer-portal'}
+          closeModal={e => {openModal(e, '');}}
+        />
+        <Games
+          showModal={showModal === 'games'}
+          closeModal={e => {openModal(e, '');}}
+        />
+        <Chatbot
+          showModal={showModal === 'facebook-chatbot'}
+          closeModal={e => {openModal(e, '');}}
+        />
+      </section>
+    </>
   );
 }
 

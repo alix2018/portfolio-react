@@ -26,15 +26,28 @@ section.about-me .left img {
   max-width: 50%;
   height: auto;
   margin-left: 25%;
+
+  /* transition: transform 0.6s; */
 }
 
-section.about-me .left p {
+/* section.about-me .left img:hover {
+  transform: scale(1.6);
+} */
+
+section.about-me .left input {
+  width: 100%;
   max-width: 50%;
   margin-left: 25%;
   margin-top: 20px;
   font-size: 12px;
   text-align: center;
+  white-space: normal;
+  font-family: var(--font-poppins-medium);
+  background-color: transparent;
+  border-color: transparent;
   color: #485563C9;
+  cursor: pointer;
+  outline: none !important;
 }
 
 section.about-me .right {
