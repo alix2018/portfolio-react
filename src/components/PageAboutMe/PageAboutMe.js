@@ -7,27 +7,29 @@ function PageAboutMe() {
       <div className="left">
         <div className="img-container">
           <img src="../../../public/images/self-picture.jpg"/>
-          <form method="get" action="./public/assets/cv.pdf" className="btn-animation animated fadeInUp" target="_blank" rel="noopener noreferrer">
+          {/* <form method="get" action="./public/assets/cv.pdf" className="btn-animation animated fadeInUp" target="_blank" rel="noopener noreferrer">
             <input type="submit" className="button" value="Click here to download my CV"/>
-          </form>
+          </form> */}
+          <p>Develop a passion for learning. If you do, you will never cease to grow.</p>
         </div>
       </div>
       <div className="right">
         <article>
           <header>Hey!</header>
           <section>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-            dolor in reprehenderit in voluptate velit esse cillum dolore eu
-            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est
-            laborum culpa qu
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+          I’m a 24 year old girl who recently moved to Amsterdam
+          to start my first job as a web developer. After an intensive
+          mathematics school, I chose to integrate a computer science
+          school in France. Among all the projects, I prefered Web
+          development. That’s why I did my 3 internships in that
+          field and got hired as a Junior Web developer. On my spare time
+          I love coding and continue learning, not only Web but also other
+          platforms and languages. I’m also a big fan of sport! I really
+          enjoy playing team sports with colleagues and friends and I
+          also practise some individual sports on the side. Since I finished
+          school and moved to the Netherlands I also started to travel,
+          explore new countries and learn more about other cultures which
+          I find fascinating!
           </section>
           <footer>I am <span>ready</span></footer>
         </article>
