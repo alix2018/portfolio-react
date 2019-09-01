@@ -93,6 +93,26 @@
   transform: rotate(-45deg);
 }
 
+.arrow-right {
+  z-index: 150;
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  padding: 10px;
+  border: solid var(--third-color);
+  border-width: 0 6px 6px 0;
+  transform: rotate(-45deg);
+  cursor: pointer;
+}
+
+.arrow-right.show {
+  display: block;
+}
+
+.arrow-right.hide {
+  display: none;
+}
+
 .box {
   display: inline-block;
   position: relative;
