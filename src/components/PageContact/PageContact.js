@@ -46,7 +46,7 @@ function PageContact() {
           </div>
         </section>
         <footer>
-          Available for new web developing projects
+          Opportunities don&apos;t happen. You create them.
         </footer>
       </div>
     </section>
