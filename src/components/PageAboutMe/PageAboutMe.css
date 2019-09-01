@@ -23,22 +23,22 @@ section.about-me .left .img,
 }
 
 section.about-me .left img {
-  max-width: 60%;
+  max-width: 55%;
   height: auto;
-  margin-left: 20%;
-
-  /* transition: transform 0.6s; */
+  margin-left: 22.5%;
+  cursor: pointer;
+  transition: transform 0.6s;
 }
 
-/* section.about-me .left img:hover {
-  transform: scale(1.6);
-} */
+section.about-me .left img:hover {
+  transform: scale(1.5);
+}
 
 section.about-me .left p {
-  max-width: 60%;
-  margin-left: 20%;
-  margin-top: 20px;
-  font-size: 13px;
+  max-width: 55%;
+  margin-left: 22.5%;
+  margin-top: 15px;
+  font-size: 12px;
   text-align: center;
   font-family: var(--font-poppins-medium);
   color: #485563C9;
@@ -71,6 +71,10 @@ section.about-me .right article section {
   line-height: 25px;
   font-family: var(--font-poppins-light);
   color: var(--first-color-light);
+}
+
+section.about-me .right article section p {
+  margin: 0;
 }
 
 footer {

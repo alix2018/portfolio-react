@@ -119,3 +119,7 @@ section.contact .right footer {
   letter-spacing: 2px;
   color: var(--second-color-dark);
 }
+
+section.contact .right footer:hover {
+  text-decoration: underline;
+}

@@ -17,19 +17,22 @@ function PageAboutMe() {
         <article>
           <header>Hey!</header>
           <section>
-          I’m a 24 year old girl who recently moved to Amsterdam
-          to start my first job as a web developer. After an intensive
-          mathematics school, I chose to integrate a computer science
-          school in France. Among all the projects, I prefered Web
-          development. That’s why I did my 3 internships in that
-          field and got hired as a Junior Web developer. On my spare time
-          I love coding and continue learning, not only Web but also other
-          platforms and languages. I’m also a big fan of sport! I really
-          enjoy playing team sports with colleagues and friends and I
-          also practise some individual sports on the side. Since I finished
-          school and moved to the Netherlands I also started to travel,
-          explore new countries and learn more about other cultures which
-          I find fascinating!
+            <p>
+              I’m a 24 year old girl who recently moved to Amsterdam
+              to start my first job as a web developer. After an intensive
+              mathematics school, I chose to integrate a computer science
+              school in France. Among all the projects, I prefered Web
+              development. That’s why I did my 3 internships in that
+              field and got hired as a Junior Web developer.
+              {/* </p><br/><p> */}
+              On my spare time
+              I love coding and continue learning, not only Web but also other
+              platforms and languages. I’m also a big fan of sport! I really
+              enjoy playing team sports with colleagues and friends. After moving
+              in the Netherland I also started to travel,
+              explore new countries and learn about other cultures which
+              I find fascinating!
+            </p>
           </section>
           <footer>I am <span>ready</span></footer>
         </article>
