@@ -1,7 +1,7 @@
 import React from 'react';
 import './ModalGames.css';
 import Modal from '../Modal';
-import Paragraph from '../Paragraph';
+import Paragraph from '../../Paragraph/Paragraph';
 
 function Games({showModal, closeModal}) {
   const listSubtitles = [

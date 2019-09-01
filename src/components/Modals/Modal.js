@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './Modal.css';
-import Paragraph from './Paragraph';
+import Paragraph from '../Paragraph/Paragraph';
 
 function Modal({showModal, closeModal, listSubtitles, modalInfo, paragraphInfo, children}) {
   const [showArrow, setShowArrow] = useState('show');

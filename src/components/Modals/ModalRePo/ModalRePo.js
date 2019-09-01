@@ -1,7 +1,7 @@
 import React from 'react';
 import './ModalRePo.css';
 import Modal from '../Modal';
-import Paragraph from '../Paragraph';
+import Paragraph from '../../Paragraph/Paragraph';
 
 function RetailerPortal({showModal, closeModal}) {
   const listSubtitles = [

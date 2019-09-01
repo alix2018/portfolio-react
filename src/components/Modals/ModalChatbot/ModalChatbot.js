@@ -1,7 +1,7 @@
 import React from 'react';
 import './ModalChatbot.css';
 import Modal from '../Modal';
-import Paragraph from '../Paragraph';
+import Paragraph from '../../Paragraph/Paragraph';
 
 function Chatbot({showModal, closeModal}) {
   const listSubtitles = [
