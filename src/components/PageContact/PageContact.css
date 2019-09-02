@@ -110,13 +110,16 @@ section.contact .right section .icons .github {
 
 section.contact .right footer {
   position: absolute;
-  width: 230px;
+  width: 270px;
   bottom: 60px;
   right: 60px;
   font-family: var(--font-poppins-light);
-  font-size: 15px;
-  text-align: center;
+  font-size: 17px;
+  text-align: right;
   letter-spacing: 2px;
-  text-decoration: underline;
   color: var(--second-color-dark);
+}
+
+section.contact .right footer:hover {
+  text-decoration: underline;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import './ModalRePo.css';
 import Modal from '../Modal';
-import Paragraph from '../Paragraph';
+import Paragraph from '../../Paragraph/Paragraph';
 
 function RetailerPortal({showModal, closeModal}) {
   const listSubtitles = [
@@ -28,7 +28,7 @@ function RetailerPortal({showModal, closeModal}) {
   };
   const paragraphDetails = {
     context: 'Details',
-    text: 'Every actions possible for the users is represented by a module. These modules are displayed using the template engine <span>Handlebars</span>. The javascript code is based on <span>JQuery</span> and we complete it by implementing our own helpers and plugins. The project exists for few years already and the Front-End Framework chosen at this time was <span>Bootstrap 3</span>. The whole application is built using <span>Gulpfile</span> and its tasks system.'
+    text: 'Every actions possible for the users is represented by a module. These modules are displayed using the template engine <span>Handlebars</span>. The javascript code is based on <span>JQuery</span> and we complete it by implementing our own helpers and plugins. The project exists for few years already and the Front-End Framework chosen at this time was <span>Bootstrap 3</span>. The whole application is built using <span>Gulp</span> and its tasks system.'
   };
   return (
     <Modal showModal={showModal} closeModal={closeModal} listSubtitles={listSubtitles}

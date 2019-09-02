@@ -1,7 +1,7 @@
 import React from 'react';
 import './ModalLoyaltyApplication.css';
 import Modal from '../Modal';
-import Paragraph from '../Paragraph';
+import Paragraph from '../../Paragraph/Paragraph';
 
 function LoyaltyApplication({showModal, closeModal}) {
   const listSubtitles = [

@@ -23,31 +23,26 @@ section.about-me .left .img,
 }
 
 section.about-me .left img {
-  max-width: 50%;
+  max-width: 55%;
   height: auto;
-  margin-left: 25%;
-
-  /* transition: transform 0.6s; */
+  margin-left: 22.5%;
+  cursor: pointer;
+  transition: transform 0.6s;
 }
 
-/* section.about-me .left img:hover {
-  transform: scale(1.6);
-} */
+section.about-me .left img:hover {
+  transform: scale(1.5);
+}
 
-section.about-me .left input {
-  width: 100%;
-  max-width: 50%;
-  margin-left: 25%;
-  margin-top: 20px;
+section.about-me .left p {
+  max-width: 55%;
+  margin-left: 22.5%;
+  margin-top: 15px;
   font-size: 12px;
   text-align: center;
-  white-space: normal;
   font-family: var(--font-poppins-medium);
-  background-color: transparent;
-  border-color: transparent;
   color: #485563C9;
-  cursor: pointer;
-  outline: none !important;
+  line-height: 1.7;
 }
 
 section.about-me .right {
@@ -70,12 +65,16 @@ header {
 }
 
 section.about-me .right article section {
-  width: 450px;
+  width: 460px;
   margin: 40px 0;
   font-size: 14px;
   line-height: 25px;
   font-family: var(--font-poppins-light);
   color: var(--first-color-light);
+}
+
+section.about-me .right article section p {
+  margin: 0;
 }
 
 footer {

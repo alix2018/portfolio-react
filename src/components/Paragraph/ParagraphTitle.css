@@ -1,0 +1,25 @@
+.column {
+  float: left;
+  font-size: 14px;
+}
+
+.column.title {
+  position: absolute;
+  min-width: 200px;
+  padding: 0;
+}
+
+.context {
+  position: absolute;
+  display: inline-block;
+  right: calc(var(--line-width) + 25px);
+}
+
+.line-context {
+  position: absolute;
+  width: var(--line-width);
+  height: 1px;
+  right: 10px;
+  margin-top: 8px;
+  background: var(--white-color);
+}

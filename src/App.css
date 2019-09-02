@@ -6,7 +6,7 @@ section.contact {
   margin: 0;
 }
 
-/* Animations */
+/* Fade in animation */
 
 @keyframes fadeInUp {
   from {
@@ -27,4 +27,26 @@ section.contact {
 .fadeInUp {
   opacity: 0;
   animation-name: fadeInUp;
+}
+
+/* Blink animation */
+
+@keyframes blinker {
+  from,
+  49.9% {
+    opacity: 1;
+  }
+
+  50%,
+  to {
+    opacity: 0;
+  }
+}
+
+.blink {
+  animation-name: blinker;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 0s;
 }

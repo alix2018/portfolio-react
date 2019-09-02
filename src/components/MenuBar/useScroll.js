@@ -2,7 +2,6 @@ import {useEffect, useState} from 'react';
 
 function useScroll(pagesIds) {
   const [activePageId, setActivePageId] = useState('home');
-  const [scrollToHome, setScrollToHome] = useState(true);
 
   const firstLightColor = getComputedStyle(document.documentElement).getPropertyValue('--first-color-light');
   const secondDarkColor = getComputedStyle(document.documentElement).getPropertyValue('--second-color-dark');
@@ -34,15 +33,6 @@ function useScroll(pagesIds) {
   }
 
   useEffect(() => {
-    if (scrollToHome) {
-      const currentAnchor = document.querySelector('#home');
-      currentAnchor.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-      setScrollToHome(false);
-    }
-
     switch (activePageId) {
       case 'home':
         setMenuBarColors(secondDarkColor, greyColor);
@@ -61,7 +51,7 @@ function useScroll(pagesIds) {
     window.addEventListener('scroll', scrolling);
 
     return () => window.removeEventListener('scroll', scrolling);
-  }, [scrollToHome, scrolling, activePageId]);
+  }, [scrolling, activePageId]);
 
   return activePageId;
 }
