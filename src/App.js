@@ -1,25 +1,16 @@
-import React, {useEffect} from 'react';
+import {useEffect} from 'react';
+import {useRoutes} from 'hookrouter';
 import './App.css';
-import MenuBar from './components/MenuBar/MenuBar';
-import PageHome from './components/PageHome/PageHome';
-import PagePortfolio from './components/PagePortfolio/PagePortfolio';
-import PageAboutMe from './components/PageAboutMe/PageAboutMe';
-import PageContact from './components/PageContact/PageContact';
+import routes from './router';
 
 function App() {
+  const routeResult = useRoutes(routes);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  return (
-    <>
-      <MenuBar/>
-      <PageHome/>
-      <PagePortfolio/>
-      <PageAboutMe/>
-      <PageContact/>
-    </>
-  );
+  return routeResult;
 }
 
 export default App;

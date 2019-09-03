@@ -51,7 +51,7 @@ function useScroll(pagesIds) {
     window.addEventListener('scroll', scrolling);
 
     return () => window.removeEventListener('scroll', scrolling);
-  }, [scrolling, activePageId]);
+  }, [activePageId]);
 
   return activePageId;
 }

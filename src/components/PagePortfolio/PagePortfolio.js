@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './PagePortfolio.css';
 import LoyaltyApplication from '../Modals/ModalLoyaltyApplication/ModalLoyaltyApplication';
 import RetailerPortal from '../Modals/ModalRePo/ModalRePo';
@@ -35,10 +35,12 @@ function PagePortfolio() {
   const [activeProject, setActiveProject] = useState(projectsList[0]);
   const [showModal, setShowModal] = useState('');
 
-  function openModal(e, project) {
-    e.preventDefault();
+  function openModal(project) {
     setShowModal(project);
-    if (project === '') {
+    if (projects.includes(project)) {
+      history.pushState(null, null, `?project=${project}`);
+    } else {
+      history.pushState(null, null, '/');
       const menuBar = document.querySelector('ul.menu-effect');
       if (menuBar) {
         menuBar.style.pointerEvents = 'visible';
@@ -56,6 +58,14 @@ function PagePortfolio() {
     setProjectsArray(newArray);
   }
 
+  useEffect(() => {
+    const url = window.location.search;
+    if (url.substring(0, 9) === '?project=') {
+      const query = url.split('=')[1];
+      openModal(query);
+    }
+  }, []);
+
   return (
     <>
       <section id="portfolio" className="portfolio">
@@ -68,25 +78,25 @@ function PagePortfolio() {
           {projectsArray.map(project => {
             return (
               <img key={project} className="isometric" src={`../../../public/images/${project}.png`}
-                onClick={e => {openModal(e, project);}}/>
+                onClick={openModal(project)}/>
             );
           })}
         </div>
         <LoyaltyApplication
           showModal={showModal === 'loyalty-application'}
-          closeModal={e => {openModal(e, '');}}
+          closeModal={openModal('')}
         />
         <RetailerPortal
           showModal={showModal === 'retailer-portal'}
-          closeModal={e => {openModal(e, '');}}
+          closeModal={openModal('')}
         />
         <Games
           showModal={showModal === 'games'}
-          closeModal={e => {openModal(e, '');}}
+          closeModal={openModal('')}
         />
         <Chatbot
           showModal={showModal === 'facebook-chatbot'}
-          closeModal={e => {openModal(e, '');}}
+          closeModal={openModal('')}
         />
       </section>
     </>
