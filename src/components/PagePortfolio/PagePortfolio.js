@@ -78,25 +78,25 @@ function PagePortfolio() {
           {projectsArray.map(project => {
             return (
               <img key={project} className="isometric" src={`../../../public/images/${project}.png`}
-                onClick={openModal(project)}/>
+                onClick={() => {openModal(project);}}/>
             );
           })}
         </div>
         <LoyaltyApplication
           showModal={showModal === 'loyalty-application'}
-          closeModal={openModal('')}
+          closeModal={() => {openModal('');}}
         />
         <RetailerPortal
           showModal={showModal === 'retailer-portal'}
-          closeModal={openModal('')}
+          closeModal={() => {openModal('');}}
         />
         <Games
           showModal={showModal === 'games'}
-          closeModal={openModal('')}
+          closeModal={() => {openModal('');}}
         />
         <Chatbot
           showModal={showModal === 'facebook-chatbot'}
-          closeModal={openModal('')}
+          closeModal={() => {openModal('');}}
         />
       </section>
     </>
