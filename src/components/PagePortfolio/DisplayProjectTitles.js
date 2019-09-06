@@ -17,7 +17,7 @@ function DisplayProjectTitles({projectsList, activeProject, updateProjectsArray}
               <h1 className={isActive ? 'active' : ''} onClick={e => {clickOnProject(e, project);}}>{project.name}</h1>
               <div className="project-index">0{index + 1}</div>
             </section>
-            {isActive && <div className={`line-titles  ${project.class}`}/>}
+            {isActive && <div className={isActive ? `line-titles active ${project.class}` : `line-titles active ${project.class}`}/>}
           </React.Fragment>
         );
       })}

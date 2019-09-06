@@ -29,6 +29,18 @@
   left: 115%;
   top: -35px;
   width: 5.5vw;
+  background: linear-gradient(var(--first-color-light), var(--first-color-light)) var(--second-color-dark) no-repeat 0 0 !important;
+  background-size: 0 100% !important;
+}
+
+.line-titles.active {
+  animation: loading 0.08s linear 1 forwards;
+}
+
+@keyframes loading {
+  to {
+    background-size: 100% 100%;
+  }
 }
 
 .line-titles.games {
