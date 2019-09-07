@@ -53,6 +53,9 @@ section.portfolio img.isometric {
   padding: 60px 0;
   margin-top: 40px;
   background-color: var(--white-color);
+  transition-property: left, height, width;
+  transition-timing-function: ease-out;
+  transition-duration: 1s;
 }
 
 section.portfolio img.isometric:nth-child(1) {
