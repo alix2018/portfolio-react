@@ -34,13 +34,7 @@
 }
 
 .line-titles.active {
-  animation: loading 0.08s linear 1 forwards;
-}
-
-@keyframes loading {
-  to {
-    background-size: 100% 100%;
-  }
+  animation: loading 0.2s linear 1 forwards;
 }
 
 .line-titles.games {
