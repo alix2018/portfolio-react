@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import './PagePortfolio.css';
+import ReactGA from 'react-ga';
 import LoyaltyApplication from '../Modals/ModalLoyaltyApplication/ModalLoyaltyApplication';
 import RetailerPortal from '../Modals/ModalRePo/ModalRePo';
 import Games from '../Modals/ModalGames/ModalGames';
@@ -39,6 +40,7 @@ function PagePortfolio() {
     setShowModal(project);
     if (projects.includes(project)) {
       history.pushState(null, null, `?project=${project}`);
+      ReactGA.pageview(`${project}`);
     } else {
       history.pushState(null, null, '/');
       const menuBar = document.querySelector('ul.menu-effect');
