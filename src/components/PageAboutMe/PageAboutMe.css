@@ -43,6 +43,7 @@ section.about-me .left p {
   font-family: var(--font-poppins-medium);
   color: #485563C9;
   line-height: 1.7;
+  letter-spacing: 0.9;
 }
 
 section.about-me .right {
