@@ -33,6 +33,12 @@
   background-size: 0 100% !important;
 }
 
+@media screen and (max-width: 1254px) {
+  .line-titles {
+    display: none;
+  }
+}
+
 .line-titles.active {
   animation: loading 0.2s linear 1 forwards;
 }
