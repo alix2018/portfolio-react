@@ -11,14 +11,16 @@ function Modal({showModal, closeModal, listSubtitles, modalInfo, paragraphInfo, 
     menuBar.style.pointerEvents = 'none';
   }
 
-  setTimeout(() => {
-    const pageOneClass = '#container2 .' + modalInfo.modalName + '.box .page-one';
-    const currentAnchor = document.querySelector(pageOneClass);
-    currentAnchor.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
-  }, 1);
+  if (showArrow === 'show') {
+    setTimeout(() => {
+      const pageOneClass = '#container2 .' + modalInfo.modalName + '.box .page-one';
+      const currentAnchor = document.querySelector(pageOneClass);
+      currentAnchor.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }, 1);
+  }
 
   function scrollRight() {
     const pageTwoClass = '#container2 .' + modalInfo.modalName + '.box .page-two';
