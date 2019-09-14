@@ -27,7 +27,7 @@ function LoyaltyApplication({showModal, closeModal}) {
     text: 'The Stamps application is a <span>digital solution</span> which informs the customers about the current <span>loyalty program</span>. They can find their number of stamps, see the rewards they can redeem or check the promotions that will make them earn more points.'
   };
   const paragraphStamps = {
-    context: 'Stamps Application',
+    context: 'Application',
     text: 'The first implementation was with Polymer 1.0 and <span>web components</span>. Web components allow us to reuse them from one application to another and do efficient customizations for the different costumers.'
   };
   const paragraphPwa = {
