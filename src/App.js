@@ -1,25 +1,22 @@
-import React, {useEffect} from 'react';
+import {useEffect} from 'react';
+import {useRoutes} from 'hookrouter';
 import './App.css';
-import MenuBar from './components/MenuBar/MenuBar';
-import PageHome from './components/PageHome/PageHome';
-import PagePortfolio from './components/PagePortfolio/PagePortfolio';
-import PageAboutMe from './components/PageAboutMe/PageAboutMe';
-import PageContact from './components/PageContact/PageContact';
+import ReactGA from 'react-ga';
+import routes from './router';
 
 function App() {
+  ReactGA.initialize('UA-147425189-1');
+  ReactGA.pageview(window.location.pathname + window.location.search);
+  const routeResult = useRoutes(routes);
+
   useEffect(() => {
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
     window.scrollTo(0, 0);
   }, []);
 
-  return (
-    <>
-      <MenuBar/>
-      <PageHome/>
-      <PagePortfolio/>
-      <PageAboutMe/>
-      <PageContact/>
-    </>
-  );
+  return routeResult;
 }
 
 export default App;

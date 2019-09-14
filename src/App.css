@@ -50,3 +50,11 @@ section.contact {
   animation-direction: alternate;
   animation-delay: 0s;
 }
+
+/* Loading left right animation */
+
+@keyframes loading {
+  to {
+    background-size: 100% 100%;
+  }
+}

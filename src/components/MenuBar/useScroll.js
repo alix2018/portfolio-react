@@ -1,4 +1,5 @@
 import {useEffect, useState} from 'react';
+import ReactGA from 'react-ga';
 
 function useScroll(pagesIds) {
   const [activePageId, setActivePageId] = useState('home');
@@ -32,7 +33,15 @@ function useScroll(pagesIds) {
     }
   }
 
+  function analyticsActivePage(page) {
+    ReactGA.event({
+      category: 'Active tab',
+      action: `${page} visited`
+    });
+  }
+
   useEffect(() => {
+    analyticsActivePage(activePageId);
     switch (activePageId) {
       case 'home':
         setMenuBarColors(secondDarkColor, greyColor);
@@ -48,10 +57,10 @@ function useScroll(pagesIds) {
         break;
     }
 
-    window.addEventListener('scroll', scrolling);
+    document.querySelector('#vertical-snapping').addEventListener('scroll', scrolling);
 
     return () => window.removeEventListener('scroll', scrolling);
-  }, [scrolling, activePageId]);
+  }, [activePageId]);
 
   return activePageId;
 }

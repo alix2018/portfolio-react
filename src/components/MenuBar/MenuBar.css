@@ -28,7 +28,6 @@
 
 .menu-effect a:hover,
 .menu-effect .active a {
-  font-weight: 900;
   color: var(--third-color);
   transition: color 0.3s;
 }

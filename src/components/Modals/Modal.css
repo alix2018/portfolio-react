@@ -174,8 +174,9 @@ img.flat {
   position: absolute;
   width: var(--flat-image-width);
   top: 300px;
-  right: calc(var(--percentage-border-right) - 200px);
+  right: var(--percentage-border-right);
   background-color: var(--image-background);
+  transform: translate(0, -50%) !important;
 }
 
 .container-categories {
