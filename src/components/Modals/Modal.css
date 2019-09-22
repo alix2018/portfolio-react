@@ -93,26 +93,6 @@
   transform: rotate(-45deg);
 }
 
-.arrow-right {
-  z-index: 150;
-  position: absolute;
-  bottom: 30px;
-  right: 40px;
-  padding: 10px;
-  border: solid var(--third-color);
-  border-width: 0 6px 6px 0;
-  transform: rotate(-45deg);
-  cursor: pointer;
-}
-
-.arrow-right.show {
-  display: block;
-}
-
-.arrow-right.hide {
-  display: none;
-}
-
 .box {
   display: inline-block;
   position: relative;
@@ -150,6 +130,13 @@ section.half-page {
   font-size: 40px;
   line-height: 1.1;
   letter-spacing: 1.2;
+}
+
+.arrow {
+  bottom: -15px;
+  width: 50px;
+  position: absolute;
+  right: 10px;
 }
 
 .page-one .main-info h2 {
