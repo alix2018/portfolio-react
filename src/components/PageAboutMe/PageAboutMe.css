@@ -60,13 +60,16 @@ section.about-me .right article section {
 
 section.about-me .right article section p {
   margin: 0;
-  letter-spacing: 0.5;
+  letter-spacing: 0.3;
+}
+
+section.about-me .right article footer span {
+  color: var(--third-color);
 }
 
 section.about-me .right article section p span {
   font-family: var(--font-poppins-bold);
 }
-
 
 footer {
   position: absolute;
@@ -74,8 +77,4 @@ footer {
   bottom: 30px;
   font-size: 40px;
   color: var(--first-color-light);
-}
-
-section.about-me .right article footer span {
-  color: var(--third-color);
 }
