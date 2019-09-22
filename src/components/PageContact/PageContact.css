@@ -116,7 +116,7 @@ section.contact .right footer {
   font-family: var(--font-poppins-light);
   font-size: 17px;
   text-align: right;
-  letter-spacing: 2px;
+  letter-spacing: 0;
   color: var(--second-color-dark);
 }
 

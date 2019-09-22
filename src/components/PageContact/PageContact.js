@@ -56,7 +56,7 @@ function PageContact() {
           </div>
         </section>
         <footer>
-          Opportunities don&apos;t happen. You create them.
+          Available for new web projects, contact me!
         </footer>
       </div>
     </section>
