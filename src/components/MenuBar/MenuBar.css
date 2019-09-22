@@ -32,6 +32,20 @@
   transition: color 0.3s;
 }
 
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+  .menu-effect a:hover,
+  .menu-effect .active a {
+    font-weight: 900;
+  }
+}
+
+@-moz-document url-prefix() {
+  .menu-effect a:hover,
+  .menu-effect .active a {
+    font-weight: 400;
+  }
+}
+
 .menu-effect a:hover {
   color: var(--third-color) !important;
 }
