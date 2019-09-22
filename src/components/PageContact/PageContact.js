@@ -3,15 +3,6 @@ import './PageContact.css';
 import ReactGA from 'react-ga';
 
 function PageContact() {
-  function clickArrowsUp(e) {
-    e.preventDefault();
-    const currentAnchor = document.querySelector('.home');
-    currentAnchor.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
-  }
-
   function onIconClick(iconName) {
     ReactGA.event({
       category: 'Click',
@@ -23,11 +14,6 @@ function PageContact() {
   return (
     <section id="contact" className="contact">
       <div className="left">
-        <div className="group-arrows" onClick={e => {clickArrowsUp(e);}}>
-          <div className="arrow-1"/>
-          <div className="arrow-2"/>
-          <div className="arrow-3"/>
-        </div>
         <div className="rights-reserved">© 2019. All Rights Reserved.</div>
         <div className="name">Stéphanie Alix</div>
       </div>
