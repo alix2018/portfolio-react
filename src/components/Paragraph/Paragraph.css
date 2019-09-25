@@ -1,9 +1,51 @@
-.row {
-  width: 610px;
+:root {
+  --paragraph-width: 500px;
+}
+
+article.paragraph {
+  display: flex;
+  flex-direction: column;
+}
+
+.title h1 {
+  font-size: 12px;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2;
+  font-family: var(--font-poppins-extra-bold);
+}
+
+.line-context {
+  width: var(--line-width);
+  height: 1px;
+  right: 10px;
+  margin: 10px 0 20px 0;
+  background: var(--white-color);
+}
+
+article.paragraph p {
+  width: var(--paragraph-width);
+  float: right;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: var(--font-poppins-light);
+  white-space: pre-wrap;
+  text-align: justify;
+  letter-spacing: 1;
+}
+
+article.paragraph p span {
+  font-family: var(--font-poppins-bold);
+}
+
+article.paragraph p span a {
+  text-decoration: none;
+  color: unset;
 }
 
 @media screen and (min-width: 1415px) {
-  .row,
+  article.paragraph,
   .flat,
   .quote,
   .main-info {
@@ -16,7 +58,7 @@
 }
 
 @media screen and (max-width: 1415px) {
-  .row,
+  article.paragraph,
   .flat,
   .quote,
   .main-info {
@@ -29,7 +71,7 @@
 }
 
 @media screen and (max-width: 1345px) {
-  .row,
+  article.paragraph,
   .flat,
   .quote,
   .main-info {
@@ -46,7 +88,7 @@
 }
 
 @media screen and (max-width: 1270px) {
-  .row,
+  article.paragraph,
   .flat,
   .quote,
   .main-info {
@@ -59,7 +101,7 @@
 }
 
 @media screen and (max-width: 1200px) {
-  .row,
+  article.paragraph,
   .flat,
   .quote,
   .main-info {

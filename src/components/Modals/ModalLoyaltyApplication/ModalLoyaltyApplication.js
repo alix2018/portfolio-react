@@ -44,11 +44,16 @@ function LoyaltyApplication({showModal, closeModal}) {
 
   return (
     <Modal showModal={showModal} closeModal={closeModal} listSubtitles={listSubtitles}
-      modalInfo={modalInfo} paragraphInfo={paragraphIntro}
+      modalInfo={modalInfo}
     >
       <div className={`${modalInfo.modalName} box`}>
-        <section className="page-two half-page">
-          <div className="loyalty-top-right">
+        <section className="page-two full-page">
+          <div className="loyalty-top-left">
+            <Paragraph>
+              {paragraphIntro}
+            </Paragraph>
+          </div>
+          <div className="bottom-left">
             <Paragraph>
               {paragraphStamps}
             </Paragraph>

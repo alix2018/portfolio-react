@@ -26,7 +26,6 @@ section.about-me .left img {
   max-width: 55%;
   height: auto;
   margin-left: 22.5%;
-  cursor: pointer;
   transform: scale(1.2);
 }
 
@@ -38,7 +37,7 @@ section.about-me .right {
   background-color: var(--second-color-dark);
 }
 
-article {
+section.about-me .right article {
   margin-left: 140px;
   margin-top: 17vh;
 }

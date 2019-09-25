@@ -32,7 +32,7 @@ function Games({showModal, closeModal}) {
   };
   const paragraphPixijs = {
     context: 'PixiJS',
-    text: 'I implemented the same 2D platform game with the <span>2D WebGL renderer <a href="https:// unity.com" target="_blank" rel="noopener noreferrer">PixiJS</a></span>. There was no interface but only Javascript code. I wrapped the game into a web component to be easily reusable. All the options of the game could be decided while importing the component: number of coins, speed, space between platforms...'
+    text: 'I implemented the same 2D game with the <span>2D WebGL renderer <a href="https:// unity.com" target="_blank" rel="noopener noreferrer">PixiJS</a></span>. I wrapped the game into a web component to be easily reusable. All the options of the game could be decided while importing the component: number of coins, speed, space between platforms...'
   };
   const paragraphWebAssembly = {
     context: 'webassembly',
@@ -45,11 +45,16 @@ function Games({showModal, closeModal}) {
   const textPlayGame = 'Play the game';
   return (
     <Modal showModal={showModal} closeModal={closeModal} listSubtitles={listSubtitles}
-      modalInfo={modalInfo} paragraphInfo={paragraphIntro}
+      modalInfo={modalInfo}
     >
       <div className={`${modalInfo.modalName} box`}>
         <section className="page-two full-page">
           <div className="games-top-left">
+            <Paragraph>
+              {paragraphIntro}
+            </Paragraph>
+          </div>
+          <div className="games-middle-left">
             <a href="https://pwa-test-1bec3.web.app" className="play-game unity" target="_blank" rel="noopener noreferrer">
               <p>{textPlayGame}</p>
               <img src="../../../../public/images/play-game.svg"/>
@@ -67,14 +72,14 @@ function Games({showModal, closeModal}) {
               {paragraphPixijs}
             </Paragraph>
           </div>
-          <div className="games-bottom-right">
-            <Paragraph>
-              {paragraphResult}
-            </Paragraph>
-          </div>
           <div className="games-top-right">
             <Paragraph>
               {paragraphWebAssembly}
+            </Paragraph>
+          </div>
+          <div className="games-bottom-right">
+            <Paragraph>
+              {paragraphResult}
             </Paragraph>
           </div>
         </section>

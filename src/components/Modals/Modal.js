@@ -1,13 +1,21 @@
 import React from 'react';
 import './Modal.css';
-import Paragraph from '../Paragraph/Paragraph';
 
-function Modal({showModal, closeModal, listSubtitles, modalInfo, paragraphInfo, children}) {
+function Modal({showModal, closeModal, listSubtitles, modalInfo, children}) {
   const showHideClassName = showModal ? 'modal display-block' : 'modal display-none';
   const menuBar = document.querySelector('ul.menu-effect');
   if (menuBar && showModal) {
     menuBar.style.pointerEvents = 'none';
   }
+
+  setTimeout(() => {	
+    const pageOneClass = '#container2 .' + modalInfo.modalName + '.box .page-one';	
+    const currentAnchor = document.querySelector(pageOneClass);	
+    currentAnchor.scrollIntoView({	
+      behavior: 'smooth',	
+      block: 'start'	
+    });	
+  }, 1);
 
   return (
     <div className={showHideClassName}>
@@ -36,12 +44,7 @@ function Modal({showModal, closeModal, listSubtitles, modalInfo, paragraphInfo, 
                     );
                   })}
                 </div>
-                <img className="flat" src={`../../../public/images/${modalInfo.imageName}.png`}/>
-                <div className="bottom-right">
-                  <Paragraph>
-                    {paragraphInfo}
-                  </Paragraph>
-                </div>
+                <img className="flat" src={`../../../public/images/flat/${modalInfo.imageName}.png`}/>
               </section>
               <img className="arrow" src="../../../public/images/arrow.svg"/>
             </div>

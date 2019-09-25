@@ -1,14 +1,17 @@
 import React from 'react';
 import './Paragraph.css';
-import ParagraphTitle from './ParagraphTitle';
-import ParagraphText from './ParagraphText';
+
+const parse = require('html-react-parser');
 
 function Paragraph({children}) {
   return (
-    <div className="row">
-      <ParagraphTitle title={children.context}/>
-      <ParagraphText text={children.text}/>
-    </div>
+    <article className="paragraph">
+      <div className="title">
+        <h1>{children.context}</h1>
+        <div className="line-context"/>
+      </div>
+      <p>{parse(children.text)}</p>
+    </article>
   );
 }
 

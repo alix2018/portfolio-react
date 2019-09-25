@@ -2,17 +2,23 @@
   width: 50vw;
 }
 
-.loyalty-top-right {
+.bottom-left {
   position: absolute;
-  bottom: 66%;
-  right: calc(var(--percentage-border-right));
+  bottom: var(--bottom-modal);
+  left: var(--percentage-borders-modal);
+}
+
+.loyalty-top-left {
+  position: absolute;
+  bottom: 40%;
+  left: var(--percentage-borders-modal);
 }
 
 .quote {
   position: absolute;
-  width: var(--flat-image-width);
-  bottom: 30%;
-  right: calc(var(--percentage-border-right));
+  width: var(--paragraph-width);
+  bottom: 36%;
+  right: var(--percentage-borders-modal);
   font-size: 18px;
   white-space: pre-wrap;
   letter-spacing: 0.8;
