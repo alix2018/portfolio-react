@@ -1,10 +1,8 @@
 :root {
   color: var(--white-color);
 
-  --percentage-border-left: 5%;
-  --percentage-borders-modal: 6%;
   --image-background: #CDD2E0;
-  --bottom-modal: 8%;
+  --bottom-modal: 10%;
 }
 
 #container1 {
@@ -66,7 +64,7 @@
   position: absolute;
   width: 32px;
   height: 32px;
-  left: 5%;
+  left: var(--global-margin-side);
   top: 0;
   margin-top: 31px;
   opacity: 1;
@@ -119,8 +117,9 @@ section.half-page {
 
 .main-info {
   position: absolute;
-  left: var(--percentage-border-left);
+  left: var(--global-margin-side);
   bottom: var(--bottom-modal);
+  /* transform: translateY(-50%); */
 }
 
 .page-one .main-info h1 {
@@ -132,10 +131,11 @@ section.half-page {
 }
 
 .arrow {
-  bottom: -15px;
-  width: 50px;
   position: absolute;
-  right: 10px;
+  bottom: 15px;
+  width: 60px;
+  right: var(--global-margin-side);
+  transform: inherit !important;
 }
 
 .page-one .main-info h2 {
@@ -158,10 +158,19 @@ section.half-page {
 
 img.flat {
   position: absolute;
-  width: 600px;
+  max-height: 70vh;
+  max-width: 40vw;
+  height: auto;
+  width: auto;
+  /* top: 50%; */
+  right: calc(var(--global-margin-side) + 50px);
+  bottom: var(--bottom-modal);
+  transform: inherit !important;
+  /* right: var(--global-margin-side); */
+  /* transform: translateY(-50%) !important; */
+  /* width: 600px;
   top: 300px;
-  right: var(--percentage-borders-modal);
-  transform: translate(0, -50%) !important;
+  transform: translate(0, -50%) !important; */
 }
 
 .container-categories {
@@ -193,7 +202,7 @@ img.flat {
 .bottom-right {
   position: absolute;
   bottom: var(--bottom-modal);
-  right: calc(var(--percentage-borders-modal));
+  right: calc(var(--global-margin-side));
 }
 
 section.page-two {

@@ -5,20 +5,20 @@
 .bottom-left {
   position: absolute;
   bottom: var(--bottom-modal);
-  left: var(--percentage-borders-modal);
+  left: var(--global-margin-side);
 }
 
 .loyalty-top-left {
   position: absolute;
   bottom: 40%;
-  left: var(--percentage-borders-modal);
+  left: var(--global-margin-side);
 }
 
 .quote {
   position: absolute;
   width: var(--paragraph-width);
   bottom: 36%;
-  right: var(--percentage-borders-modal);
+  right: var(--global-margin-side);
   font-size: 18px;
   white-space: pre-wrap;
   letter-spacing: 0.8;

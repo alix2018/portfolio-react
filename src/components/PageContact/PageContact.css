@@ -14,7 +14,7 @@ section.contact .left {
 .rights-reserved,
 .name {
   position: absolute;
-  left: 17%;
+  left: 20%;
   font-size: 13px;
   text-align: left;
   font-family: var(--font-poppins-light);
@@ -89,7 +89,6 @@ section.contact .right footer {
   position: absolute;
   width: 270px;
   bottom: 60px;
-  right: 60px;
   font-family: var(--font-poppins-light);
   font-size: 15px;
   text-align: right;

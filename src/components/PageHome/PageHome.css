@@ -18,7 +18,7 @@ section.home .left .name {
   position: fixed;
   z-index: 2;
   top: 0%;
-  left: 5%;
+  left: var(--global-margin-side);
   margin-top: 36.5px;
   font-size: 14px;
   font-family: var(--font-poppins-medium);
@@ -64,7 +64,7 @@ section.home .right .icons {
   position: absolute;
   display: inline-flex;
   bottom: 5%;
-  right: 5%;
+  right: var(--global-margin-side);
   margin: 0;
 }
 

@@ -46,40 +46,28 @@ article.paragraph p span a {
 
 @media screen and (min-width: 1415px) {
   article.paragraph,
-  .flat,
+  /* .flat, */
   .quote,
   .main-info {
     zoom: 1;
-  }
-
-  img.flat {
-    transform: translate(0, -50%) !important;
   }
 }
 
 @media screen and (max-width: 1415px) {
   article.paragraph,
-  .flat,
+  /* .flat, */
   .quote,
   .main-info {
     zoom: 0.95;
-  }
-
-  img.flat {
-    transform: translate(0, -35%);
   }
 }
 
 @media screen and (max-width: 1345px) {
   article.paragraph,
-  .flat,
+  /* .flat, */
   .quote,
   .main-info {
     zoom: 0.9;
-  }
-
-  img.flat {
-    transform: translate(0, -40%) !important;
   }
 
   .play-game {
@@ -89,27 +77,19 @@ article.paragraph p span a {
 
 @media screen and (max-width: 1270px) {
   article.paragraph,
-  .flat,
+  /* .flat, */
   .quote,
   .main-info {
     zoom: 0.85;
-  }
-
-  img.flat {
-    transform: translate(0, -25%) !important;
   }
 }
 
 @media screen and (max-width: 1200px) {
   article.paragraph,
-  .flat,
+  /* .flat, */
   .quote,
   .main-info {
     zoom: 0.8;
-  }
-
-  img.flat {
-    transform: translate(0, -10%) !important;
   }
 
   .play-game {

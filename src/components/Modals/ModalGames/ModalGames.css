@@ -5,31 +5,31 @@
 .games-top-left {
   position: absolute;
   bottom: 65%;
-  left: var(--percentage-borders-modal);
+  left: var(--global-margin-side);
 }
 
 .games-middle-left {
   position: absolute;
   bottom: 38%;
-  left: var(--percentage-borders-modal);
+  left: var(--global-margin-side);
 }
 
 .games-bottom-left {
   position: absolute;
   bottom: var(--bottom-modal);
-  left: var(--percentage-borders-modal);
+  left: var(--global-margin-side);
 }
 
 .games-top-right {
   position: absolute;
   bottom: 35%;
-  right: var(--percentage-borders-modal);
+  right: var(--global-margin-side);
 }
 
 .games-bottom-right {
   position: absolute;
   bottom: var(--bottom-modal);
-  right: var(--percentage-borders-modal);
+  right: var(--global-margin-side);
 }
 
 .play-game {
