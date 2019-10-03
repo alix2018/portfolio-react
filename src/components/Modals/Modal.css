@@ -119,7 +119,6 @@ section.half-page {
   position: absolute;
   left: var(--global-margin-side);
   bottom: var(--bottom-modal);
-  /* transform: translateY(-50%); */
 }
 
 .page-one .main-info h1 {
@@ -162,15 +161,9 @@ img.flat {
   max-width: 40vw;
   height: auto;
   width: auto;
-  /* top: 50%; */
   right: calc(var(--global-margin-side) + 50px);
   bottom: var(--bottom-modal);
   transform: inherit !important;
-  /* right: var(--global-margin-side); */
-  /* transform: translateY(-50%) !important; */
-  /* width: 600px;
-  top: 300px;
-  transform: translate(0, -50%) !important; */
 }
 
 .container-categories {
