@@ -14,3 +14,9 @@
   scroll-snap-align: start;
   scroll-margin: 50% 0 -50% 0;
 }
+
+@media only screen and (max-width: 768px) {
+  #vertical-snapping {
+    scroll-snap-type: none !important;
+  }
+}

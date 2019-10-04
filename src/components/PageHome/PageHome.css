@@ -138,3 +138,64 @@ section.home .right .button:hover {
 .github:hover {
   transform: scale(1.13);
 }
+
+@media only screen and (max-width: 1024px) {
+  .top {
+    position: relative;
+    height: 65vh;
+    width: 100vw;
+  }
+
+  .name {
+    font-size: 25px !important;
+  }
+
+  section.home .left h1,
+  .typewriter {
+    font-size: 110px;
+    margin: 20px 50px;
+    line-height: 1.1;
+  }
+
+  section.home .left h1 {
+    bottom: 0;
+    left: 0;
+    top: initial;
+  }
+
+  .bottom {
+    position: relative;
+    height: 35vh;
+    width: 100vw;
+  }
+
+  .typewriter {
+    top: 0;
+    left: 0;
+  }
+
+  .icons {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .name {
+    margin-top: 20px;
+    font-size: 15px !important;
+  }
+
+  section.home .left h1,
+  .typewriter {
+    font-size: 50px;
+    margin: 10px 20px;
+    line-height: 1.25;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  section.home .left h1,
+  .typewriter {
+    font-size: 45px;
+  }
+}
