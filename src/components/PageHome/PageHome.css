@@ -50,7 +50,7 @@ section.home .left h1,
 }
 
 .typewriter {
-  left: calc(var(--width-left-column) + 15px);
+  left: calc(var(--width-left-column) + 18px);
   color: var(--first-color-light);
 }
 
