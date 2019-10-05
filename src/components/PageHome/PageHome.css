@@ -18,7 +18,7 @@ section.home .left .name {
   position: fixed;
   z-index: 2;
   top: 0%;
-  left: var(--global-margin-side);
+  left: var(--margin-side-desktop);
   margin-top: 36.5px;
   font-size: 14px;
   font-family: var(--font-poppins-medium);
@@ -64,7 +64,7 @@ section.home .right .icons {
   position: absolute;
   display: inline-flex;
   bottom: 5%;
-  right: var(--global-margin-side);
+  right: var(--margin-side-desktop);
   margin: 0;
 }
 
@@ -147,13 +147,14 @@ section.home .right .button:hover {
   }
 
   .name {
+    left: var(--margin-side-tablet) !important;
     font-size: 25px !important;
   }
 
   section.home .left h1,
   .typewriter {
     font-size: 110px;
-    margin: 20px 50px;
+    margin: 20px var(--margin-side-tablet);
     line-height: 1.1;
   }
 
@@ -181,6 +182,7 @@ section.home .right .button:hover {
 
 @media only screen and (max-width: 767px) {
   .name {
+    left: var(--margin-side-mobile) !important;
     margin-top: 20px !important;
     font-size: 15px !important;
   }
@@ -188,7 +190,7 @@ section.home .right .button:hover {
   section.home .left h1,
   .typewriter {
     font-size: 50px;
-    margin: 10px 20px;
+    margin: 10px var(--margin-side-mobile);
     line-height: 1.25;
   }
 }

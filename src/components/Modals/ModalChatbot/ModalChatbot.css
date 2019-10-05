@@ -5,5 +5,5 @@
 .chatbot-top-left {
   position: absolute;
   bottom: 40%;
-  left: var(--global-margin-side);
+  left: var(--margin-side-desktop);
 }

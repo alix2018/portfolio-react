@@ -64,7 +64,7 @@
   position: absolute;
   width: 32px;
   height: 32px;
-  left: var(--global-margin-side);
+  left: var(--margin-side-desktop);
   top: 0;
   margin-top: 31px;
   opacity: 1;
@@ -117,7 +117,7 @@ section.half-page {
 
 .main-info {
   position: absolute;
-  left: var(--global-margin-side);
+  left: var(--margin-side-desktop);
   bottom: var(--bottom-modal);
 }
 
@@ -133,7 +133,7 @@ section.half-page {
   position: absolute;
   bottom: 15px;
   width: 60px;
-  right: var(--global-margin-side);
+  right: var(--margin-side-desktop);
   transform: inherit !important;
 }
 
@@ -161,7 +161,7 @@ img.flat {
   max-width: 40vw;
   height: auto;
   width: auto;
-  right: calc(var(--global-margin-side) + 50px);
+  right: calc(var(--margin-side-desktop) + 50px);
   bottom: var(--bottom-modal);
   transform: inherit !important;
 }
@@ -195,7 +195,7 @@ img.flat {
 .bottom-right {
   position: absolute;
   bottom: var(--bottom-modal);
-  right: calc(var(--global-margin-side));
+  right: calc(var(--margin-side-desktop));
 }
 
 section.page-two {

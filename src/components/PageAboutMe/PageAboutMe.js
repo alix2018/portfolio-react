@@ -15,7 +15,7 @@ function PageAboutMe() {
           <section>
             <p>
               I’m a 24 year old girl who recently moved to Amsterdam
-              to start my first job as a <span>web developer</span>. After an intensive
+              for a <span>web developer</span> job. After an intensive
               mathematics school, I chose to integrate a <span>computer science school</span> in
               France. Among all the projects, I prefered Web
               development. That’s why I did my 3 internships in that

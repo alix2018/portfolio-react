@@ -10,7 +10,9 @@
   --font-poppins-bold: 'Poppins Bold', sans-serif;
   --font-poppins-extra-bold: 'Poppins Extra Bold', sans-serif;
   --line-width: 40px;
-  --global-margin-side: 6%;
+  --margin-side-desktop: 6%;
+  --margin-side-tablet: 50px;
+  --margin-side-mobile: 20px;
 }
 
 @font-face {
