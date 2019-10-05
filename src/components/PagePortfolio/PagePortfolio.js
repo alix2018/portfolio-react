@@ -78,13 +78,7 @@ function PagePortfolio() {
   return (
     <section id="portfolio" className="portfolio">
       {isMobile &&
-        <div id="swipe-carousel">
-          {projectsList.map((project, index) => {
-            return (
-              <DisplayCarousel key={project.class} project={project} index={index} openModal={openModal}/>
-            );
-          })}
-        </div>
+          <DisplayCarousel projectsList={projectsList} openModal={openModal}/>
       }
       {!isMobile &&
         <div id="desktop-carousel">
