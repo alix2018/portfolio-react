@@ -1,5 +1,6 @@
 :root {
   --project-left: 60%;
+  --line-height: 70px;
 }
 
 section.portfolio {
@@ -23,7 +24,7 @@ section.portfolio img {
 .titles {
   left: calc(30% - 73px);
   top: 50%;
-  margin-top: 40px;
+  margin-top: 30px;
   text-align: right;
 }
 
@@ -31,7 +32,7 @@ section.portfolio img {
   position: relative;
   height: auto;
   width: 255px;
-  margin: 50px 0 0;
+  margin: 40px 0 0;
   overflow: auto;
   overflow-y: hidden;
 }

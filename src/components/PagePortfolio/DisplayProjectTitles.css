@@ -12,7 +12,7 @@
   color: var(--third-color);
 }
 
-.project-index {
+section.titles-list .project-index {
   position: absolute;
   width: 20px;
   top: calc(50% + 2px);
@@ -45,4 +45,18 @@
 
 .line-titles.games {
   top: -18px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .titles {
+    left: calc(30% - 90px);
+  }
+
+  .titles-list h1 {
+    font-size: 30px;
+  }
+
+  section.portfolio .right {
+    zoom: 0.8;
+  }
 }

@@ -11,14 +11,14 @@ section.about-me .left {
 }
 
 section.about-me .left .img,
-.img-container {
+section.about-me .left .img-container {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
 
-.img-container {
+section.about-me .left .img-container {
   position: relative;
 }
 

@@ -181,7 +181,7 @@ section.home .right .button:hover {
 
 @media only screen and (max-width: 767px) {
   .name {
-    margin-top: 20px;
+    margin-top: 20px !important;
     font-size: 15px !important;
   }
 

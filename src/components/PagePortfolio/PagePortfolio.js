@@ -6,6 +6,9 @@ import RetailerPortal from '../Modals/ModalRePo/ModalRePo';
 import Games from '../Modals/ModalGames/ModalGames';
 import Chatbot from '../Modals/ModalChatbot/ModalChatbot';
 import DisplayProjectTitles from './DisplayProjectTitles';
+import DisplayCarousel from './DisplayCarousel';
+
+import '../../scroll-snap-polyfill';
 
 function PagePortfolio() {
   const projectsList = [
@@ -35,6 +38,7 @@ function PagePortfolio() {
   const [projectsArray, setProjectsArray] = useState(projects);
   const [activeProject, setActiveProject] = useState(projectsList[0]);
   const [showModal, setShowModal] = useState('');
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   function openModal(project) {
     setShowModal(project);
@@ -61,6 +65,9 @@ function PagePortfolio() {
   }
 
   useEffect(() => {
+    window.addEventListener('resize', () => {
+      setIsMobile(window.innerWidth < 768);
+    });
     const url = window.location.search;
     if (url.substring(0, 9) === '?project=') {
       const query = url.split('=')[1];
@@ -69,39 +76,50 @@ function PagePortfolio() {
   }, []);
 
   return (
-    <>
-      <section id="portfolio" className="portfolio">
-        <div className="left">
-          <div className="titles">
-            <DisplayProjectTitles projectsList={projectsList} activeProject={activeProject} updateProjectsArray={updateProjectsArray}/>
-          </div>
-        </div>
-        <div className="right">
-          {projectsArray.map(project => {
+    <section id="portfolio" className="portfolio">
+      {isMobile &&
+        <div id="swipe-carousel">
+          {projectsList.map((project, index) => {
             return (
-              <img key={project} className="isometric" src={`../../../public/images/isometric/${project}.png`}
-                onClick={() => {openModal(project);}}/>
+              <DisplayCarousel key={project.class} project={project} index={index} openModal={openModal}/>
             );
           })}
         </div>
-        <LoyaltyApplication
-          showModal={showModal === 'loyalty-application'}
-          closeModal={() => {openModal('');}}
-        />
-        <RetailerPortal
-          showModal={showModal === 'retailer-portal'}
-          closeModal={() => {openModal('');}}
-        />
-        <Games
-          showModal={showModal === 'games'}
-          closeModal={() => {openModal('');}}
-        />
-        <Chatbot
-          showModal={showModal === 'facebook-chatbot'}
-          closeModal={() => {openModal('');}}
-        />
-      </section>
-    </>
+      }
+      {!isMobile &&
+        <div id="desktop-carousel">
+          <div className="left">
+            <div className="titles">
+              <DisplayProjectTitles projectsList={projectsList} activeProject={activeProject} updateProjectsArray={updateProjectsArray}/>
+            </div>
+          </div>
+          <div className="right">
+            {projectsArray.map(project => {
+              return (
+                <img key={project} className="isometric" src={`../../../public/images/isometric/${project}.png`}
+                  onClick={() => {openModal(project);}}/>
+              );
+            })}
+          </div>
+        </div>
+      }
+      <LoyaltyApplication
+        showModal={showModal === 'loyalty-application'}
+        closeModal={() => {openModal('');}}
+      />
+      <RetailerPortal
+        showModal={showModal === 'retailer-portal'}
+        closeModal={() => {openModal('');}}
+      />
+      <Games
+        showModal={showModal === 'games'}
+        closeModal={() => {openModal('');}}
+      />
+      <Chatbot
+        showModal={showModal === 'facebook-chatbot'}
+        closeModal={() => {openModal('');}}
+      />
+    </section>
   );
 }
 

@@ -15,7 +15,7 @@
   scroll-margin: 50% 0 -50% 0;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   #vertical-snapping {
     scroll-snap-type: none !important;
   }
