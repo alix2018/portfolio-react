@@ -78,7 +78,7 @@ function PagePortfolio() {
   return (
     <section id="portfolio" className="portfolio">
       {isMobile &&
-          <DisplayCarousel projectsList={projectsList} openModal={openModal}/>
+        <DisplayCarousel projectsList={projectsList} openModal={openModal}/>
       }
       {!isMobile &&
         <div id="desktop-carousel">
