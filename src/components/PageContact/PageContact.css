@@ -12,7 +12,7 @@ section.contact .left {
 }
 
 .rights-reserved,
-.name {
+section.contact .left .name {
   position: absolute;
   left: 20%;
   font-size: 13px;
@@ -25,7 +25,7 @@ section.contact .left {
   bottom: 65px;
 }
 
-.name {
+section.contact .left .name {
   bottom: 50px;
 }
 
@@ -98,4 +98,30 @@ section.contact .right footer {
 
 section.contact .right footer:hover {
   text-decoration: underline;
+}
+
+@media only screen and (max-width: 1024px) {
+  section.contact {
+    height: 70vh;
+    margin-top: -1px;
+  }
+
+  section.contact .left,
+  section.contact .right {
+    height: 100%;
+  }
+
+  section.contact .left {
+    width: 100vw;
+    background-color: var(--first-color-light);
+  }
+
+  section.contact .right {
+    width: 0%;
+  }
+
+  section.contact .left > *,
+  section.contact .right > * {
+    display: none;
+  }
 }
