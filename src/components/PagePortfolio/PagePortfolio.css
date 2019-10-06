@@ -84,3 +84,9 @@ section.portfolio img.isometric:nth-child(4) {
   height: 240px;
   background-color: #76808A;
 }
+
+@media only screen and (max-width: 767px) {
+  section.portfolio {
+    margin-top: -1px;
+  }
+}
