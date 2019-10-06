@@ -154,7 +154,7 @@ section.home .right .button:hover {
 
   section.home .left h1,
   .typewriter {
-    font-size: 110px;
+    font-size: 100px;
     margin: 20px var(--margin-side-tablet);
     line-height: 1.1;
   }
