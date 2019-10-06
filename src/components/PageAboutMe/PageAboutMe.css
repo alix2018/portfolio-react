@@ -131,6 +131,7 @@ footer {
   section.about-me .bottom .img-container {
     position: absolute;
     top: 100vh;
+    left: 43%;
   }
 
   section.about-me .bottom img {
