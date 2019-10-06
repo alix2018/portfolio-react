@@ -12,16 +12,16 @@ function MainPage() {
     <>
       <MenuBar/>
       <div id="vertical-snapping">
-        <div className="page">
+        <div className="page home">
           <PageHome/>
         </div>
-        <div className="page">
+        <div className="page portfolio">
           <PagePortfolio/>
         </div>
-        <div className="page">
+        <div className="page about-me">
           <PageAboutMe/>
         </div>
-        <div className="page">
+        <div className="page contact">
           <PageContact/>
         </div>
       </div>
