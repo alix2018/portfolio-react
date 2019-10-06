@@ -10,16 +10,11 @@ section.about-me .left {
   background-color: var(--first-color-light);
 }
 
-section.about-me .left .img,
 section.about-me .left .img-container {
-  position: absolute;
+  position: relative;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-}
-
-section.about-me .left .img-container {
-  position: relative;
 }
 
 section.about-me .left img {
@@ -42,19 +37,24 @@ section.about-me .right article {
   margin-top: 17vh;
 }
 
-header {
+section.about-me article header {
   margin: 0;
   font-size: 40px;
   color: var(--first-color-light);
 }
 
 section.about-me .right article section {
+  display: block;
   width: 470px;
   margin: 40px 0;
   font-size: 14px;
   line-height: 25px;
   font-family: var(--font-poppins-light);
   color: var(--first-color-light);
+}
+
+p.about-me-mobile {
+  display: none;
 }
 
 section.about-me .right article section p {
@@ -79,9 +79,94 @@ footer {
 }
 
 @media only screen and (max-width: 1024px) {
+  section.about-me {
+    margin-top: -1px;
+  }
+
   section.about-me,
   section.about-me .left,
   section.about-me .right {
     background-color: var(--second-color-dark);
+  }
+
+  section.about-me .left {
+    position: relative;
+    width: 100vw !important;
+  }
+
+  section.about-me .right {
+    position: absolute;
+    display: contents;
+  }
+
+  section.about-me article {
+    position: relative;
+    margin: 0 !important;
+  }
+
+  section.about-me article header {
+    position: absolute;
+    left: var(--margin-side-tablet);
+    top: 10vh;
+  }
+
+  section.about-me article section {
+    position: absolute;
+    left: var(--margin-side-tablet);
+    top: 21vh;
+    width: auto !important;
+    margin: 0 !important;
+  }
+
+  section.about-me article section p {
+    display: block;
+    width: calc(100vw - 4 * var(--margin-side-tablet));
+    font-size: 15px;
+  }
+
+  section.about-me article section p.about-me-mobile {
+    display: none;
+  }
+
+  section.about-me .bottom .img-container {
+    position: absolute;
+    top: 100vh;
+  }
+
+  section.about-me .bottom img {
+    max-width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+  section.about-me .right article footer {
+    top: 50vh;
+    right: var(--margin-side-tablet);
+    bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  section.about-me article header {
+    top: 5vh !important;
+    left: var(--margin-side-mobile);
+  }
+
+  section.about-me article section {
+    margin: 0 !important;
+    left: var(--margin-side-mobile) !important;
+  }
+
+  section.about-me article section p {
+    display: none;
+  }
+
+  section.about-me article section p.about-me-mobile {
+    display: block;
+    width: calc(100vw - 2 * var(--margin-side-mobile) - 20px) !important;
+    font-size: 14px;
+  }
+
+  section.about-me .right article footer {
+    display: none;
   }
 }

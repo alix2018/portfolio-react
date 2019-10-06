@@ -4,7 +4,7 @@ import './PageAboutMe.css';
 function PageAboutMe() {
   return (
     <section id="about-me" className="about-me">
-      <div className="left">
+      <div className="left bottom">
         <div className="img-container">
           <img src="../../../public/images/self-picture.jpg"/>
         </div>
@@ -26,6 +26,16 @@ function PageAboutMe() {
               in the Netherland I also started <span>to travel</span>,
               explore new countries and learn about other cultures which
               I find fascinating!
+            </p>
+            <p className="about-me-mobile">
+              I’m a 24 year old girl who recently moved to Amsterdam
+              for a <span>web developer</span> job. I studied in a computer
+              science <span>engineering school</span> in France. I did my 3 internships in web
+              field and got hired as a Junior Web developer. On my spare time
+              I love coding and continue learning. I also really
+              enjoy playing <span>team sports</span> with colleagues and friends. After moving
+              in the Netherland I also started <span>to travel</span>,
+              explore new countries and learn about other cultures.
             </p>
           </section>
           <footer>I am <span>ready</span></footer>
