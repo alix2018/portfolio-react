@@ -55,6 +55,7 @@ section.portfolio #swipe-carousel .tile .project-index {
 }
 
 section.portfolio #swipe-carousel .tile .title {
+  max-width: 250px;
   padding-top: 18px;
   font-size: 40px;
   line-height: 1.1;
