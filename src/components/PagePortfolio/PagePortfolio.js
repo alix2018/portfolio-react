@@ -66,9 +66,7 @@ function PagePortfolio() {
 
   useEffect(() => {
     window.addEventListener('resize', () => {
-      console.log("window.innerWidth", window.innerWidth);
       setIsMobile(window.innerWidth < 1024);
-      console.log("mobile!");
     });
     const url = window.location.search;
     if (url.substring(0, 9) === '?project=') {
