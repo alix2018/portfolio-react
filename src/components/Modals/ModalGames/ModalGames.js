@@ -57,7 +57,7 @@ function Games({showModal, closeModal}) {
           <div className="games-middle-left">
             <a href="https://pwa-test-1bec3.web.app" className="play-game unity" target="_blank" rel="noopener noreferrer">
               <p>{textPlayGame}</p>
-              <img src="../../../../public/images/play-game.svg"/>
+              <img src="../../../../public/assets/play-game.svg"/>
             </a>
             <Paragraph>
               {paragraphUnity}
@@ -66,7 +66,7 @@ function Games({showModal, closeModal}) {
           <div className="games-bottom-left">
             <a href="https://jumpy-component.web.app/demo" className="play-game pixi" target="_blank" rel="noopener noreferrer">
               <p>{textPlayGame}</p>
-              <img src="../../../../public/images/play-game.svg"/>
+              <img src="../../../../public/assets/play-game.svg"/>
             </a>
             <Paragraph>
               {paragraphPixijs}

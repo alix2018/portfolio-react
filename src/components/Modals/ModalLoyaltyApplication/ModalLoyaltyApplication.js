@@ -59,7 +59,7 @@ function LoyaltyApplication({showModal, closeModal}) {
             </Paragraph>
           </div>
           <div className="quote">
-            <img src="../../../../public/images/quotation-mark.svg"/>
+            <img src="../../../../public/assets/quotation-mark.svg"/>
             {pwaQuote.mainText}<br/>
             {pwaQuote.line1}<br/>
             {pwaQuote.line2}<br/>

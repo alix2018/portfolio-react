@@ -2,7 +2,7 @@
   color: var(--white-color);
 
   --image-background: #CDD2E0;
-  --bottom-modal: 10%;
+  --bottom-modal: 8%;
 }
 
 #container1 {
@@ -131,7 +131,7 @@ section.half-page {
 
 .arrow {
   position: absolute;
-  bottom: 15px;
+  bottom: calc(var(--bottom-modal) - 20px);
   width: 60px;
   right: var(--global-margin-side);
   transform: inherit !important;
@@ -155,14 +155,11 @@ section.half-page {
   margin-bottom: 0;
 }
 
-img.flat {
-  position: absolute;
-  max-height: 70vh;
-  max-width: 40vw;
-  height: auto;
+section.page-one img {
+  height: 95vh;
   width: auto;
-  right: calc(var(--global-margin-side) + 50px);
-  bottom: var(--bottom-modal);
+  right: calc(var(--global-margin-side) - 50px);
+  bottom: -30px;
   transform: inherit !important;
 }
 
