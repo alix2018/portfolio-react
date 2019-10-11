@@ -1,11 +1,8 @@
 :root {
   color: var(--white-color);
 
-  --line-width: 70px;
-  --flat-image-width: 400px;
-  --percentage-border-left: 5%;
-  --percentage-border-right: 6%;
   --image-background: #CDD2E0;
+  --bottom-modal: 8%;
 }
 
 #container1 {
@@ -67,7 +64,7 @@
   position: absolute;
   width: 32px;
   height: 32px;
-  left: 5%;
+  left: var(--global-margin-side);
   top: 0;
   margin-top: 31px;
   opacity: 1;
@@ -91,26 +88,6 @@
 
 .close:after {
   transform: rotate(-45deg);
-}
-
-.arrow-right {
-  z-index: 150;
-  position: absolute;
-  bottom: 30px;
-  right: 40px;
-  padding: 10px;
-  border: solid var(--third-color);
-  border-width: 0 6px 6px 0;
-  transform: rotate(-45deg);
-  cursor: pointer;
-}
-
-.arrow-right.show {
-  display: block;
-}
-
-.arrow-right.hide {
-  display: none;
 }
 
 .box {
@@ -140,8 +117,8 @@ section.half-page {
 
 .main-info {
   position: absolute;
-  left: var(--percentage-border-left);
-  bottom: 7%;
+  left: var(--global-margin-side);
+  bottom: var(--bottom-modal);
 }
 
 .page-one .main-info h1 {
@@ -150,6 +127,14 @@ section.half-page {
   font-size: 40px;
   line-height: 1.1;
   letter-spacing: 1.2;
+}
+
+.arrow {
+  position: absolute;
+  bottom: calc(var(--bottom-modal) - 20px);
+  width: 60px;
+  right: var(--global-margin-side);
+  transform: inherit !important;
 }
 
 .page-one .main-info h2 {
@@ -170,13 +155,12 @@ section.half-page {
   margin-bottom: 0;
 }
 
-img.flat {
-  position: absolute;
-  width: var(--flat-image-width);
-  top: 300px;
-  right: var(--percentage-border-right);
-  background-color: var(--image-background);
-  transform: translate(0, -50%) !important;
+section.page-one img {
+  height: 95vh;
+  width: auto;
+  right: calc(var(--global-margin-side) - 50px);
+  bottom: -30px;
+  transform: inherit !important;
 }
 
 .container-categories {
@@ -191,7 +175,7 @@ img.flat {
 
 .categories,
 .context {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 2;
@@ -207,8 +191,8 @@ img.flat {
 
 .bottom-right {
   position: absolute;
-  bottom: 8%;
-  right: calc(var(--percentage-border-right));
+  bottom: var(--bottom-modal);
+  right: calc(var(--global-margin-side));
 }
 
 section.page-two {

@@ -9,6 +9,8 @@
   --font-poppins-medium: 'Poppins Medium', sans-serif;
   --font-poppins-bold: 'Poppins Bold', sans-serif;
   --font-poppins-extra-bold: 'Poppins Extra Bold', sans-serif;
+  --line-width: 40px;
+  --global-margin-side: 6%;
 }
 
 @font-face {

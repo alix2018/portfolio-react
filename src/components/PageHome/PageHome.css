@@ -18,7 +18,7 @@ section.home .left .name {
   position: fixed;
   z-index: 2;
   top: 0%;
-  left: 5%;
+  left: var(--global-margin-side);
   margin-top: 36.5px;
   font-size: 14px;
   font-family: var(--font-poppins-medium);
@@ -42,39 +42,6 @@ section.home .left h1,
   font-weight: bold;
 }
 
-section.home .left .group-arrows {
-  position: absolute;
-  height: 50px;
-  left: 4%;
-  bottom: 6%;
-  padding: 5px 10px;
-  cursor: pointer;
-  animation-delay: 900ms;
-}
-
-.arrow-1,
-.arrow-2,
-.arrow-3 {
-  padding: 7px;
-  border: solid var(--third-color);
-  border-width: 0 5px 5px 0;
-  transform: rotate(45deg);
-}
-
-section.home .left .arrow-1 {
-  margin-bottom: -5px;
-  animation-delay: 2s;
-}
-
-section.home .left .arrow-2 {
-  margin-bottom: -5px;
-  animation-delay: 2.5s;
-}
-
-section.home .left .arrow-3 {
-  animation-delay: 3s;
-}
-
 .right {
   height: 100vh;
   float: right;
@@ -83,7 +50,7 @@ section.home .left .arrow-3 {
 }
 
 .typewriter {
-  left: calc(var(--width-left-column) + 15px);
+  left: calc(var(--width-left-column) + 18px);
   color: var(--first-color-light);
 }
 
@@ -97,7 +64,7 @@ section.home .right .icons {
   position: absolute;
   display: inline-flex;
   bottom: 5%;
-  right: 5%;
+  right: var(--global-margin-side);
   margin: 0;
 }
 

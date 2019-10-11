@@ -4,33 +4,38 @@
 
 .games-top-left {
   position: absolute;
-  bottom: 45%;
-  left: calc(5% - 64px);
+  bottom: 65%;
+  left: var(--global-margin-side);
+}
+
+.games-middle-left {
+  position: absolute;
+  bottom: 38%;
+  left: var(--global-margin-side);
 }
 
 .games-bottom-left {
   position: absolute;
-  bottom: 8%;
-  left: calc(5% - 62px);
+  bottom: var(--bottom-modal);
+  left: var(--global-margin-side);
 }
 
 .games-top-right {
   position: absolute;
   bottom: 35%;
-  right: calc(var(--percentage-border-right));
+  right: var(--global-margin-side);
 }
 
 .games-bottom-right {
   position: absolute;
-  bottom: 8%;
-  right: calc(var(--percentage-border-right));
+  bottom: var(--bottom-modal);
+  right: var(--global-margin-side);
 }
 
 .play-game {
   position: absolute;
   display: flex;
-  top: 70%;
-  left: 5%;
+  right: 0;
   text-decoration: none;
 }
 

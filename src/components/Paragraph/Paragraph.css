@@ -1,43 +1,70 @@
-.row {
-  width: 610px;
+:root {
+  --paragraph-width: 500px;
+}
+
+article.paragraph {
+  display: flex;
+  flex-direction: column;
+}
+
+.title h1 {
+  font-size: 12px;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2;
+  font-family: var(--font-poppins-extra-bold);
+}
+
+.line-context {
+  width: var(--line-width);
+  height: 1px;
+  right: 10px;
+  margin: 10px 0 20px 0;
+  background: var(--white-color);
+}
+
+article.paragraph p {
+  width: var(--paragraph-width);
+  float: right;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: var(--font-poppins-light);
+  white-space: pre-wrap;
+  text-align: justify;
+  letter-spacing: 1;
+}
+
+article.paragraph p span {
+  font-family: var(--font-poppins-bold);
+}
+
+article.paragraph p span a {
+  text-decoration: none;
+  color: unset;
 }
 
 @media screen and (min-width: 1415px) {
-  .row,
-  .flat,
+  article.paragraph,
   .quote,
   .main-info {
     zoom: 1;
   }
-
-  img.flat {
-    transform: translate(0, -50%) !important;
-  }
 }
 
 @media screen and (max-width: 1415px) {
-  .row,
-  .flat,
+  article.paragraph,
   .quote,
   .main-info {
     zoom: 0.95;
   }
-
-  img.flat {
-    transform: translate(0, -35%);
-  }
 }
 
 @media screen and (max-width: 1345px) {
-  .row,
-  .flat,
+  article.paragraph,
   .quote,
   .main-info {
     zoom: 0.9;
-  }
-
-  img.flat {
-    transform: translate(0, -40%) !important;
   }
 
   .play-game {
@@ -46,28 +73,18 @@
 }
 
 @media screen and (max-width: 1270px) {
-  .row,
-  .flat,
+  article.paragraph,
   .quote,
   .main-info {
     zoom: 0.85;
   }
-
-  img.flat {
-    transform: translate(0, -25%) !important;
-  }
 }
 
 @media screen and (max-width: 1200px) {
-  .row,
-  .flat,
+  article.paragraph,
   .quote,
   .main-info {
     zoom: 0.8;
-  }
-
-  img.flat {
-    transform: translate(0, -10%) !important;
   }
 
   .play-game {

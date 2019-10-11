@@ -26,24 +26,7 @@ section.about-me .left img {
   max-width: 55%;
   height: auto;
   margin-left: 22.5%;
-  cursor: pointer;
-  transition: transform 0.6s;
-}
-
-section.about-me .left img:hover {
-  transform: scale(1.5);
-}
-
-section.about-me .left p {
-  max-width: 55%;
-  margin-left: 22.5%;
-  margin-top: 15px;
-  font-size: 12px;
-  text-align: center;
-  font-family: var(--font-poppins-medium);
-  color: #485563C9;
-  line-height: 1.7;
-  letter-spacing: 0.9;
+  transform: scale(1.2);
 }
 
 section.about-me .right {
@@ -54,7 +37,7 @@ section.about-me .right {
   background-color: var(--second-color-dark);
 }
 
-article {
+section.about-me .right article {
   margin-left: 140px;
   margin-top: 17vh;
 }
@@ -66,7 +49,7 @@ header {
 }
 
 section.about-me .right article section {
-  width: 460px;
+  width: 470px;
   margin: 40px 0;
   font-size: 14px;
   line-height: 25px;
@@ -76,16 +59,21 @@ section.about-me .right article section {
 
 section.about-me .right article section p {
   margin: 0;
-}
-
-footer {
-  position: absolute;
-  right: 10%;
-  bottom: 30px;
-  font-size: 40px;
-  color: var(--first-color-light);
+  letter-spacing: 0.3;
 }
 
 section.about-me .right article footer span {
   color: var(--third-color);
+}
+
+section.about-me .right article section p span {
+  font-family: var(--font-poppins-bold);
+}
+
+footer {
+  position: absolute;
+  right: 9%;
+  bottom: 30px;
+  font-size: 40px;
+  color: var(--first-color-light);
 }

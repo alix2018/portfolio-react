@@ -32,10 +32,15 @@ function RetailerPortal({showModal, closeModal}) {
   };
   return (
     <Modal showModal={showModal} closeModal={closeModal} listSubtitles={listSubtitles}
-      modalInfo={modalInfo} paragraphInfo={paragraphIntro}
+      modalInfo={modalInfo}
     >
       <div className={`${modalInfo.modalName} box`}>
-        <section className="page-two half-page">
+        <section className="page-two full-page">
+          <div className="bottom-left">
+            <Paragraph>
+              {paragraphIntro}
+            </Paragraph>
+          </div>
           <div className="bottom-right">
             <Paragraph>
               {paragraphDetails}

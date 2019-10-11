@@ -4,7 +4,7 @@
   right: 0;
   z-index: 110;
   overflow: hidden;
-  margin: 30px 30px 0 0;
+  margin: 30px var(--global-margin-side) 0 0;
   text-transform: uppercase;
   letter-spacing: 2.5px;
   font-size: 13px;
@@ -15,6 +15,10 @@
   display: inline-block;
   margin: 0.5em 1.5em;
   padding: 0;
+}
+
+.menu-effect li:last-child {
+  margin-right: 0;
 }
 
 .menu-effect a {
@@ -30,6 +34,20 @@
 .menu-effect .active a {
   color: var(--third-color);
   transition: color 0.3s;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+  .menu-effect a:hover,
+  .menu-effect .active a {
+    font-weight: 900;
+  }
+}
+
+@-moz-document url-prefix() {
+  .menu-effect a:hover,
+  .menu-effect .active a {
+    font-weight: 400;
+  }
 }
 
 .menu-effect a:hover {

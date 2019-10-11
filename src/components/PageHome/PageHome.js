@@ -4,15 +4,6 @@ import ReactGA from 'react-ga';
 import Typewriter from '../Typewriter/Typewriter';
 
 function PageHome() {
-  function clickArrowsDown(e) {
-    e.preventDefault();
-    const currentAnchor = document.querySelector('.contact');
-    currentAnchor.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
-  }
-
   function onDownloadClick() {
     ReactGA.event({
       category: 'Click',
@@ -38,11 +29,6 @@ function PageHome() {
         <h1 className="animated fadeInUp">
           I am
         </h1>
-        <div className="group-arrows animated fadeInUp" onClick={e => {clickArrowsDown(e);}}>
-          <div className="arrow-1"/>
-          <div className="arrow-2"/>
-          <div className="arrow-3"/>
-        </div>
       </div>
       <div className="right">
         <Typewriter
