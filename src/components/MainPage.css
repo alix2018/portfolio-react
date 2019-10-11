@@ -16,6 +16,10 @@
 }
 
 @media only screen and (max-width: 1024px) {
+  #vertical-snapping {
+    overflow-x: hidden;
+  }
+
   .page.contact {
     z-index: -1;
   }
