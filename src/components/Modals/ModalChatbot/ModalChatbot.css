@@ -2,8 +2,8 @@
   width: 50vw;
 }
 
-.chatbot-top-left {
+.chatbot-top-right {
   position: absolute;
-  bottom: 40%;
-  left: var(--margin-side-desktop);
+  bottom: 45%;
+  right: var(--margin-side-desktop);
 }

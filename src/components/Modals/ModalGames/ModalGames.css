@@ -4,13 +4,7 @@
 
 .games-top-left {
   position: absolute;
-  bottom: 65%;
-  left: var(--margin-side-desktop);
-}
-
-.games-middle-left {
-  position: absolute;
-  bottom: 38%;
+  bottom: 43%;
   left: var(--margin-side-desktop);
 }
 
@@ -22,7 +16,7 @@
 
 .games-top-right {
   position: absolute;
-  bottom: 35%;
+  bottom: 43%;
   right: var(--margin-side-desktop);
 }
 
@@ -42,7 +36,7 @@
 .play-game p {
   position: relative;
   margin: 0;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 900;
   color: var(--third-color);
   text-transform: uppercase;
@@ -53,6 +47,6 @@
 
 .play-game img {
   position: relative !important;
-  height: 23px;
-  margin: 7px 0 0 25px;
+  height: 16px;
+  margin: 8px 0 0 25px;
 }

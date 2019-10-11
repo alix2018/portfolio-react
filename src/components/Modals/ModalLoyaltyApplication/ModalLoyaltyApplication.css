@@ -10,14 +10,14 @@
 
 .loyalty-top-left {
   position: absolute;
-  bottom: 40%;
+  bottom: 42%;
   left: var(--margin-side-desktop);
 }
 
 .quote {
   position: absolute;
   width: var(--paragraph-width);
-  bottom: 36%;
+  bottom: 42%;
   right: var(--margin-side-desktop);
   font-size: 18px;
   white-space: pre-wrap;
