@@ -6,7 +6,7 @@ function PageAboutMe() {
     <section id="about-me" className="about-me">
       <div className="left bottom">
         <div className="img-container">
-          <img src="../../../public/images/self-picture.jpg"/>
+          <img src="../../../public/assets/self-picture.jpg"/>
         </div>
       </div>
       <div className="right">

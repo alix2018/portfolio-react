@@ -44,9 +44,9 @@ function Modal({showModal, closeModal, listSubtitles, modalInfo, children}) {
                     );
                   })}
                 </div>
-                <img className="flat" src={`../../../public/images/flat/${modalInfo.imageName}.png`}/>
+                <img className={`${modalInfo.imageName}`} src={`../../../public/assets/isometric/${modalInfo.imageName}.png`}/>
               </section>
-              <img className="arrow" src="../../../public/images/arrow.svg"/>
+              <img className="arrow" src="../../../public/assets/arrow.svg"/>
             </div>
             {children}
           </div>
