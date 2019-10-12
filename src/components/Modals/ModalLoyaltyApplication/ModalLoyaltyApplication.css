@@ -16,7 +16,7 @@
 
 .quote {
   position: absolute;
-  width: var(--paragraph-width);
+  width: var(--paragraph-width-desktop);
   bottom: 42%;
   right: var(--margin-side-desktop);
   font-size: 18px;
@@ -49,4 +49,42 @@
   color: var(--white-color);
   letter-spacing: 0.4;
   text-decoration: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  .page-two {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bottom-left {
+    position: relative;
+    bottom: initial;
+    left: initial;
+  }
+
+  .loyalty-top-left {
+    position: relative;
+    bottom: initial;
+    left: initial;
+  }
+
+  .quote {
+    position: relative;
+    width: var(--paragraph-width-mobile);
+    bottom: initial;
+    right: initial;
+    margin-top: var(--space-between-mobile-paragraph);
+  }
+
+  .main-info img {
+    transform: translate(-50%, -50%) !important;
+  }
+
+  .quote img {
+    width: auto !important;
+    left: 0 !important;
+    top: 0 !important;
+    margin: 0 15px 0 0 !important;
+  }
 }

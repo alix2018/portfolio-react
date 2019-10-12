@@ -100,18 +100,22 @@ function PagePortfolio() {
       <LoyaltyApplication
         showModal={showModal === 'loyalty-application'}
         closeModal={() => {openModal('');}}
+        isMobile={isMobile}
       />
       <RetailerPortal
         showModal={showModal === 'retailer-portal'}
         closeModal={() => {openModal('');}}
+        isMobile={isMobile}
       />
       <Games
         showModal={showModal === 'games'}
         closeModal={() => {openModal('');}}
+        isMobile={isMobile}
       />
       <Chatbot
         showModal={showModal === 'facebook-chatbot'}
         closeModal={() => {openModal('');}}
+        isMobile={isMobile}
       />
     </section>
   );

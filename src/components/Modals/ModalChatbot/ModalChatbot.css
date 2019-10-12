@@ -7,3 +7,11 @@
   bottom: 45%;
   right: var(--margin-side-desktop);
 }
+
+@media only screen and (max-width: 1024px) {
+  .chatbot-top-right {
+    position: relative;
+    bottom: initial;
+    right: initial;
+  }
+}

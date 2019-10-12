@@ -3,7 +3,7 @@ import './ModalGames.css';
 import Modal from '../Modal';
 import Paragraph from '../../Paragraph/Paragraph';
 
-function Games({showModal, closeModal}) {
+function Games({showModal, closeModal, isMobile}) {
   const listSubtitles = [
     {
       category: 'technologies',
@@ -41,7 +41,7 @@ function Games({showModal, closeModal}) {
   const textPlayGame = 'Play the game';
   return (
     <Modal showModal={showModal} closeModal={closeModal} listSubtitles={listSubtitles}
-      modalInfo={modalInfo}
+      modalInfo={modalInfo} isMobile={isMobile}
     >
       <div className={`${modalInfo.modalName} box`}>
         <section className="page-two full-page">
@@ -68,7 +68,7 @@ function Games({showModal, closeModal}) {
               {paragraphPixijs}
             </Paragraph>
           </div>
-          <div className="games-bottom-right">
+          <div className="bottom-right">
             <Paragraph>
               {paragraphWebAssembly}
             </Paragraph>

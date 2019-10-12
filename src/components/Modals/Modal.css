@@ -3,6 +3,7 @@
 
   --image-background: #CDD2E0;
   --bottom-modal: 8%;
+  --side-modal-mobile: 10vw;
 }
 
 #container1 {
@@ -13,7 +14,6 @@
   overflow-x: hidden;
   transform: rotate(270deg) translateX(-100%);
   transform-origin: top left;
-  background-color: #999;
 }
 
 #container2 {
@@ -27,21 +27,10 @@
   z-index: 100;
   position: fixed;
   width: 100%;
-  height: 100%;
+  height: auto;
   top: 0;
   left: 0;
   background: var(--second-color-dark);
-}
-
-.modal-div {
-  z-index: 110;
-  pointer-events: none;
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: transparent;
 }
 
 .modal-main {
@@ -68,7 +57,6 @@
   top: 0;
   margin-top: 31px;
   opacity: 1;
-  color: var(--white-color);
   cursor: pointer;
 }
 
@@ -121,7 +109,7 @@ section.half-page {
   bottom: var(--bottom-modal);
 }
 
-.page-one .main-info h1 {
+.main-info h1 {
   margin: 0;
   margin-bottom: 30px;
   font-size: 40px;
@@ -137,7 +125,7 @@ section.half-page {
   transform: inherit !important;
 }
 
-.page-one .main-info h2 {
+.main-info h2 {
   margin: 0;
   margin-bottom: 45px;
   font-family: var(--font-poppins-light);
@@ -147,8 +135,12 @@ section.half-page {
   letter-spacing: 0.9;
 }
 
-.main-info section {
+.main-info .map-categories {
   margin-bottom: 25px;
+}
+
+.main-info .map-categories:last-child {
+  margin-bottom: 0;
 }
 
 .main-info section:last-child {
@@ -197,4 +189,110 @@ section.page-one img {
 
 section.page-two {
   background-color: var(--second-color-dark);
+}
+
+@media only screen and (max-width: 1024px) {
+  .box {
+    height: auto;
+  }
+
+  .box > section {
+    height: auto;
+  }
+
+  .modal {
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    background: var(--second-color-dark);
+  }
+
+  .modal-main {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: var(--second-color-dark);
+  }
+
+  .close {
+    left: initial;
+    right: 8vw;
+    margin-top: 5vw;
+  }
+
+  .close:before,
+  .close:after {
+    height: 45px;
+  }
+
+  .main-info {
+    position: initial;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-info img {
+    position: relative !important;
+    width: 120vw;
+    left: -12%;
+    margin: 70px 0;
+    transform: none !important;
+  }
+
+  .main-info .page-one-mobile {
+    position: relative;
+    height: 100vh;
+    left: initial;
+    bottom: initial;
+    margin: 0;
+  }
+
+  .main-info .page-one-mobile .modal-titles {
+    position: absolute;
+    width: var(--paragraph-width-mobile);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 8vh;
+  }
+
+  .main-info h1 {
+    margin-bottom: 40px;
+    font-size: 35px;
+  }
+
+  .main-info h2 {
+    margin-bottom: 0;
+    font-size: 21px;
+  }
+
+  .page-two-mobile {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    margin: 0 auto;
+  }
+
+  .bottom-right {
+    position: relative;
+    bottom: initial;
+    right: initial;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .close {
+    margin-top: 31px;
+    right: var(--side-modal-mobile);
+  }
+
+  .close:before,
+  .close:after {
+    height: 33px;
+  }
 }
