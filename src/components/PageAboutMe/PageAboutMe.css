@@ -101,6 +101,7 @@ footer {
 
   section.about-me article {
     position: relative;
+    height: inherit;
     margin: 0 !important;
   }
 

@@ -1,5 +1,8 @@
 :root {
   --center-text-from-top: 45%;
+  --margin-top-mobile: 30px;
+  --top-part: 65vh;
+  --bottom-part: 35vh;
 }
 
 section.home {
@@ -140,9 +143,9 @@ section.home .right .button:hover {
 }
 
 @media only screen and (max-width: 1024px) {
-  .top {
+  section.home .top {
     position: relative;
-    height: 65vh;
+    height: var(--top-part);
     width: 100vw;
   }
 
@@ -165,9 +168,9 @@ section.home .right .button:hover {
     top: initial;
   }
 
-  .bottom {
+  section.home .bottom {
     position: relative;
-    height: 35vh;
+    height: var(--bottom-part);
     width: 100vw;
   }
 
@@ -176,7 +179,7 @@ section.home .right .button:hover {
     left: 0;
   }
 
-  .icons {
+  section.home .bottom .icons {
     display: none !important;
   }
 }
@@ -184,7 +187,7 @@ section.home .right .button:hover {
 @media only screen and (max-width: 767px) {
   section.home .left .name {
     left: var(--margin-side-mobile) !important;
-    margin-top: 20px !important;
+    margin-top: var(--margin-top-mobile) !important;
     font-size: 15px !important;
   }
 
