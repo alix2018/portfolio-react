@@ -166,6 +166,7 @@ section.home .right .button:hover {
     bottom: 0;
     left: 0;
     top: initial;
+    animation-delay: 500ms !important;
   }
 
   section.home .bottom {
@@ -177,6 +178,7 @@ section.home .right .button:hover {
   .typewriter {
     top: 0;
     left: 0;
+    animation-delay: 900ms !important;
   }
 
   section.home .bottom .icons {

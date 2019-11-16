@@ -18,6 +18,7 @@ a:hover {
   top: var(--margin-top-mobile);
   z-index: 1;
   margin-left: calc(90vw - 25px);
+  animation-delay: 275ms;
 }
 
 #menuToggle input {
