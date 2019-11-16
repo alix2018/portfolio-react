@@ -50,8 +50,8 @@ function BurgerMenu() {
 
   return (
     <nav role="navigation">
-      <div id="menuToggle" className="animated fadeInUp" onClick={onBurgerMenuClicked}>
-        <input type="checkbox" id="checkbox" className={`${burgerMenuDisplay}`}/>
+      <div id="menuToggle" className="animated fadeInUp">
+        <input type="checkbox" id="checkbox" className={`${burgerMenuDisplay}`} onClick={onBurgerMenuClicked}/>
         <span/>
         <span/>
         <span/>
