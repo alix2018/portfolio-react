@@ -61,3 +61,19 @@ article.paragraph p span a {
     width: var(--paragraph-width-mobile) !important;
   }
 }
+
+@media screen and (max-width: 1200px) {
+  article.paragraph,
+  .quote,
+  .main-info {
+    zoom: 0.9;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  article.paragraph,
+  .quote,
+  .main-info {
+    zoom: 0.85;
+  }
+}
