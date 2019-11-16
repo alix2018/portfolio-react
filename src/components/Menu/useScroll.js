@@ -30,7 +30,8 @@ function useScroll(pagesIds) {
       let aboutMePageNonActive;
 
       if (isMobile) {
-        contactPageActive = elements[index-1] && (elements[index-1].className === 'about-me') && (elements[index-1].getBoundingClientRect().bottom < window.innerHeight - offset);
+        const previousElt = elements[index - 1];
+        contactPageActive = previousElt && (previousElt.className === 'about-me') && (previousElt.getBoundingClientRect().bottom < window.innerHeight - offset);
         aboutMePageNonActive = (page.className === 'about-me') && (elementRect.bottom < window.innerHeight - offset);
       }
 
