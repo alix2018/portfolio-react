@@ -46,7 +46,7 @@ article.paragraph p span a {
   color: unset;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1366px) {
   article.paragraph {
     width: var(--paragraph-width-mobile) !important;
     margin-top: var(--space-between-mobile-paragraph);

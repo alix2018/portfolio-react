@@ -54,7 +54,7 @@
   color: var(--third-color) !important;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1366px) {
   .menu-effect {
     display: none;
   }

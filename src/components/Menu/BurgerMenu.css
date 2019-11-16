@@ -149,7 +149,7 @@ a:hover {
   left: var(--menu-margin-side);
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1366px) {
   #menuToggle {
     display: block;
     margin-top: 15px;

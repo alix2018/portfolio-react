@@ -142,7 +142,7 @@ section.home .right .button:hover {
   transform: scale(1.13);
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1366px) {
   section.home .top {
     position: relative;
     height: var(--top-part);

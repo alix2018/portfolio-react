@@ -3,7 +3,7 @@ import ReactGA from 'react-ga';
 
 function useScroll(pagesIds) {
   const [activePageId, setActivePageId] = useState('home');
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1366);
 
   const firstLightColor = getComputedStyle(document.documentElement).getPropertyValue('--first-color-light');
   const secondDarkColor = getComputedStyle(document.documentElement).getPropertyValue('--second-color-dark');
@@ -53,7 +53,7 @@ function useScroll(pagesIds) {
 
   useEffect(() => {
     window.addEventListener('resize', () => {
-      setIsMobile(window.innerWidth < 1024);
+      setIsMobile(window.innerWidth < 1366);
     });
 
     analyticsActivePage(activePageId);
