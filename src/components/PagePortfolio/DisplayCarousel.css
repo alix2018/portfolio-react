@@ -11,6 +11,12 @@
     align-items: center;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  #swipe-carousel::-webkit-scrollbar {
+    display: none;
   }
 
   #swipe-carousel .tile {
