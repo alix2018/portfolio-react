@@ -62,6 +62,10 @@ section.about-me .right article section p {
   letter-spacing: 0.3;
 }
 
+section.about-me .right article .download-cv-mobile {
+  display: none;
+}
+
 section.about-me .right article footer span {
   color: var(--third-color);
 }
@@ -101,7 +105,7 @@ footer {
 
   section.about-me article {
     position: relative;
-    height: inherit;
+    height: 65vh;
     margin: 0 !important;
   }
 
@@ -114,19 +118,33 @@ footer {
   section.about-me article section {
     position: absolute;
     left: var(--margin-side-tablet);
-    top: 21vh;
+    top: 20vh;
     width: auto !important;
     margin: 0 !important;
   }
 
   section.about-me article section p {
     display: block;
-    width: calc(100vw - 4 * var(--margin-side-tablet));
-    font-size: 15px;
+    width: calc(100vw - 3 * var(--margin-side-tablet));
+    font-size: 18px;
   }
 
   section.about-me article section p.about-me-mobile {
     display: none;
+  }
+
+  section.about-me .right article .download-cv-mobile {
+    position: absolute;
+    bottom: 2%;
+    display: block;
+    left: var(--margin-side-tablet);
+  }
+
+  section.about-me .right article .download-cv-mobile button {
+    color: var(--third-color);
+    padding: 0;
+    font-size: 16px;
+    font-family: var(--font-poppins-medium);
   }
 
   section.about-me .bottom .img-container {
@@ -141,21 +159,26 @@ footer {
   }
 
   section.about-me .right article footer {
-    top: 50vh;
+    top: 52vh;
     right: var(--margin-side-tablet);
     bottom: 0;
   }
 }
 
 @media only screen and (max-width: 767px) {
+  section.about-me article {
+    height: 75vh;
+  }
+
   section.about-me article header {
     top: 5vh !important;
     left: var(--margin-side-mobile);
   }
 
   section.about-me article section {
-    margin: 0 !important;
+    top: 18vh;
     left: var(--margin-side-mobile) !important;
+    margin: 0 !important;
   }
 
   section.about-me article section p {
@@ -166,6 +189,10 @@ footer {
     display: block;
     width: calc(100vw - 2 * var(--margin-side-mobile) - 20px) !important;
     font-size: 14px;
+  }
+
+  section.about-me .right article .download-cv-mobile {
+    left: var(--margin-side-mobile);
   }
 
   section.about-me .right article footer {

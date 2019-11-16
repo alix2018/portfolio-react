@@ -1,7 +1,16 @@
 import React from 'react';
+import ReactGA from 'react-ga';
 import './PageAboutMe.css';
 
 function PageAboutMe() {
+  function onDownloadClick() {
+    ReactGA.event({
+      category: 'Click',
+      action: 'Click on Download CV',
+      label: 'In home page'
+    });
+  }
+
   return (
     <section id="about-me" className="about-me">
       <div className="left bottom">
@@ -38,6 +47,9 @@ function PageAboutMe() {
               explore new countries and learn about other cultures.
             </p>
           </section>
+          <form method="get" action="./public/assets/cv.pdf" className="download-cv-mobile" target="_blank" rel="noopener noreferrer">
+            <button type="submit" className="button" onClick={() => {onDownloadClick();}}>Download CV</button>
+          </form>
           <footer>I am <span>ready</span></footer>
         </article>
       </div>
