@@ -126,7 +126,9 @@ footer {
   section.about-me article section p {
     display: block;
     width: calc(100vw - 3 * var(--margin-side-tablet));
-    font-size: 18px;
+
+    /* font-size: 20px !important;
+    line-height: 2 !important; */
   }
 
   section.about-me article section p.about-me-mobile {
@@ -143,7 +145,7 @@ footer {
   section.about-me .right article .download-cv-mobile button {
     color: var(--third-color);
     padding: 0;
-    font-size: 16px;
+    font-size: 22px !important;
     font-family: var(--font-poppins-medium);
   }
 
@@ -162,6 +164,20 @@ footer {
     top: 52vh;
     right: var(--margin-side-tablet);
     bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  section.about-me article section p {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  section.about-me .right article .download-cv-mobile button {
+    color: var(--third-color);
+    padding: 0;
+    font-size: 16px !important;
+    font-family: var(--font-poppins-medium);
   }
 }
 
