@@ -17,7 +17,8 @@ a:hover {
   position: relative;
   top: var(--margin-top-mobile);
   z-index: 1;
-  margin-left: calc(90vw - 25px);
+  float: right;
+  margin-right: var(--margin-side-tablet);
   animation-delay: 275ms;
 }
 
@@ -26,21 +27,22 @@ a:hover {
   height: 32px;
   position: absolute;
   top: -7px;
-  left: -7px;
+  right: -5px;
   cursor: pointer;
   opacity: 0;
   z-index: 2;
 }
 
 #menuToggle span {
+  position: relative;
   display: block;
   width: 33px;
   height: 4px;
   margin-bottom: 5px;
-  position: relative;
   background: #CDCDCD;
   border-radius: 1px;
   z-index: 1;
+  margin-left: calc(100vw - var(--margin-side-tablet) + 7px);
   transform-origin: 4px 0;
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
 }
@@ -71,8 +73,7 @@ a:hover {
 #menu {
   height: 100vh;
   width: 100vw;
-  margin: calc(-27px - var(--margin-top-mobile)) 0 0 -85vw;
-  padding: 0;
+  margin: calc(-42px - var(--margin-top-mobile)) calc(-1 * var(--margin-side-tablet)) 0 0;
   list-style-type: none;
   transform-origin: 0 0;
   transform: translate(100%);
@@ -95,7 +96,7 @@ a:hover {
   position: absolute;
   display: flex;
   flex-direction: column;
-  left: var(--menu-margin-side);
+  left: var(--margin-side-tablet);
   bottom: 40px;
 }
 
@@ -137,7 +138,7 @@ a:hover {
   width: 200px;
   bottom: calc(10vh + 70px);
   margin: 0;
-  left: var(--menu-margin-side);
+  left: var(--margin-side-tablet);
   font-size: 12px;
   line-height: 1.6;
   color: var(--second-color-dark);
@@ -146,7 +147,7 @@ a:hover {
 #menu .bottom .icons {
   position: absolute;
   bottom: 10vh;
-  left: var(--menu-margin-side);
+  left: var(--margin-side-tablet);
 }
 
 @media only screen and (max-width: 1366px) {
@@ -158,6 +159,27 @@ a:hover {
 
 @media only screen and (max-width: 767px) {
   #menuToggle {
-    margin-top: 1px;
+    margin-top: 0;
+    margin-right: var(--margin-side-mobile);
+  }
+
+  #menuToggle span {
+    margin-left: calc(100vw - var(--margin-side-mobile) + 7px);
+  }
+
+  #menu {
+    margin: calc(-27px - var(--margin-top-mobile)) calc(-1 * var(--margin-side-mobile)) 0 0;
+  }
+
+  .menu-items-container {
+    left: var(--margin-side-mobile);
+  }
+
+  #menu .bottom p {
+    left: var(--margin-side-mobile);
+  }
+
+  #menu .bottom .icons {
+    left: var(--margin-side-mobile);
   }
 }
