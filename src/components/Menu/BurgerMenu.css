@@ -1,36 +1,28 @@
-:root {
-  --menu-margin-side: 32px;
-}
 
 a {
   text-decoration: none;
-  color: #232323;
   transition: color 0.3s ease;
 }
 
-a:hover {
-  color: tomato;
-}
-
 #menuToggle {
-  display: none;
   position: relative;
+  display: none;
+  float: right;
   top: var(--margin-top-mobile);
   z-index: 1;
-  float: right;
   margin-right: var(--margin-side-tablet);
   animation-delay: 275ms;
 }
 
 #menuToggle input {
+  position: absolute;
   width: 40px;
   height: 32px;
-  position: absolute;
   top: -7px;
   right: -5px;
-  cursor: pointer;
   opacity: 0;
   z-index: 2;
+  cursor: pointer;
 }
 
 #menuToggle span {
@@ -38,11 +30,11 @@ a:hover {
   display: block;
   width: 33px;
   height: 4px;
+  margin-left: calc(100vw - var(--margin-side-tablet) + 7px);
   margin-bottom: 5px;
+  z-index: 1;
   background: #CDCDCD;
   border-radius: 1px;
-  z-index: 1;
-  margin-left: calc(100vw - var(--margin-side-tablet) + 7px);
   transform-origin: 4px 0;
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
 }
@@ -137,8 +129,8 @@ a:hover {
   position: absolute;
   width: 200px;
   bottom: calc(10vh + 70px);
-  margin: 0;
   left: var(--margin-side-tablet);
+  margin: 0;
   font-size: 12px;
   line-height: 1.6;
   color: var(--second-color-dark);

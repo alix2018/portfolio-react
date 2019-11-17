@@ -57,12 +57,7 @@
     flex-direction: column;
   }
 
-  .bottom-left {
-    position: relative;
-    bottom: initial;
-    left: initial;
-  }
-
+  .bottom-left,
   .loyalty-top-left {
     position: relative;
     bottom: initial;
