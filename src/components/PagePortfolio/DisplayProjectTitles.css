@@ -47,7 +47,7 @@ section.titles-list .project-index {
   top: -18px;
 }
 
-@media only screen and (max-width: 1366px) {
+@media only screen and (max-width: 1024px) {
   .titles {
     left: calc(30% - 90px);
   }

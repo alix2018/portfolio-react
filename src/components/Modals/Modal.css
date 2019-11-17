@@ -191,7 +191,7 @@ section.page-two {
   background-color: var(--second-color-dark);
 }
 
-@media only screen and (max-width: 1366px) {
+@media only screen and (max-width: 1024px) {
   .box {
     height: auto;
   }

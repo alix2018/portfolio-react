@@ -142,7 +142,7 @@ a {
   left: var(--margin-side-tablet);
 }
 
-@media only screen and (max-width: 1366px) {
+@media only screen and (max-width: 1024px) {
   #menuToggle {
     display: block;
     margin-top: 15px;

@@ -100,7 +100,7 @@ section.contact .right footer:hover {
   text-decoration: underline;
 }
 
-@media only screen and (max-width: 1366px) {
+@media only screen and (max-width: 1024px) {
   section.contact {
     height: 70vh;
     margin-top: -1px;
