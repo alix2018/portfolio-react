@@ -3,7 +3,7 @@ import './ModalGames.css';
 import Modal from '../Modal';
 import Paragraph from '../../Paragraph/Paragraph';
 
-function Games({showModal, closeModal}) {
+function Games({showModal, closeModal, isMobile}) {
   const listSubtitles = [
     {
       category: 'technologies',
@@ -38,14 +38,10 @@ function Games({showModal, closeModal}) {
     context: 'webassembly',
     text: '<span>WebAssembly</span> is near-native performances and really low level compare to the two previous ones. I wanted to give it a try even if it was quite new at this time. I made a <span>snake</span> with Javascript and WebAssembly. It was really <span>performant</span> but the time of development was too long for the result.'
   };
-  const paragraphResult = {
-    context: 'Result',
-    text: 'After checking all the criteria (cross browsers, loading time, performances, integration, development time), <span>PixiJS</span> was the most suitable solution.'
-  };
   const textPlayGame = 'Play the game';
   return (
     <Modal showModal={showModal} closeModal={closeModal} listSubtitles={listSubtitles}
-      modalInfo={modalInfo}
+      modalInfo={modalInfo} isMobile={isMobile}
     >
       <div className={`${modalInfo.modalName} box`}>
         <section className="page-two full-page">
@@ -54,7 +50,7 @@ function Games({showModal, closeModal}) {
               {paragraphIntro}
             </Paragraph>
           </div>
-          <div className="games-middle-left">
+          <div className="games-bottom-left">
             <a href="https://pwa-test-1bec3.web.app" className="play-game unity" target="_blank" rel="noopener noreferrer">
               <p>{textPlayGame}</p>
               <img src="../../../../public/assets/play-game.svg"/>
@@ -63,7 +59,7 @@ function Games({showModal, closeModal}) {
               {paragraphUnity}
             </Paragraph>
           </div>
-          <div className="games-bottom-left">
+          <div className="games-top-right">
             <a href="https://jumpy-component.web.app/demo" className="play-game pixi" target="_blank" rel="noopener noreferrer">
               <p>{textPlayGame}</p>
               <img src="../../../../public/assets/play-game.svg"/>
@@ -72,14 +68,9 @@ function Games({showModal, closeModal}) {
               {paragraphPixijs}
             </Paragraph>
           </div>
-          <div className="games-top-right">
+          <div className="bottom-right">
             <Paragraph>
               {paragraphWebAssembly}
-            </Paragraph>
-          </div>
-          <div className="games-bottom-right">
-            <Paragraph>
-              {paragraphResult}
             </Paragraph>
           </div>
         </section>

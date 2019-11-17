@@ -5,20 +5,20 @@
 .bottom-left {
   position: absolute;
   bottom: var(--bottom-modal);
-  left: var(--global-margin-side);
+  left: var(--margin-side-desktop);
 }
 
 .loyalty-top-left {
   position: absolute;
-  bottom: 40%;
-  left: var(--global-margin-side);
+  bottom: 42%;
+  left: var(--margin-side-desktop);
 }
 
 .quote {
   position: absolute;
-  width: var(--paragraph-width);
-  bottom: 36%;
-  right: var(--global-margin-side);
+  width: var(--paragraph-width-desktop);
+  bottom: 42%;
+  right: var(--margin-side-desktop);
   font-size: 18px;
   white-space: pre-wrap;
   letter-spacing: 0.8;
@@ -49,4 +49,37 @@
   color: var(--white-color);
   letter-spacing: 0.4;
   text-decoration: none;
+}
+
+@media only screen and (max-width: 1366px) {
+  .page-two {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bottom-left,
+  .loyalty-top-left {
+    position: relative;
+    bottom: initial;
+    left: initial;
+  }
+
+  .quote {
+    position: relative;
+    width: var(--paragraph-width-mobile);
+    bottom: initial;
+    right: initial;
+    margin-top: var(--space-between-mobile-paragraph);
+  }
+
+  .main-info img {
+    transform: translate(-50%, -50%) !important;
+  }
+
+  .quote img {
+    width: auto !important;
+    left: 0 !important;
+    top: 0 !important;
+    margin: 0 15px 0 0 !important;
+  }
 }

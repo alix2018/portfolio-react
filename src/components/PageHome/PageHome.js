@@ -22,7 +22,7 @@ function PageHome() {
 
   return (
     <section id="home" className="home">
-      <div className="left">
+      <div className="left top">
         <div className="name animated fadeInUp">
           Stéphanie Alix
         </div>
@@ -30,7 +30,7 @@ function PageHome() {
           I am
         </h1>
       </div>
-      <div className="right">
+      <div className="right bottom">
         <Typewriter
           className="typewriter animated fadeInUp"
           texts={['Stéphanie', 'a web developer', 'in Amsterdam']}

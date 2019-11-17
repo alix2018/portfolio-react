@@ -3,6 +3,7 @@ import ReactGA from 'react-ga';
 
 function useScroll(pagesIds) {
   const [activePageId, setActivePageId] = useState('home');
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1366);
 
   const firstLightColor = getComputedStyle(document.documentElement).getPropertyValue('--first-color-light');
   const secondDarkColor = getComputedStyle(document.documentElement).getPropertyValue('--second-color-dark');
@@ -22,10 +23,20 @@ function useScroll(pagesIds) {
     const pagesElements = pagesIds.map(pageId =>
       document.querySelector(`#${pageId}`)
     );
-    const activePage = pagesElements.find(page => {
+
+    const activePage = pagesElements.find((page, index, elements) => {
       const elementRect = page.getBoundingClientRect();
-      return (elementRect.top <= offset) && (elementRect.top > -window.innerHeight + offset) &&
-      (elementRect.bottom > offset) && (elementRect.bottom <= window.innerHeight + offset);
+      let contactPageActive;
+      let aboutMePageNonActive;
+
+      if (isMobile) {
+        const previousElt = elements[index - 1];
+        contactPageActive = previousElt && (previousElt.className === 'about-me') && (previousElt.getBoundingClientRect().bottom < window.innerHeight - offset);
+        aboutMePageNonActive = (page.className === 'about-me') && (elementRect.bottom < window.innerHeight - offset);
+      }
+
+      return contactPageActive || (!aboutMePageNonActive && (elementRect.top <= offset) && (elementRect.top > -window.innerHeight - offset) &&
+        (elementRect.bottom > offset) && (elementRect.bottom <= window.innerHeight + offset));
     });
 
     if (activePage) {
@@ -41,6 +52,10 @@ function useScroll(pagesIds) {
   }
 
   useEffect(() => {
+    window.addEventListener('resize', () => {
+      setIsMobile(window.innerWidth < 1366);
+    });
+
     analyticsActivePage(activePageId);
     switch (activePageId) {
       case 'home':

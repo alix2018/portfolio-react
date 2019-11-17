@@ -3,7 +3,7 @@ import './ModalLoyaltyApplication.css';
 import Modal from '../Modal';
 import Paragraph from '../../Paragraph/Paragraph';
 
-function LoyaltyApplication({showModal, closeModal}) {
+function LoyaltyApplication({showModal, closeModal, isMobile}) {
   const listSubtitles = [
     {
       category: 'technologies',
@@ -18,8 +18,8 @@ function LoyaltyApplication({showModal, closeModal}) {
     modalName: 'modal-loyalty',
     firstTitle: 'Loyalty',
     secondTitle: 'Application',
-    firstSubtitle: 'From WEB app to PWA using',
-    secondSubtitle: 'Web Components',
+    firstSubtitle: 'From Web app to PWA',
+    secondSubtitle: 'using Web Components',
     imageName: 'loyalty-application'
   };
   const paragraphIntro = {
@@ -44,7 +44,7 @@ function LoyaltyApplication({showModal, closeModal}) {
 
   return (
     <Modal showModal={showModal} closeModal={closeModal} listSubtitles={listSubtitles}
-      modalInfo={modalInfo}
+      modalInfo={modalInfo} isMobile={isMobile}
     >
       <div className={`${modalInfo.modalName} box`}>
         <section className="page-two full-page">

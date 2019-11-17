@@ -4,7 +4,7 @@
   right: 0;
   z-index: 110;
   overflow: hidden;
-  margin: 30px var(--global-margin-side) 0 0;
+  margin: 30px var(--margin-side-desktop) 0 0;
   text-transform: uppercase;
   letter-spacing: 2.5px;
   font-size: 13px;
@@ -52,4 +52,10 @@
 
 .menu-effect a:hover {
   color: var(--third-color) !important;
+}
+
+@media only screen and (max-width: 1366px) {
+  .menu-effect {
+    display: none;
+  }
 }

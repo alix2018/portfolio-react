@@ -12,7 +12,7 @@ section.contact .left {
 }
 
 .rights-reserved,
-.name {
+section.contact .left .name {
   position: absolute;
   left: 20%;
   font-size: 13px;
@@ -25,7 +25,7 @@ section.contact .left {
   bottom: 65px;
 }
 
-.name {
+section.contact .left .name {
   bottom: 50px;
 }
 
@@ -98,4 +98,100 @@ section.contact .right footer {
 
 section.contact .right footer:hover {
   text-decoration: underline;
+}
+
+@media only screen and (max-width: 1366px) {
+  section.contact {
+    height: 70vh;
+    margin-top: -1px;
+  }
+
+  section.contact .left,
+  section.contact .right {
+    height: 100%;
+  }
+
+  section.contact .left {
+    width: 0%;
+  }
+
+  section.contact .right {
+    width: 100vw;
+    background-color: var(--first-color-light);
+  }
+
+  section.contact .left > * {
+    display: none;
+  }
+
+  section.contact .mobile section h1 {
+    margin-bottom: 30px !important;
+    font-size: 50px;
+  }
+
+  .linkedin,
+  .skype,
+  .github {
+    height: 40px !important;
+    width: 40px !important;
+    transition: none;
+  }
+
+  .linkedin:hover,
+  .skype:hover,
+  .github:hover {
+    transform: none;
+  }
+
+  section.contact .mobile section {
+    left: var(--margin-side-tablet);
+    bottom: var(--margin-side-tablet);
+    top: inherit;
+    transform: inherit;
+    height: fit-content;
+  }
+
+  .email,
+  .country {
+    font-size: 15px;
+  }
+
+  section.contact .mobile section .icons {
+    display: inline-flex !important;
+    margin-top: 30px !important;
+  }
+
+  section.contact .mobile footer {
+    display: none;
+  }
+
+  section.contact .mobile section .icons .linkedin,
+  section.contact .mobile section .icons .skype,
+  section.contact .mobile section .icons .github {
+    transition: none;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  section.contact .mobile section {
+    left: var(--margin-side-mobile);
+    bottom: 40px;
+  }
+
+  section.contact .mobile section h1 {
+    font-size: 40px;
+  }
+
+  .email,
+  .country {
+    font-size: 13px;
+  }
+
+  .linkedin,
+  .skype,
+  .github {
+    height: 35px !important;
+    width: 35px !important;
+    transition: none;
+  }
 }

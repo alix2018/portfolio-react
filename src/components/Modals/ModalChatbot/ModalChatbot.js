@@ -3,7 +3,7 @@ import './ModalChatbot.css';
 import Modal from '../Modal';
 import Paragraph from '../../Paragraph/Paragraph';
 
-function Chatbot({showModal, closeModal}) {
+function Chatbot({showModal, closeModal, isMobile}) {
   const listSubtitles = [
     {
       category: 'technologies',
@@ -32,7 +32,7 @@ function Chatbot({showModal, closeModal}) {
   };
   const paragraphFeature = {
     context: 'Chatbot feature',
-    text: 'The user can log in with his loyalty card number and then answer the onboarding questions. The questions are mostly about his shopping habits, his diet preferences, his basket size or the frequency he visits the store. After the survey, he was also able to check the rewards he could redeem at the store.'
+    text: 'The user can log in with his <span>loyalty card number</span> and then answer the onboarding questions. The questions are mostly about his shopping habits, his diet preferences, his basket size or the frequency he visits the store. After the survey, he was also able to check the <span>rewards</span> he could redeem at the store.'
   };
   const paragraphCode = {
     context: 'Code details',
@@ -41,16 +41,16 @@ function Chatbot({showModal, closeModal}) {
 
   return (
     <Modal showModal={showModal} closeModal={closeModal} listSubtitles={listSubtitles}
-      modalInfo={modalInfo}
+      modalInfo={modalInfo} isMobile={isMobile}
     >
       <div className={`${modalInfo.modalName} box`}>
         <section className="page-two full-page">
-          <div className="chatbot-top-left">
+          <div className="bottom-left">
             <Paragraph>
               {paragraphIntro}
             </Paragraph>
           </div>
-          <div className="bottom-left">
+          <div className="chatbot-top-right">
             <Paragraph>
               {paragraphFeature}
             </Paragraph>

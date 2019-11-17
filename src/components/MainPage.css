@@ -12,5 +12,23 @@
 
 #vertical-snapping .page {
   scroll-snap-align: start;
-  scroll-margin: 50% 0 -50% 0;
+  scroll-margin: 50% 0 -50%;
+}
+
+@media only screen and (max-width: 1366px) {
+  #vertical-snapping {
+    overflow-x: hidden;
+  }
+
+  .page.contact {
+    z-index: -1;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #vertical-snapping {
+    scroll-snap-type: none !important;
+    overflow-y: initial !important;
+    width: 100vw !important;
+  }
 }
