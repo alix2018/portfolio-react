@@ -10,7 +10,9 @@
   --font-poppins-bold: 'Poppins Bold', sans-serif;
   --font-poppins-extra-bold: 'Poppins Extra Bold', sans-serif;
   --line-width: 40px;
-  --global-margin-side: 6%;
+  --margin-side-desktop: 6%;
+  --margin-side-tablet: 70px;
+  --margin-side-mobile: 30px;
 }
 
 @font-face {
@@ -43,4 +45,14 @@ div[class^='line'] {
   width: var(--line-width);
   height: 1px;
   background: var(--white-color);
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }

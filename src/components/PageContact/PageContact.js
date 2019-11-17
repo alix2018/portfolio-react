@@ -18,7 +18,7 @@ function PageContact() {
         <div className="name">Stéphanie Alix</div>
       </div>
 
-      <div className="right">
+      <div className="right mobile">
         <section>
           <h1>Get in touch.</h1>
           <div className="email">stephanie.alix95@gmail.com</div>

@@ -1,5 +1,6 @@
 import React from 'react';
-import MenuBar from './MenuBar/MenuBar';
+import MenuBar from './Menu/MenuBar';
+import BurgerMenu from './Menu/BurgerMenu';
 import PageHome from './PageHome/PageHome';
 import PagePortfolio from './PagePortfolio/PagePortfolio';
 import PageAboutMe from './PageAboutMe/PageAboutMe';
@@ -11,17 +12,18 @@ function MainPage() {
   return (
     <>
       <MenuBar/>
+      <BurgerMenu/>
       <div id="vertical-snapping">
-        <div className="page">
+        <div className="page home">
           <PageHome/>
         </div>
-        <div className="page">
+        <div className="page portfolio">
           <PagePortfolio/>
         </div>
-        <div className="page">
+        <div className="page about-me">
           <PageAboutMe/>
         </div>
-        <div className="page">
+        <div className="page contact">
           <PageContact/>
         </div>
       </div>

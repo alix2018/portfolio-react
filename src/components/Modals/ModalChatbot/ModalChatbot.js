@@ -3,7 +3,7 @@ import './ModalChatbot.css';
 import Modal from '../Modal';
 import Paragraph from '../../Paragraph/Paragraph';
 
-function Chatbot({showModal, closeModal}) {
+function Chatbot({showModal, closeModal, isMobile}) {
   const listSubtitles = [
     {
       category: 'technologies',
@@ -41,7 +41,7 @@ function Chatbot({showModal, closeModal}) {
 
   return (
     <Modal showModal={showModal} closeModal={closeModal} listSubtitles={listSubtitles}
-      modalInfo={modalInfo}
+      modalInfo={modalInfo} isMobile={isMobile}
     >
       <div className={`${modalInfo.modalName} box`}>
         <section className="page-two full-page">

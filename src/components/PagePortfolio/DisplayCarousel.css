@@ -1,0 +1,94 @@
+@media only screen and (max-width: 1366px) {
+  #swipe-carousel {
+    position: relative;
+    display: flex;
+    height: 85vh;
+    top: 50%;
+    padding-bottom: 50px;
+    transform: translateY(-50%);
+    overflow-x: scroll;
+    overflow-y: hidden;
+    align-items: center;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  #swipe-carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  #swipe-carousel .tile {
+    scroll-snap-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    min-width: 100vw;
+    height: 100%;
+    margin: 0;
+  }
+
+  section.portfolio #swipe-carousel .tile img.isometric {
+    position: relative;
+    width: 65vw;
+    height: 55vh;
+    top: 35%;
+    left: 50%;
+    padding: 0;
+    margin: 0;
+    margin-top: 30px;
+    object-fit: contain;
+    background-color: #E9EBF1;
+  }
+
+  .carousel-text {
+    display: flex;
+    flex-direction: row;
+    margin-top: 35px;
+  }
+
+  .project-names-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+  }
+
+  section.portfolio #swipe-carousel .tile .project-index {
+    margin-top: 20px;
+    font-family: var(--font-poppins-light);
+    font-size: 14px;
+  }
+
+  section.portfolio #swipe-carousel .tile .title {
+    max-width: 250px;
+    padding-top: 18px;
+    font-size: 40px;
+    line-height: 1.1;
+  }
+
+  .line-carousel {
+    width: 1px !important;
+    height: var(--line-height) !important;
+    margin-left: 18%;
+    margin-top: 25px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  section.portfolio #swipe-carousel .tile img.isometric {
+    width: 80vw;
+  }
+
+  .carousel-text {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+  }
+
+  .line-carousel {
+    margin-left: 10%;
+  }
+}
