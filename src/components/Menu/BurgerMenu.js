@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import './BurgerMenu.css';
+import ReactGA from 'react-ga';
 import LinkedinIcon from '../Icons/LinkedinIcon';
 import GithubIcon from '../Icons/GithubIcon';
 import SkypeIcon from '../Icons/SkypeIcon';
-import ReactGA from 'react-ga';
 import useScroll from './useScroll';
 
 function BurgerMenu() {
