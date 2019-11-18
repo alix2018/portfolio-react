@@ -3,7 +3,6 @@ const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-const metadata = require('./public/metadata.json');
 
 const APP_DIR = path.resolve(__dirname, 'src');
 const BUILD_DIR = path.resolve(__dirname, 'dist');
@@ -61,8 +60,7 @@ const config = {
     new CleanWebpackPlugin(),
     new HtmlWebPackPlugin({
       template: PUBLIC_DIR + '/index.html',
-      filename: 'index.html',
-      favicon: metadata.faviconIcon
+      filename: 'index.html'
     }),
     new webpack.HotModuleReplacementPlugin(),
     new CopyPlugin([
