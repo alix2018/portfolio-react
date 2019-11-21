@@ -59,14 +59,14 @@ function LoyaltyApplication({showModal, closeModal, isMobile}) {
             </Paragraph>
           </div>
           <div className="quote">
-            <img src="../../../../public/assets/quotation-mark.svg"/>
+            <img src="../../../../public/assets/quotation-mark.svg" alt="quote image"/>
             {pwaQuote.mainText}<br/>
             {pwaQuote.line1}<br/>
             {pwaQuote.line2}<br/>
             {pwaQuote.line3}<br/>
             <div className="source-quote">
               <div className="line-source"/>
-              <a href="https://developers.google.com" target="_blank" rel="noopener noreferrer">Source: {pwaQuote.source}</a>
+              <a href="https://developers.google.com" title="Google developers website" target="_blank" rel="noopener noreferrer">Source: {pwaQuote.source}</a>
             </div>
           </div>
           <div className="bottom-right">
