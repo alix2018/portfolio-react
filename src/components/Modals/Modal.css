@@ -42,10 +42,6 @@
 
 .modal.display-block {
   display: block;
-  /* animation-name: zooming;
-  animation-duration: 0.4s;
-  transform-origin: translate(50%, 50%);
-  transform: scale(1); */
 }
 
 @keyframes zooming {
