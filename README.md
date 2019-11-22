@@ -31,9 +31,3 @@ npm run build:prod
 | Android  | iOS |
 | ------ | ----- |
 | 4.4.3+ | 11.3+ |
-
-## Coming soon
-- PWA
-- More animations
-- Social network sharing
-- SEO improvements

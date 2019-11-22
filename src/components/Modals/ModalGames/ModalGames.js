@@ -28,11 +28,11 @@ function Games({showModal, closeModal, isMobile}) {
   };
   const paragraphUnity = {
     context: 'Unity',
-    text: 'I started to implement a 2D game platform with the <span>game engine <a href="https:// unity.com" target="_blank" rel="noopener noreferrer">Unity</a></span>. With this first game, I could learn the process of developing video games but also all the mechanics. The Unity interface makes it way easier.'
+    text: 'I started to implement a 2D game platform with the <span>game engine <a href="https:// unity.com" title="Unity Official Website" target="_blank" rel="noopener noreferrer">Unity</a></span>. With this first game, I could learn the process of developing video games but also all the mechanics. The Unity interface makes it way easier.'
   };
   const paragraphPixijs = {
     context: 'PixiJS',
-    text: 'I implemented the same 2D game with the <span>2D WebGL renderer <a href="https:// unity.com" target="_blank" rel="noopener noreferrer">PixiJS</a></span>. I wrapped the game into a web component to be easily reusable. All the options of the game could be decided while importing the component: number of coins, speed, space between platforms...'
+    text: 'I implemented the same 2D game with the <span>2D WebGL renderer <a href="https://www.pixijs.com" title="PixiJS Official Website" target="_blank" rel="noopener noreferrer">PixiJS</a></span>. I wrapped the game into a web component to be easily reusable. All the options of the game could be decided while importing the component: number of coins, speed, space between platforms...'
   };
   const paragraphWebAssembly = {
     context: 'webassembly',
@@ -51,18 +51,18 @@ function Games({showModal, closeModal, isMobile}) {
             </Paragraph>
           </div>
           <div className="games-bottom-left">
-            <a href="https://pwa-test-1bec3.web.app" className="play-game unity" target="_blank" rel="noopener noreferrer">
+            <a href="https://pwa-test-1bec3.web.app" className="play-game unity" title="play custom Unity 2D game" target="_blank" rel="noopener noreferrer">
               <p>{textPlayGame}</p>
-              <img src="../../../../public/assets/play-game.svg"/>
+              <img src="../../../../public/assets/play-game.svg" alt="play game image"/>
             </a>
             <Paragraph>
               {paragraphUnity}
             </Paragraph>
           </div>
           <div className="games-top-right">
-            <a href="https://jumpy-component.web.app/demo" className="play-game pixi" target="_blank" rel="noopener noreferrer">
+            <a href="https://jumpy-component.web.app/demo" title="play custom PixiJS 2D game" className="play-game pixi" target="_blank" rel="noopener noreferrer">
               <p>{textPlayGame}</p>
-              <img src="../../../../public/assets/play-game.svg"/>
+              <img src="../../../../public/assets/play-game.svg" alt="play game image"/>
             </a>
             <Paragraph>
               {paragraphPixijs}

@@ -63,7 +63,7 @@ function BurgerMenu() {
             <div className="menu-items-container">
               {menuItems.map(item => {
                 return (
-                  <a key={item.name} onClick={() => {onPageClicked(item.page);}}>
+                  <a key={item.name} title={`${item.name}`} onClick={() => {onPageClicked(item.page);}}>
                     <li className={`${item.page === activePage ? 'active' : ''}`}>{item.name}</li>
                   </a>
                 );
@@ -73,13 +73,13 @@ function BurgerMenu() {
           <section className="bottom">
             <p>Available for new web projects, contact me!</p>
             <div className="icons">
-              <a href="https://www.linkedin.com/in/stephanie-alix/" target="_blank" rel="noopener noreferrer" onClick={() => {onIconClick('Linkedin');}}>
+              <a href="https://www.linkedin.com/in/stephanie-alix/" target="_blank" rel="noopener noreferrer" title="linkedin logo" onClick={() => {onIconClick('Linkedin');}}>
                 <LinkedinIcon/>
               </a>
-              <a href="https://github.com/alix2018" target="_blank" rel="noopener noreferrer" onClick={() => {onIconClick('Github');}}>
+              <a href="https://github.com/alix2018" target="_blank" rel="noopener noreferrer" title="github logo" onClick={() => {onIconClick('Github');}}>
                 <GithubIcon/>
               </a>
-              <a href="https://join.skype.com/invite/ljzSCwTgKRyX" target="_blank" rel="noopener noreferrer" onClick={() => {onIconClick('Skype');}}>
+              <a href="https://join.skype.com/invite/ljzSCwTgKRyX" target="_blank" rel="noopener noreferrer" title="skype logo" onClick={() => {onIconClick('Skype');}}>
                 <SkypeIcon/>
               </a>
             </div>
