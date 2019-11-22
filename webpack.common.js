@@ -1,20 +1,31 @@
 const path = require('path');
+const glob = require('glob');
 const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const PurgecssPlugin = require('purgecss-webpack-plugin');
 
 const APP_DIR = path.resolve(__dirname, 'src');
 const BUILD_DIR = path.resolve(__dirname, 'dist');
 const PUBLIC_DIR = path.resolve(__dirname, 'public');
+const indexMode = process.argv.findIndex(el => {
+  return el === '--mode';
+});
+const mode = process.argv[indexMode + 1] === 'production' ? 'prod' : 'dev';
+const devMode = mode === 'dev'
 
-const config = {
+const PATHS = {
+  src: path.join(__dirname, 'src')
+}
+
+module.exports = {
   entry: APP_DIR + '/index.js',
   output: {
     filename: '[name].bundle.js',
     path: BUILD_DIR
   },
-  devtool: 'inline-source-map',
   module: {
     rules: [
       {
@@ -43,7 +54,12 @@ const config = {
       {
         test: /\.css$/,
         use: [
-          'style-loader',
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              hmr: devMode,
+            },
+          },
           'css-loader',
           'postcss-loader'
         ]
@@ -68,13 +84,13 @@ const config = {
         from: 'public',
         to: 'public'
       }
-    ])
-  ],
-  devServer: {
-    contentBase: BUILD_DIR,
-    port: 9000,
-    hot: true
-  }
+    ]),
+    new MiniCssExtractPlugin({
+      filename: devMode ? '[name].css' : '[name].[hash].css',
+      chunkFilename: devMode ? '[id].css' : '[id].[hash].css'
+    }),
+    new PurgecssPlugin({
+      paths: glob.sync(`${PATHS.src}/**/*`,  { nodir: true })
+    })
+  ]
 };
-
-module.exports = config;
