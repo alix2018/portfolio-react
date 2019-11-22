@@ -91,7 +91,7 @@ function PagePortfolio() {
             {projectsArray.map(project => {
               return (
                 <img key={project} className="isometric" src={`../../../public/assets/isometric/${project}.png`}
-                  onClick={() => {openModal(project);}}/>
+                  alt={`${project.class}`} onClick={() => {openModal(project);}}/>
               );
             })}
           </div>
