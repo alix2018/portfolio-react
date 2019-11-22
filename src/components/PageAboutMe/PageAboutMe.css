@@ -57,9 +57,10 @@ p.about-me-mobile {
   display: none;
 }
 
-section.about-me .right article section p {
+section.about-me article section p {
   margin: 0;
-  letter-spacing: 0.3;
+  font-size: 14px;
+  line-height: 2;
 }
 
 section.about-me .right article .download-cv-mobile {
@@ -82,7 +83,7 @@ footer {
   color: var(--first-color-light);
 }
 
-@media only screen and (max-width: 1366px) {
+@media only screen and (max-width: 1024px) {
   section.about-me {
     margin-top: -1px;
   }
@@ -126,9 +127,8 @@ footer {
   section.about-me article section p {
     display: block;
     width: calc(100vw - 3 * var(--margin-side-tablet));
-
-    /* font-size: 20px !important;
-    line-height: 2 !important; */
+    font-size: 20px !important;
+    line-height: 2 !important;
   }
 
   section.about-me article section p.about-me-mobile {
@@ -169,8 +169,22 @@ footer {
 
 @media only screen and (max-width: 1024px) {
   section.about-me article section p {
-    font-size: 16px;
-    line-height: 1.8;
+    font-size: 20px !important;
+    line-height: 2 !important;
+  }
+
+  section.about-me .right article .download-cv-mobile button {
+    color: var(--third-color);
+    padding: 0;
+    font-size: 16px !important;
+    font-family: var(--font-poppins-medium);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  section.about-me article section p {
+    font-size: 16px !important;
+    line-height: 1.8 !important;
   }
 
   section.about-me .right article .download-cv-mobile button {
@@ -204,7 +218,8 @@ footer {
   section.about-me article section p.about-me-mobile {
     display: block;
     width: calc(100vw - 2 * var(--margin-side-mobile) - 20px) !important;
-    font-size: 14px;
+    font-size: 14px !important;
+    line-height: 1.9 !important;
   }
 
   section.about-me .right article .download-cv-mobile {
@@ -213,5 +228,20 @@ footer {
 
   section.about-me .right article footer {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  section.about-me article section p.about-me-mobile {
+    font-size: 12px !important;
+    letter-spacing: 0.2 !important;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  section.about-me article section p.about-me-mobile {
+    font-size: 11px !important;
+    letter-spacing: 0.2 !important;
+    line-height: 1.7 !important;
   }
 }

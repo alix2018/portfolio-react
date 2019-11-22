@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development --display-error-details",
     "build": "webpack --mode development",
-    "build:prod": "webpack --mode development",
+    "build:prod": "webpack --mode production",
     "prepush": "npm run lint"
   },
   "xo": {
@@ -98,6 +98,8 @@
     "react-dom": "16.8.6",
     "react-ga": "2.6.0",
     "style-loader": "0.23.1",
-    "webpack": "4.29.6"
+    "terser-webpack-plugin": "2.2.1",
+    "webpack": "4.29.6",
+    "webpack-merge": "4.2.2"
   }
 }

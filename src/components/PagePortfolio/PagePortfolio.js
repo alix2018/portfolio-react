@@ -38,7 +38,7 @@ function PagePortfolio() {
   const [projectsArray, setProjectsArray] = useState(projects);
   const [activeProject, setActiveProject] = useState(projectsList[0]);
   const [showModal, setShowModal] = useState('');
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 1366);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
 
   function openModal(project) {
     setShowModal(project);
@@ -66,7 +66,7 @@ function PagePortfolio() {
 
   useEffect(() => {
     window.addEventListener('resize', () => {
-      setIsMobile(window.innerWidth < 1366);
+      setIsMobile(window.innerWidth <= 1024);
     });
     const url = window.location.search;
     if (url.substring(0, 9) === '?project=') {

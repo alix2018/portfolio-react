@@ -56,3 +56,7 @@ button {
   cursor: pointer;
   outline: inherit;
 }
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
