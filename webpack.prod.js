@@ -45,10 +45,10 @@ module.exports = merge(config, {
           name(module) {
             const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1];
             return `npm.${packageName.replace('@', '')}`;
-          },
+          }
         }
       }
-    },
+    }
   },
   performance: {
     hints: 'warning'

@@ -55,7 +55,7 @@ function BurgerMenu() {
     <nav role="navigation">
       <div id="menuToggle" className="animated fadeInUp">
         <input type="checkbox" id="checkbox" className={`${burgerMenuDisplay}`} onClick={onBurgerMenuClicked}/>
-        <label for="checkbox"/>
+        <label value="checkbox"/>
         <span/>
         <span/>
         <span/>

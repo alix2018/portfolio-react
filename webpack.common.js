@@ -17,7 +17,7 @@ const PATHS = {
   APP_DIR: path.resolve(__dirname, 'src'),
   BUILD_DIR: path.resolve(__dirname, 'dist'),
   PUBLIC_DIR: path.resolve(__dirname, 'public')
-}
+};
 
 module.exports = {
   entry: PATHS.APP_DIR + '/index.js',
@@ -56,8 +56,8 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              hmr: devMode,
-            },
+              hmr: devMode
+            }
           },
           'css-loader',
           'postcss-loader'
@@ -82,7 +82,7 @@ module.exports = {
         options: {
           name: '[name].[ext]',
           outputPath: './public/fonts/'
-        },
+        }
       },
       {
         test: /\.(pdf)$/,
@@ -90,7 +90,7 @@ module.exports = {
         options: {
           name: '[name].[ext]',
           outputPath: './public/assets/'
-        },
+        }
       }
     ]
   },
@@ -112,7 +112,11 @@ module.exports = {
       chunkFilename: devMode ? '[id].css' : '[id].[hash].css'
     }),
     new PurgecssPlugin({
-      paths: glob.sync(`${PATHS.APP_DIR}/**/*`,  { nodir: true })
+      paths: glob.sync(`${PATHS.APP_DIR}/**/*`,
+        {
+          nodir: true
+        }
+      )
     })
   ]
 };
