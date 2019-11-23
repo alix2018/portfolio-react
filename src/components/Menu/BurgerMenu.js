@@ -55,22 +55,23 @@ function BurgerMenu() {
     <nav role="navigation">
       <div id="menuToggle" className="animated fadeInUp">
         <input type="checkbox" id="checkbox" className={`${burgerMenuDisplay}`} onClick={onBurgerMenuClicked}/>
+        <label for="checkbox"/>
         <span/>
         <span/>
         <span/>
         <ul id="menu" className={`${burgerMenuDisplay}`}>
-          <section className="top">
-            <div className="menu-items-container">
+          <li className="top">
+            <nav className="menu-items-container">
               {menuItems.map(item => {
                 return (
-                  <a key={item.name} title={`${item.name}`} onClick={() => {onPageClicked(item.page);}}>
-                    <li className={`${item.page === activePage ? 'active' : ''}`}>{item.name}</li>
-                  </a>
+                  <ul key={item.name} className="list" title={`${item.name}`} onClick={() => {onPageClicked(item.page);}}>
+                    <li className={`list ${item.page === activePage ? 'active' : ''}`}>{item.name}</li>
+                  </ul>
                 );
               })}
-            </div>
-          </section>
-          <section className="bottom">
+            </nav>
+          </li>
+          <li className="bottom">
             <p>Available for new web projects, contact me!</p>
             <div className="icons">
               <a href="https://www.linkedin.com/in/stephanie-alix/" target="_blank" rel="noopener noreferrer" title="linkedin logo" onClick={() => {onIconClick('Linkedin');}}>
@@ -83,7 +84,7 @@ function BurgerMenu() {
                 <SkypeIcon/>
               </a>
             </div>
-          </section>
+          </li>
         </ul>
       </div>
     </nav>
