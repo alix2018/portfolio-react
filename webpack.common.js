@@ -7,6 +7,7 @@ const WebpackPwaManifest = require('webpack-pwa-manifest');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const PurgecssPlugin = require('purgecss-webpack-plugin');
+const WorkboxPlugin = require('workbox-webpack-plugin');
 const manifestJSON = require('./manifest.json');
 
 const indexMode = process.argv.findIndex(el => {
@@ -120,6 +121,7 @@ module.exports = {
           nodir: true
         }
       )
-    })
+    }),
+    new WorkboxPlugin.GenerateSW()
   ]
 };
