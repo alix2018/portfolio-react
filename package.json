@@ -38,7 +38,8 @@
       "eol-last": 0,
       "import/no-unassigned-import": 0,
       "react/prop-types": 0,
-      "unicorn/no-abusive-eslint-disable": 0
+      "unicorn/no-abusive-eslint-disable": 0,
+      "react/no-unknown-property": 0
     },
     "ignores": []
   },
