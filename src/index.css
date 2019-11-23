@@ -17,22 +17,22 @@
 
 @font-face {
   font-family: 'Poppins Medium';
-  src: url('../public/assets/Poppins-Medium.ttf') format('opentype');
+  src: url('../public/fonts/Poppins-Medium.ttf') format('opentype');
 }
 
 @font-face {
   font-family: 'Poppins Light';
-  src: url('../public/assets/Poppins-Light.ttf') format('opentype');
+  src: url('../public/fonts/Poppins-Light.ttf') format('opentype');
 }
 
 @font-face {
   font-family: 'Poppins Bold';
-  src: url('../public/assets/Poppins-Bold.ttf') format('opentype');
+  src: url('../public/fonts/Poppins-Bold.ttf') format('opentype');
 }
 
 @font-face {
   font-family: 'Poppins Extra Bold';
-  src: url('../public/assets/Poppins-ExtraBold.ttf') format('opentype');
+  src: url('../public/fonts/Poppins-ExtraBold.ttf') format('opentype');
 }
 
 body {

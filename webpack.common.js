@@ -1,20 +1,30 @@
 const path = require('path');
+const glob = require('glob');
 const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const PurgecssPlugin = require('purgecss-webpack-plugin');
 
-const APP_DIR = path.resolve(__dirname, 'src');
-const BUILD_DIR = path.resolve(__dirname, 'dist');
-const PUBLIC_DIR = path.resolve(__dirname, 'public');
+const indexMode = process.argv.findIndex(el => {
+  return el === '--mode';
+});
+const mode = process.argv[indexMode + 1] === 'production' ? 'prod' : 'dev';
+const devMode = mode === 'dev';
 
-const config = {
-  entry: APP_DIR + '/index.js',
+const PATHS = {
+  APP_DIR: path.resolve(__dirname, 'src'),
+  BUILD_DIR: path.resolve(__dirname, 'dist'),
+  PUBLIC_DIR: path.resolve(__dirname, 'public')
+};
+
+module.exports = {
+  entry: PATHS.APP_DIR + '/index.js',
   output: {
     filename: '[name].bundle.js',
-    path: BUILD_DIR
+    path: PATHS.BUILD_DIR
   },
-  devtool: 'inline-source-map',
   module: {
     rules: [
       {
@@ -43,38 +53,70 @@ const config = {
       {
         test: /\.css$/,
         use: [
-          'style-loader',
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              hmr: devMode
+            }
+          },
           'css-loader',
           'postcss-loader'
         ]
       },
       {
-        test: /\.(png|svg|jpg|gif|pdf|otf|ttf)$/,
+        test: /\.(png|svg|jpg)$/,
         use: [
-          'file-loader'
+          'url-loader',
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: './public/assets/'
+            }
+          }
         ]
+      },
+      {
+        test: /\.(ttf)$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: './public/fonts/'
+        }
+      },
+      {
+        test: /\.(pdf)$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: './public/assets/'
+        }
       }
     ]
   },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebPackPlugin({
-      template: PUBLIC_DIR + '/index.html',
+      template: PATHS.PUBLIC_DIR + '/index.html',
       filename: 'index.html'
     }),
     new webpack.HotModuleReplacementPlugin(),
     new CopyPlugin([
       {
-        from: 'public',
-        to: 'public'
+        from: 'public/assets',
+        to: 'public/assets'
       }
-    ])
-  ],
-  devServer: {
-    contentBase: BUILD_DIR,
-    port: 9000,
-    hot: true
-  }
+    ]),
+    new MiniCssExtractPlugin({
+      filename: devMode ? '[name].css' : '[name].[hash].css',
+      chunkFilename: devMode ? '[id].css' : '[id].[hash].css'
+    }),
+    new PurgecssPlugin({
+      paths: glob.sync(`${PATHS.APP_DIR}/**/*`,
+        {
+          nodir: true
+        }
+      )
+    })
+  ]
 };
-
-module.exports = config;

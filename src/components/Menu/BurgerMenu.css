@@ -72,6 +72,11 @@ a {
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
+ul.list {
+  list-style-type: none;
+  padding: 0;
+}
+
 #menuToggle input:checked ~ ul {
   transform: none;
 }
@@ -98,7 +103,7 @@ a {
   background: var(--second-color-dark);
 }
 
-#menu li {
+#menu li.list {
   margin-bottom: 12px;
   font-size: 34px;
   letter-spacing: 1.5px;

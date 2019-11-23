@@ -17,6 +17,7 @@ module.exports = merge(config, {
   },
   optimization: {
     runtimeChunk: false,
+    minimize: true,
     minimizer: [
       new TerserPlugin({
         cache: true,
@@ -35,7 +36,19 @@ module.exports = merge(config, {
           safari10: true
         }
       })
-    ]
+    ],
+    splitChunks: {
+      chunks: 'all',
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name(module) {
+            const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1];
+            return `npm.${packageName.replace('@', '')}`;
+          }
+        }
+      }
+    }
   },
   performance: {
     hints: 'warning'
