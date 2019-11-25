@@ -238,14 +238,14 @@ footer {
 @media only screen and (max-width: 360px) {
   section.about-me article section p.about-me-mobile {
     font-size: 12px !important;
-    letter-spacing: 0.2 !important;
+    letter-spacing: 0.2px !important;
   }
 }
 
 @media only screen and (max-width: 320px) {
   section.about-me article section p.about-me-mobile {
     font-size: 11px !important;
-    letter-spacing: 0.2 !important;
+    letter-spacing: 0.2px !important;
     line-height: 1.7 !important;
   }
 }

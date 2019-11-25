@@ -34,7 +34,7 @@
   font-weight: 900;
   color: var(--third-color);
   text-transform: uppercase;
-  letter-spacing: 1.7;
+  letter-spacing: 1.7px;
   text-decoration: none;
   font-family: var(--font-poppins-extra-bold);
 }

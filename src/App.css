@@ -51,10 +51,26 @@ section.contact {
   animation-delay: 0s;
 }
 
-/* Loading left right animation */
+/* Loading lines from left to right animation */
 
 @keyframes loading {
   to {
     background-size: 100% 100%;
+  }
+}
+
+/* Arrow moving from left to right */
+
+@keyframes arrowMoving {
+  10% {
+    right: calc(var(--margin-side-desktop) + 20px);
+  }
+
+  30% {
+    right: var(--margin-side-desktop);
+  }
+
+  100% {
+    right: calc(var(--margin-side-desktop) + 20px);
   }
 }
