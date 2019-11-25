@@ -1,11 +1,14 @@
 const path = require('path');
 const glob = require('glob');
 const webpack = require('webpack');
-const HtmlWebPackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebPackPlugin = require('html-webpack-plugin');
+const WebpackPwaManifest = require('webpack-pwa-manifest');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const PurgecssPlugin = require('purgecss-webpack-plugin');
+const WorkboxPlugin = require('workbox-webpack-plugin');
+const manifestJSON = require('./manifest.json');
 
 const indexMode = process.argv.findIndex(el => {
   return el === '--mode';
@@ -100,7 +103,8 @@ module.exports = {
       template: PATHS.PUBLIC_DIR + '/index.html',
       filename: 'index.html'
     }),
-    new webpack.HotModuleReplacementPlugin(),
+    new WebpackPwaManifest(manifestJSON),
+    new webpack.HotModuleReplacementPlugin(), // TODO: only for dev
     new CopyPlugin([
       {
         from: 'public/assets',
@@ -117,6 +121,7 @@ module.exports = {
           nodir: true
         }
       )
-    })
+    }),
+    new WorkboxPlugin.GenerateSW()
   ]
 };
