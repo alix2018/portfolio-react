@@ -46,10 +46,10 @@ function PageAboutMe() {
               in the Netherland I also started <span>to travel</span>,
               explore new countries and learn about other cultures.
             </p>
+            <form method="get" action="./public/assets/cv.pdf" className="download-cv-mobile" target="_blank" rel="noopener noreferrer">
+              <button type="submit" className="button" onClick={() => {onDownloadClick();}}>Download CV</button>
+            </form>
           </section>
-          <form method="get" action="./public/assets/cv.pdf" className="download-cv-mobile" target="_blank" rel="noopener noreferrer">
-            <button type="submit" className="button" onClick={() => {onDownloadClick();}}>Download CV</button>
-          </form>
           <footer>I am <span>ready</span></footer>
         </article>
       </div>

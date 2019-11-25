@@ -299,6 +299,7 @@ section.page-two {
 
 @media only screen and (max-width: 767px) {
   .main-info .page-one-mobile {
+    display: grid;
     grid-template-rows: 60% 40%;
     height: 100vh;
   }
@@ -332,5 +333,11 @@ section.page-two {
   .close:before,
   .close:after {
     height: 33px;
+  }
+}
+
+@media only screen and (max-height: 530px) {
+  .main-info .page-one-mobile img {
+    padding-top: 0 !important;
   }
 }
