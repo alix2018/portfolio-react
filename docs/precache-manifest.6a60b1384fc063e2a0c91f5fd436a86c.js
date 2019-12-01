@@ -38,6 +38,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "public/assets/arrow.svg"
   },
   {
+    "revision": "0e9d949067283e2510d31fb3ae3b8e34",
+    "url": "public/assets/cv.pdf"
+  },
+  {
     "revision": "c25588aae41254a00cee4ad316ce19a4",
     "url": "public/assets/isometric/facebook-chatbot.png"
   },
