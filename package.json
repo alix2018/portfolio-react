@@ -42,7 +42,9 @@
       "unicorn/no-abusive-eslint-disable": 0,
       "react/no-unknown-property": 0
     },
-    "ignores": []
+    "ignores": [
+      "docs"
+    ]
   },
   "repository": {
     "type": "git",
