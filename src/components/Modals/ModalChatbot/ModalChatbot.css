@@ -4,7 +4,7 @@
 
 .chatbot-top-right {
   position: absolute;
-  bottom: 45%;
+  bottom: 40%;
   right: var(--margin-side-desktop);
 }
 

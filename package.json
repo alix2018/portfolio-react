@@ -94,6 +94,8 @@
     "hookrouter": "1.2.3",
     "html-react-parser": "0.9.1",
     "image-webpack-loader": "6.0.0",
+    "imagemin-mozjpeg": "8.0.0",
+    "imagemin-webpack-plugin": "2.4.2",
     "mini-css-extract-plugin": "0.8.0",
     "postcss-easy-import": "3.0.0",
     "postcss-loader": "3.0.0",
@@ -109,6 +111,7 @@
     "webpack": "4.29.6",
     "webpack-merge": "4.2.2",
     "webpack-pwa-manifest": "4.1.1",
-    "workbox-webpack-plugin": "4.3.1"
+    "workbox-webpack-plugin": "4.3.1",
+    "zopfli-webpack-plugin": "0.1.0"
   }
 }
