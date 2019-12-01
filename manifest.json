@@ -5,7 +5,7 @@
   "theme_color": "#25CCF7",
   "background_color": "#485563",
   "display": "standalone",
-  "start_url": "index.html",
+  "start_url": ".",
   "description": "React portfolio",
   "orientation": "portrait",
   "icons": [

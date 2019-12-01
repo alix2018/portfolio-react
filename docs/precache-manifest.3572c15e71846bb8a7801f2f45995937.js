@@ -18,7 +18,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "main.bundle.js.LICENSE"
   },
   {
-    "revision": "64b22a3ab2a1b0c8ff975866de2d70b9",
+    "revision": "838bea6fab360a21dfa28205d705f34b",
     "url": "manifest.json"
   },
   {
