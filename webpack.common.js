@@ -83,7 +83,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(ttf)$/,
+        test: /\.(woff)$/,
         loader: 'file-loader',
         options: {
           name: '[name].[ext]',

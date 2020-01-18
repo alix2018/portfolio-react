@@ -17,6 +17,7 @@ section.contact .left .name {
   left: 20%;
   font-size: 13px;
   text-align: left;
+  letter-spacing: 0.2px;
   font-family: var(--font-poppins-light);
   color: var(--first-color-light);
 }
