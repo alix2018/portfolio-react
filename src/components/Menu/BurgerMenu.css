@@ -150,6 +150,7 @@ ul.list {
 @media only screen and (max-width: 1024px) {
   #menuToggle {
     display: block;
+    z-index: 5;
     margin-top: 15px;
   }
 }

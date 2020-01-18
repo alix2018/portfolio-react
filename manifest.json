@@ -4,7 +4,7 @@
   "short_name": "Stéphanie",
   "theme_color": "#25CCF7",
   "background_color": "#485563",
-  "display": "standalone",
+  "display": "fullscreen",
   "start_url": "/",
   "description": "React portfolio",
   "orientation": "portrait",

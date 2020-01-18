@@ -20,8 +20,12 @@
     overflow-x: hidden;
   }
 
+  .page.about-me {
+    z-index: 1;
+  }
+
   .page.contact {
-    z-index: -1;
+    z-index: 0;
   }
 }
 

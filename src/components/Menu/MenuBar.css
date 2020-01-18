@@ -4,7 +4,7 @@
   right: 0;
   z-index: 110;
   overflow: hidden;
-  margin: 30px var(--margin-side-desktop) 0 0;
+  margin: calc(5vh - 7px) var(--margin-side-desktop) 0 0;
   text-transform: uppercase;
   letter-spacing: 2.5px;
   font-size: 13px;

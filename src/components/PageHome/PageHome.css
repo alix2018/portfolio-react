@@ -22,7 +22,7 @@ section.home .left .name {
   z-index: 2;
   top: 0%;
   left: var(--margin-side-desktop);
-  margin-top: 36.5px;
+  margin-top: 5vh;
   font-size: 14px;
   font-family: var(--font-poppins-medium);
   color: var(--second-color-dark);

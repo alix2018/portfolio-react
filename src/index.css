@@ -17,22 +17,22 @@
 
 @font-face {
   font-family: 'Poppins Medium';
-  src: url('../public/fonts/Poppins-Medium.ttf');
+  src: url('../public/fonts/Poppins-Medium.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Poppins Light';
-  src: url('../public/fonts/Poppins-Light.ttf');
+  src: url('../public/fonts/Poppins-Light.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Poppins Bold';
-  src: url('../public/fonts/Poppins-Bold.ttf');
+  src: url('../public/fonts/Poppins-Bold.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Poppins Extra Bold';
-  src: url('../public/fonts/Poppins-Extra-Bold.ttf');
+  src: url('../public/fonts/Poppins-Extra-Bold.woff') format('woff');
 }
 
 body {
@@ -59,4 +59,10 @@ button {
 
 * {
   -webkit-tap-highlight-color: transparent;
+}
+
+@media only screen and (max-width: 767px) {
+  * {
+    user-select: none;
+  }
 }

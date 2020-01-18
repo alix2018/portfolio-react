@@ -17,14 +17,14 @@ function PageContact() {
   return (
     <section id="contact" className="contact">
       <div className="left">
-        <div className="rights-reserved">© 2019. All Rights Reserved.</div>
+        <div className="rights-reserved">© 2020. All Rights Reserved.</div>
         <div className="name">Stéphanie Alix</div>
       </div>
 
       <div className="right mobile">
         <section>
           <h1>Get in touch.</h1>
-          <div className="email">stephanie.alix95@gmail.com</div>
+          <a className="email" href="mailto:stephanie.alix95@gmail.com">stephanie.alix95@gmail.com</a>
           <div className="country">Amsterdam, The Netherlands</div>
           <div className="icons">
             <a href="https://www.linkedin.com/in/stephanie-alix/" target="_blank" rel="noopener noreferrer" title="linkedin logo" onClick={() => {onIconClick('Linkedin');}}>

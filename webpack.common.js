@@ -8,7 +8,6 @@ const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const PurgecssPlugin = require('purgecss-webpack-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
-// TODO: const ZopfliPlugin = require('zopfli-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const imageminMozjpeg = require('imagemin-mozjpeg');
 const manifestJSON = require('./manifest.json');
@@ -83,7 +82,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(ttf)$/,
+        test: /\.(woff)$/,
         loader: 'file-loader',
         options: {
           name: '[name].[ext]',
@@ -126,13 +125,6 @@ module.exports = {
       )
     }),
     new WorkboxPlugin.GenerateSW(),
-    /* TODO: Fix extra bold font
-    new ZopfliPlugin({
-      asset: '[file]',
-      algorithm: 'zopfli',
-      test: /\.(ttf)$/
-    }),
-    */
     new ImageminPlugin({
       disable: devMode,
       test: /\.(jpe?g|png|svg)$/i,
