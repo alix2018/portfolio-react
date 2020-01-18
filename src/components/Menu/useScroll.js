@@ -73,8 +73,13 @@ function useScroll(pagesIds) {
     }
 
     document.querySelector('#vertical-snapping').addEventListener('scroll', scrolling);
+    document.querySelector('#vertical-snapping').addEventListener('touchmove', scrolling);
 
-    return () => window.removeEventListener('scroll', scrolling);
+    return () => {
+      window.removeEventListener('scroll', scrolling);
+      window.removeEventListener('touchmove', scrolling);
+
+    }
   }, [activePageId]);
 
   return activePageId;
