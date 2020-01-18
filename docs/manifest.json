@@ -9,7 +9,7 @@
   "name": "Stéphanie Alix",
   "short_name": "Stéphanie",
   "orientation": "portrait",
-  "display": "fullscreen",
+  "display": "standalone",
   "start_url": "/",
   "theme_color": "#25CCF7",
   "background_color": "#485563",
