@@ -5,13 +5,12 @@
   "theme_color": "#25CCF7",
   "background_color": "#485563",
   "display": "standalone",
-  "scope": "/",
   "start_url": "/",
   "description": "React portfolio",
   "orientation": "portrait",
   "icons": [
     {
-      "src": "./public/assets/logo.png",
+      "src": "public/assets/logo.png",
       "sizes": "460x460"
     }
   ]
