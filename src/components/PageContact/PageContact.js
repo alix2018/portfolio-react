@@ -24,7 +24,7 @@ function PageContact() {
       <div className="right mobile">
         <section>
           <h1>Get in touch.</h1>
-          <div className="email">stephanie.alix95@gmail.com</div>
+          <a className="email" href="mailto:stephanie.alix95@gmail.com">stephanie.alix95@gmail.com</a>
           <div className="country">Amsterdam, The Netherlands</div>
           <div className="icons">
             <a href="https://www.linkedin.com/in/stephanie-alix/" target="_blank" rel="noopener noreferrer" title="linkedin logo" onClick={() => {onIconClick('Linkedin');}}>
