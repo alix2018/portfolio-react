@@ -78,8 +78,7 @@ function useScroll(pagesIds) {
     return () => {
       window.removeEventListener('scroll', scrolling);
       window.removeEventListener('touchmove', scrolling);
-
-    }
+    };
   }, [activePageId]);
 
   return activePageId;
