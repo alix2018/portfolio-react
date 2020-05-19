@@ -8,6 +8,7 @@
   height: 100%;
   scroll-snap-type: y proximity;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 #vertical-snapping .page {
@@ -16,10 +17,6 @@
 }
 
 @media only screen and (max-width: 1024px) {
-  #vertical-snapping {
-    overflow-x: hidden;
-  }
-
   .page.about-me {
     z-index: 1;
   }
