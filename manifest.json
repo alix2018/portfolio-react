@@ -10,8 +10,14 @@
   "orientation": "portrait",
   "icons": [
     {
-      "src": "public/assets/logo.png",
-      "sizes": "460x460"
+      "src": "public/assets/icons/logo-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "public/assets/icons/logo-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ]
 }
