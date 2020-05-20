@@ -26,7 +26,9 @@ function Modal({showModal, closeModal, listSubtitles, modalInfo, isMobile, child
         {isMobile &&
           <div className="main-info">
             <section className="page-one-mobile">
-              <img className={`${modalInfo.imageName}`} src={`../../../public/assets/isometric/${modalInfo.imageName}.png`} alt={`${modalInfo.firstTitle} ${modalInfo.secondTitle}`}/>
+              <img className={`${modalInfo.imageName}`}
+                src={`../../../public/assets/${modalInfo.imageName}-mobile.png`}
+                alt={`${modalInfo.firstTitle} ${modalInfo.secondTitle}`}/>
               <div className="modal-titles">
                 <h1>{modalInfo.firstTitle}<br/>
                   {modalInfo.secondTitle}
@@ -78,7 +80,9 @@ function Modal({showModal, closeModal, listSubtitles, modalInfo, isMobile, child
                       );
                     })}
                   </div>
-                  <img className={`${modalInfo.imageName}`} src={`../../../public/assets/isometric/${modalInfo.imageName}.png`} alt={`${modalInfo.firstTitle} ${modalInfo.secondTitle}`}/>
+                  <img className={`${modalInfo.imageName}`}
+                    src={`../../../public/assets/${modalInfo.imageName}-desktop.png`}
+                    alt={`${modalInfo.firstTitle} ${modalInfo.secondTitle}`}/>
                 </section>
                 <img className="arrow" src="../../../public/assets/arrow.svg" alt="arrow to the right"/>
               </div>

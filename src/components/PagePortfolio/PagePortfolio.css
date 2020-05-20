@@ -54,9 +54,9 @@ section.portfolio img.isometric {
   padding: 60px 0;
   margin-top: 40px;
   background-color: var(--white-color);
-  transition-property: left, height;
+  transition-property: left, height, transform;
   transition-timing-function: ease-out;
-  transition-duration: 1s;
+  transition-duration: 1s, 1s, 0.3s;
 }
 
 section.portfolio img.isometric:nth-child(1) {
@@ -69,6 +69,7 @@ section.portfolio img.isometric:nth-child(2) {
   left: calc(var(--project-left) + 50px);
   height: 335px;
   background-color: #D1D5D8;
+  pointer-events: none;
 }
 
 section.portfolio img.isometric:nth-child(3) {
@@ -76,6 +77,7 @@ section.portfolio img.isometric:nth-child(3) {
   left: calc(var(--project-left) + 100px);
   height: 285px;
   background-color: #A4AAB1;
+  pointer-events: none;
 }
 
 section.portfolio img.isometric:nth-child(4) {
@@ -83,6 +85,11 @@ section.portfolio img.isometric:nth-child(4) {
   left: calc(var(--project-left) + 145px);
   height: 240px;
   background-color: #76808A;
+  pointer-events: none;
+}
+
+section.portfolio img.isometric:nth-child(1):hover {
+  transform: translate(-50%, -50%) scale(1.07);
 }
 
 @media only screen and (max-width: 767px) {
