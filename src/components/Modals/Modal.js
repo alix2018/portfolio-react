@@ -22,7 +22,7 @@ function Modal({showModal, closeModal, listSubtitles, modalInfo, isMobile, child
   return (
     <div className={showHideClassName}>
       <section className="modal-main">
-        <div className="close" onClick={closeModal}/>
+        <img alt="close cross" className="close" src="../../../public/assets/icons/cross.svg" onClick={closeModal}/>
         {isMobile &&
           <div className="main-info">
             <section className="page-one-mobile">
@@ -84,7 +84,7 @@ function Modal({showModal, closeModal, listSubtitles, modalInfo, isMobile, child
                     src={`../../../public/assets/${modalInfo.imageName}-desktop.png`}
                     alt={`${modalInfo.firstTitle} ${modalInfo.secondTitle}`}/>
                 </section>
-                <img className="arrow" src="../../../public/assets/arrow.svg" alt="arrow to the right"/>
+                <img className="arrow" src="../../../public/assets/icons/arrow.svg" alt="arrow to the right"/>
               </div>
               {children}
             </div>

@@ -42,7 +42,7 @@
 .play-game img {
   position: relative !important;
   height: 16px;
-  margin: 8px 0 0 25px;
+  margin: 8px 0 0 20px;
 }
 
 @media only screen and (max-width: 1024px) {
