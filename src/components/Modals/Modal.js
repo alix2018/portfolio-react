@@ -84,7 +84,7 @@ function Modal({showModal, closeModal, listSubtitles, modalInfo, isMobile, child
                     src={`../../../public/assets/${modalInfo.imageName}-desktop.png`}
                     alt={`${modalInfo.firstTitle} ${modalInfo.secondTitle}`}/>
                 </section>
-                <img className="arrow" src="../../../public/assets/icons/arrow.svg" alt="arrow to the right"/>
+                <img className="arrow bouncing-animation" src="../../../public/assets/icons/arrow.svg" alt="arrow to the right"/>
               </div>
               {children}
             </div>

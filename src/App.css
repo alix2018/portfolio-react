@@ -61,31 +61,30 @@ section.contact {
 
 /* Arrow moving from left to right */
 
-@keyframes arrowMoving {
-  10% {
-    right: calc(var(--margin-side-desktop) + 20px);
+@keyframes bounceLeftRight {
+  0% {
+    transform: translateX(0);
   }
 
-  30% {
-    right: var(--margin-side-desktop);
+  50% {
+    transform: translateX(-10px);
   }
 
   100% {
-    right: calc(var(--margin-side-desktop) + 20px);
+    transform: translateX(0);
   }
+}
+
+.bouncing-animation {
+  animation-name: bounceLeftRight;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
 }
 
 /* Scrolling arrows boucing */
 
-.bounce {
-  animation-name: bounce;
-  animation-duration: 1.2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease;
-  animation-delay: 5.5s;
-}
-
-@keyframes bounce {
+@keyframes bounceTopBottom {
   0% {
     transform: translateY(0);
   }
@@ -108,7 +107,7 @@ section.contact {
 
 .scrolling-animation {
   opacity: 0;
-  animation-name: smoothApparition, bounce;
+  animation-name: smoothApparition, bounceTopBottom;
   animation-duration: 0.5s, 0.8s;
   animation-iteration-count: 1, infinite;
   animation-timing-function: ease;

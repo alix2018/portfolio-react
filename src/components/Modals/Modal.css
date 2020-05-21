@@ -14,6 +14,7 @@
   overflow-x: hidden;
   transform: rotate(270deg) translateX(-100%);
   transform-origin: top left;
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -109,8 +110,6 @@ section.half-page {
   width: 60px;
   right: var(--margin-side-desktop);
   transform: inherit !important;
-
-  /* TODO: animation: arrowMoving 1.2s cubic-bezier(0.31, -0.03, 0.54, 0.76) infinite; */
 }
 
 .main-info h2 {
