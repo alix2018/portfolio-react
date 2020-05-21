@@ -74,3 +74,54 @@ section.contact {
     right: calc(var(--margin-side-desktop) + 20px);
   }
 }
+
+/* Scrolling arrows boucing */
+
+.bounce {
+  animation-name: bounce;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  animation-delay: 5.5s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.smooth-apparition {
+  animation-name: smoothApparition;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-delay: 5s;
+}
+
+.scrolling-animation {
+  opacity: 0;
+  animation-name: smoothApparition, bounce;
+  animation-duration: 0.5s, 0.8s;
+  animation-iteration-count: 1, infinite;
+  animation-timing-function: ease;
+  animation-delay: 2s;
+  animation-fill-mode: forwards, none;
+}
+
+@keyframes smoothApparition {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.7;
+  }
+}

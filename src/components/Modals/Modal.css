@@ -16,6 +16,11 @@
   transform-origin: top left;
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+#container1::-webkit-scrollbar {
+  display: none;
+}
+
 #container2 {
   transform: rotate(90deg) translateY(-100vh);
   transform-origin: top left;
@@ -55,8 +60,7 @@
   height: 25px;
   left: calc(var(--margin-side-desktop) + 15px);
   top: 0;
-  margin-top: 46px;
-  opacity: 1;
+  margin-top: calc(5vh - 7px + 15px);
   cursor: pointer;
 }
 

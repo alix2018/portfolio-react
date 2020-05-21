@@ -32,6 +32,8 @@ function PageHome() {
         <h1 className="animated fadeInUp">
           I am
         </h1>
+        <img className="scrolling-animation" src="../../../public/assets/icons/scroll-arrow.svg"></img>
+        <img className="scrolling-animation" src="../../../public/assets/icons/scroll-arrow.svg"></img>
       </div>
       <div className="right bottom">
         <Typewriter

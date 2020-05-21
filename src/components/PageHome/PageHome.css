@@ -52,6 +52,17 @@ section.home .left h1,
   background-color: var(--second-color-dark);
 }
 
+section.home img {
+  left: var(--margin-side-desktop);
+  position: absolute;
+  bottom: 5%;
+  height: 20px;
+}
+
+section.home img:last-of-type {
+  bottom: calc(5% + 15px);
+}
+
 .typewriter {
   left: calc(var(--width-left-column) + 18px);
   color: var(--first-color-light);
