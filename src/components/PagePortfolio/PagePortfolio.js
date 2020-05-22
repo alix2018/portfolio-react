@@ -7,10 +7,9 @@ import Games from '../Modals/ModalGames/ModalGames';
 import Chatbot from '../Modals/ModalChatbot/ModalChatbot';
 import DisplayProjectTitles from './DisplayProjectTitles';
 import DisplayCarousel from './DisplayCarousel';
-
 import '../../scroll-snap-polyfill';
 
-function PagePortfolio() {
+function PagePortfolio({activePage}) {
   const projectsList = [
     {
       id: 1,
@@ -81,19 +80,21 @@ function PagePortfolio() {
         <DisplayCarousel projectsList={projectsList} openModal={openModal}/>
       }
       {!isMobile &&
-        <div id="desktop-carousel">
+        <div id="desktop-carousel" className={(activePage === 'portfolio') ? 'apparition' : ''}>
           <div className="left">
             <div className="titles">
               <DisplayProjectTitles projectsList={projectsList} activeProject={activeProject} updateProjectsArray={updateProjectsArray}/>
             </div>
           </div>
           <div className="right">
-            {projectsArray.map(project => {
-              return (
-                <img key={project} className="isometric" src={`../../../public/assets/${project}-mobile.png`}
-                  alt={`${project}`} onClick={() => {openModal(project);}}/>
-              );
-            })}
+            <section>
+              {projectsArray.map(project => {
+                return (
+                  <img key={project} className="isometric" src={`../../../public/assets/${project}-mobile.png`}
+                    alt={`${project}`} onClick={() => {openModal(project);}}/>
+                );
+              })}
+            </section>
           </div>
         </div>
       }

@@ -6,25 +6,28 @@ import PagePortfolio from './PagePortfolio/PagePortfolio';
 import PageAboutMe from './PageAboutMe/PageAboutMe';
 import PageContact from './PageContact/PageContact';
 import './MainPage.css';
+import useScroll from './Menu/useScroll';
 import '../scroll-snap-polyfill';
 
 function MainPage() {
+  const activePage = useScroll(['home', 'portfolio', 'about-me', 'contact']);
+  console.log("MainPage:", activePage);
   return (
     <>
       <MenuBar/>
       <BurgerMenu/>
       <div id="vertical-snapping">
         <div className="page home">
-          <PageHome/>
+          <PageHome activePage={activePage}/>
         </div>
         <div className="page portfolio">
-          <PagePortfolio/>
+          <PagePortfolio activePage={activePage}/>
         </div>
         <div className="page about-me">
-          <PageAboutMe/>
+          <PageAboutMe activePage={activePage}/>
         </div>
         <div className="page contact">
-          <PageContact/>
+          <PageContact activePage={activePage}/>
         </div>
       </div>
     </>

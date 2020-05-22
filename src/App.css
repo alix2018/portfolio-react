@@ -10,22 +10,41 @@ section.contact {
 
 @keyframes fadeInUp {
   from {
-    transform: translate3d(0, 50px, 0);
+    transform: translateY(50px);
   }
 
   to {
     opacity: 1;
-    transform: translate3d(0, 0, 0);
+    transform: translateY(0);
   }
 }
 
-.animated {
-  animation-duration: 1s;
-  animation-fill-mode: both;
+@keyframes fadeInUpTranslation50Y {
+  from {
+    transform: translateY(calc(-50% + 50px));
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes fadeInUpTranslation50X50Y {
+  from {
+    transform: translate(-15%, 50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-15%, 0);
+  }
 }
 
 .fadeInUp {
   opacity: 0;
+  animation-duration: 1s;
+  animation-fill-mode: both;
   animation-name: fadeInUp;
 }
 
@@ -99,7 +118,7 @@ section.contact {
 }
 
 .smooth-apparition {
-  animation-name: smoothApparition;
+  animation-name: smoothApparitionOpacity07;
   animation-duration: 0.5s;
   animation-iteration-count: 1;
   animation-delay: 5s;
@@ -107,12 +126,22 @@ section.contact {
 
 .scrolling-animation {
   opacity: 0;
-  animation-name: smoothApparition, bounceTopBottom;
+  animation-name: smoothApparitionOpacity07, bounceTopBottom;
   animation-duration: 0.5s, 0.8s;
   animation-iteration-count: 1, infinite;
   animation-timing-function: ease;
   animation-delay: 2s;
   animation-fill-mode: forwards, none;
+}
+
+@keyframes smoothApparitionOpacity07 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.7;
+  }
 }
 
 @keyframes smoothApparition {
@@ -121,6 +150,6 @@ section.contact {
   }
 
   to {
-    opacity: 0.7;
+    opacity: 1;
   }
 }

@@ -3,6 +3,32 @@
   --line-height: 70px;
 }
 
+#desktop-carousel .left,
+#desktop-carousel .right section {
+  opacity: 0;
+}
+
+#desktop-carousel.apparition .left {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-name: smoothApparition;
+  animation-delay: 0.4s;
+}
+
+#desktop-carousel.apparition .left .titles {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: fadeInUpTranslation50Y;
+  animation-delay: 0.3s;
+}
+
+#desktop-carousel.apparition .right section {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-name: smoothApparition;
+  /* opacity: 1; */
+}
+
 section.portfolio {
   position: relative;
   height: 100vh;
@@ -12,6 +38,7 @@ section.portfolio {
 }
 
 section.portfolio .left {
+  position: relative;
   background-color: var(--second-color-dark);
 }
 
@@ -22,7 +49,8 @@ section.portfolio img {
 }
 
 .titles {
-  left: calc(30% - 73px);
+  position: absolute;
+  right: -55px;
   top: 50%;
   margin-top: 30px;
   text-align: right;
@@ -42,7 +70,7 @@ section.portfolio img {
 }
 
 section.portfolio .right {
-  z-index: -1;
+  background-color: transparent;
 }
 
 section.portfolio img.isometric {

@@ -23,7 +23,7 @@ function MenuBar() {
 
   return (
     <nav>
-      <ul className="menu-effect animated fadeInUp">
+      <ul className="menu-effect fadeInUp">
         {menuItems.map(({name, page, index}) => (
           <li key={page} className={`${page === activePage ? 'active' : ''}`} id={index}>
             <a href={`${name}`} title={`menu item ${name}`} onClick={e => {handleClick(e, page);}}>
