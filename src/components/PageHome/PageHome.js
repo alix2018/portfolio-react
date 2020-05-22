@@ -23,6 +23,19 @@ function PageHome() {
     });
   }
 
+  function onScrollingArrowsClicked() {
+    ReactGA.event({
+      category: 'Click',
+      action: 'Click on scrolling arrows',
+      label: 'In home page'
+    });
+    const currentAnchor = document.querySelector('.portfolio');
+    currentAnchor.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
+
   return (
     <section id="home" className="home">
       <div className="left top">
@@ -32,8 +45,10 @@ function PageHome() {
         <h1 className="animated fadeInUp">
           I am
         </h1>
-        <img className="scrolling-animation" src="../../../public/assets/icons/scroll-arrow.svg"/>
-        <img className="scrolling-animation" src="../../../public/assets/icons/scroll-arrow.svg"/>
+        <div className="scrolling-animation" onClick={onScrollingArrowsClicked}>
+          <img src="../../../public/assets/icons/scroll-arrow.svg"/>
+          <img src="../../../public/assets/icons/scroll-arrow.svg"/>
+        </div>
       </div>
       <div className="right bottom">
         <Typewriter

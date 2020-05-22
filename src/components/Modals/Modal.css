@@ -110,6 +110,7 @@ section.half-page {
   width: 60px;
   right: var(--margin-side-desktop);
   transform: inherit !important;
+  cursor: pointer;
 }
 
 .main-info h2 {

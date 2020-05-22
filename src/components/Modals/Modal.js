@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactGA from 'react-ga';
 import './Modal.css';
 
 function Modal({showModal, closeModal, listSubtitles, modalInfo, isMobile, children}) {
@@ -18,6 +19,21 @@ function Modal({showModal, closeModal, listSubtitles, modalInfo, isMobile, child
       });
     }
   }, 1);
+
+  function onRightArrowClicked() {
+    console.log("modalInfo.modalName", modalInfo.modalName);
+    ReactGA.event({
+      category: 'Click',
+      action: 'Click on right arrow',
+      label: `${modalInfo.modalName}`
+    });
+    const pageTwoClass = '#container2 .' + modalInfo.modalName + '.box .page-two';
+    const currentAnchor = document.querySelector(pageTwoClass);
+    currentAnchor.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
 
   return (
     <div className={showHideClassName}>
@@ -84,7 +100,7 @@ function Modal({showModal, closeModal, listSubtitles, modalInfo, isMobile, child
                     src={`../../../public/assets/${modalInfo.imageName}-desktop.png`}
                     alt={`${modalInfo.firstTitle} ${modalInfo.secondTitle}`}/>
                 </section>
-                <img className="arrow bouncing-animation" src="../../../public/assets/icons/arrow.svg" alt="arrow to the right"/>
+                <img className="arrow bouncing-animation" src="../../../public/assets/icons/arrow.svg" alt="arrow to the right" onClick={onRightArrowClicked}/>
               </div>
               {children}
             </div>

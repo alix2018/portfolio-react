@@ -92,6 +92,12 @@ section.portfolio img.isometric:nth-child(1):hover {
   transform: translate(-50%, -50%) scale(1.07);
 }
 
+@media only screen and (max-width: 1024px) {
+  section.portfolio img.isometric:nth-child(1):hover {
+    transform: translate(-50%, -50%);
+  }
+}
+
 @media only screen and (max-width: 767px) {
   section.portfolio {
     margin-top: -1px;
