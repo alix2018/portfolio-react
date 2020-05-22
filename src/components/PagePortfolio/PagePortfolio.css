@@ -3,32 +3,6 @@
   --line-height: 70px;
 }
 
-#desktop-carousel .left,
-#desktop-carousel .right section {
-  opacity: 0;
-}
-
-#desktop-carousel.apparition .left {
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  animation-name: smoothApparition;
-  animation-delay: 0.4s;
-}
-
-#desktop-carousel.apparition .left .titles {
-  animation-duration: 1s;
-  animation-fill-mode: both;
-  animation-name: fadeInUpTranslation50Y;
-  animation-delay: 0.3s;
-}
-
-#desktop-carousel.apparition .right section {
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  animation-name: smoothApparition;
-  /* opacity: 1; */
-}
-
 section.portfolio {
   position: relative;
   height: 100vh;
@@ -118,6 +92,31 @@ section.portfolio img.isometric:nth-child(4) {
 
 section.portfolio img.isometric:nth-child(1):hover {
   transform: translate(-50%, -50%) scale(1.07);
+}
+
+#desktop-carousel .left,
+#desktop-carousel .right section {
+  opacity: 0;
+}
+
+#desktop-carousel.apparition .left {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-name: smoothApparition;
+  animation-delay: 0.4s;
+}
+
+#desktop-carousel.apparition .left .titles {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: fadeInUpTranslation50Y;
+  animation-delay: 0.3s;
+}
+
+#desktop-carousel.apparition .right section {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-name: smoothApparition;
 }
 
 @media only screen and (max-width: 767px) {

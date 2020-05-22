@@ -11,7 +11,6 @@ import '../scroll-snap-polyfill';
 
 function MainPage() {
   const activePage = useScroll(['home', 'portfolio', 'about-me', 'contact']);
-  console.log("MainPage:", activePage);
   return (
     <>
       <MenuBar/>
