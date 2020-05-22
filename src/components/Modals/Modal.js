@@ -21,7 +21,6 @@ function Modal({showModal, closeModal, listSubtitles, modalInfo, isMobile, child
   }, 1);
 
   function onRightArrowClicked() {
-    console.log("modalInfo.modalName", modalInfo.modalName);
     ReactGA.event({
       category: 'Click',
       action: 'Click on right arrow',
