@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ReactGA from 'react-ga';
 import './Modal.css';
 
 function Modal({showModal, closeModal, listSubtitles, modalInfo, isMobile, children}) {
   const showHideClassName = showModal ? 'modal display-block' : 'modal display-none';
+  const [showArrowMobile, setShowArrowMobile] = useState('show');
+
   const menuBar = document.querySelector('ul.menu-effect');
   if (menuBar && showModal) {
     menuBar.style.pointerEvents = 'none';
@@ -26,12 +28,29 @@ function Modal({showModal, closeModal, listSubtitles, modalInfo, isMobile, child
       action: 'Click on right arrow',
       label: `${modalInfo.modalName}`
     });
-    const pageTwoClass = '#container2 .' + modalInfo.modalName + '.box .page-two';
+    const pageTwoClass = `#container2 .${modalInfo.modalName}.box .page-two`;
     const currentAnchor = document.querySelector(pageTwoClass);
     currentAnchor.scrollIntoView({
       behavior: 'smooth',
       block: 'start'
     });
+  }
+
+  function onBottomArrowClicked() {
+    ReactGA.event({
+      category: 'Click',
+      action: 'Click on bottom arrow',
+      label: `${modalInfo.modalName}`
+    });
+    const currentAnchor = document.querySelector(`.${modalInfo.modalName}.page-two-mobile`);
+    currentAnchor.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+
+    setTimeout(() => {
+      setShowArrowMobile('hide');
+    }, 1000);
   }
 
   return (
@@ -52,8 +71,9 @@ function Modal({showModal, closeModal, listSubtitles, modalInfo, isMobile, child
                   {modalInfo.secondSubtitle}
                 </h2>
               </div>
+              <img className={`arrow bouncing-top-bottom ${showArrowMobile}`} src="../../../public/assets/icons/arrow-bottom.svg" alt="arrow to the right" onClick={onBottomArrowClicked}/>
             </section>
-            <section className="page-two-mobile">
+            <section className={`page-two-mobile ${modalInfo.modalName}`}>
               <div className="categories-list">
                 {listSubtitles.map(item => {
                   return (
@@ -99,7 +119,7 @@ function Modal({showModal, closeModal, listSubtitles, modalInfo, isMobile, child
                     src={`../../../public/assets/${modalInfo.imageName}-desktop.png`}
                     alt={`${modalInfo.firstTitle} ${modalInfo.secondTitle}`}/>
                 </section>
-                <img className="arrow bouncing-animation" src="../../../public/assets/icons/arrow.svg" alt="arrow to the right" onClick={onRightArrowClicked}/>
+                <img className="arrow bouncing-left-right" src="../../../public/assets/icons/arrow-right.svg" alt="arrow to the right" onClick={onRightArrowClicked}/>
               </div>
               {children}
             </div>

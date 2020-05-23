@@ -24,6 +24,7 @@ section.home .left .name {
   left: var(--margin-side-desktop);
   margin-top: 5vh;
   font-size: 14px;
+  letter-spacing: 0.2px;
   font-family: var(--font-poppins-medium);
   color: var(--second-color-dark);
   pointer-events: none;
@@ -55,7 +56,7 @@ section.home .left h1,
 section.home .left .scrolling-animation {
   position: absolute;
   left: var(--margin-side-desktop);
-  bottom: 5%;
+  bottom: 5vh;
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -83,7 +84,7 @@ section.home .right .container {
 section.home .right .icons {
   position: absolute;
   display: inline-flex;
-  bottom: 5%;
+  bottom: 5vh;
   right: var(--margin-side-desktop);
   margin: 0;
 }

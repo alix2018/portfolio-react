@@ -104,10 +104,10 @@ section.half-page {
   letter-spacing: 1.2px;
 }
 
-.arrow {
+img.arrow {
   position: absolute;
   bottom: calc(var(--bottom-modal));
-  width: 60px;
+  width: 50px;
   right: var(--margin-side-desktop);
   transform: inherit !important;
   cursor: pointer;
@@ -135,11 +135,12 @@ section.half-page {
   margin-bottom: 0;
 }
 
-section.page-one img {
-  height: 95vh;
-  width: auto;
-  right: calc(var(--margin-side-desktop) - 50px);
-  bottom: -30px;
+section.page-one img:not(.arrow) {
+  bottom: 0;
+  right: 0;
+  max-width: 80vw;
+  height: auto;
+  max-height: 90vh;
   transform: inherit !important;
 }
 
@@ -219,7 +220,7 @@ section.page-two {
     flex-direction: column;
   }
 
-  .main-info img {
+  .main-info img:not(.arrow) {
     position: relative !important;
     width: 120vw;
     left: -12%;
@@ -254,11 +255,32 @@ section.page-two {
     font-size: 21px;
   }
 
+  img.arrow {
+    position: absolute !important;
+    bottom: var(--bottom-modal);
+    width: 40px;
+    height: auto;
+    left: initial !important;
+    right: var(--side-modal-mobile) !important;
+    transform: rotate(90deg) !important;
+    margin-bottom: 0;
+    cursor: pointer;
+  }
+
+  img.arrow.show {
+    display: block;
+  }
+
+  img.arrow.hide {
+    display: none;
+  }
+
   .page-two-mobile {
     display: flex;
     flex-direction: column;
     width: 80vw;
     margin: 0 auto;
+    padding-top: 20px;
   }
 
   .bottom-right {
@@ -275,14 +297,14 @@ section.page-two {
     height: 100vh;
   }
 
-  .main-info .page-one-mobile img {
+  .main-info .page-one-mobile img:not(.arrow) {
     grid-row: 1;
     position: relative !important;
     display: block;
     width: auto;
     height: auto;
-    max-height: 100%;
-    max-width: 130%;
+    max-height: 100vh;
+    max-width: 130vw;
     left: -13%;
     margin-top: auto;
     margin-bottom: auto;
@@ -290,10 +312,19 @@ section.page-two {
     transform: none !important;
   }
 
+  img.arrow {
+    width: 25px;
+  }
+
   .main-info .page-one-mobile .modal-titles {
     grid-row: 2;
     width: var(--paragraph-width-mobile);
     margin: auto auto;
+  }
+
+  .main-info h1,
+  .main-info h2 {
+    width: 85%;
   }
 
   .close {
