@@ -29,7 +29,7 @@ section.titles-list .project-index {
   left: calc(200px + 6vw);
   top: -35px;
   width: calc(6vw) !important;
-  background: linear-gradient(var(--first-color-light), var(--first-color-light)) var(--second-color-dark) no-repeat 0 0 !important;
+  background: linear-gradient(var(--first-color-light), var(--first-color-light)) transparent no-repeat 0 0 !important;
   background-size: 0 100% !important;
 }
 

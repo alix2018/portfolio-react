@@ -34,6 +34,25 @@
 .menu-effect .active a {
   color: var(--third-color);
   transition: color 0.3s;
+  position: relative;
+}
+
+.menu-effect a:after {
+  position: absolute;
+  content: '';
+  margin: 0;
+  width: 97%;
+  height: 2px;
+  display: block;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(var(--third-color), var(--third-color)) transparent no-repeat 0 0 !important;
+  background-size: 0 100% !important;
+}
+
+.menu-effect .active a:after {
+  animation: loading 0.2s linear 1 forwards;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
