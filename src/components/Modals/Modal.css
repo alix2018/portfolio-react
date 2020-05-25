@@ -267,14 +267,6 @@ section.page-two {
     cursor: pointer;
   }
 
-  img.arrow.show {
-    display: block;
-  }
-
-  img.arrow.hide {
-    display: none;
-  }
-
   .page-two-mobile {
     display: flex;
     flex-direction: column;

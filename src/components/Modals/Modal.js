@@ -4,7 +4,6 @@ import './Modal.css';
 
 function Modal({showModal, closeModal, listSubtitles, modalInfo, isMobile, children}) {
   const showHideClassName = showModal ? 'modal display-block' : 'modal display-none';
-  const [showArrowMobile, setShowArrowMobile] = useState('show');
 
   const menuBar = document.querySelector('ul.menu-effect');
   if (menuBar && showModal) {
@@ -47,10 +46,6 @@ function Modal({showModal, closeModal, listSubtitles, modalInfo, isMobile, child
       behavior: 'smooth',
       block: 'start'
     });
-
-    setTimeout(() => {
-      setShowArrowMobile('hide');
-    }, 1000);
   }
 
   return (
@@ -71,7 +66,7 @@ function Modal({showModal, closeModal, listSubtitles, modalInfo, isMobile, child
                   {modalInfo.secondSubtitle}
                 </h2>
               </div>
-              <img className={`arrow bouncing-top-bottom ${showArrowMobile}`} src="../../../public/assets/icons/arrow-bottom.svg" alt="arrow to the right" onClick={onBottomArrowClicked}/>
+              <img className="arrow bouncing-top-bottom" src="../../../public/assets/icons/arrow-bottom.svg" alt="arrow to the right" onClick={onBottomArrowClicked}/>
             </section>
             <section className={`page-two-mobile ${modalInfo.modalName}`}>
               <div className="categories-list">
