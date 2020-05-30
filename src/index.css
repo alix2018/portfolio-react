@@ -44,7 +44,6 @@ body {
 div[class^='line'] {
   width: var(--line-width);
   height: 2px;
-  background: var(--white-color);
 }
 
 button {

@@ -152,6 +152,7 @@ section.page-one img:not(.arrow) {
   position: relative;
   top: 8px;
   margin-right: 17px;
+  background: var(--white-color);
 }
 
 .categories,
