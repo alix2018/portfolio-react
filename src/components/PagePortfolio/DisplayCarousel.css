@@ -24,7 +24,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    min-width: 80vw;
+    min-width: 75vw;
     height: 100%;
     margin: 0;
     padding-left: 15px;
@@ -81,14 +81,19 @@
   .line-carousel {
     width: 1px !important;
     height: var(--line-height) !important;
-    margin-left: 9.5%;
+    margin-left: 7%;
     margin-top: 25px;
+    background: var(--white-color);
   }
 }
 
 @media only screen and (max-width: 767px) {
   section.portfolio #swipe-carousel .tile img.isometric {
     width: 80vw;
+  }
+
+  #swipe-carousel .tile {
+    min-width: 80vw;
   }
 
   .carousel-text {
