@@ -56,7 +56,7 @@ section.portfolio img.isometric {
   background-color: var(--white-color);
   transition-property: left, height, transform;
   transition-timing-function: ease-out;
-  transition-duration: 1s, 1s, 0.3s;
+  transition-duration: 0.8s, 0.8s, 0.3s;
 }
 
 section.portfolio img.isometric:nth-child(1) {

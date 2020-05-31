@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './PagePortfolio.css';
 import ReactGA from 'react-ga';
-import LoyaltyApplication from '../Modals/ModalLoyaltyApplication/ModalLoyaltyApplication';
+import Pwa from '../Modals/ModalPwa/ModalPwa';
 import RetailerPortal from '../Modals/ModalRePo/ModalRePo';
 import Games from '../Modals/ModalGames/ModalGames';
 import Chatbot from '../Modals/ModalChatbot/ModalChatbot';
@@ -14,8 +14,8 @@ function PagePortfolio() {
   const projectsList = [
     {
       id: 1,
-      class: 'loyalty-application',
-      name: 'Loyalty Application'
+      class: 'pwa',
+      name: 'Progressive Web Apps'
     },
     {
       id: 2,
@@ -55,6 +55,11 @@ function PagePortfolio() {
   }
 
   function updateProjectsArray(currentProject) {
+    if (activeProject.class === currentProject.class) {
+      openModal(currentProject.class);
+      return;
+    }
+
     setActiveProject(currentProject);
     const differenceBetween = currentProject.id - activeProject.id;
     const projectsLength = projectsArray.length;
@@ -97,8 +102,8 @@ function PagePortfolio() {
           </div>
         </div>
       }
-      <LoyaltyApplication
-        showModal={showModal === 'loyalty-application'}
+      <Pwa
+        showModal={showModal === 'pwa'}
         closeModal={() => {openModal('');}}
         isMobile={isMobile}
       />

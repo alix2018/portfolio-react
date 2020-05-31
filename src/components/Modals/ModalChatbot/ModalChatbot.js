@@ -22,13 +22,13 @@ function Chatbot({showModal, closeModal, isMobile}) {
     modalName: 'modal-chatbot',
     firstTitle: 'Facebook',
     secondTitle: 'Chatbot',
-    firstSubtitle: 'Collecting consumers information',
-    secondSubtitle: 'during the campaign',
+    firstSubtitle: 'Collecting consumers details',
+    secondSubtitle: 'during a campaign',
     imageName: 'facebook-chatbot'
   };
   const paragraphIntro = {
     context: 'Introduction',
-    text: 'The goal was to <span>retrieve information about the customers</span> during a loyalty program campaign. They could answer the bot questions and the flow was be updated depending on their answers. I also made some tests with <span>Telegram</span> and <span>Wechat</span> chatbots before implementing the <span>Facebook</span> one.'
+    text: 'The goal of this project was to <span>retrieve information about the customers</span> during a loyalty program campaign. They could answer the bot questions and the flow was be updated depending on their answers. I also made test apps for <span>Telegram</span> and <span>Wechat</span> chatbots before implementing the <span>Facebook</span> one.'
   };
   const paragraphFeature = {
     context: 'Chatbot feature',
@@ -36,7 +36,7 @@ function Chatbot({showModal, closeModal, isMobile}) {
   };
   const paragraphCode = {
     context: 'Code details',
-    text: 'The webviews design was realized with <span>Bootstrap</span> and <span>Materialize</span>. The backend side was handled with <span>NodeJS</span>. I chose <span>Dialogflow</span> for the text recognition because of his easy integration with lots of platforms and his natural language processing.'
+    text: 'The webviews design was realized with <span>Bootstrap</span> and <span>Materialize</span>. The backend side was handled with <span>NodeJS</span>. I chose <span>Dialogflow</span> for the text recognition because of its easy integration with lots of platforms and its natural language processing.'
   };
 
   return (

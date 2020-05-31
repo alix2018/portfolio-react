@@ -1,24 +1,24 @@
-.modal-loyalty.box:nth-child(2) {
+.modal-pwa.box:nth-child(2) {
   width: 50vw;
 }
 
-.bottom-left {
+.pwa-top-left {
   position: absolute;
-  bottom: var(--bottom-modal);
+  bottom: 45%;
   left: var(--margin-side-desktop);
 }
 
-.loyalty-top-left {
+.pwa-top-right {
   position: absolute;
-  bottom: 40%;
-  left: var(--margin-side-desktop);
+  bottom: 45%;
+  right: var(--margin-side-desktop);
 }
 
 .quote {
   position: absolute;
   width: var(--paragraph-width-desktop);
-  bottom: 40%;
-  right: var(--margin-side-desktop);
+  bottom: var(--bottom-modal);
+  left: var(--margin-side-desktop);
   font-size: 18px;
   white-space: pre-wrap;
   letter-spacing: 0.8px;
@@ -58,18 +58,19 @@
     flex-direction: column;
   }
 
-  .bottom-left,
-  .loyalty-top-left {
+  .pwa-top-left,
+  .pwa-top-right {
     position: relative;
     bottom: initial;
     left: initial;
+    right: initial;
   }
 
   .quote {
     position: relative;
     width: var(--paragraph-width-mobile);
     bottom: initial;
-    right: initial;
+    left: initial;
     margin-top: var(--space-between-mobile-paragraph);
   }
 
