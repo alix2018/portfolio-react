@@ -28,7 +28,7 @@ function PageAboutMe() {
               I studied in a <span>computer science</span> school in
               France and I always prefered the Web platform. I did 3 internships in this
               field and I&apos;m now a <span>Medior</span> Web developer. On my spare time
-              I love <span>coding</span> and <span>continuing learning</span>, not only about Web but
+              I love <span>coding</span> and <span>keep learning</span>, not only about Web but
               also other languages and platforms.
               I’m also a big fan of <span>sports</span>! I really
               enjoy playing team sports with colleagues and friends. After moving to
@@ -38,9 +38,9 @@ function PageAboutMe() {
             </p>
             <p className="about-me-mobile">
               I’m a 25 year old girl who moved to Amsterdam 2 years ago.
-              I studied <span>computer science</span> in France. I did 3 internships in this
-              field and I&apos;m now a <span>Medior</span> Web developer. On my spare time
-              I love <span>coding</span> and <span>continuing learning</span>. I also really
+              I studied <span>computer science</span> in France and did 3 internships in this
+              field. Now I&apos;m a <span>Medior</span> Web developer. On my spare time
+              I love <span>coding</span> and <span>keep learning</span>. I also really
               enjoy playing <span>team sports</span> with colleagues and friends. After moving
               top the Netherlands I also started <span>to travel</span>,
               explore new countries and learn about other cultures.
