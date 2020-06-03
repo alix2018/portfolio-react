@@ -24,11 +24,15 @@ function RetailerPortal({showModal, closeModal, isMobile}) {
   };
   const paragraphIntro = {
     context: 'Introduction',
-    text: 'The Retailer Portal is an <span>interface for cashiers and managers</span>. Its goal is to manage the loyalty cards of the shoppers and the campaign of the current loyalty program.'
+    text: 'The Retailer Portal is a web based application oriented towards cashiers and managers. This <span>internal tool</span> allows managers to handle the promotions of the different loyalty programs and cashiers to manage consumers account at the store.'
   };
   const paragraphDetails = {
     context: 'Details',
-    text: 'Every actions possible for the users is represented by a module. These modules are displayed using the template engine <span>Handlebars</span>. The javascript code is based on <span>JQuery</span> and we complete it by implementing our own helpers and plugins. The project exists for few years already and the Front-End Framework chosen at this time was <span>Bootstrap 3</span>. The whole application is built using <span>Gulp</span> and its tasks system.'
+    text: 'The interface is displayed using the template engine <span>Handlebars</span>. The javascript code is based on <span>JQuery</span>. The project exists for few years already and the Front-End Framework chosen at this time was <span>Bootstrap 3</span> and the whole application is built with <span>Gulp</span> and its tasks system.'
+  };
+  const paragraphSci = {
+    context: 'Cashier interface',
+    text: 'This module helps the <span>cashiers</span> see the user details using their card number. They can have access to their balance and <span>execute actions</span> on it such as redeeming a reward for instance.'
   };
   return (
     <Modal showModal={showModal} closeModal={closeModal} listSubtitles={listSubtitles}
@@ -41,9 +45,14 @@ function RetailerPortal({showModal, closeModal, isMobile}) {
               {paragraphIntro}
             </Paragraph>
           </div>
-          <div className="bottom-right">
+          <div className="repo-top-right">
             <Paragraph>
               {paragraphDetails}
+            </Paragraph>
+          </div>
+          <div className="bottom-right">
+            <Paragraph>
+              {paragraphSci}
             </Paragraph>
           </div>
         </section>

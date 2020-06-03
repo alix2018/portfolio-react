@@ -42,7 +42,7 @@
 .play-game img {
   position: relative !important;
   height: 16px;
-  margin: 8px 0 0 25px;
+  margin: 8px 0 0 20px;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -56,21 +56,23 @@
   }
 
   .play-game {
-    position: initial;
+    position: relative;
     display: flex;
+    flex-direction: row;
     right: 0;
     margin-top: 25px;
     text-decoration: none;
   }
 
   .play-game p {
-    width: 100%;
+    width: auto;
   }
 
   .play-game img {
-    position: relative !important;
+    position: absolute !important;
+    width: auto !important;
+    left: 20px !important;
     height: 16px;
-    margin: 0;
-    transform: translateX(-80px) !important;
+    margin: 0 !important;
   }
 }

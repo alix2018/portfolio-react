@@ -43,6 +43,10 @@ section.about-me article header {
   color: var(--first-color-light);
 }
 
+section.about-me article header.about-me-mobile {
+  display: none;
+}
+
 section.about-me .right article section {
   display: block;
   width: 470px;
@@ -73,6 +77,7 @@ section.about-me .right article footer span {
 
 section.about-me .right article section p span {
   font-family: var(--font-poppins-bold);
+  letter-spacing: 1px;
 }
 
 footer {
@@ -205,8 +210,13 @@ footer {
   }
 
   section.about-me article header {
+    display: none;
+  }
+
+  section.about-me article header.about-me-mobile {
     top: 5vh !important;
     left: var(--margin-side-mobile);
+    display: block;
   }
 
   section.about-me article section {

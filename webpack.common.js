@@ -1,6 +1,5 @@
 const path = require('path');
 const glob = require('glob');
-const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
@@ -106,7 +105,6 @@ module.exports = {
       filename: 'index.html'
     }),
     new WebpackPwaManifest(manifestJSON),
-    new webpack.HotModuleReplacementPlugin(), // TODO: only for dev
     new CopyPlugin([
       {
         from: 'public/assets',

@@ -7,7 +7,7 @@ function DisplayCarousel({projectsList, openModal}) {
       {projectsList.map((project, index) => {
         return (
           <div key={project.class} className="tile">
-            <img className="isometric" src={`../../../public/assets/isometric/${project.class}.png`} alt={`${project.class}`}
+            <img className="isometric" src={`../../../public/assets/${project.class}-mobile.png`} alt={`${project.class}`}
               onClick={() => {openModal(project.class);}}/>
             <div className="carousel-text">
               <div className="line-carousel"/>

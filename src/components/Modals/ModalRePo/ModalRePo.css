@@ -1,3 +1,25 @@
 .modal-repo.box:nth-child(2) {
   width: 50vw;
 }
+
+.bottom-left {
+  position: absolute;
+  bottom: var(--bottom-modal);
+  left: var(--margin-side-desktop);
+}
+
+.repo-top-right {
+  position: absolute;
+  bottom: 33%;
+  right: var(--margin-side-desktop);
+}
+
+@media only screen and (max-width: 1024px) {
+  .repo-top-right,
+  .bottom-left {
+    position: relative;
+    bottom: initial;
+    right: initial;
+    left: initial;
+  }
+}
