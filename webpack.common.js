@@ -6,7 +6,6 @@ const WebpackPwaManifest = require('webpack-pwa-manifest');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const PurgecssPlugin = require('purgecss-webpack-plugin');
-const WorkboxPlugin = require('workbox-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const imageminMozjpeg = require('imagemin-mozjpeg');
 const manifestJSON = require('./manifest.json');
@@ -122,7 +121,6 @@ module.exports = {
         }
       )
     }),
-    new WorkboxPlugin.GenerateSW(),
     new ImageminPlugin({
       disable: devMode,
       test: /\.(jpe?g|png|svg)$/i,
