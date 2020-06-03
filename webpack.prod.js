@@ -1,8 +1,8 @@
 const merge = require('webpack-merge');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-const config = require('./webpack.common.js');
 const {GenerateSW} = require('workbox-webpack-plugin');
+const config = require('./webpack.common.js');
 
 module.exports = merge(config, {
   mode: 'production',
@@ -60,5 +60,5 @@ module.exports = merge(config, {
       clientsClaim: true,
       skipWaiting: true
     })
-  ],
+  ]
 });
