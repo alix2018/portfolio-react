@@ -20,37 +20,36 @@ function PageAboutMe() {
       </div>
       <div className="right">
         <article>
-          <header>Hey!</header>
+          <header>A bit more...</header>
+          <header className="about-me-mobile">About me</header>
           <section>
             <p>
-              I’m a 24 year old girl who recently moved to Amsterdam
-              as a <span>web developer</span>. After an intensive
-              mathematics school, I chose to integrate a <span>computer science school</span> in
-              France. Among all the projects, I prefered Web
-              development. That’s why I did my 3 internships in that
-              field and got hired as a Junior Web developer. On my spare time
-              I love coding and continue learning, not only Web but
-              also <span>other platforms and languages</span>. I’m also a big fan of sport! I really
-              enjoy playing <span>team sports</span> with colleagues and friends. After moving
-              in the Netherland I also started <span>to travel</span>,
+              I&apos;m a 25 year old girl who moved to Amsterdam 2 years ago.
+              I studied in a <span>computer science</span> school in
+              France and I always prefered the Web platform. I did 3 internships in this
+              field and I&apos;m now a <span>Medior</span> Web developer. On my spare time
+              I love <span>coding</span> and <span>keep learning</span>, not only about Web but
+              also other languages and platforms.
+              I’m also a big fan of <span>sports</span>! I really
+              enjoy playing team sports with colleagues and friends. After moving to
+              the Netherlands I also started <span>to travel</span>,
               explore new countries and learn about other cultures which
-              I find fascinating!
+              I&apos;ve found fascinating!
             </p>
             <p className="about-me-mobile">
-              I’m a 24 year old girl who recently moved to Amsterdam
-              as a <span>web developer</span>. I studied in a computer
-              science <span>engineering school</span> in France. I did my 3 internships in web
-              and then got hired as a Junior Web developer. On my spare time
-              I love coding and continue learning. I also really
+              I’m a 25 year old girl who moved to Amsterdam 2 years ago.
+              I studied <span>computer science</span> in France and did 3 internships in this
+              field. Now I&apos;m a <span>Medior</span> Web developer. On my spare time
+              I love <span>coding</span> and <span>keep learning</span>. I also really
               enjoy playing <span>team sports</span> with colleagues and friends. After moving
-              in the Netherland I also started <span>to travel</span>,
+              top the Netherlands I also started <span>to travel</span>,
               explore new countries and learn about other cultures.
             </p>
             <form method="get" action="./public/assets/cv.pdf" className="download-cv-mobile" target="_blank" rel="noopener noreferrer">
               <button type="submit" className="button" onClick={() => {onDownloadClick();}}>Download CV</button>
             </form>
           </section>
-          <footer>I am <span>ready</span></footer>
+          <footer>about <span>me</span></footer>
         </article>
       </div>
     </section>

@@ -24,6 +24,7 @@ section.home .left .name {
   left: var(--margin-side-desktop);
   margin-top: 5vh;
   font-size: 14px;
+  letter-spacing: 0.2px;
   font-family: var(--font-poppins-medium);
   color: var(--second-color-dark);
   pointer-events: none;
@@ -52,6 +53,23 @@ section.home .left h1,
   background-color: var(--second-color-dark);
 }
 
+section.home .left .scrolling-animation {
+  position: absolute;
+  left: var(--margin-side-desktop);
+  bottom: 5vh;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+section.home img {
+  height: 20px;
+}
+
+section.home img:last-of-type {
+  margin-top: -5px;
+}
+
 .typewriter {
   left: calc(var(--width-left-column) + 18px);
   color: var(--first-color-light);
@@ -66,7 +84,7 @@ section.home .right .container {
 section.home .right .icons {
   position: absolute;
   display: inline-flex;
-  bottom: 5%;
+  bottom: 5vh;
   right: var(--margin-side-desktop);
   margin: 0;
 }
@@ -153,6 +171,10 @@ section.home .right .button:hover {
     position: inherit !important;
     left: var(--margin-side-tablet) !important;
     font-size: 25px !important;
+  }
+
+  section.home .left .scrolling-animation {
+    display: none;
   }
 
   section.home .left h1,

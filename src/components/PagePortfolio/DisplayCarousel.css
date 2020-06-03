@@ -24,10 +24,19 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 100vw;
-    min-width: 100vw;
+    min-width: 75vw;
     height: 100%;
     margin: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  #swipe-carousel .tile:first-of-type {
+    padding-left: 30px;
+  }
+
+  #swipe-carousel .tile:last-of-type {
+    padding-right: 30px;
   }
 
   section.portfolio #swipe-carousel .tile img.isometric {
@@ -72,14 +81,19 @@
   .line-carousel {
     width: 1px !important;
     height: var(--line-height) !important;
-    margin-left: 18%;
+    margin-left: 7%;
     margin-top: 25px;
+    background: var(--white-color);
   }
 }
 
 @media only screen and (max-width: 767px) {
   section.portfolio #swipe-carousel .tile img.isometric {
     width: 80vw;
+  }
+
+  #swipe-carousel .tile {
+    min-width: 80vw;
   }
 
   .carousel-text {
@@ -89,6 +103,6 @@
   }
 
   .line-carousel {
-    margin-left: 10%;
+    margin-left: 0;
   }
 }

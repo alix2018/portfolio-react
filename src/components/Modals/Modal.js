@@ -1,8 +1,10 @@
 import React from 'react';
+import ReactGA from 'react-ga';
 import './Modal.css';
 
 function Modal({showModal, closeModal, listSubtitles, modalInfo, isMobile, children}) {
   const showHideClassName = showModal ? 'modal display-block' : 'modal display-none';
+
   const menuBar = document.querySelector('ul.menu-effect');
   if (menuBar && showModal) {
     menuBar.style.pointerEvents = 'none';
@@ -19,14 +21,43 @@ function Modal({showModal, closeModal, listSubtitles, modalInfo, isMobile, child
     }
   }, 1);
 
+  function onRightArrowClicked() {
+    ReactGA.event({
+      category: 'Click',
+      action: 'Click on right arrow',
+      label: `${modalInfo.modalName}`
+    });
+    const pageTwoClass = `#container2 .${modalInfo.modalName}.box .page-two`;
+    const currentAnchor = document.querySelector(pageTwoClass);
+    currentAnchor.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
+
+  function onBottomArrowClicked() {
+    ReactGA.event({
+      category: 'Click',
+      action: 'Click on bottom arrow',
+      label: `${modalInfo.modalName}`
+    });
+    const currentAnchor = document.querySelector(`.${modalInfo.modalName}.page-two-mobile`);
+    currentAnchor.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
+
   return (
     <div className={showHideClassName}>
       <section className="modal-main">
-        <div className="close" onClick={closeModal}/>
+        <img alt="close cross" className="close" src="../../../public/assets/icons/cross.svg" onClick={closeModal}/>
         {isMobile &&
           <div className="main-info">
             <section className="page-one-mobile">
-              <img className={`${modalInfo.imageName}`} src={`../../../public/assets/isometric/${modalInfo.imageName}.png`} alt={`${modalInfo.firstTitle} ${modalInfo.secondTitle}`}/>
+              <img className={`${modalInfo.imageName}`}
+                src={`../../../public/assets/${modalInfo.imageName}-mobile.png`}
+                alt={`${modalInfo.firstTitle} ${modalInfo.secondTitle}`}/>
               <div className="modal-titles">
                 <h1>{modalInfo.firstTitle}<br/>
                   {modalInfo.secondTitle}
@@ -35,8 +66,9 @@ function Modal({showModal, closeModal, listSubtitles, modalInfo, isMobile, child
                   {modalInfo.secondSubtitle}
                 </h2>
               </div>
+              <img className="arrow bouncing-top-bottom" src="../../../public/assets/icons/arrow-bottom.svg" alt="arrow to the right" onClick={onBottomArrowClicked}/>
             </section>
-            <section className="page-two-mobile">
+            <section className={`page-two-mobile ${modalInfo.modalName}`}>
               <div className="categories-list">
                 {listSubtitles.map(item => {
                   return (
@@ -78,9 +110,11 @@ function Modal({showModal, closeModal, listSubtitles, modalInfo, isMobile, child
                       );
                     })}
                   </div>
-                  <img className={`${modalInfo.imageName}`} src={`../../../public/assets/isometric/${modalInfo.imageName}.png`} alt={`${modalInfo.firstTitle} ${modalInfo.secondTitle}`}/>
+                  <img className={`${modalInfo.imageName}`}
+                    src={`../../../public/assets/${modalInfo.imageName}-desktop.png`}
+                    alt={`${modalInfo.firstTitle} ${modalInfo.secondTitle}`}/>
                 </section>
-                <img className="arrow" src="../../../public/assets/arrow.svg" alt="arrow to the right"/>
+                <img className="arrow bouncing-left-right" src="../../../public/assets/icons/arrow-right.svg" alt="arrow to the right" onClick={onRightArrowClicked}/>
               </div>
               {children}
             </div>

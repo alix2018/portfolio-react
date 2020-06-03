@@ -41,8 +41,8 @@ article.paragraph p span {
   font-family: var(--font-poppins-bold);
 }
 
-article.paragraph p span a {
-  text-decoration: none;
+article.paragraph p a {
+  text-decoration: underline;
   color: unset;
 }
 

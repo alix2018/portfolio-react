@@ -24,19 +24,19 @@ function Games({showModal, closeModal, isMobile}) {
   };
   const paragraphIntro = {
     context: 'Introduction',
-    text: 'The goal of my 6 months internship was to integrate microgames on web applications and find the best way to develop them.'
+    text: 'The goal of my 6 months internship was to <span>integrate microgames</span> on web applications and find the best way to develop them depending on a list of parameters and expectations: development time, performances, reusability, integration to name the main ones.'
   };
   const paragraphUnity = {
     context: 'Unity',
-    text: 'I started to implement a 2D game platform with the <span>game engine <a href="https:// unity.com" title="Unity Official Website" target="_blank" rel="noopener noreferrer">Unity</a></span>. With this first game, I could learn the process of developing video games but also all the mechanics. The Unity interface makes it way easier.'
+    text: 'I started to implement a 2D game platform with the <span>game engine</span> <a href="https:// unity.com" title="Unity Official Website" target="_blank" rel="noopener noreferrer">Unity</a>. With this first game, I could learn the process of developing video games but also all the mechanics. The Unity interface really helps for these kinds of projects.'
   };
   const paragraphPixijs = {
     context: 'PixiJS',
-    text: 'I implemented the same 2D game with the <span>2D WebGL renderer <a href="https://www.pixijs.com" title="PixiJS Official Website" target="_blank" rel="noopener noreferrer">PixiJS</a></span>. I wrapped the game into a web component to be easily reusable. All the options of the game could be decided while importing the component: number of coins, speed, space between platforms...'
+    text: 'I implemented the same 2D game with the <span>2D WebGL renderer</span> <a href="https://www.pixijs.com" title="PixiJS Official Website" target="_blank" rel="noopener noreferrer">PixiJS</a>. I wrapped the game into a web component to be more easily reusable. All the options of the game could be decided while importing the component: number of coins, speed, space between platforms...'
   };
   const paragraphWebAssembly = {
     context: 'webassembly',
-    text: '<span>WebAssembly</span> is near-native performances and really low level compare to the two previous ones. I wanted to give it a try even if it was quite new at this time. I made a <span>snake</span> with Javascript and WebAssembly. It was really <span>performant</span> but the time of development was too long for the result.'
+    text: '<span>WebAssembly</span> is near-native performances and really low level compare to the two previous ones. I wanted to give it a try even if it was quite new at this time. I made a <span>snake</span> with Javascript and WebAssembly. It was really <span>performant</span> but the time of development was too long for the result we were looking for.'
   };
   const textPlayGame = 'Play the game';
   return (
@@ -53,7 +53,7 @@ function Games({showModal, closeModal, isMobile}) {
           <div className="games-bottom-left">
             <a href="https://pwa-test-1bec3.web.app" className="play-game unity" title="play custom Unity 2D game" target="_blank" rel="noopener noreferrer">
               <p>{textPlayGame}</p>
-              <img src="../../../../public/assets/play-game.svg" alt="play game image"/>
+              <img src="../../../../public/assets/icons/play-game.svg" alt="play game image"/>
             </a>
             <Paragraph>
               {paragraphUnity}
@@ -62,7 +62,7 @@ function Games({showModal, closeModal, isMobile}) {
           <div className="games-top-right">
             <a href="https://jumpy-component.web.app/demo" title="play custom PixiJS 2D game" className="play-game pixi" target="_blank" rel="noopener noreferrer">
               <p>{textPlayGame}</p>
-              <img src="../../../../public/assets/play-game.svg" alt="play game image"/>
+              <img src="../../../../public/assets/icons/play-game.svg" alt="play game image"/>
             </a>
             <Paragraph>
               {paragraphPixijs}
