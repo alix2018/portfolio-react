@@ -39,10 +39,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "npm.react-dom.bundle.js.LICENSE"
   },
   {
-    "revision": "d862353f6cdab4b90d1b34e923073f35",
-    "url": "public/assets/.DS_Store"
-  },
-  {
     "revision": "0e9d949067283e2510d31fb3ae3b8e34",
     "url": "public/assets/cv.pdf"
   },
