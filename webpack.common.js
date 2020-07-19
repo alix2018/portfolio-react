@@ -19,7 +19,7 @@ const devMode = mode === 'dev';
 const PATHS = {
   APP_DIR: path.resolve(__dirname, 'src'),
   BUILD_DIR: path.resolve(__dirname, 'docs'),
-  PUBLIC_DIR: path.resolve(__dirname, 'public'),
+  PUBLIC_DIR: path.resolve(__dirname, 'public')
 };
 
 module.exports = {
@@ -107,7 +107,7 @@ module.exports = {
     new CopyPlugin([
       {
         from: 'public/assets',
-        to: 'public/assets',
+        to: 'public/assets'
       },
       {
         from: path.resolve(__dirname, 'CNAME'),
