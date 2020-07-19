@@ -1,21 +1,25 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f475600ceb19e6333f2dfe595d97ea1a",
-    "url": "icon_192x192.693f0be976871a86ea1f3e4f1a00060b.png"
+    "revision": "770b0bb90e9191508fff5b70ac29048b",
+    "url": "CNAME"
   },
   {
-    "revision": "964f8421a09f95872bd5751ddb033b5d",
-    "url": "icon_512x512.42cd87079f1fa255831232074361707f.png"
+    "revision": "a6c94778243583d5f52fdf2b36faabdb",
+    "url": "icon_192x192.a699847179d6b9da1b8eae6a2ba686be.png"
   },
   {
-    "revision": "0f4f1984ae1a92f5bf47902cd2dde864",
+    "revision": "3c9206c33447fbe4865273e3a860b584",
+    "url": "icon_512x512.1776c5f9a6b866c24a73f62ff3e5afbd.png"
+  },
+  {
+    "revision": "899f73a71f1ea799aa56e87d12acf9d9",
     "url": "index.html"
   },
   {
-    "url": "main.658ecb434a891803ecb8.css"
+    "url": "main.9bcc143f72c086799159.css"
   },
   {
-    "revision": "d0727686d4294583498f",
+    "revision": "d9537aa002d4d06e0d1f",
     "url": "main.bundle.js"
   },
   {
@@ -23,15 +27,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "main.bundle.js.LICENSE"
   },
   {
-    "revision": "31e4c969568e0b1abc9aab853a0e7888",
+    "revision": "2d77d0f0d55ae101b7beeb4da9db4685",
     "url": "manifest.json"
   },
   {
-    "revision": "0336c5bcbf83c15adc02",
+    "revision": "1d439d38d864c0499550",
     "url": "npm.hookrouter.bundle.js"
   },
   {
-    "revision": "290efb98e38477f447f1",
+    "revision": "85d7d72d6c59ab156f1d",
     "url": "npm.react-dom.bundle.js"
   },
   {
@@ -43,11 +47,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "public/assets/cv.pdf"
   },
   {
-    "revision": "1b611773c1cf790438460e41c37a7d2f",
+    "revision": "cf60593eca2ab467c194d4b0cf8d66fd",
     "url": "public/assets/facebook-chatbot-desktop.png"
   },
   {
-    "revision": "8e579b29e55c376cd73b92302a283eda",
+    "revision": "0a7ef800d53349843b29e11f0f2eead4",
     "url": "public/assets/facebook-chatbot-mobile.png"
   },
   {
@@ -55,7 +59,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "public/assets/games-desktop.png"
   },
   {
-    "revision": "f8840d2d1bd92ddd74700c92e6e249ae",
+    "revision": "5c34e49d40d35a85928a1dca20b8ac1e",
     "url": "public/assets/games-mobile.png"
   },
   {
@@ -87,7 +91,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "public/assets/logos/favicon.ico"
   },
   {
-    "revision": "f475600ceb19e6333f2dfe595d97ea1a",
+    "revision": "a6c94778243583d5f52fdf2b36faabdb",
     "url": "public/assets/logos/logo-192.png"
   },
   {
@@ -99,7 +103,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "public/assets/pwa-desktop.png"
   },
   {
-    "revision": "2c702d61ea8f78c548e4ea2789a01922",
+    "revision": "6d10f4132ee081cc37d8a0f75880f658",
     "url": "public/assets/pwa-mobile.png"
   },
   {
@@ -107,15 +111,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "public/assets/quotation-mark.svg"
   },
   {
-    "revision": "b306c7e07009f05bc827492de2dbba1b",
+    "revision": "9b2476a8e20caa439362189577a7ff0c",
     "url": "public/assets/retailer-portal-desktop.png"
   },
   {
-    "revision": "49ebeeee16b5549e85a28b3e698a33fe",
+    "revision": "f712bbb0c9c55ae65ccf05a4f5456212",
     "url": "public/assets/retailer-portal-mobile.png"
   },
   {
-    "revision": "8f47df56169d25eddc5fb84d368d6063",
+    "revision": "d3efcdb1f55d6965c56059e814897ab8",
     "url": "public/assets/self-picture.jpg"
   },
   {
