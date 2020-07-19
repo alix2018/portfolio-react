@@ -44,9 +44,9 @@ function Typewriter({texts}) {
   }, [isTicking, start]);
 
   return (
-    <div className="typewriter animated fadeInUp">{text}
+    <h1 className="typewriter animated fadeInUp">{text}
       <span className="cursor blink animated fadeInUp">|</span>
-    </div>
+    </h1>
   );
 }
 

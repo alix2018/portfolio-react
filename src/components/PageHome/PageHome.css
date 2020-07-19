@@ -46,6 +46,11 @@ section.home .left h1,
   font-weight: bold;
 }
 
+.typewriter {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .right {
   height: 100vh;
   float: right;
@@ -180,7 +185,7 @@ section.home .right .button:hover {
   section.home .left h1,
   .typewriter {
     font-size: 100px;
-    margin: 20px var(--margin-side-tablet);
+    margin: 20px var(--margin-side-tablet) !important;
     line-height: 1.1;
   }
 
@@ -218,7 +223,7 @@ section.home .right .button:hover {
   section.home .left h1,
   .typewriter {
     font-size: 48px;
-    margin: 10px var(--margin-side-mobile);
+    margin: 10px var(--margin-side-mobile) !important;
     line-height: 1.25;
   }
 }

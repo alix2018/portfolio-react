@@ -39,9 +39,9 @@ function PageHome() {
   return (
     <section id="home" className="home">
       <div className="left top">
-        <div className="name animated fadeInUp">
+        <h2 className="name animated fadeInUp">
           Stéphanie Alix
-        </div>
+        </h2>
         <h1 className="animated fadeInUp">
           I am
         </h1>

@@ -15,7 +15,7 @@ function PageAboutMe() {
     <section id="about-me" className="about-me">
       <div className="left bottom">
         <div className="img-container">
-          <img src="../../../public/assets/self-picture.jpg" alt="picture of me"/>
+          <img src="../../../public/assets/self-picture.jpg" alt="Stéphanie Alix picture Portfolio Web"/>
         </div>
       </div>
       <div className="right">
