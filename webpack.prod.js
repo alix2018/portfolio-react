@@ -57,7 +57,7 @@ module.exports = merge(config, {
   plugins: [
     new CleanWebpackPlugin(),
     new GenerateSW({
-      exclude: [/\.DS*/],
+      exclude: [/\.DS*/, /CNAME/],
       clientsClaim: true,
       skipWaiting: true
     })
