@@ -1,16 +1,7 @@
 import React from 'react';
-import ReactGA from 'react-ga';
 import './PageAboutMe.css';
 
 function PageAboutMe() {
-  function onDownloadClick() {
-    ReactGA.event({
-      category: 'Click',
-      action: 'Click on Download CV',
-      label: 'In home page'
-    });
-  }
-
   return (
     <section id="about-me" className="about-me">
       <div className="left bottom">

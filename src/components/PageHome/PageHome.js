@@ -7,14 +7,6 @@ import SkypeIcon from '../Icons/SkypeIcon';
 import GithubIcon from '../Icons/GithubIcon';
 
 function PageHome() {
-  function onDownloadClick() {
-    ReactGA.event({
-      category: 'Click',
-      action: 'Click on Download CV',
-      label: 'In home page'
-    });
-  }
-
   function onIconClick(iconName) {
     ReactGA.event({
       category: 'Click',
