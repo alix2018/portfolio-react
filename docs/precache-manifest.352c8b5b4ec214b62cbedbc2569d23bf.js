@@ -12,19 +12,19 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "icon_512x512.1776c5f9a6b866c24a73f62ff3e5afbd.png"
   },
   {
-    "revision": "1411de851bf1a38e071a5af44a94cf63",
+    "revision": "d53949f87e4bb7522d6a556be32bc0d8",
     "url": "index.html"
   },
   {
-    "url": "main.7a9e7aa9c5cb525b1896.css"
-  },
-  {
-    "revision": "897fd99373f2261159ea",
+    "revision": "0b5e1bd6b109d86ae18f",
     "url": "main.bundle.js"
   },
   {
     "revision": "548e49774908698bd1c7239ee139d38c",
     "url": "main.bundle.js.LICENSE"
+  },
+  {
+    "url": "main.d7ec2e7fe40cac4a8c3c.css"
   },
   {
     "revision": "2d77d0f0d55ae101b7beeb4da9db4685",
