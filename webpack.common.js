@@ -108,6 +108,18 @@ module.exports = {
       {
         from: 'public/assets',
         to: 'public/assets'
+      },
+      {
+        from: path.resolve(__dirname, 'CNAME'),
+        to: PATHS.BUILD_DIR
+      },
+      {
+        from: path.resolve(__dirname, 'robots.txt'),
+        to: PATHS.BUILD_DIR
+      },
+      {
+        from: path.resolve(__dirname, 'google4557e53a06dccc26.html'),
+        to: PATHS.BUILD_DIR
       }
     ]),
     new MiniCssExtractPlugin({
