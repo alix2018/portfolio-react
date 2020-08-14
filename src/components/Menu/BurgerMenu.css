@@ -1,5 +1,6 @@
 
 a {
+  margin-left: 5px;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -132,11 +133,11 @@ ul.list {
 
 #menu .bottom p {
   position: absolute;
-  width: 200px;
+  width: 250px;
   bottom: calc(10vh + 70px);
   left: var(--margin-side-tablet);
   margin: 0;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.6;
   color: var(--second-color-dark);
 }
@@ -152,6 +153,10 @@ ul.list {
     display: block;
     z-index: 5;
     margin-top: 15px;
+  }
+
+  a {
+    margin-left: 0;
   }
 }
 

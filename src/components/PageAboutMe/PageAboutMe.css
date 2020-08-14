@@ -153,13 +153,6 @@ footer {
     margin-top: 10%;
   }
 
-  section.about-me .right article .download-cv-mobile button {
-    color: var(--third-color);
-    padding: 0;
-    font-size: 22px !important;
-    font-family: var(--font-poppins-medium);
-  }
-
   section.about-me .bottom .img-container {
     top: 100vh;
     left: 0;
@@ -185,13 +178,6 @@ footer {
   section.about-me article section p {
     font-size: 16px !important;
     line-height: 1.8 !important;
-  }
-
-  section.about-me .right article .download-cv-mobile button {
-    color: var(--third-color);
-    padding: 0;
-    font-size: 16px !important;
-    font-family: var(--font-poppins-medium);
   }
 }
 

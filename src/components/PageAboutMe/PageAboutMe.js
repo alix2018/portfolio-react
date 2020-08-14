@@ -45,9 +45,6 @@ function PageAboutMe() {
               top the Netherlands I also started <span>to travel</span>,
               explore new countries and learn about other cultures.
             </p>
-            <form method="get" action="./public/assets/cv.pdf" className="download-cv-mobile" target="_blank" rel="noopener noreferrer">
-              <button type="submit" className="button" onClick={() => {onDownloadClick();}}>Download CV</button>
-            </form>
           </section>
           <footer>about <span>me</span></footer>
         </article>

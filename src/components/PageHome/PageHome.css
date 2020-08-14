@@ -107,62 +107,34 @@ section.home .right .icons {
 .linkedin,
 .skype,
 .github {
-  height: 30px;
-  width: 30px;
+  height: 35px;
+  width: 35px;
   background-size: cover;
   transition: all 0.5s cubic-bezier(0.27, 1.4, 0.57, 1.7);
 }
 
 .linkedin-animation,
 .github-animation,
-.skype-animation,
-.btn-animation {
+.skype-animation {
   animation-duration: 650ms;
 }
 
 .linkedin-animation {
-  animation-delay: 1475ms;
+  animation-delay: 1275ms;
 }
 
 .github-animation {
-  animation-delay: 1550ms;
+  animation-delay: 1350ms;
 }
 
 .skype-animation {
-  animation-delay: 1625ms;
-}
-
-.btn-animation {
-  margin: 0;
-  animation-delay: 1400ms;
-}
-
-section.home .right .button {
-  display: inline-block;
-  padding: 6px 10px;
-  margin-right: 25px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 0.1em;
-  border: none;
-  border-radius: 5px;
-  color: var(--second-color-dark);
-  background-color: var(--first-color-light);
-  cursor: pointer;
-  outline: none;
-  transition: all 0.5s cubic-bezier(0.27, 1.4, 0.57, 1.7);
-}
-
-section.home .right .button:hover {
-  transform: scale(1.075);
+  animation-delay: 1425ms;
 }
 
 .linkedin:hover,
 .skype:hover,
 .github:hover {
-  transform: scale(1.13);
+  transform: scale(1.15);
 }
 
 @media only screen and (max-width: 1024px) {

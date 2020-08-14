@@ -80,8 +80,8 @@ section.contact .right section .icons .skype path {
 section.contact .right section .icons .linkedin,
 section.contact .right section .icons .skype,
 section.contact .right section .icons .github {
-  height: 30px;
-  width: 30px;
+  height: 35px;
+  width: 35px;
   background-size: cover;
   transition: all 0.5s cubic-bezier(0.27, 1.4, 0.57, 1.7);
 }
@@ -190,8 +190,8 @@ section.contact .right footer:hover {
   .linkedin,
   .skype,
   .github {
-    height: 35px !important;
-    width: 35px !important;
+    height: 45px !important;
+    width: 45px !important;
     transition: none;
   }
 }
