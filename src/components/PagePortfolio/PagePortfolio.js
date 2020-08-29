@@ -42,15 +42,17 @@ function PagePortfolio() {
 
   function openModal(project) {
     setShowModal(project);
+    const burgerMenu = document.querySelector('#menuToggle');
+
     if (projects.includes(project)) {
       history.pushState(null, null, `?project=${project}`);
       ReactGA.pageview(`${project}`);
+      burgerMenu.style.visibility = 'hidden';
     } else {
       history.pushState(null, null, '/');
+      burgerMenu.style.visibility = 'visible';
       const menuBar = document.querySelector('ul.menu-effect');
-      if (menuBar) {
-        menuBar.style.pointerEvents = 'visible';
-      }
+      menuBar.style.pointerEvents = 'visible';
     }
   }
 

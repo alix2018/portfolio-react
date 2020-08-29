@@ -1,13 +1,13 @@
 {
   "homepage": "http://alix2018.github.io",
   "name": "react-website",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "",
   "main": "index.js",
   "scripts": {
     "lint": "xo && stylelint src/*.css src/components/**/*.css",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --mode development --display-error-details",
+    "start": "webpack-dev-server --mode development --display-error-details --host 0.0.0.0",
     "build": "webpack --mode development",
     "build:prod": "webpack --mode production",
     "prepush": "npm run lint"

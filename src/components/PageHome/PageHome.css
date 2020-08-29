@@ -3,6 +3,7 @@
   --margin-top-mobile: 30px;
   --top-part: 65vh;
   --bottom-part: 35vh;
+  -webkit-overflow-scrolling: touch;
 }
 
 section.home {
