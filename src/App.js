@@ -5,7 +5,7 @@ import ReactGA from 'react-ga';
 import routes from './router';
 
 function App() {
-  ReactGA.initialize('');
+  ReactGA.initialize('201601428');
   ReactGA.pageview(window.location.pathname + window.location.search);
   const routeResult = useRoutes(routes);
 
