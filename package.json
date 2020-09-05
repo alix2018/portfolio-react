@@ -1,7 +1,7 @@
 {
   "homepage": "http://alix2018.github.io",
   "name": "react-website",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -96,8 +96,8 @@
     "postcss-nesting": "7.0.0",
     "postcss-preset-env": "6.6.0",
     "purgecss-webpack-plugin": "1.6.0",
-    "stylelint": "^13.3.2",
-    "stylelint-config-standard": "18.3.0",
+    "stylelint": "13.7.0",
+    "stylelint-config-standard": "20.0.0",
     "terser-webpack-plugin": "2.2.1",
     "url-loader": "2.3.0",
     "webpack": "4.43.0",
@@ -111,6 +111,7 @@
   },
   "dependencies": {
     "hookrouter": "1.2.3",
+    "inobounce": "^0.2.0",
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-ga": "2.6.0"

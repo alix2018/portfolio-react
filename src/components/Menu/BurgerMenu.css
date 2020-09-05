@@ -1,5 +1,5 @@
 
-a {
+#menuToggle a {
   margin-left: 5px;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -127,7 +127,7 @@ ul.list {
 
 #menu .icons .linkedin path,
 #menu .icons .github path,
-#menu .icons .skype path {
+#menu .icons .twitter path {
   fill: var(--second-color-dark);
 }
 

@@ -2,8 +2,8 @@ import React from 'react';
 import './PageContact.css';
 import ReactGA from 'react-ga';
 import LinkedinIcon from '../Icons/LinkedinIcon';
-import SkypeIcon from '../Icons/SkypeIcon';
 import GithubIcon from '../Icons/GithubIcon';
+import TwitterIcon from '../Icons/TwitterIcon';
 
 function PageContact() {
   function onIconClick(iconName) {
@@ -33,8 +33,8 @@ function PageContact() {
             <a href="https://github.com/alix2018" target="_blank" rel="noopener noreferrer" title="github logo" onClick={() => {onIconClick('Github');}}>
               <GithubIcon/>
             </a>
-            <a href="https://join.skype.com/invite/ljzSCwTgKRyX" target="_blank" rel="noopener noreferrer" title="skype logo" onClick={() => {onIconClick('Skype');}}>
-              <SkypeIcon/>
+            <a href="https://twitter.com/StephanieAlix95" target="_blank" rel="noopener noreferrer" title="twitter logo" onClick={() => {onIconClick('Twitter');}}>
+              <TwitterIcon/>
             </a>
           </div>
         </section>

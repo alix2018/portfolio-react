@@ -3,8 +3,8 @@ import './PageHome.css';
 import ReactGA from 'react-ga';
 import Typewriter from '../Typewriter/Typewriter';
 import LinkedinIcon from '../Icons/LinkedinIcon';
-import SkypeIcon from '../Icons/SkypeIcon';
 import GithubIcon from '../Icons/GithubIcon';
+import TwitterIcon from '../Icons/TwitterIcon';
 
 function PageHome() {
   function onIconClick(iconName) {
@@ -54,8 +54,8 @@ function PageHome() {
           <a href="https://github.com/alix2018" className="github-animation animated fadeInUp" target="_blank" rel="noopener noreferrer" title="github logo" onClick={() => {onIconClick('Github');}}>
             <GithubIcon/>
           </a>
-          <a href="https://join.skype.com/invite/ljzSCwTgKRyX" className="skype-animation animated fadeInUp" target="_blank" rel="noopener noreferrer" title="skype logo" onClick={() => {onIconClick('Skype');}}>
-            <SkypeIcon/>
+          <a href="https://twitter.com/StephanieAlix95" target="_blank" className="twitter-animation animated fadeInUp" rel="noopener noreferrer" title="twitter logo" onClick={() => {onIconClick('Twitter');}}>
+            <TwitterIcon/>
           </a>
         </div>
       </div>

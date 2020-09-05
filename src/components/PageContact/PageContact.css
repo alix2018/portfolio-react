@@ -73,13 +73,13 @@ section.contact .right section .icons {
 
 section.contact .right section .icons .linkedin path,
 section.contact .right section .icons .github path,
-section.contact .right section .icons .skype path {
+section.contact .right section .icons .twitter path {
   fill: var(--second-color-dark);
 }
 
 section.contact .right section .icons .linkedin,
-section.contact .right section .icons .skype,
-section.contact .right section .icons .github {
+section.contact .right section .icons .github,
+section.contact .right section .icons .twitter {
   height: 35px;
   width: 35px;
   background-size: cover;
@@ -131,16 +131,16 @@ section.contact .right footer:hover {
   }
 
   .linkedin,
-  .skype,
-  .github {
+  .github,
+  .twitter {
     height: 40px !important;
     width: 40px !important;
     transition: none;
   }
 
   .linkedin:hover,
-  .skype:hover,
-  .github:hover {
+  .github:hover,
+  .twitter:hover {
     transform: none;
   }
 
@@ -166,8 +166,8 @@ section.contact .right footer:hover {
   }
 
   section.contact .mobile section .icons .linkedin,
-  section.contact .mobile section .icons .skype,
-  section.contact .mobile section .icons .github {
+  section.contact .mobile section .icons .github,
+  section.contact .mobile section .icons .twitter {
     transition: none;
   }
 }
@@ -188,8 +188,8 @@ section.contact .right footer:hover {
   }
 
   .linkedin,
-  .skype,
-  .github {
+  .github,
+  .twitter {
     height: 45px !important;
     width: 45px !important;
     transition: none;

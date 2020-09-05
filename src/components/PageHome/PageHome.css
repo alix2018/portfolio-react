@@ -3,6 +3,7 @@
   --margin-top-mobile: 30px;
   --top-part: 65vh;
   --bottom-part: 35vh;
+
   -webkit-overflow-scrolling: touch;
 }
 
@@ -50,6 +51,8 @@ section.home .left h1,
 .typewriter {
   margin-top: 0;
   margin-bottom: 0;
+  left: calc(var(--width-left-column) + 18px);
+  color: var(--first-color-light);
 }
 
 .right {
@@ -76,11 +79,6 @@ section.home img:last-of-type {
   margin-top: -5px;
 }
 
-.typewriter {
-  left: calc(var(--width-left-column) + 18px);
-  color: var(--first-color-light);
-}
-
 section.home .right .container {
   position: relative;
   padding-top: 35vh;
@@ -95,28 +93,34 @@ section.home .right .icons {
   margin: 0;
 }
 
-.github {
-  margin: 0 15px;
-}
-
 .linkedin path,
 .github path,
-.skype path {
+.twitter path {
   fill: var(--first-color-light);
 }
 
 .linkedin,
-.skype,
-.github {
+.github,
+.twitter {
   height: 35px;
   width: 35px;
+  margin-right: 15px;
+  margin-left: 15px;
   background-size: cover;
   transition: all 0.5s cubic-bezier(0.27, 1.4, 0.57, 1.7);
 }
 
+.icons:last-child a svg {
+  margin-right: 0;
+}
+
+.linkedin {
+  margin-left: 0;
+}
+
 .linkedin-animation,
 .github-animation,
-.skype-animation {
+.twitter-animation {
   animation-duration: 650ms;
 }
 
@@ -128,13 +132,13 @@ section.home .right .icons {
   animation-delay: 1350ms;
 }
 
-.skype-animation {
+.twitter-animation {
   animation-delay: 1425ms;
 }
 
 .linkedin:hover,
-.skype:hover,
-.github:hover {
+.github:hover,
+.twitter:hover {
   transform: scale(1.15);
 }
 

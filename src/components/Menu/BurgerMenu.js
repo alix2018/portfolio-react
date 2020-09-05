@@ -3,7 +3,7 @@ import './BurgerMenu.css';
 import ReactGA from 'react-ga';
 import LinkedinIcon from '../Icons/LinkedinIcon';
 import GithubIcon from '../Icons/GithubIcon';
-import SkypeIcon from '../Icons/SkypeIcon';
+import TwitterIcon from '../Icons/TwitterIcon';
 import useScroll from './useScroll';
 
 function BurgerMenu() {
@@ -80,8 +80,8 @@ function BurgerMenu() {
               <a href="https://github.com/alix2018" target="_blank" rel="noopener noreferrer" title="github logo" onClick={() => {onIconClick('Github');}}>
                 <GithubIcon/>
               </a>
-              <a href="https://join.skype.com/invite/ljzSCwTgKRyX" target="_blank" rel="noopener noreferrer" title="skype logo" onClick={() => {onIconClick('Skype');}}>
-                <SkypeIcon/>
+              <a href="https://twitter.com/StephanieAlix95" target="_blank" rel="noopener noreferrer" title="twitter logo" onClick={() => {onIconClick('Twitter');}}>
+                <TwitterIcon/>
               </a>
             </div>
           </li>
