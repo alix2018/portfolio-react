@@ -50,7 +50,7 @@ section.about-me article header.about-me-mobile {
 section.about-me .right article section {
   display: block;
   width: 470px;
-  margin: 40px 0;
+  margin: 70px 0 40px;
   font-size: 14px;
   line-height: 25px;
   font-family: var(--font-poppins-light);
