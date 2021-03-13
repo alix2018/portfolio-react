@@ -1,7 +1,7 @@
 {
   "homepage": "http://alix2018.github.io",
   "name": "react-website",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -111,7 +111,6 @@
   },
   "dependencies": {
     "hookrouter": "1.2.3",
-    "inobounce": "^0.2.0",
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-ga": "2.6.0"

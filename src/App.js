@@ -6,7 +6,7 @@ import routes from './router';
 
 function App() {
   ReactGA.initialize('UA-147425189-1');
-  ReactGA.pageview(window.location.pathname + window.location.search);
+  ReactGA.pageview(window.location.pathname);
   const routeResult = useRoutes(routes);
 
   useEffect(() => {

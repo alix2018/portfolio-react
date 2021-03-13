@@ -109,7 +109,7 @@ section.contact .right footer:hover {
 
   section.contact .left,
   section.contact .right {
-    height: 100%;
+    height: calc(100% + 60px);
   }
 
   section.contact .left {

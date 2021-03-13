@@ -77,7 +77,7 @@ section.about-me .right article footer span {
 
 section.about-me .right article section p span {
   font-family: var(--font-poppins-bold);
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 footer {
@@ -189,6 +189,8 @@ footer {
 
   section.about-me .bottom img {
     margin-left: var(--margin-side-mobile);
+    height: auto;
+    max-height: 400px;
   }
 
   section.about-me article {

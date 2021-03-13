@@ -17,19 +17,17 @@
 }
 
 @media only screen and (max-width: 1024px) {
+  #vertical-snapping {
+    scroll-snap-type: none !important;
+    overflow-y: initial !important;
+    width: 100vw !important;
+  }
+
   .page.about-me {
     z-index: 1;
   }
 
   .page.contact {
     z-index: 0;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  #vertical-snapping {
-    scroll-snap-type: none !important;
-    overflow-y: initial !important;
-    width: 100vw !important;
   }
 }
