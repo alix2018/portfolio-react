@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# 0.2.9 (2021-10-06)
+* Update the profile dates
+
 # 0.2.8 (2021-03-13)
 * Fix broken image on mobile
 

@@ -17,7 +17,7 @@ function PageContact() {
   return (
     <section id="contact" className="contact">
       <div className="left">
-        <div className="rights-reserved">© 2020. All Rights Reserved.</div>
+        <div className="rights-reserved">© 2021. All Rights Reserved.</div>
         <div className="name">Stéphanie Alix</div>
       </div>
 
