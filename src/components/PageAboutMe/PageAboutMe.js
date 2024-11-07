@@ -1,46 +1,43 @@
-import React from 'react';
-import './PageAboutMe.css';
+import React from "react";
+import "./PageAboutMe.module.css";
+import PictureProfile from "@/assets/self-picture.jpg";
 
 function PageAboutMe() {
   return (
-    <section id="about-me" className="about-me">
-      <div className="left bottom">
-        <div className="img-container">
-          <img src="../../../public/assets/self-picture.jpg" alt="Stéphanie Alix picture Portfolio Web"/>
-        </div>
-      </div>
-      <div className="right">
-        <article>
-          <header>A bit more...</header>
-          <header className="about-me-mobile">About me</header>
-          <section>
+    <article className="full-page about-me">
+      <section className="left img-container">
+        {/* <div className="img-container"> */}
+        <img src={PictureProfile} alt="Stéphanie Alix picture Portfolio Web" />
+        {/* </div> */}
+      </section>
+      <section className="right">
+        <div>
+          <h1 class="top">A bit more...</h1>
+          <div>
             <p>
-              I&apos;m a 26 year old girl who moved to Amsterdam 3 years ago.
-              I studied in a <span>computer science</span> school in
-              France and I always prefered the Web platform. I did 3 internships in this
-              field and I&apos;m now a <span>Medior</span> Web developer. On my spare time
-              I love <span>coding</span> and <span>keep learning</span>, especially by reading books and listening to podcasts.
-              I’m also a big fan of <span>sports</span>! I really
-              enjoy playing team sports with colleagues and friends. After moving to
-              the Netherlands I also started <span>to travel</span>,
-              explore new countries and learn about other cultures which
-              I&apos;ve found fascinating!
+              I&apos;m 29 year old, I <span>studied</span> computer science in
+              France and I always liked web. I moved to <span>Amsterdam</span> 7
+              years ago and I&apos;ve worked as a <span>web developer</span>
+              since. I like coding projects on the side to
+              <span>continue learning</span>, to make nice apps to share
+              comething I care about or that can be useful for me or my friends.{" "}
             </p>
-            <p className="about-me-mobile">
-              I’m a 26 year old girl who moved to Amsterdam 3 years ago.
-              I studied <span>computer science</span> in France and did 3 internships in this
-              field. Now I&apos;m a <span>Medior</span> Web developer. On my spare time
-              I love <span>coding</span> and <span>keep learning</span>, especially by reading books and listening to podcasts. I also really
-              enjoy playing <span>team sports</span> with colleagues and friends. After moving
-              top the Netherlands I also started <span>to travel</span>,
-              explore new countries and learn about other cultures.
+            <p>
+              On my spare time I love <span>reading</span>. It can be any type
+              of novels, adventures, psychological or self-development books. I
+              also enjoy <span>sports</span> very much. It can be going to the
+              gym, swimming, running or any team sports with friends. I also
+              found recently a new passion for <span>crochet</span>! Besides
+              that I also like to <span>travel</span>, learn new languages and
+              discover different cultures.
             </p>
-          </section>
-          <footer>about <span>me</span></footer>
-        </article>
-      </div>
-    </section>
-
+          </div>
+          <h1 class="bottom">
+            ...about <span>me</span>
+          </h1>
+        </div>
+      </section>
+    </article>
   );
 }
 

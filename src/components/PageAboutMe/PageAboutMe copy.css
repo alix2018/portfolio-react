@@ -33,8 +33,7 @@ section.about-me .right {
 }
 
 section.about-me .right article {
-  margin-left: 140px;
-  margin-top: 17vh;
+  padding: 17vh var(--margin-side-desktop) 140px;
 }
 
 section.about-me article header {
@@ -43,14 +42,20 @@ section.about-me article header {
   color: var(--first-color-light);
 }
 
+section.about-me article header.bottom {
+  text-align: right;
+}
+
+section.about-me article header.bottom span {
+  color: var(--third-color);
+}
+
 section.about-me article header.about-me-mobile {
   display: none;
 }
 
 section.about-me .right article section {
   display: block;
-  width: 470px;
-  margin: 70px 0 40px;
   font-size: 14px;
   line-height: 25px;
   font-family: var(--font-poppins-light);
@@ -59,6 +64,18 @@ section.about-me .right article section {
 
 p.about-me-mobile {
   display: none;
+}
+
+section.about-me article section p:first-of-type {
+  margin-top: 28px;
+}
+
+section.about-me article section p:not(first-of-type) {
+  margin-top: 12px;
+}
+
+section.about-me article section p:last-of-type {
+  margin-bottom: 28px;
 }
 
 section.about-me article section p {
