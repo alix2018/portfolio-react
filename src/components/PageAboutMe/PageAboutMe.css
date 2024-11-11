@@ -1,0 +1,109 @@
+/* .full-page {
+  height: 100vh;
+  width: 100vw;
+} */
+
+/* TODO: Create CSS module */
+section.about-me {
+  .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profile-img {
+    max-width: 70%;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  article {
+    display: flex;
+    align-items: center;
+  }
+
+  .content {
+    padding-top: calc(10vh); /* TODO: Fix menu size */
+    padding-left: var(--margin-side-desktop);
+    padding-right: var(--margin-side-desktop);
+  }
+
+  .text p {
+    line-height: 1.8;
+  }
+
+  .text p:first-of-type {
+    margin-top: 22px;
+  }
+
+  .text p:last-of-type {
+    margin-top: 18px;
+    margin-bottom: 18px;
+  }
+
+  .text p span {
+    font-family: var(--font-poppins-bold);
+  }
+
+  h1 span {
+    color: var(--third-color);
+  }
+
+  h1.bottom {
+    text-align: right;
+  }
+
+  h3::before {
+    /* TODO: fix @/assets/ for CSS files - content: url("@/assets/eye.png"); */
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    width: 32px;
+    height: 32px;
+    background-image: url("../../assets/eye.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .cards-container {
+    display: flex;
+    justify-content: space-between;
+    height: 110px;
+    margin-top: 12px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  a.card {
+    display: flex;
+    align-items: center;
+    width: 45%;
+    background-color: var(--fourth-color);
+  }
+
+  .card img {
+    height: 100%;
+  }
+
+  .card p {
+    margin: 20px;
+  }
+}
+
+/* @media only screen and (max-width: 1024px) {
+  section.about-me {
+    .text p:first-of-type {
+      margin-top: 12px;
+    }
+
+    .text p:last-of-type {
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+  }
+} */

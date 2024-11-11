@@ -1,7 +1,7 @@
 const path = require("path");
 const merge = require("webpack-merge");
 const common = require("./webpack.common.js");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+// const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const BUILD_DIR = path.resolve(__dirname, "docs");
 
@@ -18,6 +18,8 @@ module.exports = merge(common, {
       "@": path.resolve(__dirname, "src"),
     },
   },
+  // mini-css-extract-plugin doesn't support hrm right now
+  // https://github.com/webpack-contrib/mini-css-extract-plugin/issues/126
   // plugins: [
   //   new MiniCssExtractPlugin({
   //     filename: "[name].css",

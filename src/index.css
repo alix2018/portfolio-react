@@ -2,11 +2,13 @@
   --first-color-light: #f7faff;
   --second-color-dark: #485563;
   --third-color: #25ccf7;
+  --fourth-color: #617283;
   --white-color: #fff;
   --width-left-column: 30%;
   --width-right-colum: 70%;
   --font-poppins-light: "Poppins Light", sans-serif;
   --font-poppins-medium: "Poppins Medium", sans-serif;
+  --font-poppins-semibold: "Poppins SemiBold", sans-serif;
   --font-poppins-bold: "Poppins Bold", sans-serif;
   --font-poppins-extra-bold: "Poppins Extra Bold", sans-serif;
   --line-width: 40px;
@@ -23,6 +25,11 @@
 @font-face {
   font-family: "Poppins Light";
   src: url("../public/fonts/Poppins-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Poppins Semi Bold";
+  src: url("../public/fonts/Poppins-SemiBold.woff") format("woff");
 }
 
 @font-face {
@@ -58,6 +65,40 @@ button {
 
 * {
   -webkit-tap-highlight-color: transparent;
+}
+
+h1 {
+  margin: 0;
+  font-size: 40px;
+  font-family: var(--font-poppins-medium);
+  font-weight: 400;
+  color: var(--first-color-light);
+}
+
+h3 {
+  margin: 0;
+  font-size: 20px;
+  font-family: var(--font-poppins-medium);
+  font-weight: 400;
+  color: var(--first-color-light);
+}
+
+p {
+  margin: 0;
+  font-size: 14px;
+  font-family: var(--font-poppins-light);
+  color: var(--first-color-light);
+  letter-spacing: 0.3px;
+}
+
+b {
+  font-family: var(--font-poppins-semibold);
+}
+
+@media only screen and (max-width: 1024px) {
+  p {
+    font-size: 12px;
+  }
 }
 
 @media only screen and (max-width: 767px) {
