@@ -7,7 +7,8 @@ import equalsImg from "@/assets/equals.png";
 function PageAboutMe() {
   return (
     <section id="about-me" className="about-me">
-      <section className="left img-container">
+      {/* Rename left class to left-panel */}
+      <section className="left left-panel img-container">
         {/* TODO: Change picture on hover */}
         <img
           src={profileImg}
@@ -15,9 +16,12 @@ function PageAboutMe() {
           className="profile-img"
         />
       </section>
-      <article className="right">
+      <article className="right right-panel">
         <div className="content">
-          <h1 className="top">A bit more...</h1>
+          <h1 className="top mobile">
+            About <span>me</span>
+          </h1>
+          <h1 className="top desktop tablet">A bit more...</h1>
           <section className="text">
             <p>
               I&apos;m 29 year old, I <b>studied</b> computer science in France
@@ -36,7 +40,7 @@ function PageAboutMe() {
               like to <b>travel</b>, learn new languages and about different
               cultures.
             </p>
-            <h1 className="bottom">
+            <h1 className="bottom desktop tablet">
               ...about <span>me</span>
             </h1>
           </section>
@@ -49,7 +53,7 @@ function PageAboutMe() {
                 href="https://double-slash.dev/podcasts/progressive-web-app/"
                 target="_blank"
               >
-                <p>Main guess in a French podcast about progressive web apps</p>
+                <p>Main guess in French podcast about PWA</p>
                 <img src={podcastImg} alt="Slash podacst about PWA"></img>
               </a>
 
@@ -58,7 +62,7 @@ function PageAboutMe() {
                 href="https://equals.nl/stephaniealix/"
                 target="_blank"
               >
-                <p>Role model for women in tech campaign in Amsterdam</p>
+                <p>Role model for Women in Tech campaign</p>
                 <img
                   src={equalsImg}
                   alt="Women tech campaign with Equals"

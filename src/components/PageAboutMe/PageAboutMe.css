@@ -4,6 +4,7 @@
 } */
 
 /* TODO: Create CSS module */
+
 section.about-me {
   .img-container {
     display: flex;
@@ -12,7 +13,7 @@ section.about-me {
   }
 
   .profile-img {
-    max-width: 70%;
+    width: 70%;
   }
 
   h1 {
@@ -40,7 +41,10 @@ section.about-me {
 
   .text p:last-of-type {
     margin-top: 18px;
-    margin-bottom: 18px;
+  }
+
+  h1.bottom {
+    margin-top: 18px;
   }
 
   .text p span {
@@ -84,6 +88,11 @@ section.about-me {
     align-items: center;
     width: 45%;
     background-color: var(--fourth-color);
+    transition: transform 0.3s ease;
+  }
+
+  a.card:hover {
+    transform: scale(1.1);
   }
 
   .card img {
@@ -95,15 +104,140 @@ section.about-me {
   }
 }
 
-/* @media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   section.about-me {
+    display: flex;
+    flex-direction: column-reverse;
+
+    .right {
+      height: auto;
+      min-height: 100vh;
+      float: unset;
+      width: auto;
+    }
+
+    .content {
+      padding: 0 var(--margin-side-tablet);
+    }
+
     .text p:first-of-type {
       margin-top: 12px;
     }
 
     .text p:last-of-type {
       margin-top: 8px;
-      margin-bottom: 8px;
+    }
+
+    h1.bottom {
+      margin-top: 8px;
+    }
+
+    h3 {
+      margin-top: 4px;
+    }
+
+    .cards-container {
+      height: 124px;
+      margin-top: 10px;
+    }
+
+    a.card {
+      justify-content: center;
+    }
+
+    .card p {
+      margin: 10px;
+      align-content: center;
+      flex: 1;
+      text-align: center;
+    }
+
+    .left-panel {
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      height: auto;
+      float: unset;
+      width: 100%;
+      background-color: unset;
+    }
+
+    .left-panel::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      background-color: var(--second-color-dark);
+      z-index: -1;
+    }
+
+    .left-panel::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      background-color: var(--first-color-light);
+      z-index: -1;
+    }
+
+    .right-panel {
+      height: auto;
+      float: unset;
+      width: auto;
+    }
+
+    .profile-img {
+      width: 40%;
     }
   }
-} */
+}
+
+@media only screen and (max-width: 767px) {
+  section.about-me {
+    .text p:first-of-type {
+      margin-top: 28px;
+    }
+
+    .content {
+      padding: 0 var(--margin-side-mobile);
+      margin-bottom: 100px;
+    }
+
+    h3 {
+      margin-top: 36px;
+    }
+
+    .cards-container {
+      height: auto;
+      flex-direction: column;
+      margin-top: 22px;
+    }
+
+    a.card {
+      width: 100%;
+      height: 110px;
+      justify-content: normal;
+    }
+
+    a.card:hover {
+      transform: none;
+    }
+
+    a.card:last-of-type {
+      margin-top: 28px;
+    }
+
+    .img-container {
+      padding: 0 var(--margin-side-mobile);
+      width: calc(100% - 2 * var(--margin-side-mobile));
+    }
+
+    .profile-img {
+      width: 100%;
+    }
+  }
+}
