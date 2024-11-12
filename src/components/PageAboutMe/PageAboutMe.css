@@ -29,6 +29,7 @@ section.about-me {
     padding-top: calc(10vh); /* TODO: Fix menu size */
     padding-left: var(--margin-side-desktop);
     padding-right: var(--margin-side-desktop);
+    margin-bottom: 100px;
   }
 
   .text p {
@@ -76,7 +77,7 @@ section.about-me {
     display: flex;
     justify-content: space-between;
     height: 110px;
-    margin-top: 12px;
+    margin-top: 18px;
   }
 
   a {
@@ -102,6 +103,16 @@ section.about-me {
   .card p {
     margin: 20px;
   }
+
+  /* TODO: Move to index.css */
+  .tablet,
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -109,9 +120,9 @@ section.about-me {
     display: flex;
     flex-direction: column-reverse;
 
-    .right {
+    .right-panel {
       height: auto;
-      min-height: 100vh;
+      min-height: auto;
       float: unset;
       width: auto;
     }
@@ -184,27 +195,30 @@ section.about-me {
       z-index: -1;
     }
 
-    .right-panel {
-      height: auto;
-      float: unset;
-      width: auto;
-    }
-
     .profile-img {
       width: 40%;
+    }
+
+    /* TODO: Move to index.css */
+    .desktop,
+    .mobile {
+      display: none;
+    }
+
+    .tablet {
+      display: block;
     }
   }
 }
 
 @media only screen and (max-width: 767px) {
   section.about-me {
-    .text p:first-of-type {
-      margin-top: 28px;
-    }
-
     .content {
       padding: 0 var(--margin-side-mobile);
-      margin-bottom: 100px;
+    }
+
+    .text p:first-of-type {
+      margin-top: 28px;
     }
 
     h3 {
@@ -238,6 +252,16 @@ section.about-me {
 
     .profile-img {
       width: 100%;
+    }
+
+    /* TODO: Move to index.css */
+    .tablet,
+    .desktop {
+      display: none;
+    }
+
+    .mobile {
+      display: block;
     }
   }
 }
