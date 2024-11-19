@@ -1,47 +1,54 @@
 :root {
-  --first-color-light: #F7FAFF;
+  --first-color-light: #f7faff;
   --second-color-dark: #485563;
-  --third-color: #25CCF7;
-  --white-color: #FFF;
+  --third-color: #25ccf7;
+  --fourth-color: #617283;
+  --white-color: #fff;
   --width-left-column: 30%;
   --width-right-colum: 70%;
-  --font-poppins-light: 'Poppins Light', sans-serif;
-  --font-poppins-medium: 'Poppins Medium', sans-serif;
-  --font-poppins-bold: 'Poppins Bold', sans-serif;
-  --font-poppins-extra-bold: 'Poppins Extra Bold', sans-serif;
+  --font-poppins-light: "Poppins Light", sans-serif;
+  --font-poppins-medium: "Poppins Medium", sans-serif;
+  --font-poppins-semibold: "Poppins SemiBold", sans-serif;
+  --font-poppins-bold: "Poppins Bold", sans-serif;
+  --font-poppins-extra-bold: "Poppins Extra Bold", sans-serif;
   --line-width: 40px;
-  --margin-side-desktop: 6%;
+  --margin-side-desktop: 6vw;
   --margin-side-tablet: 70px;
   --margin-side-mobile: 30px;
 }
 
 @font-face {
-  font-family: 'Poppins Medium';
-  src: url('../public/fonts/Poppins-Medium.woff') format('woff');
+  font-family: "Poppins Medium";
+  src: url("../public/fonts/Poppins-Medium.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Poppins Light';
-  src: url('../public/fonts/Poppins-Light.woff') format('woff');
+  font-family: "Poppins Light";
+  src: url("../public/fonts/Poppins-Light.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Poppins Bold';
-  src: url('../public/fonts/Poppins-Bold.woff') format('woff');
+  font-family: "Poppins Semi Bold";
+  src: url("../public/fonts/Poppins-SemiBold.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Poppins Extra Bold';
-  src: url('../public/fonts/Poppins-Extra-Bold.woff') format('woff');
+  font-family: "Poppins Bold";
+  src: url("../public/fonts/Poppins-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Poppins Extra Bold";
+  src: url("../public/fonts/Poppins-Extra-Bold.woff") format("woff");
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins Medium', sans-serif;
+  font-family: "Poppins Medium", sans-serif;
 }
 
-div[class^='line'] {
+div[class^="line"] {
   width: var(--line-width);
   height: 2px;
 }
@@ -58,6 +65,49 @@ button {
 
 * {
   -webkit-tap-highlight-color: transparent;
+}
+
+h1 {
+  margin: 0;
+  font-size: 40px;
+  font-family: var(--font-poppins-medium);
+  font-weight: 400;
+  color: var(--first-color-light);
+}
+
+h3 {
+  margin: 0;
+  font-size: 20px;
+  font-family: var(--font-poppins-medium);
+  font-weight: 400;
+  color: var(--first-color-light);
+}
+
+p {
+  margin: 0;
+  font-size: 14px;
+  font-family: var(--font-poppins-light);
+  color: var(--first-color-light);
+  letter-spacing: 0.3px;
+}
+
+b {
+  font-family: var(--font-poppins-semibold);
+}
+
+@media only screen and (max-width: 1024px) {
+  h1 {
+    font-size: 34px;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 12px;
+    letter-spacing: 0px;
+  }
 }
 
 @media only screen and (max-width: 767px) {

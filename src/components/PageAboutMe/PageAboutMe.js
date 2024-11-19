@@ -1,46 +1,82 @@
-import React from 'react';
-import './PageAboutMe.css';
+import React, { useState } from "react";
+import "./PageAboutMe.css";
+import profileImg from "@/assets/profile-picture1.jpg";
+import profileImgHover from "@/assets/profile-picture2.jpg";
+import podcastImg from "@/assets/podcast.png";
+import equalsImg from "@/assets/equals.png";
 
 function PageAboutMe() {
+  const [isImgHovered, setIsImgHovered] = useState(false);
+
   return (
     <section id="about-me" className="about-me">
-      <div className="left bottom">
-        <div className="img-container">
-          <img src="../../../public/assets/self-picture.jpg" alt="Stéphanie Alix picture Portfolio Web"/>
-        </div>
-      </div>
-      <div className="right">
-        <article>
-          <header>A bit more...</header>
-          <header className="about-me-mobile">About me</header>
-          <section>
+      {/* Rename left class to left-panel */}
+      <section className="left left-panel img-container">
+        <img
+          src={isImgHovered ? profileImgHover : profileImg}
+          alt="Stéphanie Alix picture Portfolio Web profile 1"
+          className="profile-img"
+          onMouseEnter={() => setIsImgHovered(true)}
+          onMouseLeave={() => setIsImgHovered(false)}
+        />
+      </section>
+      <article className="right right-panel">
+        <div className="content">
+          <h1 className="top mobile">
+            About <span>me</span>
+          </h1>
+          <h1 className="top desktop tablet">A bit more...</h1>
+          <section className="text">
             <p>
-              I&apos;m a 26 year old girl who moved to Amsterdam 3 years ago.
-              I studied in a <span>computer science</span> school in
-              France and I always prefered the Web platform. I did 3 internships in this
-              field and I&apos;m now a <span>Medior</span> Web developer. On my spare time
-              I love <span>coding</span> and <span>keep learning</span>, especially by reading books and listening to podcasts.
-              I’m also a big fan of <span>sports</span>! I really
-              enjoy playing team sports with colleagues and friends. After moving to
-              the Netherlands I also started <span>to travel</span>,
-              explore new countries and learn about other cultures which
-              I&apos;ve found fascinating!
+              I&apos;m 29 year old, I <b>studied</b> computer science in France
+              and I always liked web. I moved to <b>Amsterdam</b> 7 years ago
+              and I&apos;ve worked as a <b>web developer </b>
+              since. I like coding projects on the side to
+              <b> continue learning</b>, to make nice apps to share comething I
+              care about or that can be useful for me or my friends.{" "}
             </p>
-            <p className="about-me-mobile">
-              I’m a 26 year old girl who moved to Amsterdam 3 years ago.
-              I studied <span>computer science</span> in France and did 3 internships in this
-              field. Now I&apos;m a <span>Medior</span> Web developer. On my spare time
-              I love <span>coding</span> and <span>keep learning</span>, especially by reading books and listening to podcasts. I also really
-              enjoy playing <span>team sports</span> with colleagues and friends. After moving
-              top the Netherlands I also started <span>to travel</span>,
-              explore new countries and learn about other cultures.
+            <p>
+              On my spare time I love <b>reading</b>. It can be any type of
+              novels, adventures, psychological or self-development books. I
+              also enjoy <b>sports</b> very much. It can be going to the gym,
+              swimming, running or any team sports with friends. I also found
+              recently a new passion for <b>crochet</b>! Besides that I also
+              like to <b>travel</b>, learn new languages and about different
+              cultures.
             </p>
+            <h1 className="bottom desktop tablet">
+              ...about <span>me</span>
+            </h1>
           </section>
-          <footer>about <span>me</span></footer>
-        </article>
-      </div>
-    </section>
 
+          <section className="network">
+            <h3>You might have seen me there:</h3>
+            <div className="cards-container">
+              <a
+                className="card"
+                href="https://double-slash.dev/podcasts/progressive-web-app/"
+                target="_blank"
+              >
+                <p>Main guess in French podcast about PWA</p>
+                <img src={podcastImg} alt="Slash podacst about PWA"></img>
+              </a>
+
+              <a
+                className="card"
+                href="https://equals.nl/stephaniealix/"
+                target="_blank"
+              >
+                <p>Role model for Women in Tech campaign</p>
+                <img
+                  src={equalsImg}
+                  alt="Women tech campaign with Equals"
+                ></img>
+              </a>
+            </div>
+          </section>
+        </div>
+      </article>
+    </section>
   );
 }
 

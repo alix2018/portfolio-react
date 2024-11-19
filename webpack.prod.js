@@ -1,11 +1,16 @@
-const merge = require('webpack-merge');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
-const {GenerateSW} = require('workbox-webpack-plugin');
-const config = require('./webpack.common.js');
+const merge = require("webpack-merge");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
+const { GenerateSW } = require("workbox-webpack-plugin");
+const config = require("./webpack.common.js");
 
 module.exports = merge(config, {
-  mode: 'production',
+  mode: "production",
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "src"),
+    },
+  },
   stats: {
     colors: false,
     hash: true,
@@ -14,7 +19,7 @@ module.exports = merge(config, {
     chunks: true,
     chunkModules: true,
     modules: true,
-    children: true
+    children: true,
   },
   optimization: {
     runtimeChunk: false,
@@ -34,32 +39,34 @@ module.exports = merge(config, {
           toplevel: false,
           nameCache: null,
           ie8: false,
-          safari10: true
-        }
-      })
+          safari10: true,
+        },
+      }),
     ],
     splitChunks: {
-      chunks: 'all',
+      chunks: "all",
       cacheGroups: {
         vendor: {
           test: /[\\/]node_modules[\\/]/,
           name(module) {
-            const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1];
-            return `npm.${packageName.replace('@', '')}`;
-          }
-        }
-      }
-    }
+            const packageName = module.context.match(
+              /[\\/]node_modules[\\/](.*?)([\\/]|$)/
+            )[1];
+            return `npm.${packageName.replace("@", "")}`;
+          },
+        },
+      },
+    },
   },
   performance: {
-    hints: 'warning'
+    hints: "warning",
   },
   plugins: [
     new CleanWebpackPlugin(),
     new GenerateSW({
       exclude: [/\.DS*/, /CNAME/],
       clientsClaim: true,
-      skipWaiting: true
-    })
-  ]
+      skipWaiting: true,
+    }),
+  ],
 });

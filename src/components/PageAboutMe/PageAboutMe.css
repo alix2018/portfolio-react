@@ -1,255 +1,267 @@
-section.about-me {
+/* .full-page {
   height: 100vh;
   width: 100vw;
-}
+} */
 
-section.about-me .left {
-  height: 100vh;
-  float: left;
-  width: var(--width-left-column);
-  background-color: var(--first-color-light);
-}
+/* TODO: Create CSS module */
 
-section.about-me .left .img-container {
-  position: relative;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
+section.about-me {
+  .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-section.about-me .left img {
-  max-width: 55%;
-  height: auto;
-  margin-left: 22.5%;
-  transform: scale(1.2);
-}
+  .profile-img {
+    width: 70%;
+  }
 
-section.about-me .right {
-  position: relative;
-  height: 100vh;
-  float: right;
-  width: var(--width-right-colum);
-  background-color: var(--second-color-dark);
-}
+  h1 {
+    margin: 0;
+  }
 
-section.about-me .right article {
-  margin-left: 140px;
-  margin-top: 17vh;
-}
+  article {
+    display: flex;
+    align-items: center;
+  }
 
-section.about-me article header {
-  margin: 0;
-  font-size: 40px;
-  color: var(--first-color-light);
-}
+  .content {
+    padding-top: calc(10vh); /* TODO: Fix menu size */
+    padding-left: var(--margin-side-desktop);
+    padding-right: var(--margin-side-desktop);
+    margin-bottom: 100px;
+  }
 
-section.about-me article header.about-me-mobile {
-  display: none;
-}
+  .text p {
+    line-height: 1.8;
+  }
 
-section.about-me .right article section {
-  display: block;
-  width: 470px;
-  margin: 70px 0 40px;
-  font-size: 14px;
-  line-height: 25px;
-  font-family: var(--font-poppins-light);
-  color: var(--first-color-light);
-}
+  .text p:first-of-type {
+    margin-top: 22px;
+  }
 
-p.about-me-mobile {
-  display: none;
-}
+  .text p:last-of-type {
+    margin-top: 18px;
+  }
 
-section.about-me article section p {
-  margin: 0;
-  font-size: 14px;
-  line-height: 2;
-}
+  h1.bottom {
+    margin-top: 18px;
+  }
 
-section.about-me .right article .download-cv-mobile {
-  display: none;
-}
+  .text p span {
+    font-family: var(--font-poppins-bold);
+  }
 
-section.about-me .right article footer span {
-  color: var(--third-color);
-}
+  h1 span {
+    color: var(--third-color);
+  }
 
-section.about-me .right article section p span {
-  font-family: var(--font-poppins-bold);
-  letter-spacing: 0.5px;
-}
+  h1.bottom {
+    text-align: right;
+  }
 
-footer {
-  position: absolute;
-  right: 9%;
-  bottom: 30px;
-  font-size: 40px;
-  color: var(--first-color-light);
+  h3::before {
+    /* TODO: fix @/assets/ for CSS files - content: url("@/assets/eye.png"); */
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    width: 32px;
+    height: 32px;
+    background-image: url("../../assets/eye.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .cards-container {
+    display: flex;
+    justify-content: space-between;
+    height: 110px;
+    margin-top: 18px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  a.card {
+    display: flex;
+    align-items: center;
+    width: 45%;
+    background-color: var(--fourth-color);
+    transition: transform 0.3s ease;
+  }
+
+  a.card:hover {
+    transform: scale(1.1);
+  }
+
+  .card img {
+    height: 100%;
+  }
+
+  .card p {
+    margin: 20px;
+  }
+
+  /* TODO: Move to index.css */
+  .tablet,
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
   section.about-me {
-    margin-top: -1px;
-  }
+    display: flex;
+    flex-direction: column-reverse;
 
-  section.about-me,
-  section.about-me .left,
-  section.about-me .right {
-    background-color: var(--second-color-dark);
-  }
+    .right-panel {
+      height: auto;
+      min-height: auto;
+      float: unset;
+      width: auto;
+    }
 
-  section.about-me .left {
-    position: relative;
-    width: 100vw !important;
-  }
+    .content {
+      padding: 0 var(--margin-side-tablet);
+    }
 
-  section.about-me .left img {
-    max-width: initial;
-    height: auto;
-    margin-left: initial;
-    transform: initial;
-  }
+    .text p:first-of-type {
+      margin-top: 12px;
+    }
 
-  section.about-me .right {
-    position: absolute;
-    display: contents;
-  }
+    .text p:last-of-type {
+      margin-top: 8px;
+    }
 
-  section.about-me article {
-    position: relative;
-    height: 65vh;
-    margin: 0 !important;
-  }
+    h1.bottom {
+      margin-top: 8px;
+    }
 
-  section.about-me article header {
-    position: absolute;
-    left: var(--margin-side-tablet);
-    top: 10vh;
-  }
+    h3 {
+      margin-top: 4px;
+    }
 
-  section.about-me article section {
-    position: absolute;
-    left: var(--margin-side-tablet);
-    top: 20vh;
-    width: auto !important;
-    margin: 0 !important;
-  }
+    .cards-container {
+      height: 124px;
+      margin-top: 10px;
+    }
 
-  section.about-me article section p {
-    display: block;
-    width: calc(100vw - 3 * var(--margin-side-tablet));
-    font-size: 20px !important;
-    line-height: 2 !important;
-  }
+    a.card {
+      justify-content: center;
+    }
 
-  section.about-me article section p.about-me-mobile {
-    display: none;
-  }
+    .card p {
+      margin: 10px;
+      align-content: center;
+      flex: 1;
+      text-align: center;
+    }
 
-  section.about-me .right article .download-cv-mobile {
-    display: block;
-    left: 0;
-    margin-top: 10%;
-  }
+    .left-panel {
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      height: auto;
+      float: unset;
+      width: 100%;
+      background-color: unset;
+    }
 
-  section.about-me .bottom .img-container {
-    top: 100vh;
-    left: 0;
-    max-width: 100vw;
-    max-height: 60vh;
-    transform: translate(0, -50%);
-  }
+    .left-panel::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      background-color: var(--second-color-dark);
+      z-index: -1;
+    }
 
-  section.about-me .bottom img {
-    max-width: 100% !important;
-    height: stretch;
-    margin-left: var(--margin-side-tablet);
-  }
+    .left-panel::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      background-color: var(--first-color-light);
+      z-index: -1;
+    }
 
-  section.about-me .right article footer {
-    top: 52vh;
-    right: var(--margin-side-tablet);
-    bottom: 0;
-  }
-}
+    .profile-img {
+      width: 40%;
+    }
 
-@media only screen and (max-width: 800px) {
-  section.about-me article section p {
-    font-size: 16px !important;
-    line-height: 1.8 !important;
+    /* TODO: Move to index.css */
+    .desktop,
+    .mobile {
+      display: none;
+    }
+
+    .tablet {
+      display: block;
+    }
   }
 }
 
 @media only screen and (max-width: 767px) {
-  section.about-me .bottom .img-container {
-    width: calc(100vw - 2 * var(--margin-side-mobile));
-    max-height: 50vh;
-  }
+  section.about-me {
+    .content {
+      padding: 0 var(--margin-side-mobile);
+    }
 
-  section.about-me .bottom img {
-    margin-left: var(--margin-side-mobile);
-    height: auto;
-    max-height: 400px;
-  }
+    .text p:first-of-type {
+      margin-top: 28px;
+    }
 
-  section.about-me article {
-    height: 75vh;
-  }
+    h3 {
+      margin-top: 36px;
+    }
 
-  section.about-me article header {
-    display: none;
-  }
+    .cards-container {
+      height: auto;
+      flex-direction: column;
+      margin-top: 22px;
+    }
 
-  section.about-me article header.about-me-mobile {
-    top: 5vh !important;
-    left: var(--margin-side-mobile);
-    display: block;
-  }
+    a.card {
+      width: 100%;
+      height: 110px;
+      justify-content: normal;
+    }
 
-  section.about-me article section {
-    top: 18vh;
-    left: var(--margin-side-mobile) !important;
-    margin: 0 !important;
-  }
+    a.card:hover {
+      transform: none;
+    }
 
-  section.about-me article section p {
-    display: none;
-  }
+    a.card:last-of-type {
+      margin-top: 28px;
+    }
 
-  section.about-me article section p.about-me-mobile {
-    display: block;
-    width: calc(100vw - 2 * var(--margin-side-mobile) - 20px) !important;
-    font-size: 14px !important;
-    line-height: 1.9 !important;
-  }
+    .img-container {
+      padding: 0 var(--margin-side-mobile);
+      width: calc(100% - 2 * var(--margin-side-mobile));
+    }
 
-  section.about-me .right article .download-cv-mobile {
-    left: var(--margin-side-mobile);
-  }
+    .profile-img {
+      width: 100%;
+    }
 
-  section.about-me .right article footer {
-    display: none;
-  }
-}
+    /* TODO: Move to index.css */
+    .tablet,
+    .desktop {
+      display: none;
+    }
 
-@media only screen and (max-width: 360px) {
-  section.about-me article section p.about-me-mobile {
-    font-size: 12px !important;
-    letter-spacing: 0.2px !important;
-  }
-}
-
-@media only screen and (max-width: 320px) {
-  section.about-me article section p.about-me-mobile {
-    font-size: 11px !important;
-    letter-spacing: 0.2px !important;
-    line-height: 1.7 !important;
-  }
-}
-
-@media only screen and (max-height: 550px) {
-  section.about-me .bottom .img-container {
-    max-height: 40vh;
+    .mobile {
+      display: block;
+    }
   }
 }
