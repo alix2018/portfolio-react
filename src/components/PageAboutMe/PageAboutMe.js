@@ -1,19 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import "./PageAboutMe.css";
-import profileImg from "@/assets/profile-picture.jpg";
+import profileImg from "@/assets/profile-picture1.jpg";
+import profileImgHover from "@/assets/profile-picture2.jpg";
 import podcastImg from "@/assets/podcast.png";
 import equalsImg from "@/assets/equals.png";
 
 function PageAboutMe() {
+  const [isImgHovered, setIsImgHovered] = useState(false);
+
   return (
     <section id="about-me" className="about-me">
       {/* Rename left class to left-panel */}
       <section className="left left-panel img-container">
-        {/* TODO: Change picture on hover */}
         <img
-          src={profileImg}
-          alt="Stéphanie Alix picture Portfolio Web"
+          src={isImgHovered ? profileImgHover : profileImg}
+          alt="Stéphanie Alix picture Portfolio Web profile 1"
           className="profile-img"
+          onMouseEnter={() => setIsImgHovered(true)}
+          onMouseLeave={() => setIsImgHovered(false)}
         />
       </section>
       <article className="right right-panel">
