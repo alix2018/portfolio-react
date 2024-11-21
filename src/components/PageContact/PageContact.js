@@ -1,47 +1,66 @@
-import React from 'react';
-import './PageContact.css';
-import ReactGA from 'react-ga';
-import LinkedinIcon from '../Icons/LinkedinIcon';
-import GithubIcon from '../Icons/GithubIcon';
-import TwitterIcon from '../Icons/TwitterIcon';
+import React from "react";
+import "./PageContact.css";
+import ReactGA from "react-ga";
+import linkedinIcon from "@/assets/icons/linkedin.svg";
+import githubIcon from "@/assets/icons/github.svg";
 
 function PageContact() {
   function onIconClick(iconName) {
     ReactGA.event({
-      category: 'Click',
+      category: "Click",
       action: `Click on icon ${iconName}`,
-      label: 'In contact page'
+      label: "In contact page",
     });
   }
 
   return (
     <section id="contact" className="contact">
-      <div className="left">
-        <div className="rights-reserved">© 2021. All Rights Reserved.</div>
-        <div className="name">Stéphanie Alix</div>
-      </div>
+      <section className="left">
+        <p className="copyright">
+          © 2024 Stéphanie Alix. <br />
+          All rights reserved.
+        </p>
+      </section>
 
-      <div className="right mobile">
-        <section>
-          <h1>Get in touch.</h1>
-          <a className="email" href="mailto:stephanie.alix95@gmail.com">stephanie.alix95@gmail.com</a>
-          <div className="country">Amsterdam, The Netherlands</div>
-          <div className="icons">
-            <a href="https://www.linkedin.com/in/stephanie-alix/" target="_blank" rel="noopener noreferrer" title="linkedin logo" onClick={() => {onIconClick('Linkedin');}}>
-              <LinkedinIcon/>
+      <section className="right">
+        <article>
+          <section className="content">
+            <h1>Get in touch.</h1>
+            <a className="email" href="mailto:stephanie.alix95@gmail.com">
+              stephanie.alix95@gmail.com
             </a>
-            <a href="https://github.com/alix2018" target="_blank" rel="noopener noreferrer" title="github logo" onClick={() => {onIconClick('Github');}}>
-              <GithubIcon/>
-            </a>
-            <a href="https://twitter.com/StephanieAlix95" target="_blank" rel="noopener noreferrer" title="twitter logo" onClick={() => {onIconClick('Twitter');}}>
-              <TwitterIcon/>
-            </a>
-          </div>
-        </section>
-        <footer>
-          Available for new web projects, contact me!
-        </footer>
-      </div>
+            <p className="country">Amsterdam, The Netherlands</p>
+            <div className="icons">
+              <a
+                href="https://www.linkedin.com/in/stephanie-alix/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="linkedin"
+                onClick={() => {
+                  onIconClick("Linkedin");
+                }}
+              >
+                <img src={linkedinIcon} alt="linkedin icon" />
+              </a>
+              <a
+                href="https://github.com/alix2018"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="github"
+                onClick={() => {
+                  onIconClick("Github");
+                }}
+              >
+                <img src={githubIcon} alt="github icon" />
+              </a>
+            </div>
+          </section>
+          <footer className="desktop tablet">
+            Available for new web projects,
+            <br /> contact me!
+          </footer>
+        </article>
+      </section>
     </section>
   );
 }
