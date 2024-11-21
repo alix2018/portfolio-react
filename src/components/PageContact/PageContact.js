@@ -55,7 +55,7 @@ function PageContact() {
               </a>
             </div>
           </section>
-          <footer>
+          <footer className="desktop tablet">
             Available for new web projects,
             <br /> contact me!
           </footer>

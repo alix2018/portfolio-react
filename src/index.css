@@ -118,3 +118,22 @@ b {
     user-select: none;
   }
 }
+
+/* TODO: Rename global css class name to gl- => gl-left-panel */
+.left {
+  height: 100vh;
+  float: left;
+  width: var(--width-left-column);
+  background-color: var(--first-color-light);
+}
+
+@media only screen and (max-width: 1024px) {
+  .left {
+    /* width: 100%; */
+  }
+
+  .right {
+    /* height: auto;
+    width: 100%; */
+  }
+}

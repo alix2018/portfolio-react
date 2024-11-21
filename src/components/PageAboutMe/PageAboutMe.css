@@ -4,7 +4,6 @@
 } */
 
 /* TODO: Create CSS module */
-
 section.about-me {
   .img-container {
     display: flex;
@@ -196,17 +195,7 @@ section.about-me {
     }
 
     .profile-img {
-      width: 40%;
-    }
-
-    /* TODO: Move to index.css */
-    .desktop,
-    .mobile {
-      display: none;
-    }
-
-    .tablet {
-      display: block;
+      width: 50%;
     }
   }
 }
@@ -253,15 +242,37 @@ section.about-me {
     .profile-img {
       width: 100%;
     }
+  }
+}
 
-    /* TODO: Move to index.css */
-    .tablet,
-    .desktop {
-      display: none;
-    }
+/* TODO: Move to index.css */
+.tablet,
+.mobile {
+  display: none;
+}
 
-    .mobile {
-      display: block;
-    }
+.desktop {
+  display: block;
+}
+
+@media only screen and (max-width: 1024px) {
+  .desktop,
+  .mobile {
+    display: none;
+  }
+
+  .tablet {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .tablet,
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
   }
 }

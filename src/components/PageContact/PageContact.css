@@ -1,3 +1,4 @@
+/* TODO: Create CSS module */
 .contact {
   .left {
     display: flex;
@@ -16,7 +17,7 @@
   article {
     position: relative;
     height: 100%;
-    padding: 0 var(--margin-side-desktop);
+    margin: 0 var(--margin-side-desktop);
   }
 
   .content {
@@ -35,7 +36,7 @@
   }
 
   .email {
-    margin-top: 24px;
+    margin-top: 28px;
   }
 
   .country {
@@ -58,8 +59,69 @@
   footer {
     position: absolute;
     bottom: var(--bottom-spacing-desktop);
-    right: var(--margin-side-desktop);
+    right: 0;
     font-family: var(--font-poppins-light);
     text-align: right;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .contact {
+    .left {
+      display: none;
+    }
+
+    .right {
+      height: auto;
+      width: 100%;
+    }
+
+    article {
+      margin: var(--margin-side-tablet);
+    }
+
+    footer {
+      bottom: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .contact {
+    article {
+      margin: 80px var(--margin-side-mobile) var(--margin-side-mobile);
+    }
+  }
+}
+
+/* TODO: Move to index.css */
+.tablet,
+.mobile {
+  display: none;
+}
+
+.desktop {
+  display: block;
+}
+
+@media only screen and (max-width: 1024px) {
+  .desktop,
+  .mobile {
+    display: none;
+  }
+
+  .tablet {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .tablet,
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
   }
 }
