@@ -49,6 +49,7 @@ function PageAboutMe() {
             </h1>
           </section>
 
+          {/* Add Google Analytics events onClick */}
           <section className="network">
             <h3>You might have seen me there:</h3>
             <div className="cards-container">
@@ -56,6 +57,7 @@ function PageAboutMe() {
                 className="card"
                 href="https://double-slash.dev/podcasts/progressive-web-app/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <p>Main guess in French podcast about PWA</p>
                 <img src={podcastImg} alt="Slash podacst about PWA"></img>
@@ -65,6 +67,7 @@ function PageAboutMe() {
                 className="card"
                 href="https://equals.nl/stephaniealix/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <p>Role model for Women in Tech campaign</p>
                 <img

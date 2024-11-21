@@ -1,4 +1,5 @@
 :root {
+  /* Rename colors variable */
   --first-color-light: #f7faff;
   --second-color-dark: #485563;
   --third-color: #25ccf7;
@@ -12,19 +13,22 @@
   --font-poppins-bold: "Poppins Bold", sans-serif;
   --font-poppins-extra-bold: "Poppins Extra Bold", sans-serif;
   --line-width: 40px;
+  --bottom-spacing-desktop: 50px;
+
+  /* TODO: One variable that changes per screen */
   --margin-side-desktop: 6vw;
   --margin-side-tablet: 70px;
   --margin-side-mobile: 30px;
 }
 
 @font-face {
-  font-family: "Poppins Medium";
-  src: url("../public/fonts/Poppins-Medium.woff") format("woff");
+  font-family: "Poppins Light";
+  src: url("../public/fonts/Poppins-Light.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Poppins Light";
-  src: url("../public/fonts/Poppins-Light.woff") format("woff");
+  font-family: "Poppins Medium";
+  src: url("../public/fonts/Poppins-Medium.woff") format("woff");
 }
 
 @font-face {
@@ -71,7 +75,6 @@ h1 {
   margin: 0;
   font-size: 40px;
   font-family: var(--font-poppins-medium);
-  font-weight: 400;
   color: var(--first-color-light);
 }
 
