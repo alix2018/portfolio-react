@@ -121,7 +121,7 @@ b {
 }
 
 /* TODO: Rename global css class name to gl- => gl-left-panel */
-.left {
+.gl-left-panel {
   position: relative;
   height: 100vh;
   float: left;
@@ -129,7 +129,7 @@ b {
   background-color: var(--first-color-light);
 }
 
-.right {
+.gl-right-panel {
   position: relative;
   height: 100vh;
   float: right;

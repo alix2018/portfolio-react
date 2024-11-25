@@ -18,7 +18,9 @@ function useScroll(pagesIds) {
   const offset = 48;
 
   function setMenuBarColors(nameColor, menuLinkColor) {
-    document.querySelector("section.home .left .name").style.color = nameColor;
+    document.querySelector(
+      "section.home .gl-left-panel  .name"
+    ).style.color = nameColor;
     document.querySelectorAll(".menu-effect a").forEach((menuItem) => {
       menuItem.style.color = menuLinkColor;
     });

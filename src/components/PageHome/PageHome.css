@@ -80,3 +80,18 @@
     animation-delay: 1350ms;
   }
 }
+
+@media only screen and (max-width: 1024px) {
+  .home {
+    .top {
+      position: relative;
+      height: 60%;
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .home {
+  }
+}

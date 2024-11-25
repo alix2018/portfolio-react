@@ -11,7 +11,7 @@ section.portfolio {
   background-color: var(--second-color-dark);
 }
 
-section.portfolio .left {
+section.portfolio .gl-left-panel {
   background-color: var(--second-color-dark);
 }
 
@@ -41,7 +41,7 @@ section.portfolio img {
   margin: 0;
 }
 
-section.portfolio .right {
+section.portfolio .gl-right-panel {
   z-index: -1;
 }
 
@@ -68,7 +68,7 @@ section.portfolio img.isometric:nth-child(2) {
   z-index: 9;
   left: calc(var(--project-left) + 50px);
   height: 335px;
-  background-color: #D1D5D8;
+  background-color: #d1d5d8;
   pointer-events: none;
 }
 
@@ -76,7 +76,7 @@ section.portfolio img.isometric:nth-child(3) {
   z-index: 8;
   left: calc(var(--project-left) + 100px);
   height: 285px;
-  background-color: #A4AAB1;
+  background-color: #a4aab1;
   pointer-events: none;
 }
 
@@ -84,7 +84,7 @@ section.portfolio img.isometric:nth-child(4) {
   z-index: 7;
   left: calc(var(--project-left) + 145px);
   height: 240px;
-  background-color: #76808A;
+  background-color: #76808a;
   pointer-events: none;
 }
 

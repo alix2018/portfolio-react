@@ -1,6 +1,6 @@
 /* TODO: Create CSS module */
 .contact {
-  .left {
+  .gl-left-panel {
     display: flex;
     align-items: flex-end;
     background-color: var(--second-color-dark);
@@ -10,7 +10,7 @@
     margin: 0 var(--margin-side-desktop) var(--vertical-spacing-desktop);
   }
 
-  .right {
+  .gl-right-panel {
     background-color: var(--first-color-light);
   }
 
@@ -71,11 +71,11 @@
 
 @media only screen and (max-width: 1024px) {
   .contact {
-    .left {
+    .gl-left-panel {
       display: none;
     }
 
-    .right {
+    .gl-right-panel {
       height: auto;
       width: 100%;
     }

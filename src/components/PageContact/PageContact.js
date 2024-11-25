@@ -16,14 +16,14 @@ function PageContact() {
 
   return (
     <section id="contact" className="contact">
-      <section className="left">
+      <section className="gl-left-panel ">
         <p className="copyright">
           © 2024 Stéphanie Alix. <br />
           All rights reserved.
         </p>
       </section>
 
-      <section className="right">
+      <section className="gl-right-panel">
         <article>
           <section className="content">
             <h1>Get in touch.</h1>

@@ -119,7 +119,7 @@ section.about-me {
     display: flex;
     flex-direction: column-reverse;
 
-    .right-panel {
+    .gl-right-panel {
       height: auto;
       min-height: auto;
       float: unset;
@@ -162,7 +162,7 @@ section.about-me {
       text-align: center;
     }
 
-    .left-panel {
+    .gl-left-panel {
       margin-left: auto;
       margin-right: auto;
       position: relative;
@@ -172,7 +172,7 @@ section.about-me {
       background-color: unset;
     }
 
-    .left-panel::before {
+    .gl-left-panel::before {
       content: "";
       position: absolute;
       top: 0;
@@ -183,7 +183,7 @@ section.about-me {
       z-index: -1;
     }
 
-    .left-panel::after {
+    .gl-left-panel::after {
       content: "";
       position: absolute;
       bottom: 0;

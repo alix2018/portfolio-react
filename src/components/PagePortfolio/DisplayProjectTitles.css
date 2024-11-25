@@ -29,7 +29,11 @@ section.titles-list .project-index {
   left: calc(200px + 6vw);
   top: -35px;
   width: calc(6vw) !important;
-  background: linear-gradient(var(--first-color-light), var(--first-color-light)) transparent no-repeat 0 0;
+  background: linear-gradient(
+      var(--first-color-light),
+      var(--first-color-light)
+    )
+    transparent no-repeat 0 0;
   background-size: 0 100%;
 }
 
@@ -56,7 +60,7 @@ section.titles-list .project-index {
     font-size: 30px;
   }
 
-  section.portfolio .right {
+  section.portfolio .gl-right-panel {
     zoom: 0.8;
   }
 }

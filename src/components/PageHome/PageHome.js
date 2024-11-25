@@ -38,7 +38,7 @@ function PageHome() {
 
   return (
     <section id="home" className="home">
-      <section className="left top">
+      <section className="gl-left-panel ">
         <p className="name animation-setup fade-in-upwards-animation">
           Stéphanie Alix 2
         </p>
@@ -51,7 +51,7 @@ function PageHome() {
           <img src={scrollArrowSvg} />
         </div>
       </section>
-      <section className="right bottom">
+      <section className="gl-right-panel">
         <Typewriter
           className="typewriter animation-setup fade-in-upwards-animation"
           texts={typewriterArray}
