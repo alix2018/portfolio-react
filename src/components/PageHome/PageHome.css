@@ -3,10 +3,19 @@
     position: fixed;
     z-index: 10;
     left: var(--margin-side-desktop);
-    margin-top: var(--vertical-spacing-desktop);
+    top: var(--vertical-spacing-desktop);
     font-family: var(--font-poppins-medium);
     /* FIX: color should be set in useScroll component */
     color: var(--second-color-dark);
+  }
+
+  h1,
+  .typewriter {
+    position: absolute;
+    top: 45%;
+    font-size: 60px;
+    animation-delay: 700ms;
+    font-weight: bold;
   }
 
   h1 {
@@ -17,15 +26,6 @@
   .typewriter {
     left: 18px;
     color: var(--first-color-light);
-  }
-
-  h1,
-  .typewriter {
-    position: absolute;
-    top: 45%;
-    font-size: 60px;
-    animation-delay: 700ms;
-    font-weight: bold;
   }
 
   .arrows {
@@ -83,15 +83,56 @@
 
 @media only screen and (max-width: 1024px) {
   .home {
-    .top {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    .gl-left-panel {
       position: relative;
-      height: 60%;
+      height: 58%;
       width: 100%;
+    }
+
+    .gl-right-panel {
+      height: 42%;
+      width: 100%;
+    }
+
+    .name {
+      left: var(--margin-side-tablet);
+      font-size: 15px;
+    }
+
+    h1 {
+      top: unset;
+      bottom: 5px;
+    }
+
+    .typewriter {
+      top: 5px;
+      bottom: unset;
+    }
+
+    h1,
+    .typewriter {
+      left: var(--margin-side-tablet);
     }
   }
 }
 
 @media only screen and (max-width: 767px) {
   .home {
+    .name {
+      top: var(--vertical-spacing-mobile);
+      left: var(--margin-side-mobile);
+    }
+
+    h1,
+    .typewriter {
+      font-size: 48px;
+      left: var(--margin-side-mobile);
+    }
   }
 }

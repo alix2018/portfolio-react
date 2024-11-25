@@ -102,16 +102,6 @@ section.about-me {
   .card p {
     margin: 20px;
   }
-
-  /* TODO: Move to index.css */
-  .tablet,
-  .mobile {
-    display: none;
-  }
-
-  .desktop {
-    display: block;
-  }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -242,37 +232,5 @@ section.about-me {
     .profile-img {
       width: 100%;
     }
-  }
-}
-
-/* TODO: Move to index.css */
-.tablet,
-.mobile {
-  display: none;
-}
-
-.desktop {
-  display: block;
-}
-
-@media only screen and (max-width: 1024px) {
-  .desktop,
-  .mobile {
-    display: none;
-  }
-
-  .tablet {
-    display: block;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .tablet,
-  .desktop {
-    display: none;
-  }
-
-  .mobile {
-    display: block;
   }
 }

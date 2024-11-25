@@ -18,8 +18,10 @@
   --margin-side-desktop: 6vw;
   --margin-side-tablet: 70px;
   --margin-side-mobile: 30px;
+
   /* FIX: Same as top spacing for menu */
   --vertical-spacing-desktop: 40px;
+  --vertical-spacing-mobile: 30px;
 }
 
 @font-face {
@@ -135,4 +137,36 @@ b {
   float: right;
   width: var(--width-right-colum);
   background-color: var(--second-color-dark);
+}
+
+/* Desktop, tablet and mobile responsiveness */
+.desktop {
+  display: block !important;
+}
+
+.tablet,
+.mobile {
+  display: none !important;
+}
+
+@media only screen and (max-width: 1024px) {
+  .desktop,
+  .mobile {
+    display: none !important;
+  }
+
+  .tablet {
+    display: block !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .tablet,
+  .desktop {
+    display: none !important;
+  }
+
+  .mobile {
+    display: block !important;
+  }
 }

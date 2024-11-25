@@ -44,7 +44,7 @@ function PageHome() {
         </p>
         <h1 className="animation-setup fade-in-upwards-animation">I am</h1>
         <div
-          className="arrows scrolling-animation"
+          className="arrows scrolling-animation desktop"
           onClick={onScrollingArrowsClicked}
         >
           <img src={scrollArrowSvg} />
@@ -56,7 +56,7 @@ function PageHome() {
           className="typewriter animation-setup fade-in-upwards-animation"
           texts={typewriterArray}
         />
-        <div className="icons">
+        <div className="icons desktop">
           <a
             href="https://www.linkedin.com/in/stephanie-alix/"
             className="linkedin-icon animation-setup fade-in-upwards-animation"
@@ -65,7 +65,7 @@ function PageHome() {
             title="Linkedin"
             onClick={onIconClick}
           >
-            <LinkedinIcon className="icon" />
+            <LinkedinIcon />
           </a>
           <a
             href="https://github.com/alix2018"
@@ -75,7 +75,7 @@ function PageHome() {
             title="Github"
             onClick={onIconClick}
           >
-            <GithubIcon className="icon" />
+            <GithubIcon />
           </a>
         </div>
       </section>
