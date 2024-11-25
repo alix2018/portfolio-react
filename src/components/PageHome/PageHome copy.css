@@ -204,11 +204,3 @@ section.home .right .icons {
     font-size: 45px;
   }
 }
-
-/***************** NEW CSS *****************/
-.home {
-  .linkedin path,
-  .github path {
-    fill: var(--first-color-light);
-  }
-}

@@ -1,11 +1,12 @@
 import React from "react";
 import "./PageContact.css";
 import ReactGA from "react-ga";
-import linkedinIcon from "@/assets/icons/linkedin.svg";
-import githubIcon from "@/assets/icons/github.svg";
+import LinkedinIcon from "../Icons/LinkedinIcon";
+import GithubIcon from "../Icons/GithubIcon";
 
 function PageContact() {
-  function onIconClick(iconName) {
+  function onIconClick(event) {
+    const iconName = event.currentTarget.title;
     ReactGA.event({
       category: "Click",
       action: `Click on icon ${iconName}`,
@@ -35,23 +36,19 @@ function PageContact() {
                 href="https://www.linkedin.com/in/stephanie-alix/"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="linkedin"
-                onClick={() => {
-                  onIconClick("Linkedin");
-                }}
+                title="Linkedin"
+                onClick={onIconClick}
               >
-                <img src={linkedinIcon} alt="linkedin icon" />
+                <LinkedinIcon />
               </a>
               <a
                 href="https://github.com/alix2018"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="github"
-                onClick={() => {
-                  onIconClick("Github");
-                }}
+                title="Github"
+                onClick={onIconClick}
               >
-                <img src={githubIcon} alt="github icon" />
+                <GithubIcon />
               </a>
             </div>
           </section>

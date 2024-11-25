@@ -4,10 +4,18 @@ import ReactGA from "react-ga";
 import Typewriter from "../Typewriter/Typewriter";
 import LinkedinIcon from "../Icons/LinkedinIcon";
 import GithubIcon from "../Icons/GithubIcon";
-import TwitterIcon from "../Icons/TwitterIcon";
+import scrollArrowSvg from "@/assets/scroll-arrow.svg";
+
+const typewriterArray = [
+  "Stéphanie",
+  "a web developer",
+  "French",
+  "in Amsterdam",
+];
 
 function PageHome() {
-  function onIconClick(iconName) {
+  function onIconClick(event) {
+    const iconName = event.currentTarget.title;
     ReactGA.event({
       category: "Click",
       action: `Click on icon ${iconName}`,
@@ -21,7 +29,7 @@ function PageHome() {
       action: "Click on scrolling arrows",
       label: "In home page",
     });
-    const currentAnchor = document.querySelector(".portfolio");
+    const currentAnchor = document.querySelector("#portfolio");
     currentAnchor.scrollIntoView({
       behavior: "smooth",
       block: "start",
@@ -30,18 +38,18 @@ function PageHome() {
 
   return (
     <section id="home" className="home">
-      <div className="left top">
-        <h2 className="name animated fadeInUp">Stéphanie Alix 2</h2>
+      <section className="left top">
+        <p className="name animated fadeInUp">Stéphanie Alix 2</p>
         <h1 className="animated fadeInUp">I am</h1>
         <div className="scrolling-animation" onClick={onScrollingArrowsClicked}>
-          <img src="../../../public/assets/icons/scroll-arrow.svg" />
-          <img src="../../../public/assets/icons/scroll-arrow.svg" />
+          <img src={scrollArrowSvg} />
+          <img src={scrollArrowSvg} />
         </div>
-      </div>
-      <div className="right bottom">
+      </section>
+      <section className="right bottom">
         <Typewriter
           className="typewriter animated fadeInUp"
-          texts={["Stéphanie", "a web developer", "in Amsterdam"]}
+          texts={typewriterArray}
         />
         <div className="icons">
           <a
@@ -49,10 +57,8 @@ function PageHome() {
             className="linkedin-animation animated fadeInUp"
             target="_blank"
             rel="noopener noreferrer"
-            title="linkedin logo"
-            onClick={() => {
-              onIconClick("Linkedin");
-            }}
+            title="Linkedin"
+            onClick={onIconClick}
           >
             <LinkedinIcon />
           </a>
@@ -61,27 +67,13 @@ function PageHome() {
             className="github-animation animated fadeInUp"
             target="_blank"
             rel="noopener noreferrer"
-            title="github logo"
-            onClick={() => {
-              onIconClick("Github");
-            }}
+            title="Github"
+            onClick={onIconClick}
           >
             <GithubIcon />
           </a>
-          <a
-            href="https://twitter.com/StephanieAlix95"
-            target="_blank"
-            className="twitter-animation animated fadeInUp"
-            rel="noopener noreferrer"
-            title="twitter logo"
-            onClick={() => {
-              onIconClick("Twitter");
-            }}
-          >
-            <TwitterIcon />
-          </a>
         </div>
-      </div>
+      </section>
     </section>
   );
 }

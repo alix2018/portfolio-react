@@ -1,4 +1,3 @@
-
 #menuToggle a {
   margin-left: 5px;
   text-decoration: none;
@@ -34,10 +33,11 @@
   margin-left: calc(100vw - var(--margin-side-tablet) + 7px);
   margin-bottom: 5px;
   z-index: 1;
-  background: #CDCDCD;
+  background: #cdcdcd;
   border-radius: 1px;
   transform-origin: 4px 0;
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
 }
 
 #menuToggle span:first-child {
@@ -51,7 +51,7 @@
 #menuToggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
-  background: #CDCDCD;
+  background: #cdcdcd;
 }
 
 #menuToggle input:checked ~ span:nth-last-child(3) {
@@ -66,7 +66,8 @@
 #menu {
   height: 100vh;
   width: 100vw;
-  margin: calc(-42px - var(--margin-top-mobile)) calc(-1 * var(--margin-side-tablet)) 0 0;
+  margin: calc(-42px - var(--margin-top-mobile))
+    calc(-1 * var(--margin-side-tablet)) 0 0;
   list-style-type: none;
   transform-origin: 0 0;
   transform: translate(100%);
@@ -126,8 +127,7 @@ ul.list {
 }
 
 #menu .icons .linkedin path,
-#menu .icons .github path,
-#menu .icons .twitter path {
+#menu .icons .github path {
   fill: var(--second-color-dark);
 }
 
@@ -171,7 +171,8 @@ ul.list {
   }
 
   #menu {
-    margin: calc(-27px - var(--margin-top-mobile)) calc(-1 * var(--margin-side-mobile)) 0 0;
+    margin: calc(-27px - var(--margin-top-mobile))
+      calc(-1 * var(--margin-side-mobile)) 0 0;
   }
 
   .menu-items-container {

@@ -52,8 +52,9 @@
     width: 35px;
   }
 
-  .icons a:not(first-of-type) {
-    margin-right: 18px;
+  .linkedin path,
+  .github path {
+    fill: var(--second-color-dark);
   }
 
   footer {
