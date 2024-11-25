@@ -39,38 +39,43 @@ function PageHome() {
   return (
     <section id="home" className="home">
       <section className="left top">
-        <p className="name animated fadeInUp">Stéphanie Alix 2</p>
-        <h1 className="animated fadeInUp">I am</h1>
-        <div className="scrolling-animation" onClick={onScrollingArrowsClicked}>
+        <p className="name animation-setup fade-in-upwards-animation">
+          Stéphanie Alix 2
+        </p>
+        <h1 className="animation-setup fade-in-upwards-animation">I am</h1>
+        <div
+          className="arrows scrolling-animation"
+          onClick={onScrollingArrowsClicked}
+        >
           <img src={scrollArrowSvg} />
           <img src={scrollArrowSvg} />
         </div>
       </section>
       <section className="right bottom">
         <Typewriter
-          className="typewriter animated fadeInUp"
+          className="typewriter animation-setup fade-in-upwards-animation"
           texts={typewriterArray}
         />
         <div className="icons">
           <a
             href="https://www.linkedin.com/in/stephanie-alix/"
-            className="linkedin-animation animated fadeInUp"
+            className="linkedin-icon animation-setup fade-in-upwards-animation"
             target="_blank"
             rel="noopener noreferrer"
             title="Linkedin"
             onClick={onIconClick}
           >
-            <LinkedinIcon />
+            <LinkedinIcon className="icon" />
           </a>
           <a
             href="https://github.com/alix2018"
-            className="github-animation animated fadeInUp"
+            className="github-icon animation-setup fade-in-upwards-animation"
             target="_blank"
             rel="noopener noreferrer"
             title="Github"
             onClick={onIconClick}
           >
-            <GithubIcon />
+            <GithubIcon className="icon" />
           </a>
         </div>
       </section>

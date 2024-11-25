@@ -54,7 +54,10 @@ function BurgerMenu() {
 
   return (
     <nav role="navigation">
-      <div id="menuToggle" className="animated fadeInUp">
+      <div
+        id="menuToggle"
+        className="animation-setup fade-in-upwards-animation"
+      >
         <input
           type="checkbox"
           id="checkbox"

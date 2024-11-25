@@ -13,12 +13,13 @@
   --font-poppins-bold: "Poppins Bold", sans-serif;
   --font-poppins-extra-bold: "Poppins Extra Bold", sans-serif;
   --line-width: 40px;
-  --bottom-spacing-desktop: 50px;
 
   /* TODO: One variable that changes per screen */
   --margin-side-desktop: 6vw;
   --margin-side-tablet: 70px;
   --margin-side-mobile: 30px;
+  /* FIX: Same as top spacing for menu */
+  --vertical-spacing-desktop: 40px;
 }
 
 @font-face {
@@ -121,19 +122,17 @@ b {
 
 /* TODO: Rename global css class name to gl- => gl-left-panel */
 .left {
+  position: relative;
   height: 100vh;
   float: left;
   width: var(--width-left-column);
   background-color: var(--first-color-light);
 }
 
-@media only screen and (max-width: 1024px) {
-  .left {
-    /* width: 100%; */
-  }
-
-  .right {
-    /* height: auto;
-    width: 100%; */
-  }
+.right {
+  position: relative;
+  height: 100vh;
+  float: right;
+  width: var(--width-right-colum);
+  background-color: var(--second-color-dark);
 }

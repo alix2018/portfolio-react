@@ -7,7 +7,7 @@
   }
 
   .copyright {
-    margin: 0 var(--margin-side-desktop) var(--bottom-spacing-desktop);
+    margin: 0 var(--margin-side-desktop) var(--vertical-spacing-desktop);
   }
 
   .right {
@@ -45,21 +45,24 @@
 
   .icons {
     margin-top: 12px;
+    display: flex;
+    gap: 18px;
   }
 
-  img {
+  .linkedin-icon,
+  .github-icon {
     height: 35px;
     width: 35px;
   }
 
-  .linkedin path,
-  .github path {
+  .linkedin-icon path,
+  .github-icon path {
     fill: var(--second-color-dark);
   }
 
   footer {
     position: absolute;
-    bottom: var(--bottom-spacing-desktop);
+    bottom: var(--vertical-spacing-desktop);
     right: 0;
     font-family: var(--font-poppins-light);
     text-align: right;
