@@ -101,6 +101,7 @@
     }
 
     .name {
+      position: absolute;
       left: var(--margin-side-tablet);
       font-size: 15px;
     }

@@ -10,8 +10,8 @@ function PageAboutMe() {
 
   return (
     <section id="about-me" className="about-me">
-      {/* Rename left class to left-panel */}
       <section className="gl-left-panel img-container">
+        {/* TODO: Align image with Stéphanie Alix sticky text */}
         <img
           src={isImgHovered ? profileImgHover : profileImg}
           alt="Stéphanie Alix picture Portfolio Web profile 1"
