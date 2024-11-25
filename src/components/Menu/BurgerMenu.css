@@ -8,9 +8,9 @@
   position: relative;
   display: none;
   float: right;
-  top: var(--margin-top-mobile);
+  top: var(--vertical-spacing-mobile);
   z-index: 1;
-  margin-right: var(--margin-side-tablet);
+  right: 0;
   animation-delay: 275ms;
 }
 
@@ -18,8 +18,8 @@
   position: absolute;
   width: 40px;
   height: 32px;
-  top: -7px;
-  right: -5px;
+  top: var(--vertical-spacing-mobile);
+  right: 0;
   opacity: 0;
   z-index: 2;
   cursor: pointer;
