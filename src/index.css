@@ -146,7 +146,7 @@ b {
 }
 
 .desktop {
-  display: block !important;
+  display: flex !important;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -156,7 +156,7 @@ b {
   }
 
   .tablet {
-    display: block !important;
+    display: flex !important;
   }
 }
 
@@ -167,6 +167,6 @@ b {
   }
 
   .mobile {
-    display: block !important;
+    display: flex !important;
   }
 }

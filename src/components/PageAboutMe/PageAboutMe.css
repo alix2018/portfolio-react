@@ -56,7 +56,9 @@ section.about-me {
   }
 
   h1.bottom {
-    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
   }
 
   h3::before {

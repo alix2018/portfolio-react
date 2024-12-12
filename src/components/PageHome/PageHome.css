@@ -47,13 +47,14 @@
     bottom: var(--vertical-spacing-desktop);
     right: var(--margin-side-desktop);
     display: flex;
-    gap: 18px;
+    gap: 14px;
   }
 
   .linkedin-icon,
   .github-icon {
     height: 35px;
     width: 35px;
+    transition: transform 0.3s ease;
   }
 
   .linkedin-icon:hover,
