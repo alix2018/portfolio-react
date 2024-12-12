@@ -1,16 +1,16 @@
 /* TODO: Create CSS module */
 .contact {
-  .left {
+  .gl-left-panel {
     display: flex;
     align-items: flex-end;
     background-color: var(--second-color-dark);
   }
 
   .copyright {
-    margin: 0 var(--margin-side-desktop) var(--bottom-spacing-desktop);
+    margin: 0 var(--margin-side-desktop) var(--vertical-spacing-desktop);
   }
 
-  .right {
+  .gl-right-panel {
     background-color: var(--first-color-light);
   }
 
@@ -45,20 +45,24 @@
 
   .icons {
     margin-top: 12px;
+    display: flex;
+    gap: 14px;
   }
 
-  img {
+  .linkedin-icon,
+  .github-icon {
     height: 35px;
     width: 35px;
   }
 
-  .icons a:not(first-of-type) {
-    margin-right: 18px;
+  .linkedin-icon path,
+  .github-icon path {
+    fill: var(--second-color-dark);
   }
 
   footer {
     position: absolute;
-    bottom: var(--bottom-spacing-desktop);
+    bottom: var(--vertical-spacing-desktop);
     right: 0;
     font-family: var(--font-poppins-light);
     text-align: right;
@@ -67,11 +71,11 @@
 
 @media only screen and (max-width: 1024px) {
   .contact {
-    .left {
+    .gl-left-panel {
       display: none;
     }
 
-    .right {
+    .gl-right-panel {
       height: auto;
       width: 100%;
     }
@@ -91,37 +95,5 @@
     article {
       margin: 80px var(--margin-side-mobile) var(--margin-side-mobile);
     }
-  }
-}
-
-/* TODO: Move to index.css */
-.tablet,
-.mobile {
-  display: none;
-}
-
-.desktop {
-  display: block;
-}
-
-@media only screen and (max-width: 1024px) {
-  .desktop,
-  .mobile {
-    display: none;
-  }
-
-  .tablet {
-    display: block;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .tablet,
-  .desktop {
-    display: none;
-  }
-
-  .mobile {
-    display: block;
   }
 }

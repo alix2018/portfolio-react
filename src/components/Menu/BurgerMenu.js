@@ -1,21 +1,20 @@
-import React, {useState, useEffect} from 'react';
-import './BurgerMenu.css';
-import ReactGA from 'react-ga';
-import LinkedinIcon from '../Icons/LinkedinIcon';
-import GithubIcon from '../Icons/GithubIcon';
-import TwitterIcon from '../Icons/TwitterIcon';
-import useScroll from './useScroll';
+import React, { useState, useEffect } from "react";
+import "./BurgerMenu.css";
+import ReactGA from "react-ga";
+import LinkedinIcon from "../Icons/LinkedinIcon";
+import GithubIcon from "../Icons/GithubIcon";
+import useScroll from "./useScroll";
 
 function BurgerMenu() {
-  const activePage = useScroll(['home', 'portfolio', 'about-me', 'contact']);
+  const activePage = useScroll(["home", "portfolio", "about-me", "contact"]);
   const [hideBurgerMenu, setHideBurgerMenu] = useState(true);
-  const [burgerMenuDisplay, setBurgerMenuDisplay] = useState('display-block');
+  const [burgerMenuDisplay, setBurgerMenuDisplay] = useState("display-block");
 
   const menuItems = [
-    {name: 'Home', page: 'home'},
-    {name: 'Portfolio', page: 'portfolio'},
-    {name: 'About Me', page: 'about-me'},
-    {name: 'Contact', page: 'contact'}
+    { name: "Home", page: "home" },
+    { name: "Portfolio", page: "portfolio" },
+    { name: "About Me", page: "about-me" },
+    { name: "Contact", page: "contact" },
   ];
 
   function onBurgerMenuClicked() {
@@ -30,42 +29,65 @@ function BurgerMenu() {
 
   function onPageClicked(page) {
     setHideBurgerMenu(!hideBurgerMenu);
-    document.querySelector('#checkbox').checked = false;
-    const currentAnchor = document.querySelector('.' + page);
+    document.querySelector("#checkbox").checked = false;
+    const currentAnchor = document.querySelector("." + page);
     currentAnchor.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
+      behavior: "smooth",
+      block: "start",
     });
   }
 
   function onIconClick(iconName) {
     ReactGA.event({
-      category: 'Click',
+      category: "Click",
       action: `Click on icon ${iconName}`,
-      label: 'In burger menu'
+      label: "In burger menu",
     });
   }
 
   useEffect(() => {
-    const burgerMenuDisplayValue = hideBurgerMenu ? 'display-none' : 'display-block';
+    const burgerMenuDisplayValue = hideBurgerMenu
+      ? "display-none"
+      : "display-block";
     setBurgerMenuDisplay(burgerMenuDisplayValue);
   }, [hideBurgerMenu]);
 
   return (
     <nav role="navigation">
-      <div id="menuToggle" className="animated fadeInUp">
-        <input type="checkbox" id="checkbox" className={`${burgerMenuDisplay}`} onClick={onBurgerMenuClicked}/>
-        <label htmlFor="checkbox"/>
-        <span/>
-        <span/>
-        <span/>
+      <div
+        id="menuToggle"
+        className="animation-setup fade-in-upwards-animation"
+      >
+        <input
+          type="checkbox"
+          id="checkbox"
+          className={`${burgerMenuDisplay}`}
+          onClick={onBurgerMenuClicked}
+        />
+        <label htmlFor="checkbox" />
+        <span />
+        <span />
+        <span />
         <ul id="menu" className={`${burgerMenuDisplay}`}>
           <li className="top">
             <nav className="menu-items-container">
-              {menuItems.map(item => {
+              {menuItems.map((item) => {
                 return (
-                  <ul key={item.name} className="list" title={`${item.name}`} onClick={() => {onPageClicked(item.page);}}>
-                    <li className={`list ${item.page === activePage ? 'active' : ''}`}>{item.name}</li>
+                  <ul
+                    key={item.name}
+                    className="list"
+                    title={`${item.name}`}
+                    onClick={() => {
+                      onPageClicked(item.page);
+                    }}
+                  >
+                    <li
+                      className={`list ${
+                        item.page === activePage ? "active" : ""
+                      }`}
+                    >
+                      {item.name}
+                    </li>
                   </ul>
                 );
               })}
@@ -74,14 +96,27 @@ function BurgerMenu() {
           <li className="bottom">
             <p>Available for new web projects, contact me!</p>
             <div className="icons">
-              <a href="https://www.linkedin.com/in/stephanie-alix/" target="_blank" rel="noopener noreferrer" title="linkedin logo" onClick={() => {onIconClick('Linkedin');}}>
-                <LinkedinIcon/>
+              <a
+                href="https://www.linkedin.com/in/stephanie-alix/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="linkedin logo"
+                onClick={() => {
+                  onIconClick("Linkedin");
+                }}
+              >
+                <LinkedinIcon />
               </a>
-              <a href="https://github.com/alix2018" target="_blank" rel="noopener noreferrer" title="github logo" onClick={() => {onIconClick('Github');}}>
-                <GithubIcon/>
-              </a>
-              <a href="https://twitter.com/StephanieAlix95" target="_blank" rel="noopener noreferrer" title="twitter logo" onClick={() => {onIconClick('Twitter');}}>
-                <TwitterIcon/>
+              <a
+                href="https://github.com/alix2018"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="github logo"
+                onClick={() => {
+                  onIconClick("Github");
+                }}
+              >
+                <GithubIcon />
               </a>
             </div>
           </li>

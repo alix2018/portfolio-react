@@ -1,7 +1,7 @@
-import React, {useState, useEffect} from 'react';
-import './Typewriter.css';
+import React, { useState, useEffect } from "react";
+import "./Typewriter.css";
 
-function Typewriter({texts}) {
+function Typewriter({ texts }) {
   const [isDeleting, setIsDeleting] = useState(true);
   const [text, setText] = useState(texts[0]);
   const [delta, setDelta] = useState(0);
@@ -25,7 +25,7 @@ function Typewriter({texts}) {
     if (!isDeleting && text === fullText) {
       setDelta(timeBeforeDeleting);
       setIsDeleting(true);
-    } else if (isDeleting && text === '') {
+    } else if (isDeleting && text === "") {
       setIsDeleting(false);
       setDelta(timeBeforeWriting);
       setTextIndex((textIndex + 1) % texts.length);
@@ -44,8 +44,11 @@ function Typewriter({texts}) {
   }, [isTicking, start]);
 
   return (
-    <h1 className="typewriter animated fadeInUp">{text}
-      <span className="cursor blink animated fadeInUp">|</span>
+    <h1 className="typewriter animation-setup fade-in-upwards-animation">
+      {text}
+      <span className="cursor blink-animation animation-setup fade-in-upwards-animation">
+        |
+      </span>
     </h1>
   );
 }

@@ -1,80 +1,108 @@
-import React from 'react';
-import ReactGA from 'react-ga';
-import './Modal.css';
+import React from "react";
+import ReactGA from "react-ga";
+import "./Modal.css";
 
-function Modal({showModal, closeModal, listSubtitles, modalInfo, isMobile, children}) {
-  const showHideClassName = showModal ? 'modal display-block' : 'modal display-none';
+function Modal({
+  showModal,
+  closeModal,
+  listSubtitles,
+  modalInfo,
+  isMobile,
+  children,
+}) {
+  const showHideClassName = showModal
+    ? "modal display-block"
+    : "modal display-none";
 
-  const menuBar = document.querySelector('ul.menu-effect');
+  const menuBar = document.querySelector("ul.menu-effect");
   if (menuBar && showModal) {
-    menuBar.style.pointerEvents = 'none';
+    menuBar.style.pointerEvents = "none";
   }
 
   setTimeout(() => {
     if (!isMobile) {
-      const pageOneClass = '#container2 .' + modalInfo.modalName + '.box .page-one';
+      const pageOneClass =
+        "#container2 ." + modalInfo.modalName + ".box .page-one";
       const currentAnchor = document.querySelector(pageOneClass);
       currentAnchor.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
+        behavior: "smooth",
+        block: "start",
       });
     }
   }, 1);
 
   function onRightArrowClicked() {
     ReactGA.event({
-      category: 'Click',
-      action: 'Click on right arrow',
-      label: `${modalInfo.modalName}`
+      category: "Click",
+      action: "Click on right arrow",
+      label: `${modalInfo.modalName}`,
     });
     const pageTwoClass = `#container2 .${modalInfo.modalName}.box .page-two`;
     const currentAnchor = document.querySelector(pageTwoClass);
     currentAnchor.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
+      behavior: "smooth",
+      block: "start",
     });
   }
 
   function onBottomArrowClicked() {
     ReactGA.event({
-      category: 'Click',
-      action: 'Click on bottom arrow',
-      label: `${modalInfo.modalName}`
+      category: "Click",
+      action: "Click on bottom arrow",
+      label: `${modalInfo.modalName}`,
     });
-    const currentAnchor = document.querySelector(`.${modalInfo.modalName}.page-two-mobile`);
+    const currentAnchor = document.querySelector(
+      `.${modalInfo.modalName}.page-two-mobile`
+    );
     currentAnchor.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
+      behavior: "smooth",
+      block: "start",
     });
   }
 
   return (
     <div className={showHideClassName}>
       <section className="modal-main">
-        <img alt="close cross" className="close" src="../../../public/assets/icons/cross.svg" onClick={closeModal}/>
-        {isMobile &&
+        <img
+          alt="close cross"
+          className="close"
+          src="../../../public/assets/icons/cross.svg"
+          onClick={closeModal}
+        />
+        {isMobile && (
           <div className="main-info">
             <section className="page-one-mobile">
-              <img className={`${modalInfo.imageName}`}
+              <img
+                className={`${modalInfo.imageName}`}
                 src={`../../../public/assets/${modalInfo.imageName}-mobile.png`}
-                alt={`${modalInfo.firstTitle} ${modalInfo.secondTitle}`}/>
+                alt={`${modalInfo.firstTitle} ${modalInfo.secondTitle}`}
+              />
               <div className="modal-titles">
-                <h1>{modalInfo.firstTitle}<br/>
+                <h1>
+                  {modalInfo.firstTitle}
+                  <br />
                   {modalInfo.secondTitle}
                 </h1>
-                <h2>{modalInfo.firstSubtitle}<br/>
+                <h2>
+                  {modalInfo.firstSubtitle}
+                  <br />
                   {modalInfo.secondSubtitle}
                 </h2>
               </div>
-              <img className="arrow bouncing-top-bottom" src="../../../public/assets/icons/arrow-bottom.svg" alt="arrow to the right" onClick={onBottomArrowClicked}/>
+              <img
+                className="arrow bounce-top-bottom-animation"
+                src="../../../public/assets/icons/arrow-bottom.svg"
+                alt="arrow to the right"
+                onClick={onBottomArrowClicked}
+              />
             </section>
             <section className={`page-two-mobile ${modalInfo.modalName}`}>
               <div className="categories-list">
-                {listSubtitles.map(item => {
+                {listSubtitles.map((item) => {
                   return (
                     <div key={item.category} className="map-categories">
                       <div className="container-categories">
-                        <div className="line-categories"/>
+                        <div className="line-categories" />
                         <div className="categories">{item.category}</div>
                       </div>
                       <div className="details">{item.details}</div>
@@ -85,24 +113,28 @@ function Modal({showModal, closeModal, listSubtitles, modalInfo, isMobile, child
               {children}
             </section>
           </div>
-        }
-        {!isMobile &&
+        )}
+        {!isMobile && (
           <div id="container1">
             <div id="container2">
               <div className={`${modalInfo.modalName} box`}>
                 <section className="page-one">
                   <div className="main-info">
-                    <h1>{modalInfo.firstTitle}<br/>
+                    <h1>
+                      {modalInfo.firstTitle}
+                      <br />
                       {modalInfo.secondTitle}
                     </h1>
-                    <h2>{modalInfo.firstSubtitle}<br/>
+                    <h2>
+                      {modalInfo.firstSubtitle}
+                      <br />
                       {modalInfo.secondSubtitle}
                     </h2>
-                    {listSubtitles.map(item => {
+                    {listSubtitles.map((item) => {
                       return (
                         <div key={item.category} className="map-categories">
                           <div className="container-categories">
-                            <div className="line-categories"/>
+                            <div className="line-categories" />
                             <div className="categories">{item.category}</div>
                           </div>
                           <div className="details">{item.details}</div>
@@ -110,16 +142,23 @@ function Modal({showModal, closeModal, listSubtitles, modalInfo, isMobile, child
                       );
                     })}
                   </div>
-                  <img className={`${modalInfo.imageName}`}
+                  <img
+                    className={`${modalInfo.imageName}`}
                     src={`../../../public/assets/${modalInfo.imageName}-desktop.png`}
-                    alt={`${modalInfo.firstTitle} ${modalInfo.secondTitle}`}/>
+                    alt={`${modalInfo.firstTitle} ${modalInfo.secondTitle}`}
+                  />
                 </section>
-                <img className="arrow bouncing-left-right" src="../../../public/assets/icons/arrow-right.svg" alt="arrow to the right" onClick={onRightArrowClicked}/>
+                <img
+                  className="arrow bounce-left-right-animation"
+                  src="../../../public/assets/icons/arrow-right.svg"
+                  alt="arrow to the right"
+                  onClick={onRightArrowClicked}
+                />
               </div>
               {children}
             </div>
           </div>
-        }
+        )}
       </section>
     </div>
   );

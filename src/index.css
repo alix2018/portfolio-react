@@ -13,12 +13,15 @@
   --font-poppins-bold: "Poppins Bold", sans-serif;
   --font-poppins-extra-bold: "Poppins Extra Bold", sans-serif;
   --line-width: 40px;
-  --bottom-spacing-desktop: 50px;
 
   /* TODO: One variable that changes per screen */
   --margin-side-desktop: 6vw;
   --margin-side-tablet: 70px;
   --margin-side-mobile: 30px;
+
+  /* FIX: Same as top spacing for menu */
+  --vertical-spacing-desktop: 40px;
+  --vertical-spacing-mobile: 30px;
 }
 
 @font-face {
@@ -120,20 +123,50 @@ b {
 }
 
 /* TODO: Rename global css class name to gl- => gl-left-panel */
-.left {
+.gl-left-panel {
+  position: relative;
   height: 100vh;
   float: left;
   width: var(--width-left-column);
   background-color: var(--first-color-light);
 }
 
+.gl-right-panel {
+  position: relative;
+  height: 100vh;
+  float: right;
+  width: var(--width-right-colum);
+  background-color: var(--second-color-dark);
+}
+
+/* Desktop, tablet and mobile responsiveness */
+.tablet,
+.mobile {
+  display: none !important;
+}
+
+.desktop {
+  display: flex !important;
+}
+
 @media only screen and (max-width: 1024px) {
-  .left {
-    /* width: 100%; */
+  .desktop,
+  .mobile {
+    display: none !important;
   }
 
-  .right {
-    /* height: auto;
-    width: 100%; */
+  .tablet {
+    display: flex !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .tablet,
+  .desktop {
+    display: none !important;
+  }
+
+  .mobile {
+    display: flex !important;
   }
 }

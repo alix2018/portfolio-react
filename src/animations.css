@@ -1,15 +1,12 @@
-/* TODO: Move this to index.css */
-/* Global CSS */
-section.home,
-section.portfolio,
-section.about-me,
-section.contact {
-  margin: 0;
+/* Animations */
+
+.animation-setup {
+  animation-duration: 1s;
+  animation-fill-mode: both;
 }
 
-/* Fade in animation */
-
-@keyframes fadeInUp {
+/* Elements fading in and going up */
+@keyframes fade-in-upwards {
   from {
     transform: translate3d(0, 50px, 0);
   }
@@ -20,19 +17,13 @@ section.contact {
   }
 }
 
-.animated {
-  animation-duration: 1s;
-  animation-fill-mode: both;
-}
-
-.fadeInUp {
+.fade-in-upwards-animation {
   opacity: 0;
-  animation-name: fadeInUp;
+  animation-name: fade-in-upwards;
 }
 
-/* Blink animation */
-
-@keyframes blinker {
+/* Elements blinking */
+@keyframes blink {
   from,
   49.9% {
     opacity: 1;
@@ -44,25 +35,24 @@ section.contact {
   }
 }
 
-.blink {
-  animation-name: blinker;
+.blink-animation {
+  animation-name: blink;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-delay: 0s;
 }
 
-/* Loading lines from left to right animation */
-
+/* Elements content loading from left to right */
 @keyframes loading {
   to {
     background-size: 100% 100%;
   }
 }
 
-/* Arrow moving from left to right */
+/* Elements moving from left to right */
 
-@keyframes bounceLeftRight {
+@keyframes bounce-left-right {
   0% {
     transform: translateX(0);
   }
@@ -76,23 +66,16 @@ section.contact {
   }
 }
 
-.bouncing-left-right {
-  animation-name: bounceLeftRight;
+.bounc-left-right-animation {
+  animation-name: bounce-left-right;
   animation-duration: 0.8s;
   animation-iteration-count: infinite;
   animation-timing-function: ease;
 }
 
-.bouncing-top-bottom {
-  animation-name: bounceTopBottom;
-  animation-duration: 0.8s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease;
-}
+/* Element boucing up and down */
 
-/* Scrolling arrows boucing */
-
-@keyframes bounceTopBottom {
+@keyframes bounce-top-bottom {
   0% {
     transform: translateY(0);
   }
@@ -106,24 +89,16 @@ section.contact {
   }
 }
 
-.smooth-apparition {
-  animation-name: smoothApparition;
-  animation-duration: 0.5s;
-  animation-iteration-count: 1;
-  animation-delay: 5s;
-}
-
-.scrolling-animation {
-  opacity: 0;
-  animation-name: smoothApparition, bounceTopBottom;
-  animation-duration: 0.5s, 0.8s;
-  animation-iteration-count: 1, infinite;
+.bounce-top-bottom-animation {
+  animation-name: bounce-top-bottom;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
   animation-timing-function: ease;
-  animation-delay: 2s;
-  animation-fill-mode: forwards, none;
 }
 
-@keyframes smoothApparition {
+/* Elements appearing with stronger opacity */
+
+@keyframes smooth-apparition {
   from {
     opacity: 0;
   }
@@ -131,4 +106,22 @@ section.contact {
   to {
     opacity: 0.7;
   }
+}
+
+.smooth-apparition-animation {
+  animation-name: smooth-apparition;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-delay: 5s;
+}
+
+/* Elements appearing with stronger opacity and boucing at the same time */
+.scrolling-animation {
+  opacity: 0;
+  animation-name: smooth-apparition, bounce-top-bottom;
+  animation-duration: 0.5s, 0.8s;
+  animation-iteration-count: 1, infinite;
+  animation-timing-function: ease;
+  animation-delay: 2s;
+  animation-fill-mode: forwards, none;
 }

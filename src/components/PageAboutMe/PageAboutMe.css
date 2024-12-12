@@ -56,7 +56,9 @@ section.about-me {
   }
 
   h1.bottom {
-    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
   }
 
   h3::before {
@@ -102,16 +104,6 @@ section.about-me {
   .card p {
     margin: 20px;
   }
-
-  /* TODO: Move to index.css */
-  .tablet,
-  .mobile {
-    display: none;
-  }
-
-  .desktop {
-    display: block;
-  }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -119,7 +111,7 @@ section.about-me {
     display: flex;
     flex-direction: column-reverse;
 
-    .right-panel {
+    .gl-right-panel {
       height: auto;
       min-height: auto;
       float: unset;
@@ -162,7 +154,7 @@ section.about-me {
       text-align: center;
     }
 
-    .left-panel {
+    .gl-left-panel {
       margin-left: auto;
       margin-right: auto;
       position: relative;
@@ -172,7 +164,7 @@ section.about-me {
       background-color: unset;
     }
 
-    .left-panel::before {
+    .gl-left-panel::before {
       content: "";
       position: absolute;
       top: 0;
@@ -183,7 +175,7 @@ section.about-me {
       z-index: -1;
     }
 
-    .left-panel::after {
+    .gl-left-panel::after {
       content: "";
       position: absolute;
       bottom: 0;
@@ -242,37 +234,5 @@ section.about-me {
     .profile-img {
       width: 100%;
     }
-  }
-}
-
-/* TODO: Move to index.css */
-.tablet,
-.mobile {
-  display: none;
-}
-
-.desktop {
-  display: block;
-}
-
-@media only screen and (max-width: 1024px) {
-  .desktop,
-  .mobile {
-    display: none;
-  }
-
-  .tablet {
-    display: block;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .tablet,
-  .desktop {
-    display: none;
-  }
-
-  .mobile {
-    display: block;
   }
 }

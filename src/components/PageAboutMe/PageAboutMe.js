@@ -10,8 +10,8 @@ function PageAboutMe() {
 
   return (
     <section id="about-me" className="about-me">
-      {/* Rename left class to left-panel */}
-      <section className="left left-panel img-container">
+      <section className="gl-left-panel img-container">
+        {/* TODO: Align image with Stéphanie Alix sticky text */}
         <img
           src={isImgHovered ? profileImgHover : profileImg}
           alt="Stéphanie Alix picture Portfolio Web profile 1"
@@ -20,7 +20,7 @@ function PageAboutMe() {
           onMouseLeave={() => setIsImgHovered(false)}
         />
       </section>
-      <article className="right right-panel">
+      <article className="gl-right-panel">
         <div className="content">
           <h1 className="top mobile">
             About <span>me</span>
