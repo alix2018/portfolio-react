@@ -1,148 +1,98 @@
 import React, { useState, useEffect } from "react";
 import "./PagePortfolio.css";
+import wasteSaverPlatformMockup from "@/assets/work-waste-saver-platform-mockup.png";
+import partnerPortalMockup from "@/assets/work-partner-portal-mockup.png";
+import pwaMockup from "@/assets/work-pwa-mockup.png";
+import gamesMockup from "@/assets/work-2d-games-mockup.png";
 import ReactGA from "react-ga";
-import Pwa from "../Modals/ModalPwa/ModalPwa";
-import RetailerPortal from "../Modals/ModalRePo/ModalRePo";
-import Games from "../Modals/ModalGames/ModalGames";
-import Chatbot from "../Modals/ModalChatbot/ModalChatbot";
-import DisplayProjectTitles from "./DisplayProjectTitles";
-import DisplayCarousel from "./DisplayCarousel";
-
-import "../../scroll-snap-polyfill";
+import DisplayProjectNames from "./DisplayProjectNames";
 
 function PagePortfolio() {
-  const projectsList = [
+  const workProjectsList = [
     {
       id: 1,
-      class: "pwa",
-      name: "Progressive Web Apps",
+      image: wasteSaverPlatformMockup,
+      name: "Waste Saver Platform",
     },
     {
       id: 2,
-      class: "retailer-portal",
-      name: "Retailer Portal",
+      image: partnerPortalMockup,
+      name: "Partner Portal",
     },
     {
       id: 3,
-      class: "games",
-      name: "2D Games",
+      image: pwaMockup,
+      name: "Progressive Web Apps",
     },
     {
       id: 4,
-      class: "facebook-chatbot",
-      name: "Facebook Chatbot",
+      image: gamesMockup,
+      name: "2D Games",
     },
   ];
 
-  const projects = projectsList.map((element) => element.class);
-  const [projectsArray, setProjectsArray] = useState(projects);
+  const personalProjectsList = [
+    {
+      id: 1,
+      class: "list-up",
+      name: "List up!",
+    },
+    {
+      id: 2,
+      class: "lwfp",
+      name: "Less Waste For the Planet",
+    },
+    {
+      id: 3,
+      class: "worldmappie",
+      name: "WorldMappie",
+    },
+    {
+      id: 4,
+      class: "portfolio",
+      name: "Portfolio",
+    },
+  ];
+
+  const [projectsList, setProjectsList] = useState(workProjectsList);
+  const [projectImages, setProjectImages] = useState(projectsList);
   const [activeProject, setActiveProject] = useState(projectsList[0]);
-  const [showModal, setShowModal] = useState("");
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
 
-  function openModal(project) {
-    setShowModal(project);
-    const burgerMenu = document.querySelector("#menuToggle");
-
-    if (projects.includes(project)) {
-      history.pushState(null, null, `?project=${project}`);
-      ReactGA.pageview(`${project}`);
-      burgerMenu.style.visibility = "hidden";
-    } else {
-      history.pushState(null, null, "/");
-      burgerMenu.style.visibility = "visible";
-      const menuBar = document.querySelector("ul.menu-effect");
-      menuBar.style.pointerEvents = "visible";
-    }
-  }
-
-  function updateProjectsArray(currentProject) {
-    if (activeProject.class === currentProject.class) {
-      openModal(currentProject.class);
-      return;
-    }
-
-    setActiveProject(currentProject);
-    const differenceBetween = currentProject.id - activeProject.id;
-    const projectsLength = projectsArray.length;
-    const newArray = projectsArray.map((_p, index, arr) => {
-      return arr[(projectsLength + index + differenceBetween) % projectsLength];
+  function updateActiveProject(selectedProject) {
+    setActiveProject(selectedProject);
+    const shiftAmount = selectedProject.id - activeProject.id;
+    const updatedProjectImages = projectImages.map((_, index, arr) => {
+      return arr[(index + shiftAmount + arr.length) % arr.length];
     });
-    setProjectsArray(newArray);
+    setProjectImages(updatedProjectImages);
   }
-
-  useEffect(() => {
-    window.addEventListener("resize", () => {
-      setIsMobile(window.innerWidth <= 1024);
-    });
-    const url = window.location.search;
-    if (url.substring(0, 9) === "?project=") {
-      const query = url.split("=")[1];
-      openModal(query);
-    }
-  }, []);
 
   return (
     <section id="portfolio" className="portfolio">
-      {isMobile && (
-        <DisplayCarousel projectsList={projectsList} openModal={openModal} />
-      )}
-      {!isMobile && (
-        <div id="desktop-carousel">
-          <div className="gl-left-panel">
-            <div className="titles">
-              <DisplayProjectTitles
-                projectsList={projectsList}
-                activeProject={activeProject}
-                updateProjectsArray={updateProjectsArray}
+      <section className="gl-left-panel">
+        <DisplayProjectNames
+          projectsList={projectsList}
+          activeProject={activeProject}
+          updateActiveProject={updateActiveProject}
+        />
+      </section>
+      <section className="gl-right-panel">
+        {projectImages.map((project) => {
+          return (
+            <div className="image-container">
+              <img
+                key={project.name}
+                className="project-image"
+                src={project.image}
+                alt={project.name}
+                onClick={() => {
+                  console.log("Open modal!");
+                }}
               />
             </div>
-          </div>
-          <div className="gl-right-panel">
-            {projectsArray.map((project) => {
-              return (
-                <img
-                  key={project}
-                  className="isometric"
-                  src={`../../../public/assets/${project}-mobile.png`}
-                  alt={`${project}`}
-                  onClick={() => {
-                    openModal(project);
-                  }}
-                />
-              );
-            })}
-          </div>
-        </div>
-      )}
-      <Pwa
-        showModal={showModal === "pwa"}
-        closeModal={() => {
-          openModal("");
-        }}
-        isMobile={isMobile}
-      />
-      <RetailerPortal
-        showModal={showModal === "retailer-portal"}
-        closeModal={() => {
-          openModal("");
-        }}
-        isMobile={isMobile}
-      />
-      <Games
-        showModal={showModal === "games"}
-        closeModal={() => {
-          openModal("");
-        }}
-        isMobile={isMobile}
-      />
-      <Chatbot
-        showModal={showModal === "facebook-chatbot"}
-        closeModal={() => {
-          openModal("");
-        }}
-        isMobile={isMobile}
-      />
+          );
+        })}
+      </section>
     </section>
   );
 }

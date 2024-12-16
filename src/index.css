@@ -74,9 +74,11 @@ button {
   -webkit-tap-highlight-color: transparent;
 }
 
-h1 {
+h1,
+.heading-styles {
   margin: 0;
   font-size: 40px;
+  line-height: 1;
   font-family: var(--font-poppins-medium);
   color: var(--first-color-light);
 }
