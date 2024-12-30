@@ -4,6 +4,10 @@ import wasteSaverPlatformMockup from "@/assets/work-waste-saver-platform-mockup.
 import partnerPortalMockup from "@/assets/work-partner-portal-mockup.png";
 import pwaMockup from "@/assets/work-pwa-mockup.png";
 import gamesMockup from "@/assets/work-2d-games-mockup.png";
+import listUpMockup from "@/assets/perso-list-up-mockup.png";
+import lwfpMockup from "@/assets/perso-lwfp-mockup.png";
+import worldmappieMockup from "@/assets/perso-worldmappie-mockup.png";
+import portfolioMockup from "@/assets/perso-portfolio-mockup.png";
 import ReactGA from "react-ga";
 import DisplayProjectNames from "./DisplayProjectNames";
 
@@ -34,27 +38,28 @@ function PagePortfolio() {
   const personalProjectsList = [
     {
       id: 1,
-      class: "list-up",
+      image: listUpMockup,
       name: "List up!",
     },
     {
       id: 2,
-      class: "lwfp",
+      image: lwfpMockup,
       name: "Less Waste For the Planet",
     },
     {
       id: 3,
-      class: "worldmappie",
+      image: worldmappieMockup,
       name: "WorldMappie",
     },
     {
       id: 4,
-      class: "portfolio",
+      image: portfolioMockup,
       name: "Portfolio",
     },
   ];
 
   const [projectsList, setProjectsList] = useState(workProjectsList);
+  const [selectedTab, setSelectedTab] = useState("work");
   const [projectImages, setProjectImages] = useState(projectsList);
   const [activeProject, setActiveProject] = useState(projectsList[0]);
 
@@ -67,14 +72,52 @@ function PagePortfolio() {
     setProjectImages(updatedProjectImages);
   }
 
+  function switchTab(selectedTab) {
+    console.log("selectedTab", selectedTab);
+    if (selectedTab === "work") {
+      setProjectsList(workProjectsList);
+      setProjectImages(workProjectsList);
+      setActiveProject(workProjectsList[0]);
+    } else {
+      setProjectsList(personalProjectsList);
+      setProjectImages(personalProjectsList);
+      setActiveProject(personalProjectsList[0]);
+    }
+    setSelectedTab(selectedTab);
+  }
+
   return (
     <section id="portfolio" className="portfolio">
       <section className="gl-left-panel">
-        <DisplayProjectNames
-          projectsList={projectsList}
-          activeProject={activeProject}
-          updateActiveProject={updateActiveProject}
-        />
+        <div className="projects-list">
+          <div className="tabs">
+            <a
+              className={`styled-button ${
+                selectedTab === "work" ? "active" : ""
+              }`}
+              onClick={() => {
+                switchTab("work");
+              }}
+            >
+              Work
+            </a>
+            <a
+              className={`styled-button ${
+                selectedTab === "perso" ? "active" : ""
+              }`}
+              onClick={() => {
+                switchTab("perso");
+              }}
+            >
+              Perso
+            </a>
+          </div>
+          <DisplayProjectNames
+            projectsList={projectsList}
+            activeProject={activeProject}
+            updateActiveProject={updateActiveProject}
+          />
+        </div>
       </section>
       <section className="gl-right-panel">
         {projectImages.map((project) => {

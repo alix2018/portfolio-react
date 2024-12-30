@@ -1,12 +1,11 @@
 .project-names {
-  margin-top: 20px; /* TODO: center content on the page and deducting menu page - same on about page */
-  height: 100%;
+  margin-top: 40px; /* TODO: center content on the page and deducting menu page - same on about page */
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: flex-end;
   text-align: right;
   gap: 40px;
+  height: 50%;
 
   .project-name {
     position: relative;
@@ -15,7 +14,6 @@
   a {
     display: block;
     max-width: 280px;
-    cursor: pointer;
   }
 
   a.active {

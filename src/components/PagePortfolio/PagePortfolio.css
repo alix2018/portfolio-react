@@ -8,7 +8,18 @@
   }
 
   .projects-list {
-    float: right;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .tabs {
+    display: flex;
+    gap: 20px;
+    text-transform: uppercase;
+    font-size: 18px;
   }
 
   .gl-right-panel {
