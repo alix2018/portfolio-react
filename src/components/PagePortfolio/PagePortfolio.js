@@ -10,6 +10,8 @@ import worldmappieMockup from "@/assets/perso-worldmappie-mockup.png";
 import portfolioMockup from "@/assets/perso-portfolio-mockup.png";
 import ReactGA from "react-ga";
 import DisplayProjectNames from "./DisplayProjectNames";
+import SwiperCarousel from "./SwiperCarousel";
+import { useScreenSize } from "@/hooks";
 
 function PagePortfolio() {
   const workProjectsList = [
@@ -62,6 +64,7 @@ function PagePortfolio() {
   const [selectedTab, setSelectedTab] = useState("work");
   const [projectImages, setProjectImages] = useState(projectsList);
   const [activeProject, setActiveProject] = useState(projectsList[0]);
+  const isDesktop = useScreenSize();
 
   function updateActiveProject(selectedProject) {
     setActiveProject(selectedProject);
@@ -88,54 +91,67 @@ function PagePortfolio() {
 
   return (
     <section id="portfolio" className="portfolio">
-      <section className="gl-left-panel">
-        <div className="projects-list">
-          <div className="tabs">
-            <a
-              className={`styled-button ${
-                selectedTab === "work" ? "active" : ""
-              }`}
-              onClick={() => {
-                switchTab("work");
-              }}
-            >
-              Work
-            </a>
-            <a
-              className={`styled-button ${
-                selectedTab === "perso" ? "active" : ""
-              }`}
-              onClick={() => {
-                switchTab("perso");
-              }}
-            >
-              Perso
-            </a>
-          </div>
-          <DisplayProjectNames
-            projectsList={projectsList}
-            activeProject={activeProject}
-            updateActiveProject={updateActiveProject}
-          />
-        </div>
-      </section>
-      <section className="gl-right-panel">
-        {projectImages.map((project) => {
-          return (
-            <div className="image-container">
-              <img
-                key={project.name}
-                className="project-image"
-                src={project.image}
-                alt={project.name}
-                onClick={() => {
-                  console.log("Open modal!");
-                }}
+      {isDesktop && (
+        <>
+          <section className="gl-left-panel">
+            <div className="projects-list">
+              <div className="tabs">
+                <a
+                  className={`styled-button ${
+                    selectedTab === "work" ? "active" : ""
+                  }`}
+                  onClick={() => {
+                    switchTab("work");
+                  }}
+                >
+                  Work
+                </a>
+                <a
+                  className={`styled-button ${
+                    selectedTab === "perso" ? "active" : ""
+                  }`}
+                  onClick={() => {
+                    switchTab("perso");
+                  }}
+                >
+                  Perso
+                </a>
+              </div>
+              <DisplayProjectNames
+                projectsList={projectsList}
+                activeProject={activeProject}
+                updateActiveProject={updateActiveProject}
               />
             </div>
-          );
-        })}
-      </section>
+          </section>
+
+          <section className="gl-right-panel" isDesktop={false}>
+            {/* TODO: Add arrow icon */}
+            {/* TODO: Add animation on hover */}
+            {projectImages.map((project) => {
+              return (
+                <div className="tile">
+                  <img
+                    key={project.name}
+                    className="project-image"
+                    src={project.image}
+                    alt={project.name}
+                    onClick={() => {
+                      console.log("Open modal!");
+                    }}
+                  />
+                </div>
+              );
+            })}
+          </section>
+        </>
+      )}
+
+      {!isDesktop && (
+        <section className="carousel mobile tablet">
+          <SwiperCarousel projectsList={projectImages}></SwiperCarousel>
+        </section>
+      )}
     </section>
   );
 }

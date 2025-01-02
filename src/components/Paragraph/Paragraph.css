@@ -18,11 +18,10 @@ article.paragraph {
 }
 
 .line-context {
-  width: var(--line-width);
+  width: var(--line-length);
   height: 1px;
   right: 10px;
   margin: 10px 0 20px 0;
-  background: var(--white-color);
 }
 
 article.paragraph p {

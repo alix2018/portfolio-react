@@ -12,7 +12,7 @@
   --font-poppins-semibold: "Poppins SemiBold", sans-serif;
   --font-poppins-bold: "Poppins Bold", sans-serif;
   --font-poppins-extra-bold: "Poppins Extra Bold", sans-serif;
-  --line-width: 40px;
+  --line-length: 40px;
 
   /* TODO: One variable that changes per screen */
   --margin-side-desktop: 6vw;
@@ -56,8 +56,9 @@ body {
 }
 
 div[class^="line"] {
-  width: var(--line-width);
+  width: var(--line-length);
   height: 2px;
+  background-color: var(--first-color-light);
 }
 
 button {
@@ -161,6 +162,7 @@ a {
 }
 
 /* Desktop, tablet and mobile responsiveness */
+/* TODO: use the composable */
 .tablet,
 .mobile {
   display: none !important;

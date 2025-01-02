@@ -21,7 +21,7 @@
   }
 
   .index,
-  .line {
+  .line-projects {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -34,7 +34,7 @@
     color: var(--first-color-light);
   }
 
-  .line {
+  .line-projects {
     width: 90px;
     background-color: var(--first-color-light);
     right: -170px;

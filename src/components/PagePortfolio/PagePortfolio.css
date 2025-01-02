@@ -13,6 +13,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
+    padding-left: 20px;
   }
 
   .tabs {
@@ -24,55 +25,55 @@
 
   .gl-right-panel {
     background-color: var(--second-color-dark);
-  }
 
-  .image-container {
-    position: absolute;
-    top: calc(
-      50% + 20px
-    ); /* TODO: center content on the page and deducting menu page - same on about page */
-    transform: translateY(-50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 75%;
-    object-fit: cover;
-    background-color: var(--white-color);
-    width: 400px; /* TODO: EXport images with same size */
-  }
+    .tile {
+      position: absolute;
+      top: calc(
+        50% + 20px
+      ); /* TODO: center content on the page and deducting menu page - same on about page */
+      transform: translateY(-50%);
+      height: 75%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      object-fit: contain;
+      background-color: var(--white-color);
+      width: 50%; /* TODO: Export images with same size */
+    }
 
-  img {
-    height: auto;
-    width: 100%;
-  }
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
 
-  .image-container:nth-child(1) {
-    left: var(--carousel-slide-width);
-    z-index: 10;
-    cursor: pointer;
-  }
+    .tile:nth-child(1) {
+      left: var(--carousel-slide-width);
+      z-index: 10;
+      cursor: pointer;
+    }
 
-  .image-container:nth-child(2) {
-    z-index: 9;
-    left: calc(var(--carousel-slide-width) + 45px);
-    height: calc(75% - 45px);
-    background-color: #d1d5d8;
-    pointer-events: none;
-  }
+    .tile:nth-child(2) {
+      z-index: 9;
+      left: calc(var(--carousel-slide-width) + 45px);
+      height: calc(75% - 45px);
+      background-color: #d1d5d8;
+      pointer-events: none;
+    }
 
-  .image-container:nth-child(3) {
-    z-index: 8;
-    left: calc(var(--carousel-slide-width) + 90px);
-    height: calc(75% - 90px);
-    background-color: #a4aab1;
-    pointer-events: none;
-  }
+    .tile:nth-child(3) {
+      z-index: 8;
+      left: calc(var(--carousel-slide-width) + 90px);
+      height: calc(75% - 90px);
+      background-color: #a4aab1;
+      pointer-events: none;
+    }
 
-  .image-container:nth-child(4) {
-    z-index: 7;
-    left: calc(var(--carousel-slide-width) + 135px);
-    height: calc(75% - 135px);
-    background-color: #76808a;
-    pointer-events: none;
+    .tile:nth-child(4) {
+      z-index: 7;
+      left: calc(var(--carousel-slide-width) + 135px);
+      height: calc(75% - 135px);
+      background-color: #76808a;
+      pointer-events: none;
+    }
   }
 }

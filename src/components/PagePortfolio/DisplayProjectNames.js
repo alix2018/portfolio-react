@@ -27,7 +27,7 @@ function DisplayProjectNames({
                 {project.name}
               </a>
               <p className="index">0{index + 1}</p>
-              {isActive && <div className="line" />}
+              {isActive && <div className="line-projects" />}
             </div>
           </React.Fragment>
         );
