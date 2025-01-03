@@ -1,6 +1,4 @@
 .swiper-carousel {
-  padding-top: 20px;
-  padding-bottom: 150px;
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -9,6 +7,7 @@
   -ms-overflow-style: none; /* TODO: Check if still necessary */
   background-color: var(--second-color-dark);
   gap: var(--margin-side-tablet);
+  margin-top: 50px;
 
   .slide {
     scroll-snap-align: center;
@@ -66,12 +65,12 @@
 
 @media only screen and (max-width: 767px) {
   .swiper-carousel {
+    margin-top: 40px;
+
     gap: var(--margin-side-mobile);
-    padding-top: 50px;
-    padding-bottom: 100px;
 
     img {
-      width: 80vw;
+      width: var(--swiper-carousel-slide-width-mobile);
     }
 
     .slide:first-of-type {

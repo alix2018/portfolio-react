@@ -10,6 +10,7 @@ import worldmappieMockup from "@/assets/perso-worldmappie-mockup.png";
 import portfolioMockup from "@/assets/perso-portfolio-mockup.png";
 import ReactGA from "react-ga";
 import DisplayProjectNames from "./DisplayProjectNames";
+import ProjectSwitcher from "./ProjectSwitcher";
 import SwiperCarousel from "./SwiperCarousel";
 import { useScreenSize } from "@/hooks";
 
@@ -61,10 +62,25 @@ function PagePortfolio() {
   ];
 
   const [projectsList, setProjectsList] = useState(workProjectsList);
-  const [selectedTab, setSelectedTab] = useState("work");
   const [projectImages, setProjectImages] = useState(projectsList);
   const [activeProject, setActiveProject] = useState(projectsList[0]);
+  const WORK = "work";
+  const PERSO = "perso";
+  const projectTabs = [WORK, PERSO];
+  const [selectedTab, setSelectedTab] = useState(projectTabs[0]);
   const isDesktop = useScreenSize();
+
+  useEffect(() => {
+    if (selectedTab === WORK) {
+      setProjectsList(workProjectsList);
+      setProjectImages(workProjectsList);
+      setActiveProject(workProjectsList[0]);
+    } else {
+      setProjectsList(personalProjectsList);
+      setProjectImages(personalProjectsList);
+      setActiveProject(personalProjectsList[0]);
+    }
+  }, [selectedTab]);
 
   function updateActiveProject(selectedProject) {
     setActiveProject(selectedProject);
@@ -75,48 +91,17 @@ function PagePortfolio() {
     setProjectImages(updatedProjectImages);
   }
 
-  function switchTab(selectedTab) {
-    console.log("selectedTab", selectedTab);
-    if (selectedTab === "work") {
-      setProjectsList(workProjectsList);
-      setProjectImages(workProjectsList);
-      setActiveProject(workProjectsList[0]);
-    } else {
-      setProjectsList(personalProjectsList);
-      setProjectImages(personalProjectsList);
-      setActiveProject(personalProjectsList[0]);
-    }
-    setSelectedTab(selectedTab);
-  }
-
   return (
     <section id="portfolio" className="portfolio">
       {isDesktop && (
         <>
           <section className="gl-left-panel">
             <div className="projects-list">
-              <div className="tabs">
-                <a
-                  className={`styled-button ${
-                    selectedTab === "work" ? "active" : ""
-                  }`}
-                  onClick={() => {
-                    switchTab("work");
-                  }}
-                >
-                  Work
-                </a>
-                <a
-                  className={`styled-button ${
-                    selectedTab === "perso" ? "active" : ""
-                  }`}
-                  onClick={() => {
-                    switchTab("perso");
-                  }}
-                >
-                  Perso
-                </a>
-              </div>
+              <ProjectSwitcher
+                projectTabs={projectTabs}
+                selectedTab={selectedTab}
+                setSelectedTab={setSelectedTab}
+              />
               <DisplayProjectNames
                 projectsList={projectsList}
                 activeProject={activeProject}
@@ -125,12 +110,12 @@ function PagePortfolio() {
             </div>
           </section>
 
-          <section className="gl-right-panel" isDesktop={false}>
+          <section className="gl-right-panel">
             {/* TODO: Add arrow icon */}
             {/* TODO: Add animation on hover */}
             {projectImages.map((project) => {
               return (
-                <div className="tile">
+                <div className="tile" key={`${project.name}-${project.id}`}>
                   <img
                     key={project.name}
                     className="project-image"
@@ -148,7 +133,12 @@ function PagePortfolio() {
       )}
 
       {!isDesktop && (
-        <section className="carousel mobile tablet">
+        <section className="carousel-wrapper">
+          <ProjectSwitcher
+            projectTabs={projectTabs}
+            selectedTab={selectedTab}
+            setSelectedTab={setSelectedTab}
+          />
           <SwiperCarousel projectsList={projectImages}></SwiperCarousel>
         </section>
       )}

@@ -1,7 +1,3 @@
-:root {
-  --carousel-slide-width: 210px;
-}
-
 .portfolio {
   .gl-left-panel {
     background-color: var(--second-color-dark);
@@ -14,13 +10,6 @@
     justify-content: center;
     align-items: flex-end;
     padding-left: 20px;
-  }
-
-  .tabs {
-    display: flex;
-    gap: 20px;
-    text-transform: uppercase;
-    font-size: 18px;
   }
 
   .gl-right-panel {
@@ -47,14 +36,14 @@
     }
 
     .tile:nth-child(1) {
-      left: var(--carousel-slide-width);
+      left: var(--carousel-slide-width-desktop);
       z-index: 10;
       cursor: pointer;
     }
 
     .tile:nth-child(2) {
       z-index: 9;
-      left: calc(var(--carousel-slide-width) + 45px);
+      left: calc(var(--carousel-slide-width-desktop) + 45px);
       height: calc(75% - 45px);
       background-color: #d1d5d8;
       pointer-events: none;
@@ -62,7 +51,7 @@
 
     .tile:nth-child(3) {
       z-index: 8;
-      left: calc(var(--carousel-slide-width) + 90px);
+      left: calc(var(--carousel-slide-width-desktop) + 90px);
       height: calc(75% - 90px);
       background-color: #a4aab1;
       pointer-events: none;
@@ -70,10 +59,30 @@
 
     .tile:nth-child(4) {
       z-index: 7;
-      left: calc(var(--carousel-slide-width) + 135px);
+      left: calc(var(--carousel-slide-width-desktop) + 135px);
       height: calc(75% - 135px);
       background-color: #76808a;
       pointer-events: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .portfolio {
+    .carousel-wrapper {
+      width: 100%;
+      background-color: var(--second-color-dark);
+      padding-top: 20px;
+      padding-bottom: 150px;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .portfolio {
+    .carousel-wrapper {
+      padding-top: 50px;
+      padding-bottom: 100px;
     }
   }
 }

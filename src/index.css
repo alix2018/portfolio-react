@@ -22,6 +22,9 @@
   /* FIX: Same as top spacing for menu */
   --vertical-spacing-desktop: 40px;
   --vertical-spacing-mobile: 30px;
+
+  --carousel-slide-width-desktop: 210px;
+  --swiper-carousel-slide-width-mobile: 80vw;
 }
 
 @font-face {
