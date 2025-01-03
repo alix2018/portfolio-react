@@ -147,7 +147,6 @@ a {
   }
 }
 
-/* TODO: Rename global css class name to gl- => gl-left-panel */
 .gl-left-panel {
   position: relative;
   height: 100vh;

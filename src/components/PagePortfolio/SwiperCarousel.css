@@ -1,10 +1,14 @@
+.swiper-carousel::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Safari */
+}
+
 .swiper-carousel {
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
-  -ms-overflow-style: none; /* TODO: Check if still necessary */
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
   background-color: var(--second-color-dark);
   gap: var(--margin-side-tablet);
   margin-top: 50px;
@@ -15,7 +19,6 @@
     display: flex;
     flex-direction: column;
     margin: 0;
-    /* background-color: blue; */
   }
 
   .slide:first-of-type {
@@ -56,11 +59,6 @@
   .title {
     margin-top: 18px;
   }
-}
-
-/* TODO: Check if still necessary */
-.swiper-carousel::-webkit-scrollbar {
-  display: none;
 }
 
 @media only screen and (max-width: 767px) {
