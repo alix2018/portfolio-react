@@ -74,6 +74,10 @@ section.about-me {
     background-repeat: no-repeat;
   }
 
+  .network {
+    margin-top: 5vh;
+  }
+
   .cards-container {
     display: flex;
     justify-content: space-between;
@@ -201,10 +205,6 @@ section.about-me {
 
     .text p:first-of-type {
       margin-top: 28px;
-    }
-
-    h3 {
-      margin-top: 36px;
     }
 
     .cards-container {

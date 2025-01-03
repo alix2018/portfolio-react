@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./PagePortfolio.css";
-import wasteSaverPlatformMockup from "@/assets/work-waste-saver-platform-mockup.png";
-import partnerPortalMockup from "@/assets/work-partner-portal-mockup.png";
-import pwaMockup from "@/assets/work-pwa-mockup.png";
-import gamesMockup from "@/assets/work-2d-games-mockup.png";
-import listUpMockup from "@/assets/perso-list-up-mockup.png";
-import lwfpMockup from "@/assets/perso-lwfp-mockup.png";
-import worldmappieMockup from "@/assets/perso-worldmappie-mockup.png";
-import portfolioMockup from "@/assets/perso-portfolio-mockup.png";
+import wasteSaverPlatformMockup from "@/assets/projects/work-waste-saver-platform-mockup.png";
+import partnerPortalMockup from "@/assets/projects/work-partner-portal-mockup.png";
+import pwaMockup from "@/assets/projects/work-pwa-mockup.png";
+import gamesMockup from "@/assets/projects/work-2d-games-mockup.png";
+import listUpMockup from "@/assets/projects/perso-list-up-mockup.png";
+import lwfpMockup from "@/assets/projects/perso-lwfp-mockup.png";
+import worldmappieMockup from "@/assets/projects/perso-worldmappie-mockup.png";
+import portfolioMockup from "@/assets/projects/perso-portfolio-mockup.png";
 import ReactGA from "react-ga";
 import DisplayProjectNames from "./DisplayProjectNames";
 import ProjectSwitcher from "./ProjectSwitcher";
@@ -15,6 +15,7 @@ import SwiperCarousel from "./SwiperCarousel";
 import { useScreenSize } from "@/hooks";
 
 function PagePortfolio() {
+  // TODO: Move projects data info to a separate file?
   const workProjectsList = [
     {
       id: 1,
