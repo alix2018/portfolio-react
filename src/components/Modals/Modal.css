@@ -1,7 +1,7 @@
 :root {
   color: var(--white-color);
 
-  --image-background: #CDD2E0;
+  --image-background: #cdd2e0;
   --bottom-modal: 8%;
   --side-modal-mobile: 10vw;
 }

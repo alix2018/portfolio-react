@@ -7,11 +7,11 @@ import equalsImg from "@/assets/equals.png";
 
 function PageAboutMe() {
   const [isImgHovered, setIsImgHovered] = useState(false);
-
+  // TODO: compute birthday from current date
+  // TODO: compute moving date from current date
   return (
     <section id="about-me" className="about-me">
       <section className="gl-left-panel img-container">
-        {/* TODO: Align image with Stéphanie Alix sticky text */}
         <img
           src={isImgHovered ? profileImgHover : profileImg}
           alt="Stéphanie Alix picture Portfolio Web profile 1"

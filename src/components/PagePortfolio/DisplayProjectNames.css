@@ -1,0 +1,49 @@
+.project-names {
+  margin-top: 40px; /* TODO: center content on the page and deducting menu page - same on about page */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  gap: 40px;
+  height: 50%;
+
+  .project-name {
+    position: relative;
+  }
+
+  a {
+    display: block;
+    max-width: 280px;
+  }
+
+  a.active {
+    color: var(--third-color);
+  }
+
+  .index,
+  .line-projects {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    z-index: 1;
+  }
+
+  .index {
+    right: -40px;
+    color: var(--first-color-light);
+  }
+
+  .line-projects {
+    width: 90px;
+    background-color: var(--first-color-light);
+    right: -170px;
+    background: linear-gradient(
+        var(--first-color-light),
+        var(--first-color-light)
+      )
+      transparent no-repeat 0 0;
+    background-size: 0 100%;
+    animation: loading 0.2s linear 1 forwards;
+  }
+}

@@ -25,10 +25,10 @@ section.about-me {
   }
 
   .content {
-    padding-top: calc(10vh); /* TODO: Fix menu size */
+    /* TODO: center content on the page and deducting menu page - same on portfolio page */
+    padding-top: 5vh; /* TODO: Fix menu size */
     padding-left: var(--margin-side-desktop);
     padding-right: var(--margin-side-desktop);
-    margin-bottom: 100px;
   }
 
   .text p {
@@ -72,6 +72,10 @@ section.about-me {
     background-image: url("../../assets/eye.png");
     background-size: contain;
     background-repeat: no-repeat;
+  }
+
+  .network {
+    margin-top: 5vh;
   }
 
   .cards-container {
@@ -120,6 +124,7 @@ section.about-me {
 
     .content {
       padding: 0 var(--margin-side-tablet);
+      margin-bottom: 100px;
     }
 
     .text p:first-of-type {
@@ -200,10 +205,6 @@ section.about-me {
 
     .text p:first-of-type {
       margin-top: 28px;
-    }
-
-    h3 {
-      margin-top: 36px;
     }
 
     .cards-container {

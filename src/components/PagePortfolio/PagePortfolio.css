@@ -1,105 +1,112 @@
-:root {
-  --project-left: 60%;
-  --line-height: 70px;
-}
+.portfolio {
+  .gl-left-panel {
+    background-color: var(--second-color-dark);
+  }
 
-section.portfolio {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  color: var(--first-color-light);
-  background-color: var(--second-color-dark);
-}
+  .projects-list {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding-left: 20px;
+  }
 
-section.portfolio .gl-left-panel {
-  background-color: var(--second-color-dark);
-}
+  .gl-right-panel {
+    background-color: var(--second-color-dark);
 
-.titles,
-section.portfolio img {
-  position: absolute;
-  transform: translate(-50%, -50%);
-}
+    .tile {
+      position: absolute;
+      top: calc(
+        50% + 20px
+      ); /* TODO: center content on the page and deducting menu page - same on about page */
+      transform: translateY(-50%);
+      height: 75%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      object-fit: contain;
+      background-color: var(--white-color);
+      width: 50%; /* TODO: Export images with same size */
+    }
 
-.titles {
-  left: calc(30% - 73px);
-  top: 50%;
-  margin-top: 30px;
-  text-align: right;
-}
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
 
-.titles section {
-  position: relative;
-  height: auto;
-  width: 255px;
-  margin: 40px 0 0;
-  overflow: auto;
-  overflow-y: hidden;
-}
+    .tile:nth-child(1) {
+      left: var(--carousel-slide-width-desktop);
+      z-index: 10;
+      cursor: pointer;
+    }
 
-.titles section:first-child {
-  margin: 0;
-}
+    /* Make a filter on the background images so they don't pop as much */
+    .tile:nth-child(2)::after,
+    .tile:nth-child(3)::after,
+    .tile:nth-child(4)::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
 
-section.portfolio .gl-right-panel {
-  z-index: -1;
-}
+    .tile:nth-child(2) {
+      z-index: 9;
+      left: calc(var(--carousel-slide-width-desktop) + 45px);
+      height: calc(75% - 45px);
+      background-color: #d1d5d8;
+      pointer-events: none;
+    }
 
-section.portfolio img.isometric {
-  left: var(--project-left);
-  top: 50%;
-  width: 400px;
-  height: 380px;
-  object-fit: cover;
-  padding: 60px 0;
-  margin-top: 40px;
-  background-color: var(--white-color);
-  transition-property: left, height, transform;
-  transition-timing-function: ease-out;
-  transition-duration: 0.8s, 0.8s, 0.3s;
-}
+    .tile:nth-child(2)::after {
+      background-color: rgba(209, 213, 216, 0.5);
+    }
 
-section.portfolio img.isometric:nth-child(1) {
-  z-index: 10;
-  cursor: pointer;
-}
+    .tile:nth-child(3) {
+      z-index: 8;
+      left: calc(var(--carousel-slide-width-desktop) + 90px);
+      height: calc(75% - 90px);
+      background-color: #a4aab1;
+      pointer-events: none;
+    }
 
-section.portfolio img.isometric:nth-child(2) {
-  z-index: 9;
-  left: calc(var(--project-left) + 50px);
-  height: 335px;
-  background-color: #d1d5d8;
-  pointer-events: none;
-}
+    .tile:nth-child(3)::after {
+      background-color: rgba(164, 170, 177, 0.5);
+    }
 
-section.portfolio img.isometric:nth-child(3) {
-  z-index: 8;
-  left: calc(var(--project-left) + 100px);
-  height: 285px;
-  background-color: #a4aab1;
-  pointer-events: none;
-}
+    .tile:nth-child(4) {
+      z-index: 7;
+      left: calc(var(--carousel-slide-width-desktop) + 135px);
+      height: calc(75% - 135px);
+      background-color: #76808a;
+      pointer-events: none;
+    }
 
-section.portfolio img.isometric:nth-child(4) {
-  z-index: 7;
-  left: calc(var(--project-left) + 145px);
-  height: 240px;
-  background-color: #76808a;
-  pointer-events: none;
-}
-
-section.portfolio img.isometric:nth-child(1):hover {
-  transform: translate(-50%, -50%) scale(1.07);
+    .tile:nth-child(4)::after {
+      background-color: rgba(118, 128, 138, 0.5);
+    }
+  }
 }
 
 @media only screen and (max-width: 1024px) {
-  section.portfolio img.isometric:nth-child(1):hover {
-    transform: translate(-50%, -50%);
+  .portfolio {
+    .carousel-wrapper {
+      width: 100%;
+      background-color: var(--second-color-dark);
+      padding-top: 20px;
+      padding-bottom: 150px;
+    }
   }
 }
 
 @media only screen and (max-width: 767px) {
-  section.portfolio {
-    margin-top: -1px;
+  .portfolio {
+    .carousel-wrapper {
+      padding-top: 50px;
+      padding-bottom: 100px;
+    }
   }
 }
